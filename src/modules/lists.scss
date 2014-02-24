@@ -1,0 +1,367 @@
+/* ===================================================== LISTS ===================================================== */
+ul,
+ol,
+dl {
+	margin-bottom: 1.5em;
+
+	font-size: 1.3em;
+}
+
+li > ul,
+li > ol,
+li > dl,
+li > p,
+li > pre,
+li > label,
+li > input,
+li > select,
+li > textarea,
+li > button,
+dd > ul,
+dd > ol,
+dd > dl,
+dd > p,
+dd > pre,
+dd > label,
+dd > input,
+dd > select,
+dd > textarea,
+dd > button {
+	margin-bottom: 0;
+
+	font-size: 1em;
+}
+
+ul,
+ol {
+	margin-left: 1.5em;
+}
+
+ul {}
+
+ol {}
+
+	li {
+		line-height: 1.5em;
+	}
+
+	ul li {}
+
+	ol li {}
+
+ul.plain,
+ol.plain {
+	margin: 0;
+
+	list-style: none;
+}
+
+	ul.plain li,
+	ol.plain li {
+		line-height: normal;
+	}
+
+dl {
+	padding-bottom: 0.5em;
+
+	border-bottom: 1px #CCC solid;
+}
+
+dl dl {
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	border-bottom: none;
+}
+
+dl.inline {
+	overflow: hidden;
+}
+
+	dt,
+	dd {
+		line-height: 1.35em;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	dt,
+	dl.inline > dt,
+	dl.inline > dd {
+		margin-top: 0.5em;
+		padding-top: 0.5em;
+
+		border-top: 1px #CCC solid;
+	}
+
+	dl dl dt,
+	dl dl.inline > dt,
+	dl dl.inline > dd {
+		/*margin-top: 0;
+		padding-top: 0;
+
+		border-top: none;*/
+	}
+
+	dl dl dt:first-child,
+	dl dl dt:first-child + dd {
+		padding-top: 0;
+
+		border-top: none;
+	}
+
+	dl.inline > dt:first-child,
+	dl.inline > dt:first-child + dd {
+		margin-top: 0;
+	}
+
+	dt:first-child {
+		margin-top: 0;
+	}
+
+	dd {}
+
+	dl.inline > dt,
+	dl.inline > dd {
+		display: block;
+
+		float: left;
+	}
+
+	dl.inline > dt {
+		width: 35%;
+
+		clear: both;
+	}
+
+	dl.inline > dd {
+		width: 65%;
+	}
+
+	dl.inline > dd + dd {
+		margin-left: 35%;
+	}
+
+	dd ul {
+		margin-left: 0;
+
+		list-style: none;
+	}
+
+ul.block-list,
+ul.inline-block-list {
+	margin-bottom: 20px;
+	margin-left: 0;
+
+	list-style: none;
+
+	background: #F2F2F2;
+	background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F2F2F2), color-stop(100%, #D8D8D8));
+	background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
+	background: -o-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
+	background: -ms-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
+	background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2F2F2', endColorstr='#D8D8D8',GradientType=0);
+
+	border: 1px #CCC solid;
+	border-radius: 3px;
+
+	/*-webkit-transition: border 200ms ease, box-shadow 200ms ease;
+	-moz-transition: border 200ms ease, box-shadow 200ms ease;
+	-ms-transition: border 200ms ease, box-shadow 200ms ease;
+	-o-transition: border 200ms ease, box-shadow 200ms ease;
+	transition: border 200ms ease, box-shadow 200ms ease;*/
+}
+
+ul.block-list {}
+
+ul.inline-block-list {}
+
+/*ul.block-list:hover {
+	border-color: #999;
+
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+	ul.block-list li,
+	ul.inline-block-list li {}
+
+	ul.block-list li {}
+
+	ul.inline-block-list li {
+		display: inline-block;
+	}
+
+		ul.block-list li a,
+		ul.inline-block-list li a {
+			padding: 4px 10px;
+
+			position: relative;
+
+			text-decoration: none;
+
+			outline: none;
+
+			-webkit-transition: text-indent 200ms ease, background 200ms ease;
+			-moz-transition: text-indent 200ms ease, background 200ms ease;
+			-ms-transition: text-indent 200ms ease, background 200ms ease;
+			-o-transition: text-indent 200ms ease, background 200ms ease;
+			transition: text-indent 200ms ease, background 200ms ease;
+		}
+
+		ul.block-list li a {
+			display: block;
+
+			border-top: 1px #FFF solid;
+			border-bottom: 1px #CCC solid;
+		}
+
+		ul.inline-block-list li a {
+			display: block;
+
+			border-left: 1px #FFF solid;
+			border-right: 1px #CCC solid;
+		}
+
+		ul.block-list li:first-child a {
+			border-top: none;
+		}
+
+		ul.inline-block-list li:first-child a {
+			border-left: none;
+		}
+
+		ul.block-list li:last-child a {
+			border-bottom: none;
+		}
+
+		ul.block-list li a:hover,
+		ul.inline-block-list li a:hover {
+			background-color: rgba(255, 255, 255, 0.45);
+		}
+
+		ul.block-list li a:hover {
+			text-indent: 5px;
+		}
+
+		ul.block-list li a:active,
+		ul.inline-block-list li a:active {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+
+		ul.inline-block-list.marker-down li.selected a::before,
+		ul.inline-block-list.marker-down li.selected a:after {
+			width: 0;
+			height: 0;
+
+			position: absolute;
+			top: 100%;
+			left: 50%;
+
+			border-style: solid;
+			border-color: transparent transparent;
+
+			-webkit-transition: border-color 200ms ease;
+			-moz-transition: border-color 200ms ease;
+			-ms-transition: border-color 200ms ease;
+			-o-transition: border-color 200ms ease;
+			transition: border-color 200ms ease;
+
+			content: "";
+		}
+
+		ul.inline-block-list.marker-down li.selected a::before {
+			margin-left: -8px;
+
+			border-width: 8px;
+			border-top-color: #CCC;
+		}
+
+		ul.inline-block-list.marker-down li.selected a:after {
+			margin-left: -7px;
+
+			border-width: 7px;
+			border-top-color: #D8D8D8;
+		}
+
+		ul.inline-block-list.marker-down li.selected a:hover:after {
+			border-top-color: #EAEAEA;
+		}
+
+		ul.block-list li span {}
+
+		ul.inline-block-list li span {}
+
+		ul.block-list li ul {
+			margin: 0;
+
+			list-style: none;
+
+			border-top: 1px #FFF solid;
+			border-bottom: 1px #CCC solid;
+		}
+
+		ul.block-list li li a {
+			padding-left: 25px;
+		}
+
+		ul.block-list li li li a {
+			padding-left: 40px;
+		}
+
+		ul.block-list li li li li a {
+			padding-left: 55px;
+		}
+
+		ul.block-list li li li li li a {
+			padding-left: 70px;
+		}
+
+		ul.block-list li li li li li li a {
+			padding-left: 85px;
+		}
+
+		ul.block-list li li li li li li li a {
+			padding-left: 100px;
+		}
+
+		ul.block-list li li li li li li li li a {
+			padding-left: 115px;
+		}
+
+		ul.block-list li li li li li li li li li a {
+			padding-left: 130px;
+		}
+
+		ul.block-list li li li li li li li li li li a {
+			padding-left: 145px;
+		}
+
+		ul.block-list li li li li li li li li li li li a {
+			padding-left: 160px;
+		}
+
+ul.inline-list {
+	margin-left: 0;
+
+	overflow: hidden;
+}
+
+	ul.inline-list li {
+		display: inline-block;
+
+		float: left;
+	}
+
+	ul.inline-list li + li {}
+
+	ul.inline-list li + li::before {
+		padding: 0 0.5em;
+
+		display: inline-block;
+
+		content: "|";
+	}

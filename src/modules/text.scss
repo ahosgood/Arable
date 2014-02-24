@@ -1,0 +1,131 @@
+/* ===================================================== TEXT ===================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1.5em 0 1em;
+
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	font-weight: bold;
+	line-height: 1em;
+	page-break-after: avoid;
+}
+
+.ubuntu h1,
+.ubuntu h2,
+.ubuntu h3,
+.ubuntu h4,
+.ubuntu h5,
+.ubuntu h6 {
+	font-family: "Ubuntu", Helvetica, Arial, Tahoma, sans-serif;
+	font-weight: 500;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.85em;
+}
+
+h5 {
+	font-size: 1.75em;
+}
+
+h6 {
+	font-size: 1.5em;
+}
+
+p {
+	margin-bottom: 0.5em;
+
+	font-size: 1.3em;
+	line-height: 1.35em;
+
+	word-break: normal;
+	/*-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;*/
+
+	orphans: 3;
+	widows: 3;
+}
+
+h1.right,
+h2.right,
+h3.right,
+h4.right,
+h5.right,
+h6.right,
+p.right {
+	text-align: right;
+}
+
+small {
+	font-size: 0.75em;
+}
+
+pre,
+code {
+	margin-bottom: 0.5em;
+
+	font-family: "Courier New", Courier, monospace, mono;
+	font-size: 1.3em;
+	line-height: 1.25em;
+	white-space: pre-wrap;
+}
+
+blockquote {
+	margin: 0.25em 0 0.75em;
+	padding: 0.25em 0.25em 0.25em 1em;
+
+	color: #555;
+	font-size: 1.5em;
+	font-style: italic;
+	line-height: 1.25em;
+	white-space: pre-wrap;
+
+	border-left: 0.35em #CCC solid;
+}
+
+sup,
+sub {
+	position: relative;
+	top: -0.4em;
+
+	font-size: 0.75em;
+	vertical-align: baseline;
+}
+
+sub {
+	top: 0.4em;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}

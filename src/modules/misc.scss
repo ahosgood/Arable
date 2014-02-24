@@ -1,0 +1,89 @@
+/* ===================================================== OTHER ===================================================== */
+hr {
+	width: 100%;
+	height: 0;
+	margin: 1.5em 0;
+
+	display: block;
+
+	clear: both;
+
+	font-size: 1.3em;
+	line-height: 1.25em;
+
+	border: #CCC solid;
+	border-width: 1px 0 0;
+}
+
+/* ===================================================== GENERIC CLASSES ===================================================== */
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+/* ===================================================== NOTICES ===================================================== */
+.error,
+.warning,
+.notice,
+.success {
+	min-height: 16px;
+	margin-bottom: 10px;
+	padding: 10px;
+
+	position: relative;
+
+	border: 1px #000 solid;
+	border-radius: 3px;
+
+	z-index: 3;
+}
+
+.error > :first-child,
+.warning > :first-child,
+.notice > :first-child,
+.success > :first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.error > :last-child,
+.warning > :last-child,
+.notice > :last-child,
+.success > :last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+p.error,
+p.warning,
+p.notice,
+p.success {
+	padding: 0.25em 0.5em;
+}
+
+.error {
+	background-color: rgba(204, 0, 0, 0.2);
+
+	border-color: #C00;
+}
+
+.warning {
+	background-color: rgba(255, 204, 0, 0.2);
+
+	border-color: #FC0;
+}
+
+.notice {
+	background-color: rgba(0, 102, 204, 0.2);
+
+	border-color: #06C;
+}
+
+.success {
+	background-color: rgba(0, 204, 0, 0.2);
+
+	border-color: #0C0;
+}
