@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "//fonts.googleapis.com/css?family=Ubuntu:500,400";
 /**
  * ================================================================================
  * Shadow CSS
@@ -642,6 +641,7 @@ select {
 optgroup option {
   padding-left: 1.5em; }
 
+/* ===================================================== BUTTONS ===================================================== */
 input[type="submit"],
 input[type="submit"]:disabled:hover,
 input[type="submit"]:disabled:active,
@@ -1361,21 +1361,18 @@ h6 {
   line-height: 1em;
   page-break-after: avoid; }
 
-.ubuntu h1,
-.ubuntu h2,
-.ubuntu h3,
-.ubuntu h4,
-.ubuntu h5,
-.ubuntu h6 {
-  font-family: "Ubuntu", Helvetica, Arial, Tahoma, sans-serif;
-  font-weight: 500; }
-
-h1:first-child,
+/*h1:first-child,
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child,
-h6:first-child {
+h6:first-child,*/
+h1.no-top-margin,
+h2.no-top-margin,
+h3.no-top-margin,
+h4.no-top-margin,
+h5.no-top-margin,
+h6.no-top-margin {
   margin-top: 0; }
 
 h1 {
@@ -1433,10 +1430,14 @@ blockquote {
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
   font-size: 1.5em;
-  font-style: italic;
+  /*font-style: italic;*/
   line-height: 1.25em;
   white-space: pre-wrap;
   border-left: 0.35em #CCC solid; }
+  blockquote p {
+    margin-bottom: 0;
+    font-size: 1em;
+    line-height: 0.74em; }
 
 sup,
 sub {
