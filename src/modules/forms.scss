@@ -17,19 +17,13 @@ form {
 	input,
 	select,
 	textarea {
-		/*margin-bottom: 0.5em;*/
+		margin: 0.2em 0;
 		padding: 0.25em;
 
 		font-size: 1.3em;
 
 		border: 1px #999 solid;
 		border-radius: 3px;
-
-		&:required::after {
-			color: #F00;
-
-			content: "*";
-		}
 	}
 
 	input[type="submit"],
@@ -40,13 +34,13 @@ form {
 
 	label {
 		width: 25%;
-		margin: 1px 0;
-		padding: 0.25em 0;
+		margin: 0.4em 0;
+		padding: 1px 0;
 
 		float: left;
 		clear: both;
 
-		font-size: 1.2em;
+		font-size: 1.3em;
 		text-align: left;
 		line-height: 1.3em;
 
@@ -73,7 +67,7 @@ form {
 	}
 
 	input[type="checkbox"] {
-		margin-top: 0.25em;
+		margin-top: 0.4em;
 
 		float: left;
 	}
@@ -93,67 +87,6 @@ form {
 			clear: none;
 		}
 	}
-
-
-
-
-
-
-	/*&.inline {
-		input,
-		select,
-		textarea {
-
-			float: right;
-
-			+ label {
-				float: left;
-			}
-
-			&:required {
-				+ label {
-					&::after {
-						margin-left: 2px;
-
-						display: inline-block;
-
-						color: #F00;
-
-						content: "*";
-					}
-				}
-			}
-		}
-
-		input[type="checkbox"],
-		input[type="radio"] {
-			width: auto;
-
-			display: inline-block;
-		}
-
-		input[type="checkbox"] {
-		}
-
-		input[type="radio"] {
-			+ label {
-				width: auto;
-
-				float: right;
-
-				+ input[type="radio"] {
-					clear: none;
-				}
-
-				+ label {
-					float: left;
-
-					+ input {
-					}
-				}
-			}
-		}
-	}*/
 }
 
 /*form.inline {
