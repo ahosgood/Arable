@@ -16,14 +16,7 @@ table {
 		font-weight: bold;
 		font-size: 1.3em;
 
-		background: #D8D8D8;
-		background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F2F2F2), color-stop(100%, #D8D8D8));
-		background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
-		background: -o-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
-		background: -ms-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%);
-		background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2F2F2', endColorstr='#D8D8D8',GradientType=0);
+		@include grad(#F2F2F2, #D8D8D8);
 	}
 
 	.ubuntu thead {

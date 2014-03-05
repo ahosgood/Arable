@@ -1,162 +1,11 @@
 /* ===================================================== FORMS AND INPUTS ===================================================== */
-input,
-select,
-textarea {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 form {
 	width: 100%;
-
 	display: inline-block;
-
-	text-align: right;
-
-	input,
-	select,
-	textarea {
-		/*margin-bottom: 0.5em;*/
-		padding: 0.25em;
-
-		font-size: 1.3em;
-
-		border: 1px #999 solid;
-		border-radius: 3px;
-
-		&:required::after {
-			color: #F00;
-
-			content: "*";
-		}
-	}
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"] {
-		clear: both;
-	}
-
-	label {
-		width: 25%;
-		margin: 1px 0;
-		padding: 0.25em 0;
-
-		float: left;
-		clear: both;
-
-		font-size: 1.2em;
-		text-align: left;
-		line-height: 1.3em;
-
-		+ input,
-		+ select,
-		+ textarea {
-			width: 75%;
-
-			display: block;
-
-			float: right;
-
-			text-align: left;
-		}
-	}
-
-	&.labels-right label {
-		text-align: right;
-	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		width: auto;
-	}
-
-	input[type="checkbox"] {
-		margin-top: 0.25em;
-
-		float: left;
-	}
-
-	input[type="radio"] {
-		margin-top: 5px;
-
-		float: left;
-
-		+ label {
-			width: auto;
-			margin-top: 5px;
-			margin-right: 1.5em;
-			padding: 0 0.5em;
-
-			float: left;
-			clear: none;
-		}
-	}
-
-
-
-
-
-
-	/*&.inline {
-		input,
-		select,
-		textarea {
-
-			float: right;
-
-			+ label {
-				float: left;
-			}
-
-			&:required {
-				+ label {
-					&::after {
-						margin-left: 2px;
-
-						display: inline-block;
-
-						color: #F00;
-
-						content: "*";
-					}
-				}
-			}
-		}
-
-		input[type="checkbox"],
-		input[type="radio"] {
-			width: auto;
-
-			display: inline-block;
-		}
-
-		input[type="checkbox"] {
-		}
-
-		input[type="radio"] {
-			+ label {
-				width: auto;
-
-				float: right;
-
-				+ input[type="radio"] {
-					clear: none;
-				}
-
-				+ label {
-					float: left;
-
-					+ input {
-					}
-				}
-			}
-		}
-	}*/
+	overflow: hidden;
 }
 
-/*form.inline {
+form.inline {
 	display: block;
 }
 
@@ -191,6 +40,7 @@ form {
 		-moz-box-sizing: content-box;
 		box-sizing: content-box;
 		color: #222;
+		/*-webkit-appearance: none;*/
 	}
 
 	input[type="text"],
@@ -523,11 +373,16 @@ form {
 	label input[type="file"],
 	label select,
 	label textarea {
+		/*width: auto;*/
 		margin-top: 5px;
 		margin-right: auto;
 		margin-left: 0;
 	}
 
+	/*label input[type="checkbox"]:last-child,
+	label input[type="radio"]:last-child {
+		margin: 0 0 0 10px;
+	}*/
 	input[type="radio"] {
 		display: none;
 	}
@@ -585,6 +440,14 @@ form {
 	input[type="radio"]:checked:disabled + label {
 		color: #FFF;
 		text-shadow: 0 0 3px #999;
+		/*background: #D8D8D8;
+		background: -moz-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D8D8D8), color-stop(100%, #F2F2F2));
+		background: -webkit-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%);
+		background: -o-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%);
+		background: -ms-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%);
+		background: linear-gradient(to bottom, #D8D8D8 0%, #F2F2F2 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D8D8D8', endColorstr='#F2F2F2',GradientType=0);*/
 		background: #999;
 		background: -moz-linear-gradient(top, #999999 0%, #cccccc 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #999999), color-stop(100%, #cccccc));
@@ -647,4 +510,4 @@ form {
 
 	optgroup option {
 		padding-left: 1.5em;
-	}*/
+	}

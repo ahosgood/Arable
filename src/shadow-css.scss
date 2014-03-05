@@ -4,12 +4,16 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     2.14
- * Date:        24/02/2014
+ * Version:     3.0
+ * Date:        05/03/2014
  * ================================================================================
  */
 
-@import "modules/normalise";
+@import "resources/functions";
+
+@import "resources/mixins";
+
+@import "modules/reset";
 
 @import "modules/generic";
 

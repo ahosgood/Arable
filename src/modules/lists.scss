@@ -34,7 +34,7 @@ dd > button {
 
 ul,
 ol {
-	margin-left: 1.5em;
+	margin-left: 2em;
 }
 
 ul {}
@@ -178,7 +178,9 @@ ul.inline-block-list {
 
 ul.block-list {}
 
-ul.inline-block-list {}
+ul.inline-block-list {
+	overflow: hidden;
+}
 
 /*ul.block-list:hover {
 	border-color: #999;
@@ -193,6 +195,8 @@ ul.inline-block-list {}
 
 	ul.inline-block-list li {
 		display: inline-block;
+
+		float: left;
 	}
 
 		ul.block-list li a,

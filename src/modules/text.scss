@@ -29,19 +29,19 @@ h6.no-top-margin {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3.5em;
 }
 
 h2 {
-	font-size: 2.25em;
+	font-size: 3em;
 }
 
 h3 {
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 h4 {
-	font-size: 1.85em;
+	font-size: 2em;
 }
 
 h5 {
@@ -84,7 +84,9 @@ small {
 
 pre,
 code {
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
+
+	display: block;
 
 	font-family: "Courier New", Courier, monospace, mono;
 	font-size: 1.3em;
