@@ -199,7 +199,20 @@ form {
   form input[type="submit"],
   form input[type="reset"],
   form input[type="button"] {
+    margin-top: 0.5em;
+    float: right;
     clear: both; }
+    form input[type="submit"] ~ input[type="submit"],
+    form input[type="submit"] ~ input[type="reset"],
+    form input[type="submit"] ~ input[type="button"],
+    form input[type="reset"] ~ input[type="submit"],
+    form input[type="reset"] ~ input[type="reset"],
+    form input[type="reset"] ~ input[type="button"],
+    form input[type="button"] ~ input[type="submit"],
+    form input[type="button"] ~ input[type="reset"],
+    form input[type="button"] ~ input[type="button"] {
+      margin-right: 0.5em;
+      clear: none; }
   form label {
     width: 25%;
     margin: 0.4em 0;

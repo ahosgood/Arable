@@ -29,7 +29,18 @@ form {
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
+		margin-top: 0.5em;
+
+		float: right;
 		clear: both;
+
+		~ input[type="submit"],
+		~ input[type="reset"],
+		~ input[type="button"] {
+			margin-right: 0.5em;
+
+			clear: none;
+		}
 	}
 
 	label {
