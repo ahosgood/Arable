@@ -203,7 +203,11 @@ form {
   form select:invalid,
   form textarea:invalid {
     border-color: #F99;
-    box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.35); }
+    box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
+  form input:invalid:empty,
+  form select:invalid:empty,
+  form textarea:invalid:empty {
+    border-color: #CCC; }
   form input[type="submit"],
   form input[type="reset"],
   form input[type="button"] {
