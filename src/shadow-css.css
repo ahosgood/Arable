@@ -190,10 +190,7 @@ form {
   text-align: right; }
   form input,
   form select,
-  form textarea,
-  form input:invalid:empty,
-  form select:invalid:empty,
-  form textarea:invalid:empty {
+  form textarea {
     margin: 0.2em 0;
     padding: 0.25em;
     font-size: 1.3em;
@@ -204,10 +201,6 @@ form {
   form textarea:invalid {
     border-color: #F99;
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
-  form input:invalid:empty,
-  form select:invalid:empty,
-  form textarea:invalid:empty {
-    border-color: #CCC !important; }
   form input[type="submit"],
   form input[type="reset"],
   form input[type="button"] {
