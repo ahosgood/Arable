@@ -16,7 +16,7 @@ form {
 
 	input,
 	select,
-	textarea
+	textarea,
 	input:invalid:empty,
 	select:invalid:empty,
 	textarea:invalid:empty {
@@ -34,7 +34,7 @@ form {
 	textarea:invalid {
 		border-color: #F99;
 
-		box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.25);
+		box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
 	}
 
 	input[type="submit"],
