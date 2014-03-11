@@ -196,6 +196,10 @@ form {
     font-size: 1.3em;
     border: 1px #CCC solid;
     border-radius: 3px; }
+  form input:invalid,
+  form select:invalid,
+  form textarea:invalid {
+    border-color: #ff9999; }
   form input[type="submit"],
   form input[type="reset"],
   form input[type="button"] {

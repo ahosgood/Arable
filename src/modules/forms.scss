@@ -26,6 +26,12 @@ form {
 		border-radius: 3px;
 	}
 
+	input:invalid,
+	select:invalid,
+	textarea:invalid {
+		border-color: #F99;
+	}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
