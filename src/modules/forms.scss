@@ -16,7 +16,10 @@ form {
 
 	input,
 	select,
-	textarea {
+	textarea
+	input:invalid:empty,
+	select:invalid:empty,
+	textarea:invalid:empty {
 		margin: 0.2em 0;
 		padding: 0.25em;
 
@@ -30,6 +33,8 @@ form {
 	select:invalid,
 	textarea:invalid {
 		border-color: #F99;
+
+		box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.25);
 	}
 
 	input[type="submit"],
