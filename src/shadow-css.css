@@ -238,11 +238,11 @@ form {
     margin-top: 0.4em;
     float: left; }
   form input[type="radio"] {
-    margin-top: 5px;
+    margin-top: 0.5em;
     float: left; }
     form input[type="radio"] + label {
       width: auto;
-      margin-top: 5px;
+      margin-top: 0.4em;
       margin-right: 1.5em;
       padding: 0 0.5em;
       float: left;
