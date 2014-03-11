@@ -207,7 +207,7 @@ form {
   form input:invalid:empty,
   form select:invalid:empty,
   form textarea:invalid:empty {
-    border-color: #CCC; }
+    border-color: #CCC !important; }
   form input[type="submit"],
   form input[type="reset"],
   form input[type="button"] {
