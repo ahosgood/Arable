@@ -86,7 +86,7 @@ button {
 /* ===================================================== MODERNIZR IMPROVEMENTS ===================================================== */
 .hidden,
 .js .hide-on-js,
-.flexbox hide-on-flexbox,
+.flexbox .hide-on-flexbox,
 .canvas .hide-on-canvas,
 .canvastext .hide-on-canvastext,
 .webgl .hide-on-webgl,

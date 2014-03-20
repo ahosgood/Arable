@@ -1,59 +1,185 @@
+@mixin button-colour($base) {
+	//color: #FFF;
+
+	color: if(lightness($base) > 50, #111, #FFF);
+
+	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
+
+	@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+	border-color: desaturate(lighten($base, 2%), 10%);
+
+	&:hover,
+	&:focus {
+		@include grad(desaturate(lighten($base, 20%), 5%), lighten($base, 2%));
+
+		border-color: darken($base, 5%);
+	}
+
+	&:active {
+		@include grad(lighten($base, 5%), desaturate(lighten($base, 15%), 2%));
+
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	&.disabled,
+	&:disabled {
+		&:hover,
+		&:focus,
+		&:active {
+			@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+			border-color: desaturate(lighten($base, 2%), 10%);
+
+			box-shadow: none;
+		}
+	}
+}
+
 /* ===================================================== BUTTONS ===================================================== */
-form input[type="submit"],
-form input[type="reset"],
-form input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
 button,
 a.button {
 	width: auto;
-
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-input[type="submit"],
-input[type="submit"]:disabled:hover,
-input[type="submit"]:disabled:active,
-input[type="reset"],
-input[type="reset"]:disabled:hover,
-input[type="reset"]:disabled:active,
-input[type="button"],
-input[type="button"]:disabled:hover,
-input[type="button"]:disabled:active,
-input[type="submit"].grey,
-input[type="submit"].grey:disabled:hover,
-input[type="submit"].grey:disabled:active,
-button[type="submit"].grey,
-button[type="submit"].grey:disabled:hover,
-button[type="submit"].grey:disabled:active,
-button,
-button:disabled:hover,
-button:disabled:active,
-.button,
-.button.disabled:hover,
-.button.disabled:active,
-a.button[href=""],
-a.button[href=""]:hover,
-a.button[href=""]:active {
-	height: 1em;
 	padding: 0.5em 0.75em;
+
 	display: inline-block;
+
 	font-size: 1.3em;
 	text-align: center;
 	text-decoration: none;
 	line-height: 1em;
 	vertical-align: top;
+
 	@include grad(#F2F2F2, #D8D8D8);
+
 	border: 1px #CCC solid;
 	border-radius: 3px;
+
 	box-shadow: none;
+
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	-o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+
 	cursor: pointer;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:hover,
+	&:focus {
+		border-color: #999;
+
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+
+	&:active {
+		@include grad(#D8D8D8, #F2F2F2);
+
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.35;
+
+		&:hover,
+		&:focus,
+		&:active {
+			@include grad(#F2F2F2, #D8D8D8);
+
+			border-color: #CCC;
+		}
+	}
+
+	// ===================================================== COLOURS =====================================================
+	&.red {
+		@include button-colour(#D11);
+	}
+
+	&.orange {
+		@include button-colour(#F60);
+	}
+
+	&.yellow {
+		@include button-colour(#EC0);
+	}
+
+	&.green {
+		@include button-colour(#0A1);
+	}
+
+	&.aqua {
+		@include button-colour(#0CB);
+	}
+
+	&.blue {
+		@include button-colour(#005DE8);
+	}
+
+	&.purple {
+		@include button-colour(#551A8B);
+	}
+
+	&.pink {
+		@include button-colour(#E1A);
+	}
+
+	&.black {
+		@include button-colour(#222);
+	}
+
+	// ===================================================== BLUE =====================================================
+	/*&.blue {
+		color: #FFF;
+		text-shadow: 0 0 3px #005DE8;
+
+		@include grad(#5599FF, #066AFF);
+
+		border-color: #1F79FF;
+
+		&:hover,
+		&:focus {
+			@include grad(#6EA8FF, #1F79FF);
+
+			border-color: #005DE8;
+		}
+
+		&:active {
+			@include grad(#1F79FF, #6EA8FF);
+
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+		}
+
+		&.disabled,
+		&:disabled {
+			&:hover,
+			&:focus,
+			&:active {
+				@include grad(#5599FF, #066AFF);
+
+				border-color: #1F79FF;
+
+				box-shadow: none;
+			}
+		}
+	}*/
 }
+
+input[type="submit"] {
+	font-weight: bold;
+
+	@include button-colour(#005DE8);
+}
+
+
+
 
 input[type="submit"][class^="fa-"],
 input[type="submit"][class*=" fa-"],
@@ -152,76 +278,13 @@ button.align-fa-right[class*=" fa-"]:empty::before,
 	margin-left: 0;
 }
 
-form input[type="submit"],
-form input[type="submit"]:disabled:hover,
-form input[type="submit"]:disabled:active,
-form input[type="reset"],
-form input[type="reset"]:disabled:hover,
-form input[type="reset"]:disabled:active,
-form input[type="button"],
-form input[type="button"]:disabled:hover,
-form input[type="button"]:disabled:active,
-form button,
-form button:disabled:hover,
-form button:disabled:active {
-	margin-right: 0;
-	margin-left: auto;
-	display: block;
-}
 
-form button + button,
-form button + input[type="submit"],
-form button + input[type="reset"],
-form button + input[type="button"],
-form input[type="submit"] + button,
-form input[type="reset"] + button,
-form input[type="button"] + button,
-form input[type="reset"] + input[type="submit"],
-form input[type="button"] + input[type="submit"],
-form input[type="button"] + input[type="reset"] {
-	margin-top: 5px;
-}
 
-form hr {
-	margin: 0.5em 0 1em;
-}
 
-form hr + input[type="submit"],
-form hr + input[type="submit"] + input[type="reset"],
-form hr + input[type="submit"] + input[type="reset"] + button,
-form hr + input[type="submit"] + button,
-form hr + input[type="submit"] + button + button,
-form hr + input[type="submit"] + button + input[type="reset"],
-form hr + input[type="submit"] + button + button + input[type="reset"],
-form hr + input[type="reset"],
-form hr + input[type="reset"] + input[type="submit"],
-form hr + input[type="reset"] + input[type="submit"] + button,
-form hr + input[type="reset"] + button,
-form hr + input[type="reset"] + button + button,
-form hr + input[type="reset"] + button + input[type="submit"],
-form hr + input[type="reset"] + button + button + input[type="submit"],
-form hr + input[type="button"],
-form hr + input[type="button"] + input[type="submit"],
-form hr + input[type="button"] + input[type="submit"] + button,
-form hr + input[type="button"] + button,
-form hr + input[type="button"] + button + button,
-form hr + input[type="button"] + button + input[type="submit"],
-form hr + input[type="button"] + button + button + input[type="submit"],
-form hr + button,
-form hr + button + input[type="submit"],
-form hr + button + input[type="reset"],
-form hr + button + input[type="button"],
-form hr + button + button,
-form hr + button + button + input[type="submit"],
-form hr + button + button + input[type="reset"],
-form hr + button + button + input[type="button"],
-form hr + button + button + button {
-	margin: 0 0 0 10px !important;
-	display: block;
-	float: right;
-}
 
-button.dark,
+
+
+/*button.dark,
 button.dark:disabled:hover,
 button.dark:disabled:active,
 .button.dark,
@@ -328,12 +391,4 @@ button.blue:active,
 	@include grad(#1f79ff, #6ea8ff);
 	border-color: #005DE8;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-input[type="submit"]:disabled,
-input[type="reset"]:disabled,
-input[type="button"]:disabled,
-button:disabled,
-input[type="radio"]:checked:disabled ~ label {
-	opacity: 0.35;
-}
+}*/

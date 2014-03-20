@@ -68,16 +68,6 @@ p {
 	widows: 3;
 }
 
-h1.right,
-h2.right,
-h3.right,
-h4.right,
-h5.right,
-h6.right,
-p.right {
-	text-align: right;
-}
-
 small {
 	font-size: 0.75em;
 }
@@ -92,6 +82,40 @@ code {
 	font-size: 1.3em;
 	line-height: 1.25em;
 	white-space: pre-wrap;
+}
+
+code {
+	padding: 1em;
+
+	position: relative;
+
+	overflow: auto;
+
+	white-space: pre;
+
+	background-color: #EEE;
+
+	border: 1px #CCC solid;
+	border-radius: 3px;
+}
+
+code[lang]::after {
+	height: 1.5em;
+	padding: 0 0.5em;
+
+	position: absolute;
+	top: 0;
+	right: 0.5em;
+
+	color: #FFF;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	line-height: 1.5em;
+
+	background-color: #CCC;
+
+	border-radius: 0 0 3px 3px;
+
+	content: attr(lang);
 }
 
 blockquote {
@@ -114,6 +138,28 @@ blockquote {
 	}
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre {
+	&.right {
+		text-align: right;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.justify {
+		text-align: justify;
+	}
+}
+
 sup,
 sub {
 	position: relative;
@@ -133,4 +179,24 @@ strong {
 
 em {
 	font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	&.right {
+		text-align: right;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.justify {
+		text-align: justify;
+	}
 }
