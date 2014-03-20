@@ -13,12 +13,6 @@ h6 {
 	page-break-after: avoid;
 }
 
-/*h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child,*/
 h1.no-top-margin,
 h2.no-top-margin,
 h3.no-top-margin,
@@ -59,13 +53,16 @@ p {
 	line-height: 1.35em;
 
 	word-break: normal;
-	/*-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;*/
 
 	orphans: 3;
 	widows: 3;
+
+	&.hypenate {
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+	}
 }
 
 small {
@@ -124,7 +121,6 @@ blockquote {
 
 	color: #555;
 	font-size: 1.5em;
-	/*font-style: italic;*/
 	line-height: 1.25em;
 	white-space: pre-wrap;
 

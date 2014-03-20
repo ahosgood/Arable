@@ -26,9 +26,6 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  /*-webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;*/
   z-index: inherit; }
 
 html {
@@ -68,9 +65,6 @@ ol ul,
 ul ol,
 ol ol {
   font-size: 1em; }
-
-pre {
-  font-family: "Courier New", monospace !important; }
 
 img {
   display: inline-block; }
