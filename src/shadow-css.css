@@ -777,41 +777,7 @@ a.button {
   cursor: pointer;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  	/*&.blue {
-  		color: #FFF;
-  		text-shadow: 0 0 3px #005DE8;
-  
-  		@include grad(#5599FF, #066AFF);
-  
-  		border-color: #1F79FF;
-  
-  		&:hover,
-  		&:focus {
-  			@include grad(#6EA8FF, #1F79FF);
-  
-  			border-color: #005DE8;
-  		}
-  
-  		&:active {
-  			@include grad(#1F79FF, #6EA8FF);
-  
-  			box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
-  		}
-  
-  		&.disabled,
-  		&:disabled {
-  			&:hover,
-  			&:focus,
-  			&:active {
-  				@include grad(#5599FF, #066AFF);
-  
-  				border-color: #1F79FF;
-  
-  				box-shadow: none;
-  			}
-  		}
-  	}*/ }
+  box-sizing: border-box; }
   input[type="submit"]:hover, input[type="submit"]:focus,
   input[type="reset"]:hover,
   input[type="reset"]:focus,
@@ -1632,7 +1598,7 @@ input[type="submit"] {
     border-color: #0c63e6;
     box-shadow: none; }
 
-input[type="submit"][class^="fa-"],
+/*input[type="submit"][class^="fa-"],
 input[type="submit"][class*=" fa-"],
 input[type="reset"][class^="fa-"],
 input[type="reset"][class*=" fa-"],
@@ -1642,7 +1608,8 @@ button[class^="fa-"],
 button[class*=" fa-"],
 .button[class^="fa-"],
 .button[class*=" fa-"] {
-  padding-left: 0.625em; }
+	padding-left: 0.625em;
+}
 
 input.align-fa-right[type="submit"][class^="fa-"],
 input.align-fa-right[type="submit"][class*=" fa-"],
@@ -1654,8 +1621,9 @@ button.align-fa-right[class^="fa-"],
 button.align-fa-right[class*=" fa-"],
 .button.align-fa-right[class^="fa-"],
 .button.align-fa-right[class*=" fa-"] {
-  padding-right: 0.625em;
-  padding-left: 0.75em; }
+	padding-right: 0.625em;
+	padding-left: 0.75em;
+}
 
 input[type="submit"][class^="fa-"]::before,
 input[type="submit"][class*=" fa-"]::before,
@@ -1667,9 +1635,10 @@ button[class^="fa-"]::before,
 button[class*=" fa-"]::before,
 .button[class^="fa-"]::before,
 .button[class*=" fa-"]::before {
-  margin-right: 0.75em;
-  margin-left: 0;
-  vertical-align: top; }
+	margin-right: 0.75em;
+	margin-left: 0;
+	vertical-align: top;
+}
 
 input.align-fa-right[type="submit"][class^="fa-"]::before,
 input.align-fa-right[type="submit"][class*=" fa-"]::before,
@@ -1681,9 +1650,10 @@ button.align-fa-right[class^="fa-"]::before,
 button.align-fa-right[class*=" fa-"]::before,
 .button.align-fa-right[class^="fa-"]::before,
 .button.align-fa-right[class*=" fa-"]::before {
-  margin-right: 0;
-  margin-left: 0.75em;
-  float: right; }
+	margin-right: 0;
+	margin-left: 0.75em;
+	float: right;
+}
 
 input[type="submit"][class^="fa-"]:empty,
 input[type="submit"][class*=" fa-"]:empty,
@@ -1695,7 +1665,8 @@ button[class^="fa-"]:empty,
 button[class*=" fa-"]:empty,
 .button[class^="fa-"]:empty,
 .button[class*=" fa-"]:empty {
-  padding-right: 0.625em; }
+	padding-right: 0.625em;
+}
 
 input[type="submit"][class^="fa-"]:empty::before,
 input[type="submit"][class*=" fa-"]:empty::before,
@@ -1707,7 +1678,8 @@ button[class^="fa-"]:empty::before,
 button[class*=" fa-"]:empty::before,
 .button[class^="fa-"]:empty::before,
 .button[class*=" fa-"]:empty::before {
-  margin-right: 0; }
+	margin-right: 0;
+}
 
 input.align-fa-right[type="submit"][class^="fa-"]:empty::before,
 input.align-fa-right[type="submit"][class*=" fa-"]:empty::before,
@@ -1719,116 +1691,8 @@ button.align-fa-right[class^="fa-"]:empty::before,
 button.align-fa-right[class*=" fa-"]:empty::before,
 .button.align-fa-right[class^="fa-"]:empty::before,
 .button.align-fa-right[class*=" fa-"]:empty::before {
-  margin-right: 0;
-  margin-left: 0; }
-
-/*button.dark,
-button.dark:disabled:hover,
-button.dark:disabled:active,
-.button.dark,
-.button.dark.disabled:hover,
-.button.dark.disabled:active,
-a.button.dark[href=""]:hover,
-a.button.dark[href=""]:active {
-	color: #FFF;
-	text-shadow: 0 0 3px #222;
-	@include grad(#555, #222);
-	border-color: #222;
-}
-
-input[type="submit"],
-input[type="submit"]:disabled:hover,
-input[type="submit"]:disabled:active,
-button[type="submit"],
-button[type="submit"]:disabled:hover,
-button[type="submit"]:disabled:active,
-button.blue,
-button.blue:disabled:hover,
-button.blue:disabled:active,
-.button.blue,
-.button.blue.disabled:hover,
-.button.blue.disabled:active,
-a.button.blue[href=""]:hover,
-a.button.blue[href=""]:active {
-	color: #FFF;
-	font-weight: bold;
-	text-shadow: 0 0 3px #005DE8;
-
-	@include grad(#5599FF, #066AFF);
-
-	border-color: #1F79FF;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="reset"]:hover,
-input[type="reset"]:active,
-input[type="button"]:hover,
-input[type="button"]:active,
-input[type="submit"].grey:hover,
-input[type="submit"].grey:active,
-button[type="submit"].grey:hover,
-button[type="submit"].grey:active,
-button:hover,
-button:active,
-.button:hover,
-.button:active {
-	border-color: #999;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-	-webkit-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 400ms;
-	-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 400ms;
-	-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 400ms;
-	-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 400ms;
-	transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 400ms;
-}
-
-button.dark:hover,
-button.dark:active,
-.button.dark:hover,
-.button.dark:active {
-	@include grad(#777, #333);
-
-	border-color: #111;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:active,
-button[type="submit"]:hover,
-button[type="submit"]:active,
-button.blue:hover,
-button.blue:active,
-.button.blue:hover,
-.button.blue:active {
-	@include grad(#6ea8ff, #1f79ff);
-
-	border-color: #005DE8;
-}
-
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
-input[type="submit"].grey:active,
-button[type="submit"].grey:active,
-button:active,
-.button:active {
-	@include grad(#CCC, #DDD);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-button.dark:active,
-.button.dark:active {
-	@include grad(#333, #777);
-	border-color: #111;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-input[type="submit"]:active,
-button[type="submit"]:active,
-button.blue:active,
-.button.blue:active {
-	@include grad(#1f79ff, #6ea8ff);
-	border-color: #005DE8;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+	margin-right: 0;
+	margin-left: 0;
 }*/
 /* ===================================================== LISTS ===================================================== */
 ul,
