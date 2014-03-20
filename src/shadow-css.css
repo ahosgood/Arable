@@ -1834,126 +1834,174 @@ ul.inline-block-list {
 
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }*/
-ul.inline-block-list li {
-  display: inline-block;
-  float: left; }
+	/*ul.block-list li,
+	ul.inline-block-list li {}
 
-ul.block-list li a,
-ul.inline-block-list li a {
-  padding: 4px 10px;
-  position: relative;
-  text-decoration: none;
-  outline: none;
-  -webkit-transition: text-indent 200ms ease, background 200ms ease;
-  -moz-transition: text-indent 200ms ease, background 200ms ease;
-  -ms-transition: text-indent 200ms ease, background 200ms ease;
-  -o-transition: text-indent 200ms ease, background 200ms ease;
-  transition: text-indent 200ms ease, background 200ms ease; }
+	ul.block-list li {}
 
-ul.block-list li a {
-  display: block;
-  border-top: 1px #FFF solid;
-  border-bottom: 1px #CCC solid; }
+	ul.inline-block-list li {
+		display: inline-block;
 
-ul.inline-block-list li a {
-  display: block;
-  border-left: 1px #FFF solid;
-  border-right: 1px #CCC solid; }
+		float: left;
+	}
 
-ul.block-list li:first-child a {
-  border-top: none; }
+		ul.block-list li a,
+		ul.inline-block-list li a {
+			padding: 4px 10px;
 
-ul.inline-block-list li:first-child a {
-  border-left: none; }
+			position: relative;
 
-ul.block-list li:last-child a {
-  border-bottom: none; }
+			text-decoration: none;
 
-ul.block-list li a:hover,
-ul.inline-block-list li a:hover {
-  background-color: rgba(255, 255, 255, 0.45); }
+			outline: none;
 
-ul.block-list li a:hover {
-  text-indent: 5px; }
+			-webkit-transition: text-indent 200ms ease, background 200ms ease;
+			-moz-transition: text-indent 200ms ease, background 200ms ease;
+			-ms-transition: text-indent 200ms ease, background 200ms ease;
+			-o-transition: text-indent 200ms ease, background 200ms ease;
+			transition: text-indent 200ms ease, background 200ms ease;
+		}
 
-ul.block-list li a:active,
-ul.inline-block-list li a:active {
-  background-color: rgba(255, 255, 255, 0.6); }
+		ul.block-list li a {
+			display: block;
 
-ul.inline-block-list.marker-down li.selected a::before,
-ul.inline-block-list.marker-down li.selected a:after {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  border-style: solid;
-  border-color: transparent transparent;
-  -webkit-transition: border-color 200ms ease;
-  -moz-transition: border-color 200ms ease;
-  -ms-transition: border-color 200ms ease;
-  -o-transition: border-color 200ms ease;
-  transition: border-color 200ms ease;
-  content: ""; }
+			border-top: 1px #FFF solid;
+			border-bottom: 1px #CCC solid;
+		}
 
-ul.inline-block-list.marker-down li.selected a::before {
-  margin-left: -8px;
-  border-width: 8px;
-  border-top-color: #CCC; }
+		ul.inline-block-list li a {
+			display: block;
 
-ul.inline-block-list.marker-down li.selected a:after {
-  margin-left: -7px;
-  border-width: 7px;
-  border-top-color: #D8D8D8; }
+			border-left: 1px #FFF solid;
+			border-right: 1px #CCC solid;
+		}
 
-ul.inline-block-list.marker-down li.selected a:hover:after {
-  border-top-color: #EAEAEA; }
+		ul.block-list li:first-child a {
+			border-top: none;
+		}
 
-ul.block-list li ul {
-  margin: 0;
-  list-style: none;
-  border-top: 1px #FFF solid;
-  border-bottom: 1px #CCC solid; }
+		ul.inline-block-list li:first-child a {
+			border-left: none;
+		}
 
-ul.block-list li li a {
-  padding-left: 25px; }
+		ul.block-list li:last-child a {
+			border-bottom: none;
+		}
 
-ul.block-list li li li a {
-  padding-left: 40px; }
+		ul.block-list li a:hover,
+		ul.inline-block-list li a:hover {
+			background-color: rgba(255, 255, 255, 0.45);
+		}
 
-ul.block-list li li li li a {
-  padding-left: 55px; }
+		ul.block-list li a:hover {
+			text-indent: 5px;
+		}
 
-ul.block-list li li li li li a {
-  padding-left: 70px; }
+		ul.block-list li a:active,
+		ul.inline-block-list li a:active {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
 
-ul.block-list li li li li li li a {
-  padding-left: 85px; }
+		ul.inline-block-list.marker-down li.selected a::before,
+		ul.inline-block-list.marker-down li.selected a:after {
+			width: 0;
+			height: 0;
 
-ul.block-list li li li li li li li a {
-  padding-left: 100px; }
+			position: absolute;
+			top: 100%;
+			left: 50%;
 
-ul.block-list li li li li li li li li a {
-  padding-left: 115px; }
+			border-style: solid;
+			border-color: transparent transparent;
 
-ul.block-list li li li li li li li li li a {
-  padding-left: 130px; }
+			-webkit-transition: border-color 200ms ease;
+			-moz-transition: border-color 200ms ease;
+			-ms-transition: border-color 200ms ease;
+			-o-transition: border-color 200ms ease;
+			transition: border-color 200ms ease;
 
-ul.block-list li li li li li li li li li li a {
-  padding-left: 145px; }
+			content: "";
+		}
 
-ul.block-list li li li li li li li li li li li a {
-  padding-left: 160px; }
+		ul.inline-block-list.marker-down li.selected a::before {
+			margin-left: -8px;
 
-ul.inline-list {
+			border-width: 8px;
+			border-top-color: #CCC;
+		}
+
+		ul.inline-block-list.marker-down li.selected a:after {
+			margin-left: -7px;
+
+			border-width: 7px;
+			border-top-color: #D8D8D8;
+		}
+
+		ul.inline-block-list.marker-down li.selected a:hover:after {
+			border-top-color: #EAEAEA;
+		}
+
+		ul.block-list li span {}
+
+		ul.inline-block-list li span {}
+
+		ul.block-list li ul {
+			margin: 0;
+
+			list-style: none;
+
+			border-top: 1px #FFF solid;
+			border-bottom: 1px #CCC solid;
+		}
+
+		ul.block-list li li a {
+			padding-left: 25px;
+		}
+
+		ul.block-list li li li a {
+			padding-left: 40px;
+		}
+
+		ul.block-list li li li li a {
+			padding-left: 55px;
+		}
+
+		ul.block-list li li li li li a {
+			padding-left: 70px;
+		}
+
+		ul.block-list li li li li li li a {
+			padding-left: 85px;
+		}
+
+		ul.block-list li li li li li li li a {
+			padding-left: 100px;
+		}
+
+		ul.block-list li li li li li li li li a {
+			padding-left: 115px;
+		}
+
+		ul.block-list li li li li li li li li li a {
+			padding-left: 130px;
+		}
+
+		ul.block-list li li li li li li li li li li a {
+			padding-left: 145px;
+		}
+
+		ul.block-list li li li li li li li li li li li a {
+			padding-left: 160px;
+		}*/
+ul.inline {
   margin-left: 0;
   overflow: hidden; }
 
-ul.inline-list li {
+ul.inline li {
   display: inline-block;
   float: left; }
 
-ul.inline-list li + li::before {
+ul.inline li + li::before {
   padding: 0 0.5em;
   display: inline-block;
   content: "|"; }

@@ -188,7 +188,7 @@ ul.inline-block-list {
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }*/
 
-	ul.block-list li,
+	/*ul.block-list li,
 	ul.inline-block-list li {}
 
 	ul.block-list li {}
@@ -346,23 +346,23 @@ ul.inline-block-list {
 
 		ul.block-list li li li li li li li li li li li a {
 			padding-left: 160px;
-		}
+		}*/
 
-ul.inline-list {
+ul.inline {
 	margin-left: 0;
 
 	overflow: hidden;
 }
 
-	ul.inline-list li {
+	ul.inline li {
 		display: inline-block;
 
 		float: left;
 	}
 
-	ul.inline-list li + li {}
+	ul.inline li + li {}
 
-	ul.inline-list li + li::before {
+	ul.inline li + li::before {
 		padding: 0 0.5em;
 
 		display: inline-block;
