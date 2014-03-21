@@ -1538,11 +1538,14 @@ ul.tree {
     line-height: 1.5em; }
     ul.tree li::after {
       width: 0.75em;
+      height: 1px;
+      margin-top: -1px;
       display: block;
       position: absolute;
       top: 0.75em;
       left: -1.25em;
-      border-top: 1px #CCC solid;
+      border: #CCC solid;
+      border-width: 1px 0 0 1px;
       content: ""; }
     ul.tree li:last-child::before {
       bottom: 50%; }
