@@ -1743,7 +1743,10 @@ p code {
   padding: 0;
   display: inline-block;
   font-size: 1em;
+  vertical-align: text-bottom;
+  line-height: inherit;
   border: none;
+  border-radius: 0;
   outline: 1px #CCC solid; }
 
 blockquote {
