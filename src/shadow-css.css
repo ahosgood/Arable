@@ -1519,6 +1519,38 @@ ul.inline li + li::before {
   display: inline-block;
   content: "|"; }
 
+ul.tree {
+  margin-left: 1.5em;
+  list-style: none; }
+  ul.tree ul {
+    margin-top: 0.25em;
+    margin-left: 2em;
+    list-style: none; }
+    ul.tree ul::before {
+      display: block;
+      position: absolute;
+      top: 1.5em;
+      bottom: 0.75em;
+      left: 0.75em;
+      border-left: 1px #CCC solid;
+      content: ""; }
+  ul.tree li {
+    position: relative;
+    line-height: 1.5em; }
+    ul.tree li::after {
+      width: 0.75em;
+      margin-top: -1px;
+      display: block;
+      position: absolute;
+      top: 0.75em;
+      left: -1.25em;
+      border-top: 1px #CCC solid;
+      content: ""; }
+    ul.tree li:last-child::before {
+      bottom: 50%; }
+  ul.tree > li::after {
+    display: none; }
+
 /* ===================================================== TABLES ===================================================== */
 table {
   width: 100%;

@@ -369,3 +369,58 @@ ul.inline {
 
 		content: "|";
 	}
+
+ul.tree {
+	margin-left: 1.5em;
+
+	list-style: none;
+
+	ul {
+		margin-top: 0.25em;
+		margin-left: 2em;
+
+		list-style: none;
+
+		&::before {
+			display: block;
+
+			position: absolute;
+			top: 1.5em;
+			bottom: 0.75em;
+			left: 0.75em;
+
+			border-left: 1px #CCC solid;
+
+			content: "";
+		}
+	}
+
+	li {
+		position: relative;
+
+		line-height: 1.5em;
+
+		&::after {
+			width: 0.75em;
+			margin-top: -1px;
+
+			display: block;
+
+			position: absolute;
+			top: 0.75em;
+			left: -1.25em;
+
+			border-top: 1px #CCC solid;
+
+			content: "";
+		}
+
+		&:last-child::before {
+			bottom: 50%;
+		}
+	}
+
+	> li::after {
+		display: none;
+	}
+}
