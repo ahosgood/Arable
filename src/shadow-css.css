@@ -1535,7 +1535,8 @@ ul.tree {
       content: ""; }
   ul.tree li {
     position: relative;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    white-space: nowrap; }
     ul.tree li::after {
       width: 0.75em;
       height: 1px;

@@ -398,6 +398,7 @@ ul.tree {
 		position: relative;
 
 		line-height: 1.5em;
+		white-space: nowrap;
 
 		&::after {
 			width: 0.75em;
