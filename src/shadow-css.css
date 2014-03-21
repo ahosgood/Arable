@@ -190,6 +190,8 @@ form {
     font-size: 1.3em;
     border: 1px #CCC solid;
     border-radius: 3px; }
+  form textarea {
+    resize: vertical; }
   form input:invalid,
   form select:invalid,
   form textarea:invalid {

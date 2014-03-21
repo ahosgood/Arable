@@ -26,6 +26,10 @@ form {
 		border-radius: 3px;
 	}
 
+	textarea {
+		resize: vertical;
+	}
+
 	input:invalid,
 	select:invalid,
 	textarea:invalid {
