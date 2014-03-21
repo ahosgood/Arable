@@ -1523,7 +1523,6 @@ ul.tree {
   margin-left: 1.5em;
   list-style: none; }
   ul.tree ul {
-    margin-top: 0.25em;
     margin-left: 2em;
     list-style: none; }
     ul.tree ul::before {
