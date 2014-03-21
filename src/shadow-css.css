@@ -1745,6 +1745,7 @@ p code {
   font-size: 1em;
   vertical-align: text-bottom;
   line-height: inherit;
+  white-space: nowrap;
   border: none;
   border-radius: 0;
   outline: 1px #CCC solid; }
