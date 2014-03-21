@@ -191,7 +191,7 @@ form {
     border: 1px #CCC solid;
     border-radius: 3px; }
   form textarea {
-    min-height: 1em;
+    min-height: 2em;
     resize: vertical; }
   form input:invalid,
   form select:invalid,
