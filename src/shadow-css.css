@@ -1738,6 +1738,14 @@ pre.code[lang]::after {
   border-radius: 0 0 3px 3px;
   content: attr(lang); }
 
+p code {
+  margin: 0 0.25em;
+  padding: 0;
+  display: inline-block;
+  font-size: 1em;
+  border: none;
+  outline: 1px #CCC solid; }
+
 blockquote {
   margin: 0.25em 0.5em 0.75em;
   padding: 0.25em 0.25em 0.25em 1em;
