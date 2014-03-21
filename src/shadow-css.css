@@ -1739,7 +1739,7 @@ pre.code[lang]::after {
   content: attr(lang); }
 
 p code {
-  margin: 0 0.2em;
+  margin: 0 0.1em;
   padding: 0;
   display: inline-block;
   font-size: 1em;
