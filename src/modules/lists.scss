@@ -7,29 +7,29 @@ dl {
 	font-size: 1.3em;
 }
 
-li > ul,
-li > ol,
-li > dl,
-li > p,
-li > pre,
-li > label,
-li > input,
-li > select,
-li > textarea,
-li > button,
-dd > ul,
-dd > ol,
-dd > dl,
-dd > p,
-dd > pre,
-dd > label,
-dd > input,
-dd > select,
-dd > textarea,
-dd > button {
-	margin-bottom: 0;
+li,
+dd {
+	> ul,
+	> ol,
+	> dl,
+	> p,
+	> pre,
+	> label,
+	> input,
+	> select,
+	> textarea,
+	> button {
+		font-size: 1em;
+	}
 
-	font-size: 1em;
+	> ul,
+	> ol,
+	> dl,
+	> p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 ul,

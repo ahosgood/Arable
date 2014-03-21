@@ -1229,8 +1229,16 @@ dd > input,
 dd > select,
 dd > textarea,
 dd > button {
-  margin-bottom: 0;
   font-size: 1em; }
+li > ul:last-child,
+li > ol:last-child,
+li > dl:last-child,
+li > p:last-child,
+dd > ul:last-child,
+dd > ol:last-child,
+dd > dl:last-child,
+dd > p:last-child {
+  margin-bottom: 0; }
 
 ul,
 ol {
