@@ -81,7 +81,8 @@ code {
 	white-space: pre-wrap;
 }
 
-code {
+code,
+pre.code {
 	padding: 1em;
 
 	position: relative;
@@ -96,7 +97,8 @@ code {
 	border-radius: 3px;
 }
 
-code[lang]::after {
+code[lang]::after,
+pre.code[lang]::after {
 	height: 1.5em;
 	padding: 0 0.5em;
 
