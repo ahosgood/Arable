@@ -402,6 +402,7 @@ ul.tree {
 		&::after {
 			width: 0.75em;
 			height: 1px;
+			margin-top: -1px;
 
 			display: block;
 
@@ -410,7 +411,7 @@ ul.tree {
 			left: -1.25em;
 
 			border: #CCC solid;
-			border-width: 1px 0 0 1px;
+			border-width: 0 0 1px 1px;
 
 			content: "";
 		}
