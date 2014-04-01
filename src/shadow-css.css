@@ -1076,6 +1076,14 @@ a.button {
       background: linear-gradient(to bottom, #484848 0%, #222222 100%);
       border-color: #272727;
       box-shadow: none; }
+  input[type="submit"][class^="fa-"]::before,
+  input[type="reset"][class^="fa-"]::before,
+  input[type="button"][class^="fa-"]::before,
+  button[class^="fa-"]::before,
+  a.button[class^="fa-"]::before {
+    margin-right: 0.75em;
+    margin-left: 0;
+    vertical-align: top; }
 
 input[type="submit"] {
   font-weight: bold;
