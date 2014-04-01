@@ -1081,9 +1081,17 @@ a.button {
   input[type="button"][class^="fa-"]::before,
   button[class^="fa-"]::before,
   a.button[class^="fa-"]::before {
-    margin-right: 0.75em;
-    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0.625em;
+    display: inline-block;
+    float: right;
     vertical-align: top; }
+  input[type="submit"][class^="fa-"]:empty,
+  input[type="reset"][class^="fa-"]:empty,
+  input[type="button"][class^="fa-"]:empty,
+  button[class^="fa-"]:empty,
+  a.button[class^="fa-"]:empty {
+    padding-left: 0.625em; }
 
 input[type="submit"] {
   font-weight: bold;

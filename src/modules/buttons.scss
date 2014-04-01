@@ -137,10 +137,18 @@ a.button {
 
 	&[class^="fa-"] {
 		&::before {
-			margin-right: 0.75em;
-			margin-left: 0;
+			padding-right: 0;
+			padding-left: 0.625em;
+
+			display: inline-block;
+
+			float: right;
 
 			vertical-align: top;
+		}
+
+		&:empty {
+			padding-left: 0.625em;
 		}
 	}
 }
