@@ -249,6 +249,18 @@ form {
       padding: 0 0.5em;
       float: left;
       clear: none; }
+  form h1,
+  form h2,
+  form h3,
+  form h4,
+  form h5,
+  form h6,
+  form p,
+  form ul,
+  form ol,
+  form dl {
+    clear: both;
+    text-align: left; }
 
 optgroup option {
   padding-left: 1em; }
