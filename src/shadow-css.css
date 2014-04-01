@@ -4,7 +4,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.0.0
+ * Version:     3.0.1
  * Date:        01/04/2014
  * ================================================================================
  */
@@ -1076,21 +1076,41 @@ a.button {
       background: linear-gradient(to bottom, #484848 0%, #222222 100%);
       border-color: #272727;
       box-shadow: none; }
-  input[type="submit"][class^="fa-"]::before,
-  input[type="reset"][class^="fa-"]::before,
-  input[type="button"][class^="fa-"]::before,
-  button[class^="fa-"]::before,
-  a.button[class^="fa-"]::before {
+  input[type="submit"] i.fa::before,
+  input[type="submit"] i[class^="fa-"]::before,
+  input[type="submit"] i[class*=" fa-"]::before,
+  input[type="reset"] i.fa::before,
+  input[type="reset"] i[class^="fa-"]::before,
+  input[type="reset"] i[class*=" fa-"]::before,
+  input[type="button"] i.fa::before,
+  input[type="button"] i[class^="fa-"]::before,
+  input[type="button"] i[class*=" fa-"]::before,
+  button i.fa::before,
+  button i[class^="fa-"]::before,
+  button i[class*=" fa-"]::before,
+  a.button i.fa::before,
+  a.button i[class^="fa-"]::before,
+  a.button i[class*=" fa-"]::before {
     padding-right: 0;
     padding-left: 0.625em;
     display: inline-block;
     float: right;
     vertical-align: top; }
-  input[type="submit"][class^="fa-"]:empty,
-  input[type="reset"][class^="fa-"]:empty,
-  input[type="button"][class^="fa-"]:empty,
-  button[class^="fa-"]:empty,
-  a.button[class^="fa-"]:empty {
+  input[type="submit"] i.fa:empty,
+  input[type="submit"] i[class^="fa-"]:empty,
+  input[type="submit"] i[class*=" fa-"]:empty,
+  input[type="reset"] i.fa:empty,
+  input[type="reset"] i[class^="fa-"]:empty,
+  input[type="reset"] i[class*=" fa-"]:empty,
+  input[type="button"] i.fa:empty,
+  input[type="button"] i[class^="fa-"]:empty,
+  input[type="button"] i[class*=" fa-"]:empty,
+  button i.fa:empty,
+  button i[class^="fa-"]:empty,
+  button i[class*=" fa-"]:empty,
+  a.button i.fa:empty,
+  a.button i[class^="fa-"]:empty,
+  a.button i[class*=" fa-"]:empty {
     padding-left: 0.625em; }
 
 input[type="submit"] {

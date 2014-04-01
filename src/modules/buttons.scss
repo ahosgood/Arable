@@ -135,7 +135,9 @@ a.button {
 		@include button-colour(#222);
 	}
 
-	&[class^="fa-"] {
+	i.fa,
+	i[class^="fa-"],
+	i[class*=" fa-"] {
 		&::before {
 			padding-right: 0;
 			padding-left: 0.625em;
