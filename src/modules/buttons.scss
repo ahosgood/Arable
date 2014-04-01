@@ -151,9 +151,15 @@ a.button {
 			text-align: center;
 			vertical-align: top;
 		}
+	}
 
-		&:empty {
-			padding-left: 0.625em;
+	&:empty {
+		i.fa,
+		i[class^="fa-"],
+		i[class*=" fa-"] {
+			&::before {
+				padding-left: 0;
+			}
 		}
 	}
 }

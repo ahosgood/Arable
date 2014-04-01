@@ -1099,22 +1099,22 @@ a.button {
     float: right;
     text-align: center;
     vertical-align: top; }
-  input[type="submit"] i.fa:empty,
-  input[type="submit"] i[class^="fa-"]:empty,
-  input[type="submit"] i[class*=" fa-"]:empty,
-  input[type="reset"] i.fa:empty,
-  input[type="reset"] i[class^="fa-"]:empty,
-  input[type="reset"] i[class*=" fa-"]:empty,
-  input[type="button"] i.fa:empty,
-  input[type="button"] i[class^="fa-"]:empty,
-  input[type="button"] i[class*=" fa-"]:empty,
-  button i.fa:empty,
-  button i[class^="fa-"]:empty,
-  button i[class*=" fa-"]:empty,
-  a.button i.fa:empty,
-  a.button i[class^="fa-"]:empty,
-  a.button i[class*=" fa-"]:empty {
-    padding-left: 0.625em; }
+  input[type="submit"]:empty i.fa::before,
+  input[type="submit"]:empty i[class^="fa-"]::before,
+  input[type="submit"]:empty i[class*=" fa-"]::before,
+  input[type="reset"]:empty i.fa::before,
+  input[type="reset"]:empty i[class^="fa-"]::before,
+  input[type="reset"]:empty i[class*=" fa-"]::before,
+  input[type="button"]:empty i.fa::before,
+  input[type="button"]:empty i[class^="fa-"]::before,
+  input[type="button"]:empty i[class*=" fa-"]::before,
+  button:empty i.fa::before,
+  button:empty i[class^="fa-"]::before,
+  button:empty i[class*=" fa-"]::before,
+  a.button:empty i.fa::before,
+  a.button:empty i[class^="fa-"]::before,
+  a.button:empty i[class*=" fa-"]::before {
+    padding-left: 0; }
 
 input[type="submit"] {
   font-weight: bold;
