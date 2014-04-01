@@ -1091,10 +1091,13 @@ a.button {
   a.button i.fa::before,
   a.button i[class^="fa-"]::before,
   a.button i[class*=" fa-"]::before {
+    width: 1em;
+    height: 1em;
     padding-right: 0;
     padding-left: 0.625em;
     display: inline-block;
     float: right;
+    text-align: center;
     vertical-align: top; }
   input[type="submit"] i.fa:empty,
   input[type="submit"] i[class^="fa-"]:empty,
