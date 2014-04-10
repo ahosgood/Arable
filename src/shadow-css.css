@@ -1306,7 +1306,8 @@ ol.plain {
   ul.plain ol,
   ol.plain ul,
   ol.plain ol {
-    margin-left: 0; }
+    margin-left: 0;
+    list-style: none; }
   ul.plain li,
   ol.plain li {
     line-height: normal; }
