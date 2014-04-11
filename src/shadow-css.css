@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.0.2
- * Date:        10/04/2014
+ * Version:     3.1.0
+ * Date:        11/04/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -165,6 +165,71 @@ button {
 .no-svgclippaths .hide-on-no-svgclippaths {
   display: none !important; }
 
+/* ===================================================== RESPONSIVE ELEMENTS ===================================================== */
+.show-on-desktop,
+.show-on-tablet,
+.show-on-tablet-l,
+.show-on-tablet-p,
+.show-on-mobile,
+.show-on-mobile-l,
+.show-on-mobile-p {
+  display: none; }
+
+.oldie .show-on-desktop {
+  display: block; }
+
+.oldie .hide-on-desktop {
+  display: none; }
+
+/* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
+@media screen and (max-width: 420px) {
+  .hide-on-mobile-p {
+    display: none; }
+
+  .show-on-mobile-p {
+    display: block; } }
+/* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
+@media screen and (min-width: 421px) and (max-width: 640px) {
+  .hide-on-mobile-l {
+    display: none; }
+
+  .show-on-mobile-l {
+    display: block; } }
+/* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  .hide-on-mobile {
+    display: none; }
+
+  .show-on-mobile {
+    display: block; } }
+/* ----------------------------------------------------- SMALL TABLET (iPad Portrait) ----------------------------------------------------- */
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .hide-on-tablet-p {
+    display: none; }
+
+  .show-on-tablet-p {
+    display: block; } }
+/* ----------------------------------------------------- LARGE TABLET (iPad Landscape) ----------------------------------------------------- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hide-on-tablet-l {
+    display: none; }
+
+  .show-on-tablet-l {
+    display: block; } }
+/* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .hide-on-tablet {
+    display: none; }
+
+  .show-on-tablet {
+    display: block; } }
+/* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+  .hide-on-desktop {
+    display: none; }
+
+  .show-on-desktop {
+    display: block; } }
 /* ===================================================== GENERIC ===================================================== */
 body {
   color: #222;
