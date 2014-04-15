@@ -4,13 +4,8 @@ $intTabletLarge: 769px;
 $intDesktop: 1025px;
 
 /* ===================================================== RESPONSIVE ELEMENTS ===================================================== */
-.show-on-desktop,
-.show-on-tablet,
-.show-on-tablet-l,
-.show-on-tablet-p,
-.show-on-mobile,
-.show-on-mobile-l,
-.show-on-mobile-p {
+[class^="show-on-"],
+[class*=" show-on-"] {
 	display: none;
 }
 
