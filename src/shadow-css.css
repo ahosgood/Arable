@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.1.0
- * Date:        11/04/2014
+ * Version:     3.1.1
+ * Date:        15/04/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -182,34 +182,34 @@ button {
   display: none; }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
   .hide-on-mobile-p {
     display: none; }
 
   .show-on-mobile-p {
     display: block; } }
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media screen and (min-width: 421px) and (max-width: 640px) {
+@media screen and (min-width: 481px) and (max-width: 658px) {
   .hide-on-mobile-l {
     display: none; }
 
   .show-on-mobile-l {
     display: block; } }
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 658px) {
   .hide-on-mobile {
     display: none; }
 
   .show-on-mobile {
     display: block; } }
-/* ----------------------------------------------------- SMALL TABLET (iPad Portrait) ----------------------------------------------------- */
-@media screen and (min-width: 641px) and (max-width: 768px) {
+/* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
+@media screen and (min-width: 659px) and (max-width: 768px) {
   .hide-on-tablet-p {
     display: none; }
 
   .show-on-tablet-p {
     display: block; } }
-/* ----------------------------------------------------- LARGE TABLET (iPad Landscape) ----------------------------------------------------- */
+/* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .hide-on-tablet-l {
     display: none; }
@@ -217,7 +217,7 @@ button {
   .show-on-tablet-l {
     display: block; } }
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (min-width: 659px) and (max-width: 1024px) {
   .hide-on-tablet {
     display: none; }
 

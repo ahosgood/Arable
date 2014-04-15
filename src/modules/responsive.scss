@@ -1,3 +1,8 @@
+$intMobileSmall: 480px;
+$intMobileLarge: 658px;
+$intTabletSmall: 768px;
+$intTabletLarge: 1024px;
+
 /* ===================================================== RESPONSIVE ELEMENTS ===================================================== */
 .show-on-desktop,
 .show-on-tablet,
@@ -18,7 +23,7 @@
 }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: $intMobileSmall) {
 	.hide-on-mobile-p {
 		display: none;
 	}
@@ -29,7 +34,7 @@
 }
 
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media screen and (min-width: 421px) and (max-width: 640px) {
+@media screen and (min-width: $intMobileSmall + 1) and (max-width: $intMobileLarge) {
 	.hide-on-mobile-l {
 		display: none;
 	}
@@ -40,7 +45,7 @@
 }
 
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: $intMobileLarge) {
 	.hide-on-mobile {
 		display: none;
 	}
@@ -50,8 +55,8 @@
 	}
 }
 
-/* ----------------------------------------------------- SMALL TABLET (iPad Portrait) ----------------------------------------------------- */
-@media screen and (min-width: 641px) and (max-width: 768px) {
+/* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
+@media screen and (min-width: $intMobileLarge + 1) and (max-width: $intTabletSmall) {
 	.hide-on-tablet-p {
 		display: none;
 	}
@@ -61,8 +66,8 @@
 	}
 }
 
-/* ----------------------------------------------------- LARGE TABLET (iPad Landscape) ----------------------------------------------------- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
+@media screen and (min-width: $intTabletSmall + 1) and (max-width: $intTabletLarge) {
 	.hide-on-tablet-l {
 		display: none;
 	}
@@ -73,7 +78,7 @@
 }
 
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (min-width: $intMobileLarge + 1) and (max-width: $intTabletLarge) {
 	.hide-on-tablet {
 		display: none;
 	}
@@ -84,7 +89,7 @@
 }
 
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: $intTabletLarge + 1) {
 	.hide-on-desktop {
 		display: none;
 	}
