@@ -17,12 +17,6 @@ table {
 		@include grad(#F2F2F2, #D8D8D8);
 	}
 
-	.ubuntu thead {
-		font-family: "Ubuntu", Helvetica, Arial, Tahoma, sans-serif;
-		font-weight: 500;
-		font-size: 1.4em;
-	}
-
 	thead.no-background {
 		background: none;
 	}
@@ -90,6 +84,8 @@ table {
 					margin-left: 15px;
 				}
 
+				tr.highlight th,
+				tr.highlight td,
 				table.highlight-hover-row tbody tr:hover th,
 				table.highlight-hover-row tbody tr:hover td {
 					background-color: #DEF;
