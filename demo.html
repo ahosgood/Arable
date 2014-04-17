@@ -157,7 +157,7 @@ FROM `%s`.`training`
 JOIN `%s`.`sites` ON `training`.`site_id` = `sites`.`id`
 WHERE `sites`.`ext_client_code` = '123'
 	AND `sites`.`id` &gt; 100</pre>
-		<code lang="HTML">&lt;!DOCTYPE html&gt;
+		<pre class="code" lang="html" title="/var/www/public_html/index.html">&lt;!DOCTYPE html&gt;
   &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
   &lt;head&gt;
     &lt;title&gt;Shadow CSS Demo&lt;/title&gt;
@@ -167,7 +167,8 @@ WHERE `sites`.`ext_client_code` = '123'
   &lt;body&gt;
     ...
   &lt;/body&gt;
-&lt;/html&gt;</code>
+&lt;/html&gt;</pre>
+		<p>The function <code>url_encode()</code> is deprecated.</p>
 
 		<hr>
 
