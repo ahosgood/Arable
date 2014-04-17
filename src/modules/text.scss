@@ -97,54 +97,66 @@ pre.code {
 	border-radius: 3px;
 }
 
-pre.code[title] {
-	padding-top: 2.5em;
-}
+pre.code {
+	em {
+		font-style: normal;
+		font-weight: bold;
 
-pre.code[title]::before {
-	padding: 0 0.75em;
+		background-color: #FF0;
+	}
 
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
+	&[title] {
+		padding-top: 2.5em;
 
-	color: #FFF;
-	font-weight: bold;
-	font-family: Helvetica, Arial, Tahoma, sans-serif;
-	line-height: 1.5em;
+		&::before {
+			padding: 0 0.75em;
 
-	background-color: #CCC;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
 
-	content: attr(title);
-}
+			color: #FFF;
+			font-weight: bold;
+			@include basefont;
+			line-height: 1.5em;
+			white-space: nowrap;
 
-pre.code[lang]::after {
-	height: 1.5em;
-	padding: 0 0.5em;
+			background-color: #CCC;
 
-	position: absolute;
-	top: 0;
-	right: 0.5em;
+			content: attr(title);
+		}
+	}
 
-	color: #FFF;
-	font-family: Helvetica, Arial, Tahoma, sans-serif;
-	line-height: 1.5em;
-	text-transform: uppercase;
+	&[lang] {
+		&::after {
+			height: 1.5em;
+			padding: 0 0.5em;
 
-	background-color: #CCC;
+			position: absolute;
+			top: 0;
+			right: 0.5em;
 
-	border-radius: 0 0 3px 3px;
+			color: #FFF;
+			@include basefont;
+			line-height: 1.5em;
+			text-transform: uppercase;
 
-	content: attr(lang);
-}
+			background-color: #CCC;
 
-pre.code[title][lang]::after {
-	padding: 0;
+			border-radius: 0 0 3px 3px;
 
-	right: 0.75em;
+			content: attr(lang);
+		}
 
-	background-color: transparent;
+		&[title]::after {
+			padding: 0;
+
+			right: 0.75em;
+
+			background-color: transparent;
+		}
+	}
 }
 
 p code {
