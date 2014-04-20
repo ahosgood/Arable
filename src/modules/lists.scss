@@ -96,12 +96,7 @@ dl {
 
 	dl dl dt,
 	dl dl.inline > dt,
-	dl dl.inline > dd {
-		/*margin-top: 0;
-		padding-top: 0;
-
-		border-top: none;*/
-	}
+	dl dl.inline > dd {}
 
 	dl dl dt:first-child,
 	dl dl dt:first-child + dd {
@@ -152,23 +147,25 @@ ul.inline {
 	margin-left: 0;
 
 	overflow: hidden;
-}
 
-	ul.inline li {
+	li {
 		display: inline-block;
 
 		float: left;
+
+		white-space: nowrap;
 	}
 
-	ul.inline li + li {}
+	li + li {}
 
-	ul.inline li + li::before {
+	li + li::before {
 		padding: 0 0.5em;
 
 		display: inline-block;
 
 		content: "|";
 	}
+}
 
 ul.tree {
 	margin-left: 1.5em;
