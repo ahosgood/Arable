@@ -89,19 +89,14 @@ form {
 	input[type="checkbox"],
 	input[type="radio"] {
 		width: auto;
-	}
-
-	input[type="checkbox"] {
-		margin-top: 0.4em;
+		margin-top: 0.6em;
 
 		float: left;
 	}
+
+	input[type="checkbox"] {}
 
 	input[type="radio"] {
-		margin-top: 0.5em;
-
-		float: left;
-
 		+ label {
 			width: auto;
 			margin-top: 0.4em;

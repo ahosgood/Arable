@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.1.5
- * Date:        20/04/2014
+ * Version:     3.1.6
+ * Date:        22/04/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -295,20 +295,16 @@ form {
     text-align: right; }
   form input[type="checkbox"],
   form input[type="radio"] {
-    width: auto; }
-  form input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.6em;
+    float: left; }
+  form input[type="radio"] + label {
+    width: auto;
     margin-top: 0.4em;
-    float: left; }
-  form input[type="radio"] {
-    margin-top: 0.5em;
-    float: left; }
-    form input[type="radio"] + label {
-      width: auto;
-      margin-top: 0.4em;
-      margin-right: 1.5em;
-      padding: 0 0.5em;
-      float: left;
-      clear: none; }
+    margin-right: 1.5em;
+    padding: 0 0.5em;
+    float: left;
+    clear: none; }
   form h1,
   form h2,
   form h3,
