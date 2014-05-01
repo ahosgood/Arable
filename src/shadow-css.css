@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.1.6
- * Date:        22/04/2014
+ * Version:     3.2.0
+ * Date:        01/05/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -173,54 +173,54 @@ button {
 .oldie .show-on-desktop {
   display: block; }
 
-.oldie .hide-on-desktop {
+.oldie .noshow-on-desktop {
   display: none; }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
 @media screen and (max-width: 480px) {
-  .hide-on-mobile-p {
+  .noshow-on-mobile-p {
     display: none; }
 
   .show-on-mobile-p {
     display: block; } }
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
 @media screen and (min-width: 481px) and (max-width: 658px) {
-  .hide-on-mobile-l {
+  .noshow-on-mobile-l {
     display: none; }
 
   .show-on-mobile-l {
     display: block; } }
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
 @media screen and (max-width: 658px) {
-  .hide-on-mobile {
+  .noshow-on-mobile {
     display: none; }
 
   .show-on-mobile {
     display: block; } }
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
 @media screen and (min-width: 659px) and (max-width: 768px) {
-  .hide-on-tablet-p {
+  .noshow-on-tablet-p {
     display: none; }
 
   .show-on-tablet-p {
     display: block; } }
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .hide-on-tablet-l {
+  .noshow-on-tablet-l {
     display: none; }
 
   .show-on-tablet-l {
     display: block; } }
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
 @media screen and (min-width: 659px) and (max-width: 1024px) {
-  .hide-on-tablet {
+  .noshow-on-tablet {
     display: none; }
 
   .show-on-tablet {
     display: block; } }
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
 @media screen and (min-width: 1025px) {
-  .hide-on-desktop {
+  .noshow-on-desktop {
     display: none; }
 
   .show-on-desktop {

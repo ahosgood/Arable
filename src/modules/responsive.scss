@@ -13,13 +13,13 @@ $intDesktop: 1025px;
 	display: block;
 }
 
-.oldie .hide-on-desktop {
+.oldie .noshow-on-desktop {
 	display: none;
 }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
 @media screen and (max-width: $intMobileLarge - 1) {
-	.hide-on-mobile-p {
+	.noshow-on-mobile-p {
 		display: none;
 	}
 
@@ -30,7 +30,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
 @media screen and (min-width: $intMobileLarge) and (max-width: $intTabletSmall - 1) {
-	.hide-on-mobile-l {
+	.noshow-on-mobile-l {
 		display: none;
 	}
 
@@ -41,7 +41,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
 @media screen and (max-width: $intTabletSmall - 1) {
-	.hide-on-mobile {
+	.noshow-on-mobile {
 		display: none;
 	}
 
@@ -52,7 +52,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
 @media screen and (min-width: $intTabletSmall) and (max-width: $intTabletLarge - 1) {
-	.hide-on-tablet-p {
+	.noshow-on-tablet-p {
 		display: none;
 	}
 
@@ -63,7 +63,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
 @media screen and (min-width: $intTabletLarge) and (max-width: $intDesktop - 1) {
-	.hide-on-tablet-l {
+	.noshow-on-tablet-l {
 		display: none;
 	}
 
@@ -74,7 +74,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
 @media screen and (min-width: $intTabletSmall) and (max-width: $intDesktop - 1) {
-	.hide-on-tablet {
+	.noshow-on-tablet {
 		display: none;
 	}
 
@@ -85,7 +85,7 @@ $intDesktop: 1025px;
 
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
 @media screen and (min-width: $intDesktop) {
-	.hide-on-desktop {
+	.noshow-on-desktop {
 		display: none;
 	}
 
