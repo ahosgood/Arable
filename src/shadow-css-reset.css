@@ -38,8 +38,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-size: 1em;
-  font-size: 1rem;
-  text-rendering: optimizeLegibility; }
+  font-size: 1rem; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, span, em, strong, pre {
   margin: 0;

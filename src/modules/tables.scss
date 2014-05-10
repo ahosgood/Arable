@@ -5,8 +5,33 @@ table {
 
 	background-color: rgba(255, 255, 255, 0.85);
 
+	border: 1px #CCC solid;
 	border-radius: 3px;
 	border-collapse: collapse;
+
+	a {
+		color: #222;
+		font-style: normal;
+	}
+
+	p,
+	ul,
+	ol,
+	label {
+		font-size: 1em;
+	}
+
+	p {
+		margin: 5px 0;
+	}
+
+	ul {
+		margin-left: 15px;
+	}
+
+	button {
+		font-size: 1.16666em;
+	}
 }
 
 	thead {
@@ -14,11 +39,7 @@ table {
 		font-weight: bold;
 		font-size: 1.3em;
 
-		@include grad(#F2F2F2, #D8D8D8);
-	}
-
-	thead.no-background {
-		background: none;
+		@include grad(#EEE, #D8D8D8);
 	}
 
 	tbody,
@@ -26,15 +47,20 @@ table {
 		font-size: 1.2em;
 	}
 
+		tbody {
+			tr:nth-child(even) {
+				th,
+				td {
+					background-color: #EEE;
+				}
+			}
+		}
+
 		tr.disabled {
 			color: #666;
 			font-style: italic;
 
-			background-color: #F2F2F2;
-		}
-
-		tr.details {
-			display: none;
+			background-color: #DDD;
 		}
 
 			th,
@@ -42,61 +68,18 @@ table {
 				min-width: 5px;
 				padding: 5px 10px;
 
-				border: 1px #CCC solid;
-
-				-webkit-transition: background 400ms ease;
-				-moz-transition: background 400ms ease;
-				-ms-transition: background 400ms ease;
-				-o-transition: background 400ms ease;
-				transition: background 400ms ease;
-			}
-
-			th.no-border,
-			td.no-border {
-				border: none;
+				border-width: 1px 0;
+				border-color: #CCC;
+				border-style: solid;
 			}
 
 			th {
 				text-align: left;
 			}
 
-			thead th {}
-
 			td {}
 
-				table a {
-					color: #222;
-					font-style: normal;
-				}
-
-				table p,
-				table ul,
-				table ol,
-				table label {
-					font-size: 1em;
-				}
-
-				table p {
-					margin: 5px 0;
-				}
-
-				table ul {
-					margin-left: 15px;
-				}
-
 				tr.highlight th,
-				tr.highlight td,
-				table.highlight-hover-row tbody tr:hover th,
-				table.highlight-hover-row tbody tr:hover td {
+				tr.highlight td {
 					background-color: #DEF;
-
-					-webkit-transition: background 50ms ease;
-					-moz-transition: background 50ms ease;
-					-ms-transition: background 50ms ease;
-					-o-transition: background 50ms ease;
-					transition: background 50ms ease;
-				}
-
-				table button {
-					font-size: 1.16666em;
 				}

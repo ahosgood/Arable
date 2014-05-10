@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.1
- * Date:        02/05/2014
+ * Version:     3.2.2
+ * Date:        10/05/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -38,8 +38,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-size: 1em;
-  font-size: 1rem;
-  text-rendering: optimizeLegibility; }
+  font-size: 1rem; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, span, em, strong, pre {
   margin: 0;
@@ -1213,102 +1212,6 @@ input[type="submit"] {
     border-color: #0c63e6;
     box-shadow: none; }
 
-/*input[type="submit"][class^="fa-"],
-input[type="submit"][class*=" fa-"],
-input[type="reset"][class^="fa-"],
-input[type="reset"][class*=" fa-"],
-input[type="button"][class^="fa-"],
-input[type="button"][class*=" fa-"],
-button[class^="fa-"],
-button[class*=" fa-"],
-.button[class^="fa-"],
-.button[class*=" fa-"] {
-	padding-left: 0.625em;
-}
-
-input.align-fa-right[type="submit"][class^="fa-"],
-input.align-fa-right[type="submit"][class*=" fa-"],
-input.align-fa-right[type="reset"][class^="fa-"],
-input.align-fa-right[type="reset"][class*=" fa-"],
-input.align-fa-right[type="button"][class^="fa-"],
-input.align-fa-right[type="button"][class*=" fa-"],
-button.align-fa-right[class^="fa-"],
-button.align-fa-right[class*=" fa-"],
-.button.align-fa-right[class^="fa-"],
-.button.align-fa-right[class*=" fa-"] {
-	padding-right: 0.625em;
-	padding-left: 0.75em;
-}
-
-input[type="submit"][class^="fa-"]::before,
-input[type="submit"][class*=" fa-"]::before,
-input[type="reset"][class^="fa-"]::before,
-input[type="reset"][class*=" fa-"]::before,
-input[type="button"][class^="fa-"]::before,
-input[type="button"][class*=" fa-"]::before,
-button[class^="fa-"]::before,
-button[class*=" fa-"]::before,
-.button[class^="fa-"]::before,
-.button[class*=" fa-"]::before {
-	margin-right: 0.75em;
-	margin-left: 0;
-	vertical-align: top;
-}
-
-input.align-fa-right[type="submit"][class^="fa-"]::before,
-input.align-fa-right[type="submit"][class*=" fa-"]::before,
-input.align-fa-right[type="reset"][class^="fa-"]::before,
-input.align-fa-right[type="reset"][class*=" fa-"]::before,
-input.align-fa-right[type="button"][class^="fa-"]::before,
-input.align-fa-right[type="button"][class*=" fa-"]::before,
-button.align-fa-right[class^="fa-"]::before,
-button.align-fa-right[class*=" fa-"]::before,
-.button.align-fa-right[class^="fa-"]::before,
-.button.align-fa-right[class*=" fa-"]::before {
-	margin-right: 0;
-	margin-left: 0.75em;
-	float: right;
-}
-
-input[type="submit"][class^="fa-"]:empty,
-input[type="submit"][class*=" fa-"]:empty,
-input[type="reset"][class^="fa-"]:empty,
-input[type="reset"][class*=" fa-"]:empty,
-input[type="button"][class^="fa-"]:empty,
-input[type="button"][class*=" fa-"]:empty,
-button[class^="fa-"]:empty,
-button[class*=" fa-"]:empty,
-.button[class^="fa-"]:empty,
-.button[class*=" fa-"]:empty {
-	padding-right: 0.625em;
-}
-
-input[type="submit"][class^="fa-"]:empty::before,
-input[type="submit"][class*=" fa-"]:empty::before,
-input[type="reset"][class^="fa-"]:empty::before,
-input[type="reset"][class*=" fa-"]:empty::before,
-input[type="button"][class^="fa-"]:empty::before,
-input[type="button"][class*=" fa-"]:empty::before,
-button[class^="fa-"]:empty::before,
-button[class*=" fa-"]:empty::before,
-.button[class^="fa-"]:empty::before,
-.button[class*=" fa-"]:empty::before {
-	margin-right: 0;
-}
-
-input.align-fa-right[type="submit"][class^="fa-"]:empty::before,
-input.align-fa-right[type="submit"][class*=" fa-"]:empty::before,
-input.align-fa-right[type="reset"][class^="fa-"]:empty::before,
-input.align-fa-right[type="reset"][class*=" fa-"]:empty::before,
-input.align-fa-right[type="button"][class^="fa-"]:empty::before,
-input.align-fa-right[type="button"][class*=" fa-"]:empty::before,
-button.align-fa-right[class^="fa-"]:empty::before,
-button.align-fa-right[class*=" fa-"]:empty::before,
-.button.align-fa-right[class^="fa-"]:empty::before,
-.button.align-fa-right[class*=" fa-"]:empty::before {
-	margin-right: 0;
-	margin-left: 0;
-}*/
 /* ===================================================== LISTS ===================================================== */
 ul,
 ol,
@@ -1474,83 +1377,63 @@ table {
   width: 100%;
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.85);
+  border: 1px #CCC solid;
   border-radius: 3px;
   border-collapse: collapse; }
+  table a {
+    color: #222;
+    font-style: normal; }
+  table p,
+  table ul,
+  table ol,
+  table label {
+    font-size: 1em; }
+  table p {
+    margin: 5px 0; }
+  table ul {
+    margin-left: 15px; }
+  table button {
+    font-size: 1.16666em; }
 
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 1.3em;
-  background: #f2f2f2;
-  background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8));
-  background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%);
-  background: -o-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%);
-  background: -ms-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%);
-  background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%); }
-
-thead.no-background {
-  background: none; }
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #d8d8d8));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #d8d8d8 100%); }
 
 tbody,
 tfoot {
   font-size: 1.2em; }
 
+tbody tr:nth-child(even) th,
+tbody tr:nth-child(even) td {
+  background-color: #EEE; }
+
 tr.disabled {
   color: #666;
   font-style: italic;
-  background-color: #F2F2F2; }
-
-tr.details {
-  display: none; }
+  background-color: #DDD; }
 
 th,
 td {
   min-width: 5px;
   padding: 5px 10px;
-  border: 1px #CCC solid;
-  -webkit-transition: background 400ms ease;
-  -moz-transition: background 400ms ease;
-  -ms-transition: background 400ms ease;
-  -o-transition: background 400ms ease;
-  transition: background 400ms ease; }
-
-th.no-border,
-td.no-border {
-  border: none; }
+  border-width: 1px 0;
+  border-color: #CCC;
+  border-style: solid; }
 
 th {
   text-align: left; }
 
-table a {
-  color: #222;
-  font-style: normal; }
-
-table p,
-table ul,
-table ol,
-table label {
-  font-size: 1em; }
-
-table p {
-  margin: 5px 0; }
-
-table ul {
-  margin-left: 15px; }
-
 tr.highlight th,
-tr.highlight td,
-table.highlight-hover-row tbody tr:hover th,
-table.highlight-hover-row tbody tr:hover td {
-  background-color: #DEF;
-  -webkit-transition: background 50ms ease;
-  -moz-transition: background 50ms ease;
-  -ms-transition: background 50ms ease;
-  -o-transition: background 50ms ease;
-  transition: background 50ms ease; }
-
-table button {
-  font-size: 1.16666em; }
+tr.highlight td {
+  background-color: #DEF; }
 
 /* ===================================================== TEXT ===================================================== */
 h1,
@@ -1564,14 +1447,6 @@ h6 {
   font-weight: bold;
   line-height: 1.25em;
   page-break-after: avoid; }
-
-h1.no-top-margin,
-h2.no-top-margin,
-h3.no-top-margin,
-h4.no-top-margin,
-h5.no-top-margin,
-h6.no-top-margin {
-  margin-top: 0; }
 
 h1 {
   font-size: 3.5em; }
@@ -1778,6 +1653,12 @@ hr {
 
 .float-left {
   float: left; }
+
+.no-top-margin {
+  margin-top: 0; }
+
+.no-bottom-margin {
+  margin-bottom: 0; }
 
 /* ===================================================== NOTICES ===================================================== */
 .error,
