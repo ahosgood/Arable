@@ -4,7 +4,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.2
+ * Version:     3.2.3
  * Date:        10/05/2014
  * ================================================================================
  */
@@ -295,7 +295,7 @@ form {
   form input[type="checkbox"],
   form input[type="radio"] {
     width: auto;
-    margin-top: 0.6em;
+    margin-top: 0.4em;
     float: left; }
   form input[type="radio"] + label {
     width: auto;
