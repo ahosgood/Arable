@@ -4,7 +4,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.4
+ * Version:     3.2.5
  * Date:        11/05/2014
  * ================================================================================
  */
@@ -229,6 +229,12 @@ body {
   color: #222;
   font-family: Helvetica, Arial, Tahoma, sans-serif; }
 
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden; }
+
 /* ===================================================== FORMS AND INPUTS ===================================================== */
 input,
 select,
@@ -259,19 +265,27 @@ form {
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
   form input[type="submit"],
   form input[type="reset"],
-  form input[type="button"] {
+  form input[type="button"],
+  form button {
     margin-top: 0.5em;
     float: right;
     clear: both; }
     form input[type="submit"] ~ input[type="submit"],
     form input[type="submit"] ~ input[type="reset"],
     form input[type="submit"] ~ input[type="button"],
+    form input[type="submit"] ~ button,
     form input[type="reset"] ~ input[type="submit"],
     form input[type="reset"] ~ input[type="reset"],
     form input[type="reset"] ~ input[type="button"],
+    form input[type="reset"] ~ button,
     form input[type="button"] ~ input[type="submit"],
     form input[type="button"] ~ input[type="reset"],
-    form input[type="button"] ~ input[type="button"] {
+    form input[type="button"] ~ input[type="button"],
+    form input[type="button"] ~ button,
+    form button ~ input[type="submit"],
+    form button ~ input[type="reset"],
+    form button ~ input[type="button"],
+    form button ~ button {
       margin-right: 0.5em;
       clear: none; }
   form label {

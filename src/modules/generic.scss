@@ -3,3 +3,12 @@ body {
 	color: #222;
 	@include basefont;
 }
+
+.clear {
+	display: block;
+	visibility: hidden;
+
+	clear: both;
+
+	overflow: hidden;
+}

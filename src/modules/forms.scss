@@ -42,7 +42,8 @@ form {
 
 	input[type="submit"],
 	input[type="reset"],
-	input[type="button"] {
+	input[type="button"],
+	button {
 		margin-top: 0.5em;
 
 		float: right;
@@ -50,7 +51,8 @@ form {
 
 		~ input[type="submit"],
 		~ input[type="reset"],
-		~ input[type="button"] {
+		~ input[type="button"],
+		~ button {
 			margin-right: 0.5em;
 
 			clear: none;
