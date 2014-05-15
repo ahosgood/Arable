@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.5
- * Date:        11/05/2014
+ * Version:     3.2.6
+ * Date:        15/05/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -243,52 +242,52 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-form {
+form.inline {
   width: 100%;
   display: inline-block;
   text-align: right; }
-  form input,
-  form select,
-  form textarea {
+  form.inline input,
+  form.inline select,
+  form.inline textarea {
     margin: 0.2em 0;
     padding: 0.25em;
     font-size: 1.3em;
     border: 1px #CCC solid;
     border-radius: 3px; }
-  form textarea {
+  form.inline textarea {
     min-height: 2em;
     resize: vertical; }
-  form input:invalid,
-  form select:invalid,
-  form textarea:invalid {
+  form.inline input:invalid,
+  form.inline select:invalid,
+  form.inline textarea:invalid {
     border-color: #F99;
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
-  form input[type="submit"],
-  form input[type="reset"],
-  form input[type="button"],
-  form button {
+  form.inline input[type="submit"],
+  form.inline input[type="reset"],
+  form.inline input[type="button"],
+  form.inline button {
     margin-top: 0.5em;
     float: right;
     clear: both; }
-    form input[type="submit"] ~ input[type="submit"],
-    form input[type="submit"] ~ input[type="reset"],
-    form input[type="submit"] ~ input[type="button"],
-    form input[type="submit"] ~ button,
-    form input[type="reset"] ~ input[type="submit"],
-    form input[type="reset"] ~ input[type="reset"],
-    form input[type="reset"] ~ input[type="button"],
-    form input[type="reset"] ~ button,
-    form input[type="button"] ~ input[type="submit"],
-    form input[type="button"] ~ input[type="reset"],
-    form input[type="button"] ~ input[type="button"],
-    form input[type="button"] ~ button,
-    form button ~ input[type="submit"],
-    form button ~ input[type="reset"],
-    form button ~ input[type="button"],
-    form button ~ button {
+    form.inline input[type="submit"] ~ input[type="submit"],
+    form.inline input[type="submit"] ~ input[type="reset"],
+    form.inline input[type="submit"] ~ input[type="button"],
+    form.inline input[type="submit"] ~ button,
+    form.inline input[type="reset"] ~ input[type="submit"],
+    form.inline input[type="reset"] ~ input[type="reset"],
+    form.inline input[type="reset"] ~ input[type="button"],
+    form.inline input[type="reset"] ~ button,
+    form.inline input[type="button"] ~ input[type="submit"],
+    form.inline input[type="button"] ~ input[type="reset"],
+    form.inline input[type="button"] ~ input[type="button"],
+    form.inline input[type="button"] ~ button,
+    form.inline button ~ input[type="submit"],
+    form.inline button ~ input[type="reset"],
+    form.inline button ~ input[type="button"],
+    form.inline button ~ button {
       margin-right: 0.5em;
       clear: none; }
-  form label {
+  form.inline label {
     width: 25%;
     margin: 0.4em 0;
     padding: 1px 0;
@@ -297,37 +296,37 @@ form {
     font-size: 1.3em;
     text-align: left;
     line-height: 1.3em; }
-    form label + input,
-    form label + select,
-    form label + textarea {
+    form.inline label + input,
+    form.inline label + select,
+    form.inline label + textarea {
       width: 75%;
       display: block;
       float: right;
       text-align: left; }
-  form.labels-right label {
+  form.inline.labels-right label {
     text-align: right; }
-  form input[type="checkbox"],
-  form input[type="radio"] {
+  form.inline input[type="checkbox"],
+  form.inline input[type="radio"] {
     width: auto;
     margin-top: 0.4em;
     float: left; }
-  form input[type="radio"] + label {
+  form.inline input[type="radio"] + label {
     width: auto;
     margin-top: 0.4em;
     margin-right: 1.5em;
     padding: 0 0.5em;
     float: left;
     clear: none; }
-  form h1,
-  form h2,
-  form h3,
-  form h4,
-  form h5,
-  form h6,
-  form p,
-  form ul,
-  form ol,
-  form dl {
+  form.inline h1,
+  form.inline h2,
+  form.inline h3,
+  form.inline h4,
+  form.inline h5,
+  form.inline h6,
+  form.inline p,
+  form.inline ul,
+  form.inline ol,
+  form.inline dl {
     clear: both;
     text-align: left; }
 
