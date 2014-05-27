@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.9
+ * Version:     3.2.10
  * Date:        27/05/2014
  * ================================================================================
  */
@@ -263,33 +263,14 @@ form.inline {
   form.inline textarea:invalid {
     border-color: #F99;
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
-  form.inline input[type="submit"],
-  form.inline input[type="reset"],
-  form.inline input[type="button"],
-  form.inline button {
+  form.inline input[type="submit"], form.inline input[type="reset"], form.inline input[type="button"],
+  form.inline button[type="submit"],
+  form.inline button[type="reset"],
+  form.inline button[type="button"] {
     margin-top: 0.5em;
+    padding: 0.5em 0.75em;
     float: right;
-    clear: both; }
-    form.inline input[type="submit"] ~ input[type="submit"],
-    form.inline input[type="submit"] ~ input[type="reset"],
-    form.inline input[type="submit"] ~ input[type="button"],
-    form.inline input[type="submit"] ~ button,
-    form.inline input[type="reset"] ~ input[type="submit"],
-    form.inline input[type="reset"] ~ input[type="reset"],
-    form.inline input[type="reset"] ~ input[type="button"],
-    form.inline input[type="reset"] ~ button,
-    form.inline input[type="button"] ~ input[type="submit"],
-    form.inline input[type="button"] ~ input[type="reset"],
-    form.inline input[type="button"] ~ input[type="button"],
-    form.inline input[type="button"] ~ button,
-    form.inline button ~ input[type="submit"],
-    form.inline button ~ input[type="reset"],
-    form.inline button ~ input[type="button"],
-    form.inline button ~ button {
-      margin-right: 0.5em;
-      clear: none; }
-  form.inline input[type="submit"],
-  form.inline button[type="submit"] {
+    clear: both;
     font-weight: 800;
     color: white;
     text-shadow: 0 0 3px #1e77fd;
@@ -301,9 +282,13 @@ form.inline {
     background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     border-color: #0c63e6; }
-    form.inline input[type="submit"]:hover, form.inline input[type="submit"]:focus,
+    form.inline input[type="submit"]:hover, form.inline input[type="submit"]:focus, form.inline input[type="reset"]:hover, form.inline input[type="reset"]:focus, form.inline input[type="button"]:hover, form.inline input[type="button"]:focus,
     form.inline button[type="submit"]:hover,
-    form.inline button[type="submit"]:focus {
+    form.inline button[type="submit"]:focus,
+    form.inline button[type="reset"]:hover,
+    form.inline button[type="reset"]:focus,
+    form.inline button[type="button"]:hover,
+    form.inline button[type="button"]:focus {
       background: #5396fb no-repeat scroll;
       background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2)) no-repeat scroll;
@@ -312,8 +297,10 @@ form.inline {
       background: -ms-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       border-color: #0053cf; }
-    form.inline input[type="submit"]:active,
-    form.inline button[type="submit"]:active {
+    form.inline input[type="submit"]:active, form.inline input[type="reset"]:active, form.inline input[type="button"]:active,
+    form.inline button[type="submit"]:active,
+    form.inline button[type="reset"]:active,
+    form.inline button[type="button"]:active {
       background: #0268ff no-repeat scroll;
       background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd)) no-repeat scroll;
@@ -322,13 +309,25 @@ form.inline {
       background: -ms-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline input[type="submit"].disabled:hover, form.inline input[type="submit"].disabled:focus, form.inline input[type="submit"].disabled:active, form.inline input[type="submit"]:disabled:hover, form.inline input[type="submit"]:disabled:focus, form.inline input[type="submit"]:disabled:active,
+    form.inline input[type="submit"].disabled:hover, form.inline input[type="submit"].disabled:focus, form.inline input[type="submit"].disabled:active, form.inline input[type="submit"]:disabled:hover, form.inline input[type="submit"]:disabled:focus, form.inline input[type="submit"]:disabled:active, form.inline input[type="reset"].disabled:hover, form.inline input[type="reset"].disabled:focus, form.inline input[type="reset"].disabled:active, form.inline input[type="reset"]:disabled:hover, form.inline input[type="reset"]:disabled:focus, form.inline input[type="reset"]:disabled:active, form.inline input[type="button"].disabled:hover, form.inline input[type="button"].disabled:focus, form.inline input[type="button"].disabled:active, form.inline input[type="button"]:disabled:hover, form.inline input[type="button"]:disabled:focus, form.inline input[type="button"]:disabled:active,
     form.inline button[type="submit"].disabled:hover,
     form.inline button[type="submit"].disabled:focus,
     form.inline button[type="submit"].disabled:active,
     form.inline button[type="submit"]:disabled:hover,
     form.inline button[type="submit"]:disabled:focus,
-    form.inline button[type="submit"]:disabled:active {
+    form.inline button[type="submit"]:disabled:active,
+    form.inline button[type="reset"].disabled:hover,
+    form.inline button[type="reset"].disabled:focus,
+    form.inline button[type="reset"].disabled:active,
+    form.inline button[type="reset"]:disabled:hover,
+    form.inline button[type="reset"]:disabled:focus,
+    form.inline button[type="reset"]:disabled:active,
+    form.inline button[type="button"].disabled:hover,
+    form.inline button[type="button"].disabled:focus,
+    form.inline button[type="button"].disabled:active,
+    form.inline button[type="button"]:disabled:hover,
+    form.inline button[type="button"]:disabled:focus,
+    form.inline button[type="button"]:disabled:active {
       background: #3b87fa no-repeat scroll;
       background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
@@ -338,6 +337,18 @@ form.inline {
       background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       border-color: #0c63e6;
       box-shadow: none; }
+  form.inline input ~ input[type="submit"], form.inline input ~ input[type="reset"], form.inline input ~ input[type="button"],
+  form.inline input ~ button[type="submit"],
+  form.inline input ~ button[type="reset"],
+  form.inline input ~ button[type="button"],
+  form.inline button ~ input[type="submit"],
+  form.inline button ~ input[type="reset"],
+  form.inline button ~ input[type="button"],
+  form.inline button ~ button[type="submit"],
+  form.inline button ~ button[type="reset"],
+  form.inline button ~ button[type="button"] {
+    margin-right: 0.5em;
+    clear: none; }
   form.inline label {
     width: 25%;
     margin: 0.4em 0;
