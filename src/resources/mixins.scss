@@ -10,5 +10,7 @@
 }
 
 @mixin basefont() {
+	color: #222;
 	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	font-weight: 300;
 }

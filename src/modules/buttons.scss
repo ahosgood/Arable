@@ -48,6 +48,7 @@ a.button {
 	display: inline-block;
 
 	font-size: 1.3em;
+	font-weight: 400;
 	text-align: center;
 	text-decoration: none;
 	line-height: 1em;
@@ -164,8 +165,8 @@ a.button {
 	}
 }
 
-input[type="submit"] {
-	font-weight: bold;
+[type="submit"] {
+	font-weight: 800;
 
 	@include button-colour(#005DE8);
 }

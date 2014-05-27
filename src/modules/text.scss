@@ -8,7 +8,7 @@ h6 {
 	margin: 1.5em 0 1em;
 
 	font-family: Helvetica, Arial, Tahoma, sans-serif;
-	font-weight: bold;
+	font-weight: 800;
 	line-height: 1.25em;
 	page-break-after: avoid;
 }
@@ -41,7 +41,8 @@ p {
 	margin-bottom: 0.5em;
 
 	font-size: 1.3em;
-	line-height: 1.35em;
+	font-weight: 300;
+	line-height: 1.4em;
 
 	word-break: normal;
 
@@ -91,7 +92,7 @@ pre.code {
 pre.code {
 	em {
 		font-style: normal;
-		font-weight: bold;
+		font-weight: 800;
 
 		background-color: #FF0;
 	}
@@ -108,7 +109,7 @@ pre.code {
 			left: 0;
 
 			color: #FFF;
-			font-weight: bold;
+			font-weight: 800;
 			@include basefont;
 			line-height: 1.5em;
 			white-space: nowrap;
@@ -220,7 +221,7 @@ sub {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: 800;
 }
 
 em {
