@@ -59,6 +59,15 @@ form.inline {
 		}
 	}
 
+	input,
+	button {
+		&[type="submit"] {
+			font-weight: 800;
+
+			@include button-colour(#005DE8);
+		}
+	}
+
 	label {
 		width: 25%;
 		margin: 0.4em 0;

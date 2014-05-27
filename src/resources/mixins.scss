@@ -1,16 +1,51 @@
 // ===================================================== MIXINS =====================================================
 @mixin grad($top, $bottom) {
-	background: $top;
-	background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
-	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
-	background: -o-linear-gradient(top, $top 0%, $bottom 100%);
-	background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
-	background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+	background: $top no-repeat scroll;
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)) no-repeat scroll;
+	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: -ms-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
 }
 
 @mixin basefont() {
 	color: #222;
 	font-family: Helvetica, Arial, Tahoma, sans-serif;
 	font-weight: 300;
+}
+
+@mixin button-colour($base) {
+	color: if(lightness($base) > 50, #111, #FFF);
+	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
+
+	@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+	border-color: desaturate(lighten($base, 2%), 10%);
+
+	&:hover,
+	&:focus {
+		@include grad(desaturate(lighten($base, 20%), 5%), lighten($base, 2%));
+
+		border-color: darken($base, 5%);
+	}
+
+	&:active {
+		@include grad(lighten($base, 5%), desaturate(lighten($base, 15%), 2%));
+
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	&.disabled,
+	&:disabled {
+		&:hover,
+		&:focus,
+		&:active {
+			@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+			border-color: desaturate(lighten($base, 2%), 10%);
+
+			box-shadow: none;
+		}
+	}
 }
