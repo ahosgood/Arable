@@ -165,8 +165,11 @@ a.button {
 	}
 }
 
-[type="submit"] {
-	font-weight: 800;
+input,
+button {
+	&[type="submit"] {
+		font-weight: 800;
 
-	@include button-colour(#005DE8);
+		@include button-colour(#005DE8);
+	}
 }

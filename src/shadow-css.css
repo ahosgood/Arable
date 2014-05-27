@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.7
+ * Version:     3.2.8
  * Date:        27/05/2014
  * ================================================================================
  */
@@ -1186,7 +1186,8 @@ a.button {
   a.button:empty i[class*=" fa-"]::before {
     padding-left: 0; }
 
-[type="submit"] {
+input[type="submit"],
+button[type="submit"] {
   font-weight: 800;
   color: white;
   text-shadow: 0 0 3px #1e77fd;
@@ -1198,7 +1199,9 @@ a.button {
   background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%);
   background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%);
   border-color: #0c63e6; }
-  [type="submit"]:hover, [type="submit"]:focus {
+  input[type="submit"]:hover, input[type="submit"]:focus,
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
     background: #5396fb;
     background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2));
@@ -1207,7 +1210,8 @@ a.button {
     background: -ms-linear-gradient(top, #5396fb 0%, #0061f2 100%);
     background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%);
     border-color: #0053cf; }
-  [type="submit"]:active {
+  input[type="submit"]:active,
+  button[type="submit"]:active {
     background: #0268ff;
     background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd));
@@ -1216,7 +1220,13 @@ a.button {
     background: -ms-linear-gradient(top, #0268ff 0%, #3887fd 100%);
     background: linear-gradient(to bottom, #0268ff 0%, #3887fd 100%);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-  [type="submit"].disabled:hover, [type="submit"].disabled:focus, [type="submit"].disabled:active, [type="submit"]:disabled:hover, [type="submit"]:disabled:focus, [type="submit"]:disabled:active {
+  input[type="submit"].disabled:hover, input[type="submit"].disabled:focus, input[type="submit"].disabled:active, input[type="submit"]:disabled:hover, input[type="submit"]:disabled:focus, input[type="submit"]:disabled:active,
+  button[type="submit"].disabled:hover,
+  button[type="submit"].disabled:focus,
+  button[type="submit"].disabled:active,
+  button[type="submit"]:disabled:hover,
+  button[type="submit"]:disabled:focus,
+  button[type="submit"]:disabled:active {
     background: #3b87fa;
     background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8));
