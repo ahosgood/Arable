@@ -54,16 +54,16 @@ form.inline {
 			font-weight: 800;
 
 			@include button-colour(#005DE8);
-		}
 
-		~ input,
-		~ button {
-			&[type="submit"],
-			&[type="reset"],
-			&[type="button"] {
-				margin-right: 0.5em;
+			~ input,
+			~ button {
+				&[type="submit"],
+				&[type="reset"],
+				&[type="button"] {
+					margin-right: 0.5em;
 
-				clear: none;
+					clear: none;
+				}
 			}
 		}
 	}
