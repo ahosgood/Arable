@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.12
- * Date:        30/05/2014
+ * Version:     3.3.0
+ * Date:        02/05/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -254,6 +254,7 @@ form.inline {
     margin: 0.2em 0;
     padding: 0.25em;
     font-size: 1.3em;
+    font-weight: 400;
     border: 1px #CCC solid;
     border-radius: 3px; }
   form.inline textarea {
@@ -359,6 +360,7 @@ form.inline {
     float: left;
     clear: both;
     font-size: 1.3em;
+    font-weight: 400;
     text-align: left;
     line-height: 1.3em; }
     form.inline label + input,
@@ -381,7 +383,8 @@ form.inline {
     margin-right: 1.5em;
     padding: 0 0.5em;
     float: left;
-    clear: none; }
+    clear: none;
+    font-weight: inherit; }
   form.inline h1,
   form.inline h2,
   form.inline h3,
@@ -395,6 +398,34 @@ form.inline {
     clear: both;
     text-align: left; }
 
+@media screen and (max-width: 658px) {
+  form.inline.foldable {
+    text-align: left; }
+    form.inline.foldable label {
+      width: auto;
+      margin-bottom: 0.2em;
+      margin-left: 0.2em;
+      display: inline-block; }
+      form.inline.foldable label + input,
+      form.inline.foldable label + select,
+      form.inline.foldable label + textarea {
+        width: 100%;
+        margin-top: 0;
+        float: none;
+        clear: both; }
+    form.inline.foldable input[type="checkbox"],
+    form.inline.foldable input[type="radio"] {
+      width: auto;
+      margin-top: 0.25em;
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+      display: inline-block;
+      float: left;
+      clear: both; }
+    form.inline.foldable input[type="radio"] + label {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+      display: inline-block; } }
 optgroup option {
   padding-left: 1em; }
 
@@ -1622,7 +1653,7 @@ pre.code[lang]::after {
   color: #222;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 300;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5em;
   text-transform: uppercase;
   background-color: #CCC;
@@ -1650,7 +1681,7 @@ blockquote {
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25em;
   white-space: pre-wrap;
   border-left: 0.35em #CCC solid; }
