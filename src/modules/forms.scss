@@ -53,8 +53,6 @@ form.inline {
 
 			font-weight: 800;
 
-			@include button-colour(#005DE8);
-
 			~ input,
 			~ button {
 				&[type="submit"],
@@ -65,6 +63,10 @@ form.inline {
 					clear: none;
 				}
 			}
+		}
+
+		&[type="submit"] {
+			@include button-colour(#005DE8);
 		}
 	}
 

@@ -4,7 +4,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.2.11
+ * Version:     3.2.12
  * Date:        30/05/2014
  * ================================================================================
  */
@@ -272,72 +272,7 @@ form.inline {
     padding: 0.5em 0.75em;
     float: right;
     clear: both;
-    font-weight: 800;
-    color: white;
-    text-shadow: 0 0 3px #1e77fd;
-    background: #3b87fa no-repeat scroll;
-    background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    border-color: #0c63e6; }
-    form.inline input[type="submit"]:hover, form.inline input[type="submit"]:focus, form.inline input[type="reset"]:hover, form.inline input[type="reset"]:focus, form.inline input[type="button"]:hover, form.inline input[type="button"]:focus,
-    form.inline button[type="submit"]:hover,
-    form.inline button[type="submit"]:focus,
-    form.inline button[type="reset"]:hover,
-    form.inline button[type="reset"]:focus,
-    form.inline button[type="button"]:hover,
-    form.inline button[type="button"]:focus {
-      background: #5396fb no-repeat scroll;
-      background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%) no-repeat scroll;
-      border-color: #0053cf; }
-    form.inline input[type="submit"]:active, form.inline input[type="reset"]:active, form.inline input[type="button"]:active,
-    form.inline button[type="submit"]:active,
-    form.inline button[type="reset"]:active,
-    form.inline button[type="button"]:active {
-      background: #0268ff no-repeat scroll;
-      background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #0268ff 0%, #3887fd 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline input[type="submit"].disabled:hover, form.inline input[type="submit"].disabled:focus, form.inline input[type="submit"].disabled:active, form.inline input[type="submit"]:disabled:hover, form.inline input[type="submit"]:disabled:focus, form.inline input[type="submit"]:disabled:active, form.inline input[type="reset"].disabled:hover, form.inline input[type="reset"].disabled:focus, form.inline input[type="reset"].disabled:active, form.inline input[type="reset"]:disabled:hover, form.inline input[type="reset"]:disabled:focus, form.inline input[type="reset"]:disabled:active, form.inline input[type="button"].disabled:hover, form.inline input[type="button"].disabled:focus, form.inline input[type="button"].disabled:active, form.inline input[type="button"]:disabled:hover, form.inline input[type="button"]:disabled:focus, form.inline input[type="button"]:disabled:active,
-    form.inline button[type="submit"].disabled:hover,
-    form.inline button[type="submit"].disabled:focus,
-    form.inline button[type="submit"].disabled:active,
-    form.inline button[type="submit"]:disabled:hover,
-    form.inline button[type="submit"]:disabled:focus,
-    form.inline button[type="submit"]:disabled:active,
-    form.inline button[type="reset"].disabled:hover,
-    form.inline button[type="reset"].disabled:focus,
-    form.inline button[type="reset"].disabled:active,
-    form.inline button[type="reset"]:disabled:hover,
-    form.inline button[type="reset"]:disabled:focus,
-    form.inline button[type="reset"]:disabled:active,
-    form.inline button[type="button"].disabled:hover,
-    form.inline button[type="button"].disabled:focus,
-    form.inline button[type="button"].disabled:active,
-    form.inline button[type="button"]:disabled:hover,
-    form.inline button[type="button"]:disabled:focus,
-    form.inline button[type="button"]:disabled:active {
-      background: #3b87fa no-repeat scroll;
-      background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      border-color: #0c63e6;
-      box-shadow: none; }
+    font-weight: 800; }
     form.inline input[type="submit"] ~ input[type="submit"], form.inline input[type="submit"] ~ input[type="reset"], form.inline input[type="submit"] ~ input[type="button"],
     form.inline input[type="submit"] ~ button[type="submit"],
     form.inline input[type="submit"] ~ button[type="reset"],
@@ -368,6 +303,55 @@ form.inline {
     form.inline button[type="button"] ~ button[type="button"] {
       margin-right: 0.5em;
       clear: none; }
+  form.inline input[type="submit"],
+  form.inline button[type="submit"] {
+    color: white;
+    text-shadow: 0 0 3px #1e77fd;
+    background: #3b87fa no-repeat scroll;
+    background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    border-color: #0c63e6; }
+    form.inline input[type="submit"]:hover, form.inline input[type="submit"]:focus,
+    form.inline button[type="submit"]:hover,
+    form.inline button[type="submit"]:focus {
+      background: #5396fb no-repeat scroll;
+      background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%) no-repeat scroll;
+      border-color: #0053cf; }
+    form.inline input[type="submit"]:active,
+    form.inline button[type="submit"]:active {
+      background: #0268ff no-repeat scroll;
+      background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #0268ff 0%, #3887fd 100%) no-repeat scroll;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline input[type="submit"].disabled:hover, form.inline input[type="submit"].disabled:focus, form.inline input[type="submit"].disabled:active, form.inline input[type="submit"]:disabled:hover, form.inline input[type="submit"]:disabled:focus, form.inline input[type="submit"]:disabled:active,
+    form.inline button[type="submit"].disabled:hover,
+    form.inline button[type="submit"].disabled:focus,
+    form.inline button[type="submit"].disabled:active,
+    form.inline button[type="submit"]:disabled:hover,
+    form.inline button[type="submit"]:disabled:focus,
+    form.inline button[type="submit"]:disabled:active {
+      background: #3b87fa no-repeat scroll;
+      background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      border-color: #0c63e6;
+      box-shadow: none; }
   form.inline label {
     width: 25%;
     margin: 0.4em 0;
@@ -1620,10 +1604,10 @@ pre.code[title] {
     right: 0;
     left: 0;
     color: #FFF;
-    font-weight: 800;
     color: #222;
     font-family: Helvetica, Arial, Tahoma, sans-serif;
     font-weight: 300;
+    font-weight: 800;
     line-height: 1.5em;
     white-space: nowrap;
     background-color: #CCC;
@@ -1638,6 +1622,7 @@ pre.code[lang]::after {
   color: #222;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 300;
+  font-weight: 500;
   line-height: 1.5em;
   text-transform: uppercase;
   background-color: #CCC;
@@ -1665,6 +1650,7 @@ blockquote {
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
   font-size: 1.5em;
+  font-weight: 500;
   line-height: 1.25em;
   white-space: pre-wrap;
   border-left: 0.35em #CCC solid; }
