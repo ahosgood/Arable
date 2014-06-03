@@ -49,3 +49,49 @@
 		}
 	}
 }
+
+@mixin blockform() {
+	text-align: left;
+
+	label {
+		width: auto;
+		margin-bottom: 0.2em;
+		margin-left: 0.2em;
+
+		display: inline-block;
+
+		+ input,
+		+ select,
+		+ textarea {
+			width: 100%;
+			margin-top: 0;
+
+			float: none;
+			clear: both;
+		}
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		width: auto;
+		margin-top: 0.25em;
+		margin-right: 0.5em;
+		margin-left: 0.5em;
+
+		display: inline-block;
+
+		float: left;
+		clear: both;
+	}
+
+	input[type="checkbox"] {}
+
+	input[type="radio"] {
+		+ label {
+			margin-top: 0.25em;
+			margin-bottom: 0.25em;
+
+			display: inline-block;
+		}
+	}
+}

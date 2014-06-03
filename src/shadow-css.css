@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.3.0
- * Date:        02/05/2014
+ * Version:     3.4.0
+ * Date:        02/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -244,36 +244,49 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-form.inline {
+form.inline,
+form.block {
   width: 100%;
   display: inline-block;
   text-align: right; }
   form.inline input,
   form.inline select,
-  form.inline textarea {
+  form.inline textarea,
+  form.block input,
+  form.block select,
+  form.block textarea {
     margin: 0.2em 0;
     padding: 0.25em;
     font-size: 1.3em;
     font-weight: 400;
     border: 1px #CCC solid;
     border-radius: 3px; }
-  form.inline textarea {
+  form.inline textarea,
+  form.block textarea {
     min-height: 2em;
     resize: vertical; }
   form.inline input:invalid,
   form.inline select:invalid,
-  form.inline textarea:invalid {
+  form.inline textarea:invalid,
+  form.block input:invalid,
+  form.block select:invalid,
+  form.block textarea:invalid {
     border-color: #F99;
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
   form.inline input[type="submit"], form.inline input[type="reset"], form.inline input[type="button"],
   form.inline button[type="submit"],
   form.inline button[type="reset"],
-  form.inline button[type="button"] {
+  form.inline button[type="button"],
+  form.block input[type="submit"],
+  form.block input[type="reset"],
+  form.block input[type="button"],
+  form.block button[type="submit"],
+  form.block button[type="reset"],
+  form.block button[type="button"] {
     margin-top: 0.5em;
     padding: 0.5em 0.75em;
     float: right;
-    clear: both;
-    font-weight: 800; }
+    clear: both; }
     form.inline input[type="submit"] ~ input[type="submit"], form.inline input[type="submit"] ~ input[type="reset"], form.inline input[type="submit"] ~ input[type="button"],
     form.inline input[type="submit"] ~ button[type="submit"],
     form.inline input[type="submit"] ~ button[type="reset"],
@@ -301,11 +314,49 @@ form.inline {
     form.inline button[type="button"] ~ input[type="button"],
     form.inline button[type="button"] ~ button[type="submit"],
     form.inline button[type="button"] ~ button[type="reset"],
-    form.inline button[type="button"] ~ button[type="button"] {
+    form.inline button[type="button"] ~ button[type="button"],
+    form.block input[type="submit"] ~ input[type="submit"],
+    form.block input[type="submit"] ~ input[type="reset"],
+    form.block input[type="submit"] ~ input[type="button"],
+    form.block input[type="submit"] ~ button[type="submit"],
+    form.block input[type="submit"] ~ button[type="reset"],
+    form.block input[type="submit"] ~ button[type="button"],
+    form.block input[type="reset"] ~ input[type="submit"],
+    form.block input[type="reset"] ~ input[type="reset"],
+    form.block input[type="reset"] ~ input[type="button"],
+    form.block input[type="reset"] ~ button[type="submit"],
+    form.block input[type="reset"] ~ button[type="reset"],
+    form.block input[type="reset"] ~ button[type="button"],
+    form.block input[type="button"] ~ input[type="submit"],
+    form.block input[type="button"] ~ input[type="reset"],
+    form.block input[type="button"] ~ input[type="button"],
+    form.block input[type="button"] ~ button[type="submit"],
+    form.block input[type="button"] ~ button[type="reset"],
+    form.block input[type="button"] ~ button[type="button"],
+    form.block button[type="submit"] ~ input[type="submit"],
+    form.block button[type="submit"] ~ input[type="reset"],
+    form.block button[type="submit"] ~ input[type="button"],
+    form.block button[type="submit"] ~ button[type="submit"],
+    form.block button[type="submit"] ~ button[type="reset"],
+    form.block button[type="submit"] ~ button[type="button"],
+    form.block button[type="reset"] ~ input[type="submit"],
+    form.block button[type="reset"] ~ input[type="reset"],
+    form.block button[type="reset"] ~ input[type="button"],
+    form.block button[type="reset"] ~ button[type="submit"],
+    form.block button[type="reset"] ~ button[type="reset"],
+    form.block button[type="reset"] ~ button[type="button"],
+    form.block button[type="button"] ~ input[type="submit"],
+    form.block button[type="button"] ~ input[type="reset"],
+    form.block button[type="button"] ~ input[type="button"],
+    form.block button[type="button"] ~ button[type="submit"],
+    form.block button[type="button"] ~ button[type="reset"],
+    form.block button[type="button"] ~ button[type="button"] {
       margin-right: 0.5em;
       clear: none; }
   form.inline input[type="submit"],
-  form.inline button[type="submit"] {
+  form.inline button[type="submit"],
+  form.block input[type="submit"],
+  form.block button[type="submit"] {
     color: white;
     text-shadow: 0 0 3px #1e77fd;
     background: #3b87fa no-repeat scroll;
@@ -315,10 +366,15 @@ form.inline {
     background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    border-color: #0c63e6; }
+    border-color: #0c63e6;
+    font-weight: 800; }
     form.inline input[type="submit"]:hover, form.inline input[type="submit"]:focus,
     form.inline button[type="submit"]:hover,
-    form.inline button[type="submit"]:focus {
+    form.inline button[type="submit"]:focus,
+    form.block input[type="submit"]:hover,
+    form.block input[type="submit"]:focus,
+    form.block button[type="submit"]:hover,
+    form.block button[type="submit"]:focus {
       background: #5396fb no-repeat scroll;
       background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2)) no-repeat scroll;
@@ -328,7 +384,9 @@ form.inline {
       background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       border-color: #0053cf; }
     form.inline input[type="submit"]:active,
-    form.inline button[type="submit"]:active {
+    form.inline button[type="submit"]:active,
+    form.block input[type="submit"]:active,
+    form.block button[type="submit"]:active {
       background: #0268ff no-repeat scroll;
       background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd)) no-repeat scroll;
@@ -343,7 +401,19 @@ form.inline {
     form.inline button[type="submit"].disabled:active,
     form.inline button[type="submit"]:disabled:hover,
     form.inline button[type="submit"]:disabled:focus,
-    form.inline button[type="submit"]:disabled:active {
+    form.inline button[type="submit"]:disabled:active,
+    form.block input[type="submit"].disabled:hover,
+    form.block input[type="submit"].disabled:focus,
+    form.block input[type="submit"].disabled:active,
+    form.block input[type="submit"]:disabled:hover,
+    form.block input[type="submit"]:disabled:focus,
+    form.block input[type="submit"]:disabled:active,
+    form.block button[type="submit"].disabled:hover,
+    form.block button[type="submit"].disabled:focus,
+    form.block button[type="submit"].disabled:active,
+    form.block button[type="submit"]:disabled:hover,
+    form.block button[type="submit"]:disabled:focus,
+    form.block button[type="submit"]:disabled:active {
       background: #3b87fa no-repeat scroll;
       background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
@@ -353,7 +423,8 @@ form.inline {
       background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       border-color: #0c63e6;
       box-shadow: none; }
-  form.inline label {
+  form.inline label,
+  form.block label {
     width: 25%;
     margin: 0.4em 0;
     padding: 1px 0;
@@ -365,19 +436,26 @@ form.inline {
     line-height: 1.3em; }
     form.inline label + input,
     form.inline label + select,
-    form.inline label + textarea {
+    form.inline label + textarea,
+    form.block label + input,
+    form.block label + select,
+    form.block label + textarea {
       width: 75%;
       display: block;
       float: right;
       text-align: left; }
-  form.inline.labels-right label {
+  form.inline.labels-right label,
+  form.block.labels-right label {
     text-align: right; }
   form.inline input[type="checkbox"],
-  form.inline input[type="radio"] {
+  form.inline input[type="radio"],
+  form.block input[type="checkbox"],
+  form.block input[type="radio"] {
     width: auto;
     margin-top: 0.4em;
     float: left; }
-  form.inline input[type="radio"] + label {
+  form.inline input[type="radio"] + label,
+  form.block input[type="radio"] + label {
     width: auto;
     margin-top: 0.4em;
     margin-right: 1.5em;
@@ -394,9 +472,47 @@ form.inline {
   form.inline p,
   form.inline ul,
   form.inline ol,
-  form.inline dl {
+  form.inline dl,
+  form.block h1,
+  form.block h2,
+  form.block h3,
+  form.block h4,
+  form.block h5,
+  form.block h6,
+  form.block p,
+  form.block ul,
+  form.block ol,
+  form.block dl {
     clear: both;
     text-align: left; }
+
+form.block {
+  text-align: left; }
+  form.block label {
+    width: auto;
+    margin-bottom: 0.2em;
+    margin-left: 0.2em;
+    display: inline-block; }
+    form.block label + input,
+    form.block label + select,
+    form.block label + textarea {
+      width: 100%;
+      margin-top: 0;
+      float: none;
+      clear: both; }
+  form.block input[type="checkbox"],
+  form.block input[type="radio"] {
+    width: auto;
+    margin-top: 0.25em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    display: inline-block;
+    float: left;
+    clear: both; }
+  form.block input[type="radio"] + label {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    display: inline-block; }
 
 @media screen and (max-width: 658px) {
   form.inline.foldable {
@@ -609,164 +725,6 @@ a.button {
       background: linear-gradient(to bottom, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
       border-color: #da1e1e;
       box-shadow: none; }
-  input[type="submit"].orange,
-  input[type="reset"].orange,
-  input[type="button"].orange,
-  button.orange,
-  a.button.orange {
-    color: white;
-    text-shadow: 0 0 3px #fd8535;
-    background: #fb9551 no-repeat scroll;
-    background: -moz-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb9551), color-stop(100%, #ff6600)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-    border-color: #f36f16; }
-    input[type="submit"].orange:hover, input[type="submit"].orange:focus,
-    input[type="reset"].orange:hover,
-    input[type="reset"].orange:focus,
-    input[type="button"].orange:hover,
-    input[type="button"].orange:focus,
-    button.orange:hover,
-    button.orange:focus,
-    a.button.orange:hover,
-    a.button.orange:focus {
-      background: #fba46a no-repeat scroll;
-      background: -moz-linear-gradient(top, #fba46a 0%, #ff6c0a 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fba46a), color-stop(100%, #ff6c0a)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #fba46a 0%, #ff6c0a 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #fba46a 0%, #ff6c0a 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #fba46a 0%, #ff6c0a 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #fba46a 0%, #ff6c0a 100%) no-repeat scroll;
-      border-color: #e65c00; }
-    input[type="submit"].orange:active,
-    input[type="reset"].orange:active,
-    input[type="button"].orange:active,
-    button.orange:active,
-    a.button.orange:active {
-      background: #ff751a no-repeat scroll;
-      background: -moz-linear-gradient(top, #ff751a 0%, #fd944e 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff751a), color-stop(100%, #fd944e)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #ff751a 0%, #fd944e 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #ff751a 0%, #fd944e 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #ff751a 0%, #fd944e 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #ff751a 0%, #fd944e 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].orange.disabled:hover, input[type="submit"].orange.disabled:focus, input[type="submit"].orange.disabled:active, input[type="submit"].orange:disabled:hover, input[type="submit"].orange:disabled:focus, input[type="submit"].orange:disabled:active,
-    input[type="reset"].orange.disabled:hover,
-    input[type="reset"].orange.disabled:focus,
-    input[type="reset"].orange.disabled:active,
-    input[type="reset"].orange:disabled:hover,
-    input[type="reset"].orange:disabled:focus,
-    input[type="reset"].orange:disabled:active,
-    input[type="button"].orange.disabled:hover,
-    input[type="button"].orange.disabled:focus,
-    input[type="button"].orange.disabled:active,
-    input[type="button"].orange:disabled:hover,
-    input[type="button"].orange:disabled:focus,
-    input[type="button"].orange:disabled:active,
-    button.orange.disabled:hover,
-    button.orange.disabled:focus,
-    button.orange.disabled:active,
-    button.orange:disabled:hover,
-    button.orange:disabled:focus,
-    button.orange:disabled:active,
-    a.button.orange.disabled:hover,
-    a.button.orange.disabled:focus,
-    a.button.orange.disabled:active,
-    a.button.orange:disabled:hover,
-    a.button.orange:disabled:focus,
-    a.button.orange:disabled:active {
-      background: #fb9551 no-repeat scroll;
-      background: -moz-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb9551), color-stop(100%, #ff6600)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #fb9551 0%, #ff6600 100%) no-repeat scroll;
-      border-color: #f36f16;
-      box-shadow: none; }
-  input[type="submit"].yellow,
-  input[type="reset"].yellow,
-  input[type="button"].yellow,
-  button.yellow,
-  a.button.yellow {
-    color: white;
-    text-shadow: 0 0 3px #fdde24;
-    background: #fae040 no-repeat scroll;
-    background: -moz-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fae040), color-stop(100%, #eecc00)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #fae040 0%, #eecc00 100%) no-repeat scroll;
-    border-color: #eccc0c; }
-    input[type="submit"].yellow:hover, input[type="submit"].yellow:focus,
-    input[type="reset"].yellow:hover,
-    input[type="reset"].yellow:focus,
-    input[type="button"].yellow:hover,
-    input[type="button"].yellow:focus,
-    button.yellow:hover,
-    button.yellow:focus,
-    a.button.yellow:hover,
-    a.button.yellow:focus {
-      background: #fbe459 no-repeat scroll;
-      background: -moz-linear-gradient(top, #fbe459 0%, #f8d500 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbe459), color-stop(100%, #f8d500)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #fbe459 0%, #f8d500 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #fbe459 0%, #f8d500 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #fbe459 0%, #f8d500 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #fbe459 0%, #f8d500 100%) no-repeat scroll;
-      border-color: #d4b600; }
-    input[type="submit"].yellow:active,
-    input[type="reset"].yellow:active,
-    input[type="button"].yellow:active,
-    button.yellow:active,
-    a.button.yellow:active {
-      background: #ffdc08 no-repeat scroll;
-      background: -moz-linear-gradient(top, #ffdc08 0%, #fde23d 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffdc08), color-stop(100%, #fde23d)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #ffdc08 0%, #fde23d 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #ffdc08 0%, #fde23d 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #ffdc08 0%, #fde23d 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #ffdc08 0%, #fde23d 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].yellow.disabled:hover, input[type="submit"].yellow.disabled:focus, input[type="submit"].yellow.disabled:active, input[type="submit"].yellow:disabled:hover, input[type="submit"].yellow:disabled:focus, input[type="submit"].yellow:disabled:active,
-    input[type="reset"].yellow.disabled:hover,
-    input[type="reset"].yellow.disabled:focus,
-    input[type="reset"].yellow.disabled:active,
-    input[type="reset"].yellow:disabled:hover,
-    input[type="reset"].yellow:disabled:focus,
-    input[type="reset"].yellow:disabled:active,
-    input[type="button"].yellow.disabled:hover,
-    input[type="button"].yellow.disabled:focus,
-    input[type="button"].yellow.disabled:active,
-    input[type="button"].yellow:disabled:hover,
-    input[type="button"].yellow:disabled:focus,
-    input[type="button"].yellow:disabled:active,
-    button.yellow.disabled:hover,
-    button.yellow.disabled:focus,
-    button.yellow.disabled:active,
-    button.yellow:disabled:hover,
-    button.yellow:disabled:focus,
-    button.yellow:disabled:active,
-    a.button.yellow.disabled:hover,
-    a.button.yellow.disabled:focus,
-    a.button.yellow.disabled:active,
-    a.button.yellow:disabled:hover,
-    a.button.yellow:disabled:focus,
-    a.button.yellow:disabled:active {
-      background: #fae040 no-repeat scroll;
-      background: -moz-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fae040), color-stop(100%, #eecc00)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #fae040 0%, #eecc00 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #fae040 0%, #eecc00 100%) no-repeat scroll;
-      border-color: #eccc0c;
-      box-shadow: none; }
   input[type="submit"].green,
   input[type="reset"].green,
   input[type="button"].green,
@@ -846,85 +804,6 @@ a.button {
       background: linear-gradient(to bottom, #06f01e 0%, #00aa11 100%) no-repeat scroll;
       border-color: #09ab19;
       box-shadow: none; }
-  input[type="submit"].aqua,
-  input[type="reset"].aqua,
-  input[type="button"].aqua,
-  button.aqua,
-  a.button.aqua {
-    color: white;
-    text-shadow: 0 0 3px #03fce8;
-    background: #1ff9e7 no-repeat scroll;
-    background: -moz-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1ff9e7), color-stop(100%, #00ccbb)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-    border-color: #0bcbbb; }
-    input[type="submit"].aqua:hover, input[type="submit"].aqua:focus,
-    input[type="reset"].aqua:hover,
-    input[type="reset"].aqua:focus,
-    input[type="button"].aqua:hover,
-    input[type="button"].aqua:focus,
-    button.aqua:hover,
-    button.aqua:focus,
-    a.button.aqua:hover,
-    a.button.aqua:focus {
-      background: #38faea no-repeat scroll;
-      background: -moz-linear-gradient(top, #38faea 0%, #00d6c4 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #38faea), color-stop(100%, #00d6c4)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #38faea 0%, #00d6c4 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #38faea 0%, #00d6c4 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #38faea 0%, #00d6c4 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #38faea 0%, #00d6c4 100%) no-repeat scroll;
-      border-color: #00b3a4; }
-    input[type="submit"].aqua:active,
-    input[type="reset"].aqua:active,
-    input[type="button"].aqua:active,
-    button.aqua:active,
-    a.button.aqua:active {
-      background: #00e6d2 no-repeat scroll;
-      background: -moz-linear-gradient(top, #00e6d2 0%, #1cfdea 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00e6d2), color-stop(100%, #1cfdea)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #00e6d2 0%, #1cfdea 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #00e6d2 0%, #1cfdea 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #00e6d2 0%, #1cfdea 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #00e6d2 0%, #1cfdea 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].aqua.disabled:hover, input[type="submit"].aqua.disabled:focus, input[type="submit"].aqua.disabled:active, input[type="submit"].aqua:disabled:hover, input[type="submit"].aqua:disabled:focus, input[type="submit"].aqua:disabled:active,
-    input[type="reset"].aqua.disabled:hover,
-    input[type="reset"].aqua.disabled:focus,
-    input[type="reset"].aqua.disabled:active,
-    input[type="reset"].aqua:disabled:hover,
-    input[type="reset"].aqua:disabled:focus,
-    input[type="reset"].aqua:disabled:active,
-    input[type="button"].aqua.disabled:hover,
-    input[type="button"].aqua.disabled:focus,
-    input[type="button"].aqua.disabled:active,
-    input[type="button"].aqua:disabled:hover,
-    input[type="button"].aqua:disabled:focus,
-    input[type="button"].aqua:disabled:active,
-    button.aqua.disabled:hover,
-    button.aqua.disabled:focus,
-    button.aqua.disabled:active,
-    button.aqua:disabled:hover,
-    button.aqua:disabled:focus,
-    button.aqua:disabled:active,
-    a.button.aqua.disabled:hover,
-    a.button.aqua.disabled:focus,
-    a.button.aqua.disabled:active,
-    a.button.aqua:disabled:hover,
-    a.button.aqua:disabled:focus,
-    a.button.aqua:disabled:active {
-      background: #1ff9e7 no-repeat scroll;
-      background: -moz-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1ff9e7), color-stop(100%, #00ccbb)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #1ff9e7 0%, #00ccbb 100%) no-repeat scroll;
-      border-color: #0bcbbb;
-      box-shadow: none; }
   input[type="submit"].blue,
   input[type="reset"].blue,
   input[type="button"].blue,
@@ -1003,164 +882,6 @@ a.button {
       background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       border-color: #0c63e6;
-      box-shadow: none; }
-  input[type="submit"].purple,
-  input[type="reset"].purple,
-  input[type="button"].purple,
-  button.purple,
-  a.button.purple {
-    color: white;
-    text-shadow: 0 0 3px #6f24b4;
-    background: #7c2cc5 no-repeat scroll;
-    background: -moz-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7c2cc5), color-stop(100%, #551a8b)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-    border-color: #5a248b; }
-    input[type="submit"].purple:hover, input[type="submit"].purple:focus,
-    input[type="reset"].purple:hover,
-    input[type="reset"].purple:focus,
-    input[type="button"].purple:hover,
-    input[type="button"].purple:focus,
-    button.purple:hover,
-    button.purple:focus,
-    a.button.purple:hover,
-    a.button.purple:focus {
-      background: #8938d3 no-repeat scroll;
-      background: -moz-linear-gradient(top, #8938d3 0%, #5a1c94 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8938d3), color-stop(100%, #5a1c94)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #8938d3 0%, #5a1c94 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #8938d3 0%, #5a1c94 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #8938d3 0%, #5a1c94 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #8938d3 0%, #5a1c94 100%) no-repeat scroll;
-      border-color: #481676; }
-    input[type="submit"].purple:active,
-    input[type="reset"].purple:active,
-    input[type="button"].purple:active,
-    button.purple:active,
-    a.button.purple:active {
-      background: #621ea0 no-repeat scroll;
-      background: -moz-linear-gradient(top, #621ea0 0%, #7c28c9 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #621ea0), color-stop(100%, #7c28c9)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #621ea0 0%, #7c28c9 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #621ea0 0%, #7c28c9 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #621ea0 0%, #7c28c9 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #621ea0 0%, #7c28c9 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].purple.disabled:hover, input[type="submit"].purple.disabled:focus, input[type="submit"].purple.disabled:active, input[type="submit"].purple:disabled:hover, input[type="submit"].purple:disabled:focus, input[type="submit"].purple:disabled:active,
-    input[type="reset"].purple.disabled:hover,
-    input[type="reset"].purple.disabled:focus,
-    input[type="reset"].purple.disabled:active,
-    input[type="reset"].purple:disabled:hover,
-    input[type="reset"].purple:disabled:focus,
-    input[type="reset"].purple:disabled:active,
-    input[type="button"].purple.disabled:hover,
-    input[type="button"].purple.disabled:focus,
-    input[type="button"].purple.disabled:active,
-    input[type="button"].purple:disabled:hover,
-    input[type="button"].purple:disabled:focus,
-    input[type="button"].purple:disabled:active,
-    button.purple.disabled:hover,
-    button.purple.disabled:focus,
-    button.purple.disabled:active,
-    button.purple:disabled:hover,
-    button.purple:disabled:focus,
-    button.purple:disabled:active,
-    a.button.purple.disabled:hover,
-    a.button.purple.disabled:focus,
-    a.button.purple.disabled:active,
-    a.button.purple:disabled:hover,
-    a.button.purple:disabled:focus,
-    a.button.purple:disabled:active {
-      background: #7c2cc5 no-repeat scroll;
-      background: -moz-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7c2cc5), color-stop(100%, #551a8b)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #7c2cc5 0%, #551a8b 100%) no-repeat scroll;
-      border-color: #5a248b;
-      box-shadow: none; }
-  input[type="submit"].pink,
-  input[type="reset"].pink,
-  input[type="button"].pink,
-  button.pink,
-  a.button.pink {
-    color: white;
-    text-shadow: 0 0 3px #ef43ba;
-    background: #ef5dc2 no-repeat scroll;
-    background: -moz-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef5dc2), color-stop(100%, #ee11aa)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-    border-color: #e227a9; }
-    input[type="submit"].pink:hover, input[type="submit"].pink:focus,
-    input[type="reset"].pink:hover,
-    input[type="reset"].pink:focus,
-    input[type="button"].pink:hover,
-    input[type="button"].pink:focus,
-    button.pink:hover,
-    button.pink:focus,
-    a.button.pink:hover,
-    a.button.pink:focus {
-      background: #f174cb no-repeat scroll;
-      background: -moz-linear-gradient(top, #f174cb 0%, #ef1bad 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f174cb), color-stop(100%, #ef1bad)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #f174cb 0%, #ef1bad 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #f174cb 0%, #ef1bad 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #f174cb 0%, #ef1bad 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f174cb 0%, #ef1bad 100%) no-repeat scroll;
-      border-color: #d60f99; }
-    input[type="submit"].pink:active,
-    input[type="reset"].pink:active,
-    input[type="button"].pink:active,
-    button.pink:active,
-    a.button.pink:active {
-      background: #f029b2 no-repeat scroll;
-      background: -moz-linear-gradient(top, #f029b2 0%, #f15ac3 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f029b2), color-stop(100%, #f15ac3)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #f029b2 0%, #f15ac3 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #f029b2 0%, #f15ac3 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #f029b2 0%, #f15ac3 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f029b2 0%, #f15ac3 100%) no-repeat scroll;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].pink.disabled:hover, input[type="submit"].pink.disabled:focus, input[type="submit"].pink.disabled:active, input[type="submit"].pink:disabled:hover, input[type="submit"].pink:disabled:focus, input[type="submit"].pink:disabled:active,
-    input[type="reset"].pink.disabled:hover,
-    input[type="reset"].pink.disabled:focus,
-    input[type="reset"].pink.disabled:active,
-    input[type="reset"].pink:disabled:hover,
-    input[type="reset"].pink:disabled:focus,
-    input[type="reset"].pink:disabled:active,
-    input[type="button"].pink.disabled:hover,
-    input[type="button"].pink.disabled:focus,
-    input[type="button"].pink.disabled:active,
-    input[type="button"].pink:disabled:hover,
-    input[type="button"].pink:disabled:focus,
-    input[type="button"].pink:disabled:active,
-    button.pink.disabled:hover,
-    button.pink.disabled:focus,
-    button.pink.disabled:active,
-    button.pink:disabled:hover,
-    button.pink:disabled:focus,
-    button.pink:disabled:active,
-    a.button.pink.disabled:hover,
-    a.button.pink.disabled:focus,
-    a.button.pink.disabled:active,
-    a.button.pink:disabled:hover,
-    a.button.pink:disabled:focus,
-    a.button.pink:disabled:active {
-      background: #ef5dc2 no-repeat scroll;
-      background: -moz-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef5dc2), color-stop(100%, #ee11aa)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #ef5dc2 0%, #ee11aa 100%) no-repeat scroll;
-      border-color: #e227a9;
       box-shadow: none; }
   input[type="submit"].black,
   input[type="reset"].black,
@@ -1457,6 +1178,59 @@ ul.inline {
     padding: 0 0.5em;
     display: inline-block;
     content: "|"; }
+
+ul.tabs {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding: 0 0.75em;
+  overflow: visible;
+  border-bottom: 1px #CCC solid; }
+  ul.tabs li {
+    margin: 0 0.25em 0;
+    display: block;
+    position: relative;
+    float: left;
+    vertical-align: bottom;
+    background-color: #FFF;
+    border: #CCC solid;
+    border-width: 1px 1px 0;
+    border-radius: 3px 3px 0 0; }
+    ul.tabs li a {
+      padding: 0.5em 1em;
+      display: block;
+      line-height: 1em;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15); }
+    ul.tabs li.primary a {
+      font-weight: 800; }
+    ul.tabs li.current {
+      margin-top: 0; }
+      ul.tabs li.current::after {
+        height: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        border-top: 1px #FFF solid;
+        content: ""; }
+      ul.tabs li.current a {
+        box-shadow: none; }
+    ul.tabs li.disabled {
+      color: #777;
+      background-color: #EEE;
+      border-color: #DDD; }
+      ul.tabs li.disabled a {
+        border-top-color: #EEE; }
+  ul.tabs::after {
+    width: 100%;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    content: ""; }
 
 ul.tree {
   margin-left: 1.5em;

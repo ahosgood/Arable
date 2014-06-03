@@ -67,11 +67,11 @@ a.button {
 	}
 
 	&.orange {
-		@include button-colour(#F60);
+		//@include button-colour(#F60);
 	}
 
 	&.yellow {
-		@include button-colour(#EC0);
+		//@include button-colour(#EC0);
 	}
 
 	&.green {
@@ -79,7 +79,7 @@ a.button {
 	}
 
 	&.aqua {
-		@include button-colour(#0CB);
+		//@include button-colour(#0CB);
 	}
 
 	&.blue {
@@ -87,11 +87,11 @@ a.button {
 	}
 
 	&.purple {
-		@include button-colour(#551A8B);
+		//@include button-colour(#551A8B);
 	}
 
 	&.pink {
-		@include button-colour(#E1A);
+		//@include button-colour(#E1A);
 	}
 
 	&.black {

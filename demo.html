@@ -54,20 +54,13 @@
 			<li>Delta</li>
 			<li><a href="#">Epsilon</a></li>
 		</ul>
-		<!--<ul class="block-list">
-			<li><a href="#">Alpha</a></li>
-			<li><a href="#">Beta</a></li>
+		<ul class="tabs">
+			<li class="primary"><a href="#">Alpha</a></li>
+			<li class="current"><a href="#">Beta</a></li>
 			<li><a href="#">Gamma</a></li>
-			<li><a href="#">Delta</a></li>
+			<li class="disabled"><a href="#">Delta</a></li>
 			<li><a href="#">Epsilon</a></li>
 		</ul>
-		<ul class="inline-block-list">
-			<li><a href="#">Alpha</a></li>
-			<li><a href="#">Beta</a></li>
-			<li><a href="#">Gamma</a></li>
-			<li><a href="#">Delta</a></li>
-			<li><a href="#">Epsilon</a></li>
-		</ul>-->
 		<ul class="tree">
 			<li>shadow-css<ul>
 					<li>src<ul>
@@ -227,8 +220,78 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label for="input-human">Human</label>
 			<input type="checkbox" id="input-human">
 
+			<label for="input-cv">CV</label>
+			<input type="file" id="input-cv">
+
 			<label for="textarea-about">About You</label>
 			<textarea id="textarea-about"></textarea>
+
+			<input type="submit">
+			<input type="reset">
+		</form>
+
+		<hr>
+
+		<form class="block">
+			<label for="input-name-2">Name</label>
+			<input type="text" id="input-name-2">
+
+			<label for="input-email-2">Email</label>
+			<input type="email" id="input-email-2">
+
+			<label for="select-title-2">Title</label>
+			<select id="select-title-2">
+				<option value="">Please select</option>
+				<option value="Mr">Mr</option>
+				<option value="Mrs">Mrs</option>
+				<option value="Dr">Dr</option>
+			</select>
+
+			<label for="select-age-2">Age</label>
+			<select id="select-age-2">
+				<option>Please select</option>
+				<optgroup label="Child">
+					<option>0-9</option>
+					<option>10-14</option>
+					<option>15-17</option>
+				</optgroup>
+				<optgroup label="Adult">
+					<option>18-24</option>
+					<option>25-29</option>
+					<option>30-34</option>
+					<option>35-39</option>
+				</optgroup>
+				<optgroup label="Middle aged">
+					<option>40-44</option>
+					<option>45-49</option>
+					<option>50-54</option>
+					<option>55-59</option>
+				</optgroup>
+				<optgroup label="Old">
+					<option>60-64</option>
+					<option>65-69</option>
+					<option>70-74</option>
+					<option>75-79</option>
+					<option>80+</option>
+				</optgroup>
+			</select>
+
+			<label>Sex</label>
+			<input type="radio" id="radio-sex-m-2" name="sex">
+			<label for="radio-sex-m-2">Male</label>
+			<input type="radio" id="radio-sex-f-2" name="sex">
+			<label for="radio-sex-f-2">Female</label>
+			<input type="radio" id="radio-sex-n-2" name="sex">
+			<label for="radio-sex-n-2">Prefer not to disclose</label>
+
+			<label for="input-human-2">Human</label>
+			<input type="checkbox" id="input-human-2">
+
+			<label for="input-cv-2">CV</label>
+			<input type="file" id="input-cv-2">
+
+			<label for="textarea-about-2">About You</label>
+			<textarea id="textarea-about-2"></textarea>
 
 			<input type="submit">
 			<input type="reset">
@@ -245,41 +308,39 @@ WHERE `sites`.`ext_client_code` = '123'
 
 		<a href="#" class="button">Button</a>
 		<a href="#" class="button red">Button</a>
-		<a href="#" class="button orange">Button</a>
-		<a href="#" class="button yellow">Button</a>
+		<!--<a href="#" class="button orange">Button</a>-->
+		<!--<a href="#" class="button yellow">Button</a>-->
 		<a href="#" class="button green">Button</a>
-		<a href="#" class="button aqua">Button</a>
+		<!--<a href="#" class="button aqua">Button</a>-->
 		<a href="#" class="button blue">Button</a>
-		<a href="#" class="button purple">Button</a>
-		<a href="#" class="button pink">Button</a>
+		<!--<a href="#" class="button purple">Button</a>-->
+		<!--<a href="#" class="button pink">Button</a>-->
 		<a href="#" class="button black">Button</a>
 
 		<hr>
 
 		<button>Button</button>
 		<button class="red">Button</button>
-		<button class="orange">Button</button>
-		<button class="yellow">Button</button>
+		<!--<button class="orange">Button</button>-->
+		<!--<button class="yellow">Button</button>-->
 		<button class="green">Button</button>
-		<button class="aqua">Button</button>
+		<!--<button class="aqua">Button</button>-->
 		<button class="blue">Button</button>
-		<button class="purple">Button</button>
-		<button class="pink">Button</button>
+		<!--<button class="purple">Button</button>-->
+		<!--<button class="pink">Button</button>-->
 		<button class="black">Button</button>
 
 		<hr>
 
 		<input type="button" value="Button">
 		<input type="button" class="red" value="Button">
-		<input type="button" class="orange" value="Button">
-		<input type="button" class="yellow" value="Button">
+		<!--<input type="button" class="orange" value="Button">-->
+		<!--<input type="button" class="yellow" value="Button">-->
 		<input type="button" class="green" value="Button">
-		<input type="button" class="aqua" value="Button">
+		<!--<input type="button" class="aqua" value="Button">-->
 		<input type="button" class="blue" value="Button">
-		<input type="button" class="purple" value="Button">
-		<input type="button" class="pink" value="Button">
+		<!--<input type="button" class="purple" value="Button">-->
+		<!--<input type="button" class="pink" value="Button">-->
 		<input type="button" class="black" value="Button">
-
-		<hr>
 	</body>
 </html>

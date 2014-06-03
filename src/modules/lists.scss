@@ -167,6 +167,100 @@ ul.inline {
 	}
 }
 
+ul.tabs {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	padding: 0 0.75em;
+
+	overflow: visible;
+
+	border-bottom: 1px #CCC solid;
+
+	li {
+		margin: 0 0.25em 0;
+
+		display: block;
+
+		position: relative;
+
+		float: left;
+
+		vertical-align: bottom;
+
+		background-color: #FFF;
+
+		border: #CCC solid;
+		border-width: 1px 1px 0;
+		border-radius: 3px 3px 0 0;
+
+		a {
+			padding: 0.5em 1em;
+
+			display: block;
+
+			line-height: 1em;
+			white-space: nowrap;
+			text-decoration: none;
+
+			box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15);
+		}
+
+		&.primary {
+			a {
+				font-weight: 800;
+			}
+		}
+
+		&.current {
+			margin-top: 0;
+
+			&::after {
+				height: 0;
+
+				position: absolute;
+				top: 100%;
+				right: 0;
+				left: 0;
+
+				border-top: 1px #FFF solid;
+
+				content: "";
+			}
+
+			a {
+				box-shadow: none;
+			}
+		}
+
+		&.disabled {
+			color: #777;
+
+			background-color: #EEE;
+
+			border-color: #DDD;
+
+			a {
+				border-top-color: #EEE;
+			}
+		}
+	}
+
+	&::after {
+		width: 100%;
+		height: 0;
+
+		display: block;
+		visibility: hidden;
+
+		overflow: hidden;
+
+		clear: both;
+
+		content: "";
+	}
+}
+
 ul.tree {
 	margin-left: 1.5em;
 
