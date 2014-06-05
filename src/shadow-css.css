@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.4.3
- * Date:        04/06/2014
+ * Version:     3.4.4
+ * Date:        05/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -1183,7 +1183,7 @@ ul.tabs {
   margin-top: 0.5em;
   margin-bottom: 1em;
   margin-left: 0;
-  padding: 0 0.75em;
+  padding: 0 0.25em;
   overflow: visible;
   border-bottom: 1px #CCC solid; }
   ul.tabs li {
@@ -1376,7 +1376,8 @@ p {
     hyphens: auto; }
 
 small {
-  font-size: 0.75em; }
+  font-size: 0.75em;
+  vertical-align: bottom; }
 
 pre,
 code {
