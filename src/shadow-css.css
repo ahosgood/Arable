@@ -4,7 +4,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.4.6
+ * Version:     3.5.0
  * Date:        09/06/2014
  * ================================================================================
  */
@@ -1654,3 +1654,8 @@ p.success {
 .success {
   background-color: rgba(0, 204, 0, 0.2);
   border-color: #0C0; }
+
+/* ===================================================== SHADOW SEARCHABLES ===================================================== */
+table.searchables-searching tr,
+tbody.searchables-searching tr {
+  background-color: transparent; }

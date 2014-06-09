@@ -1,0 +1,9 @@
+/* ===================================================== SHADOW SEARCHABLES ===================================================== */
+table,
+tbody {
+	&.searchables-searching {
+		tr {
+			background-color: transparent;
+		}
+	}
+}
