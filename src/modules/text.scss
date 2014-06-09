@@ -96,7 +96,7 @@ pre.code {
 		font-style: normal;
 		font-weight: 800;
 
-		background-color: #FF0;
+		background-color: #FF9;
 	}
 
 	&[title] {
@@ -110,8 +110,8 @@ pre.code {
 			right: 0;
 			left: 0;
 
-			color: #FFF;
 			@include basefont;
+			color: #FFF;
 			font-weight: 800;
 			line-height: 1.5em;
 			white-space: nowrap;
@@ -131,8 +131,8 @@ pre.code {
 			top: 0;
 			right: 0.5em;
 
-			color: #FFF;
 			@include basefont;
+			color: #FFF;
 			font-weight: 400;
 			line-height: 1.5em;
 			text-transform: uppercase;

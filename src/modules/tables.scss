@@ -49,16 +49,12 @@ table {
 
 		tbody {
 			tr:nth-child(even) {
-				th,
-				td {
-					background-color: #EEE;
-				}
+				background-color: #EEE;
 			}
 		}
 
 		tr.disabled {
-			color: #666;
-			font-style: italic;
+			color: #999;
 
 			background-color: #DDD;
 		}
@@ -79,7 +75,7 @@ table {
 
 			td {}
 
-				tr.highlight th,
-				tr.highlight td {
+				tr.highlight,
+				.highlight-on-hover tr {
 					background-color: #FFB;
 				}

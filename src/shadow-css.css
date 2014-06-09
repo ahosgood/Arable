@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.4.5
- * Date:        05/06/2014
+ * Version:     3.4.6
+ * Date:        09/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -259,8 +259,49 @@ form.block {
     padding: 0.25em;
     font-size: 1.3em;
     font-weight: 400;
+    background-color: #FFF;
     border: 1px #CCC solid;
     border-radius: 3px; }
+    form.inline input::-webkit-input-placeholder,
+    form.inline select::-webkit-input-placeholder,
+    form.inline textarea::-webkit-input-placeholder,
+    form.block input::-webkit-input-placeholder,
+    form.block select::-webkit-input-placeholder,
+    form.block textarea::-webkit-input-placeholder {
+      color: #999;
+      font-weight: 400; }
+    form.inline input:-moz-placeholder,
+    form.inline select:-moz-placeholder,
+    form.inline textarea:-moz-placeholder,
+    form.block input:-moz-placeholder,
+    form.block select:-moz-placeholder,
+    form.block textarea:-moz-placeholder {
+      color: #999;
+      font-weight: 400; }
+    form.inline input::-moz-placeholder,
+    form.inline select::-moz-placeholder,
+    form.inline textarea::-moz-placeholder,
+    form.block input::-moz-placeholder,
+    form.block select::-moz-placeholder,
+    form.block textarea::-moz-placeholder {
+      color: #999;
+      font-weight: 400; }
+    form.inline input:-ms-input-placeholder,
+    form.inline select:-ms-input-placeholder,
+    form.inline textarea:-ms-input-placeholder,
+    form.block input:-ms-input-placeholder,
+    form.block select:-ms-input-placeholder,
+    form.block textarea:-ms-input-placeholder {
+      color: #999;
+      font-weight: 400; }
+    form.inline input:disabled,
+    form.inline select:disabled,
+    form.inline textarea:disabled,
+    form.block input:disabled,
+    form.block select:disabled,
+    form.block textarea:disabled {
+      color: #999;
+      background-color: #EEE; }
   form.inline textarea,
   form.block textarea {
     min-height: 2em;
@@ -1219,7 +1260,7 @@ ul.tabs {
       ul.tabs li.current a {
         box-shadow: none; }
     ul.tabs li.disabled {
-      color: #777;
+      color: #999;
       background-color: #EEE;
       border-color: #DDD; }
       ul.tabs li.disabled a {
@@ -1235,7 +1276,7 @@ ul.tabs {
     content: ""; }
 
 ul.tree {
-  margin-left: 1.5em;
+  margin-left: 1em;
   list-style: none; }
   ul.tree ul {
     margin-left: 2em;
@@ -1307,13 +1348,11 @@ tbody,
 tfoot {
   font-size: 1.2em; }
 
-tbody tr:nth-child(even) th,
-tbody tr:nth-child(even) td {
+tbody tr:nth-child(even) {
   background-color: #EEE; }
 
 tr.disabled {
-  color: #666;
-  font-style: italic;
+  color: #999;
   background-color: #DDD; }
 
 th,
@@ -1327,8 +1366,8 @@ td {
 th {
   text-align: left; }
 
-tr.highlight th,
-tr.highlight td {
+tr.highlight,
+.highlight-on-hover tr {
   background-color: #FFB; }
 
 /* ===================================================== TEXT ===================================================== */
@@ -1403,7 +1442,7 @@ pre.code {
 pre.code em {
   font-style: normal;
   font-weight: 800;
-  background-color: #FF0; }
+  background-color: #FF9; }
 pre.code[title] {
   padding-top: 2.5em; }
   pre.code[title]::before {
@@ -1412,10 +1451,10 @@ pre.code[title] {
     top: 0;
     right: 0;
     left: 0;
-    color: #FFF;
     color: #222;
     font-family: Helvetica, Arial, Tahoma, sans-serif;
     font-weight: 300;
+    color: #FFF;
     font-weight: 800;
     line-height: 1.5em;
     white-space: nowrap;
@@ -1427,10 +1466,10 @@ pre.code[lang]::after {
   position: absolute;
   top: 0;
   right: 0.5em;
-  color: #FFF;
   color: #222;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 300;
+  color: #FFF;
   font-weight: 400;
   line-height: 1.5em;
   text-transform: uppercase;

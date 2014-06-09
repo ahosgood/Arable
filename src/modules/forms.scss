@@ -24,8 +24,36 @@ form.block {
 		font-size: 1.3em;
 		font-weight: 400;
 
+		background-color: #FFF;
+
 		border: 1px #CCC solid;
 		border-radius: 3px;
+
+		&::-webkit-input-placeholder {
+			color: #999;
+			font-weight: 400;
+		}
+
+		&:-moz-placeholder {
+			color: #999;
+			font-weight: 400;
+		}
+
+		&::-moz-placeholder {
+			color: #999;
+			font-weight: 400;
+		}
+
+		&:-ms-input-placeholder {
+			color: #999;
+			font-weight: 400;
+		}
+
+		&:disabled {
+			color: #999;
+
+			background-color: #EEE;
+		}
 	}
 
 	textarea {
