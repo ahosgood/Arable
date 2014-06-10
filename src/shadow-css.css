@@ -1,10 +1,9 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.0
+ * Version:     3.5.1
  * Date:        09/06/2014
  * ================================================================================
  */
@@ -242,7 +241,11 @@ select,
 textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-weight: 400;
+  background-color: #FFF;
+  border: 1px #CCC solid;
+  border-radius: 3px; }
 
 form.inline,
 form.block {
@@ -258,10 +261,7 @@ form.block {
     margin: 0.2em 0;
     padding: 0.25em;
     font-size: 1.3em;
-    font-weight: 400;
-    background-color: #FFF;
-    border: 1px #CCC solid;
-    border-radius: 3px; }
+    text-align: left; }
     form.inline input::-webkit-input-placeholder,
     form.inline select::-webkit-input-placeholder,
     form.inline textarea::-webkit-input-placeholder,
