@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.3
+ * Version:     3.5.4
  * Date:        10/06/2014
  * ================================================================================
  */
@@ -1658,3 +1658,6 @@ p.success {
 table.searchables-searching tr,
 tbody.searchables-searching tr {
   background-color: transparent; }
+  table.searchables-searching tr.disabled,
+  tbody.searchables-searching tr.disabled {
+    background-color: #F4F4F4; }

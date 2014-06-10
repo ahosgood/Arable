@@ -4,6 +4,10 @@ tbody {
 	&.searchables-searching {
 		tr {
 			background-color: transparent;
+
+			&.disabled {
+				background-color: #F4F4F4;
+			}
 		}
 	}
 }
