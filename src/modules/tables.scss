@@ -51,12 +51,12 @@ table {
 			tr:nth-child(even) {
 				background-color: #EEE;
 			}
-		}
 
-		tr.disabled {
-			color: #999;
+			tr.disabled {
+				color: #AAA;
 
-			background-color: #DDD;
+				background-color: #F4F4F4;
+			}
 		}
 
 			th,

@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.2
+ * Version:     3.5.3
  * Date:        10/06/2014
  * ================================================================================
  */
@@ -1350,10 +1350,9 @@ tfoot {
 
 tbody tr:nth-child(even) {
   background-color: #EEE; }
-
-tr.disabled {
-  color: #999;
-  background-color: #DDD; }
+tbody tr.disabled {
+  color: #AAA;
+  background-color: #F4F4F4; }
 
 th,
 td {
