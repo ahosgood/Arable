@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.4
- * Date:        10/06/2014
+ * Version:     3.5.5
+ * Date:        11/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -240,6 +240,7 @@ input,
 select,
 textarea {
   padding: 0.25em;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -247,6 +248,13 @@ textarea {
   background-color: #FFF;
   border: 1px #CCC solid;
   border-radius: 3px; }
+
+optgroup,
+option {
+  padding-right: 1em; }
+
+optgroup option {
+  padding-left: 1em; }
 
 form.inline,
 form.block {
@@ -583,9 +591,6 @@ form.block {
       margin-top: 0.25em;
       margin-bottom: 0.25em;
       display: inline-block; } }
-optgroup option {
-  padding-left: 1em; }
-
 /* ===================================================== BUTTONS ===================================================== */
 input[type="submit"],
 input[type="reset"],

@@ -4,6 +4,7 @@ select,
 textarea {
 	padding: 0.25em;
 
+	display: inline-block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -15,6 +16,15 @@ textarea {
 	border: 1px #CCC solid;
 	border-radius: 3px;
 }
+
+	optgroup,
+	option {
+		padding-right: 1em;
+	}
+
+		optgroup option {
+			padding-left: 1em;
+		}
 
 form.inline,
 form.block {
@@ -181,8 +191,4 @@ form.block {
 	form.inline.foldable {
 		@include blockform();
 	}
-}
-
-optgroup option {
-	padding-left: 1em;
 }
