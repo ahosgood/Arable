@@ -26,6 +26,10 @@ textarea {
 			padding-left: 1em;
 		}
 
+		option:disabled {
+			color: #AAA;
+		}
+
 form.inline,
 form.block {
 	width: 100%;
@@ -63,7 +67,7 @@ form.block {
 		}
 
 		&:disabled {
-			color: #999;
+			color: #AAA;
 
 			background-color: #EEE;
 		}
@@ -164,6 +168,12 @@ form.block {
 			clear: none;
 
 			font-weight: inherit;
+		}
+
+		&:disabled {
+			+ label {
+				color: #AAA;
+			}
 		}
 	}
 

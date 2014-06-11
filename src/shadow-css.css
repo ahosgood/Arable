@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.5
+ * Version:     3.5.6
  * Date:        11/06/2014
  * ================================================================================
  */
@@ -256,6 +256,9 @@ option {
 optgroup option {
   padding-left: 1em; }
 
+option:disabled {
+  color: #AAA; }
+
 form.inline,
 form.block {
   width: 100%;
@@ -308,7 +311,7 @@ form.block {
     form.block input:disabled,
     form.block select:disabled,
     form.block textarea:disabled {
-      color: #999;
+      color: #AAA;
       background-color: #EEE; }
   form.inline textarea,
   form.block textarea {
@@ -512,6 +515,9 @@ form.block {
     float: left;
     clear: none;
     font-weight: inherit; }
+  form.inline input[type="radio"]:disabled + label,
+  form.block input[type="radio"]:disabled + label {
+    color: #AAA; }
   form.inline h1,
   form.inline h2,
   form.inline h3,
