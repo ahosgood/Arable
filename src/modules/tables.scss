@@ -48,34 +48,65 @@ table {
 	}
 
 		tbody {
-			tr:nth-child(even) {
-				background-color: #EEE;
-			}
+			tr {
+				&:nth-child(even) {
+					background-color: #EEE;
+				}
 
-			tr.disabled {
-				color: #AAA;
+				&.disabled {
+					color: #AAA;
 
-				background-color: #F4F4F4;
+					background-color: #F4F4F4;
+				}
+
+				&.highlight-fade {
+					th,
+					td {
+						-webkit-animation: highlight-fade 6s;
+						-moz-animation: highlight-fade 6s;
+						-ms-animation: highlight-fade 6s;
+						-o-animation: highlight-fade 6s;
+						animation: highlight-fade 6s;
+					}
+				}
 			}
 		}
 
-			th,
-			td {
-				min-width: 5px;
-				padding: 5px 10px;
-
-				border-width: 1px 0;
-				border-color: #CCC;
-				border-style: solid;
+			tr.highlight,
+			.highlight-on-hover tr:hover {
+				background-color: #FFB;
 			}
 
-			th {
-				text-align: left;
-			}
+				th,
+				td {
+					min-width: 5px;
+					padding: 5px 10px;
 
-			td {}
+					text-align: left;
 
-				tr.highlight,
-				.highlight-on-hover tr {
-					background-color: #FFB;
+					border-width: 1px 0;
+					border-color: #CCC;
+					border-style: solid;
 				}
+
+				th {}
+
+				td {}
+
+@include keyframes(highlight-fade) {
+	0% {
+		background-color: transparent;
+	}
+
+	10% {
+		background-color: #FFB;
+	}
+
+	75% {
+		background-color: #FFB;
+	}
+
+	100% {
+		background-color: transparent;
+	}
+}

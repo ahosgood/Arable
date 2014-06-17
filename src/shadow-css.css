@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.5.6
- * Date:        11/06/2014
+ * Version:     3.6.0
+ * Date:        17/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -1364,22 +1364,87 @@ tbody tr:nth-child(even) {
 tbody tr.disabled {
   color: #AAA;
   background-color: #F4F4F4; }
+tbody tr.highlight-fade th,
+tbody tr.highlight-fade td {
+  -webkit-animation: highlight-fade 6s;
+  -moz-animation: highlight-fade 6s;
+  -ms-animation: highlight-fade 6s;
+  -o-animation: highlight-fade 6s;
+  animation: highlight-fade 6s; }
+
+tr.highlight,
+.highlight-on-hover tr:hover {
+  background-color: #FFB; }
 
 th,
 td {
   min-width: 5px;
   padding: 5px 10px;
+  text-align: left;
   border-width: 1px 0;
   border-color: #CCC;
   border-style: solid; }
 
-th {
-  text-align: left; }
+@-webkit-keyframes highlight-fade {
+  0% {
+    background-color: transparent; }
 
-tr.highlight,
-.highlight-on-hover tr {
-  background-color: #FFB; }
+  10% {
+    background-color: #FFB; }
 
+  75% {
+    background-color: #FFB; }
+
+  100% {
+    background-color: transparent; } }
+@-moz-keyframes highlight-fade {
+  0% {
+    background-color: transparent; }
+
+  10% {
+    background-color: #FFB; }
+
+  75% {
+    background-color: #FFB; }
+
+  100% {
+    background-color: transparent; } }
+@-ms-keyframes highlight-fade {
+  0% {
+    background-color: transparent; }
+
+  10% {
+    background-color: #FFB; }
+
+  75% {
+    background-color: #FFB; }
+
+  100% {
+    background-color: transparent; } }
+@-o-keyframes highlight-fade {
+  0% {
+    background-color: transparent; }
+
+  10% {
+    background-color: #FFB; }
+
+  75% {
+    background-color: #FFB; }
+
+  100% {
+    background-color: transparent; } }
+@keyframes highlight-fade {
+  0% {
+    background-color: transparent; }
+
+  10% {
+    background-color: #FFB; }
+
+  75% {
+    background-color: #FFB; }
+
+  100% {
+    background-color: transparent; } }
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,

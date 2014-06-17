@@ -9,6 +9,28 @@
 	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
 }
 
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+
+	@-o-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
 @mixin basefont() {
 	color: #222;
 	font-family: Helvetica, Arial, Tahoma, sans-serif;
