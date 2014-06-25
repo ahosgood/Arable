@@ -180,16 +180,15 @@ ul.tabs {
 
 	white-space: nowrap;
 
-	border-bottom: 1px #CCC solid;
+	//border-bottom: 1px #CCC solid;
 
 	li {
-		margin: 0 0.25em 0;
+		margin: 0 0.25em;
+		//padding-bottom: 1px;
 
 		display: inline-block;
 
 		position: relative;
-
-		//float: left;
 
 		white-space: nowrap;
 		vertical-align: bottom;
@@ -199,6 +198,8 @@ ul.tabs {
 		border: #CCC solid;
 		border-width: 1px 1px 0;
 		border-radius: 3px 3px 0 0;
+
+		z-index: 1;
 
 		a {
 			padding: 0.5em 1em;
@@ -221,6 +222,8 @@ ul.tabs {
 
 		&.current {
 			margin-top: 0;
+
+			z-index: 3;
 
 			&::after {
 				height: 0;
@@ -253,6 +256,22 @@ ul.tabs {
 				cursor: default;
 			}
 		}
+	}
+
+	&::before {
+		width: 100%;
+		height: 1px;
+
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		background-color: #CCC;
+
+		z-index: 2;
+
+		content: "";
 	}
 
 	&::after {
