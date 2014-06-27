@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.6.2
- * Date:        25/06/2014
+ * Version:     3.6.3
+ * Date:        27/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -305,12 +305,17 @@ form.block {
     form.block textarea:-ms-input-placeholder {
       color: #999;
       font-weight: 400; }
-    form.inline input:disabled,
+    form.inline input:disabled, form.inline input[readonly],
     form.inline select:disabled,
+    form.inline select[readonly],
     form.inline textarea:disabled,
+    form.inline textarea[readonly],
     form.block input:disabled,
+    form.block input[readonly],
     form.block select:disabled,
-    form.block textarea:disabled {
+    form.block select[readonly],
+    form.block textarea:disabled,
+    form.block textarea[readonly] {
       color: #AAA;
       background-color: #EEE; }
   form.inline textarea,
@@ -515,8 +520,9 @@ form.block {
     float: left;
     clear: none;
     font-weight: inherit; }
-  form.inline input[type="radio"]:disabled + label,
-  form.block input[type="radio"]:disabled + label {
+  form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
+  form.block input[type="radio"]:disabled + label,
+  form.block input[type="radio"][readonly] + label {
     color: #AAA; }
   form.inline h1,
   form.inline h2,

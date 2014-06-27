@@ -178,14 +178,6 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label for="input-email">Email</label>
 			<input type="email" id="input-email">
 
-			<label for="select-title">Title</label>
-			<select id="select-title">
-				<option value="">Please select</option>
-				<option value="Mr">Mr</option>
-				<option value="Mrs">Mrs</option>
-				<option value="Dr">Dr</option>
-			</select>
-
 			<label for="select-age">Age</label>
 			<select id="select-age">
 				<option>Please select</option>
@@ -240,24 +232,16 @@ WHERE `sites`.`ext_client_code` = '123'
 
 		<form class="block">
 			<label for="input-name-2">Name</label>
-			<input type="text" id="input-name-2">
+			<input type="text" id="input-name-2" value="MC" readonly>
 
 			<label for="input-middlename-2">Middle Name</label>
-			<input type="text" id="input-middlename-2" disabled>
+			<input type="text" id="input-middlename-2" value="Hammer" readonly>
 
 			<label for="input-email-2">Email</label>
-			<input type="email" id="input-email-2">
-
-			<label for="select-title-2">Title</label>
-			<select id="select-title-2" disabled>
-				<option value="">Please select</option>
-				<option value="Mr">Mr</option>
-				<option value="Mrs">Mrs</option>
-				<option value="Dr">Dr</option>
-			</select>
+			<input type="email" id="input-email-2" value="cant.touch@this.com" readonly>
 
 			<label for="select-age-2">Age</label>
-			<select id="select-age-2">
+			<select id="select-age-2" readonly>
 				<option>Please select</option>
 				<optgroup label="Child">
 					<option>0-9</option>
@@ -286,24 +270,24 @@ WHERE `sites`.`ext_client_code` = '123'
 			</select>
 
 			<label>Sex</label>
-			<input type="radio" id="radio-sex-m-2" name="sex">
+			<input type="radio" id="radio-sex-m-2" name="sex" disabled>
 			<label for="radio-sex-m-2">Male</label>
-			<input type="radio" id="radio-sex-f-2" name="sex">
+			<input type="radio" id="radio-sex-f-2" name="sex" disabled>
 			<label for="radio-sex-f-2">Female</label>
 			<input type="radio" id="radio-sex-n-2" name="sex" disabled>
 			<label for="radio-sex-n-2">Prefer not to disclose</label>
 
 			<label for="input-human-2">Human</label>
-			<input type="checkbox" id="input-human-2" disabled>
+			<input type="checkbox" id="input-human-2" checked disabled>
 
 			<label for="input-cv-2">CV</label>
-			<input type="file" id="input-cv-2" disabled>
+			<input type="file" id="input-cv-2" readonly>
 
 			<label for="textarea-about-2">About You</label>
-			<textarea id="textarea-about-2" disabled></textarea>
+			<textarea id="textarea-about-2" readonly>Can't touch this...</textarea>
 
-			<input type="submit">
-			<input type="reset">
+			<input type="submit" disabled>
+			<input type="reset" disabled>
 		</form>
 
 		<hr>
