@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.6.3
- * Date:        27/06/2014
+ * Version:     3.6.4
+ * Date:        28/06/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -1417,6 +1418,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1429,6 +1431,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1441,6 +1444,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1453,6 +1457,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1465,6 +1470,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
@@ -1582,7 +1588,7 @@ p code {
   display: inline-block;
   font-size: 1em;
   font-weight: 400;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
   line-height: inherit;
   white-space: nowrap;
   border: none;
