@@ -111,30 +111,35 @@ form.block {
 		box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
 	}
 
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button[type="submit"],
+	button[type="reset"],
+	button[type="button"],
+	label.button {
+		width: auto;
+		margin-top: 0.5em;
+		padding: 0.5em 0.75em;
+
+		float: right;
+		clear: both;
+
+		+ input[type="submit"],
+		+ input[type="reset"],
+		+ input[type="button"],
+		+ button[type="submit"],
+		+ button[type="reset"],
+		+ button[type="button"],
+		+ label.button {
+			margin-right: 0.5em;
+
+			clear: none;
+		}
+	}
+
 	input,
 	button {
-		&[type="submit"],
-		&[type="reset"],
-		&[type="button"] {
-			width: auto;
-			margin-top: 0.5em;
-			padding: 0.5em 0.75em;
-
-			float: right;
-			clear: both;
-
-			+ input,
-			+ button {
-				&[type="submit"],
-				&[type="reset"],
-				&[type="button"] {
-					margin-right: 0.5em;
-
-					clear: none;
-				}
-			}
-		}
-
 		&[type="submit"] {
 			@include button-colour(#005DE8);
 

@@ -3,7 +3,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
-a.button {
+a.button,
+label.button {
 	width: auto;
 	padding: 0.5em 0.75em;
 
@@ -46,6 +47,11 @@ a.button {
 		@include grad(#D8D8D8, #F2F2F2);
 
 		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	&.thin {
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
 	}
 
 	&.disabled,
@@ -133,5 +139,26 @@ button {
 		font-weight: 800;
 
 		@include button-colour(#005DE8);
+	}
+}
+
+label.button {
+	width: auto !important;
+	padding: 0.5em 0.75em !important;
+
+	font-size: 1.3em !important;
+	line-height: 1em !important;
+
+	&.thin {
+		padding-top: 0.2em !important;
+		padding-bottom: 0.2em !important;
+	}
+
+	input[type="checkbox"] {
+		margin: 0 0 0 0.5em !important;
+
+		display: inline-block !important;
+
+		float: none !important;
 	}
 }
