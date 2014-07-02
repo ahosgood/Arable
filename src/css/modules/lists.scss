@@ -295,7 +295,8 @@ ul.tree {
 	list-style: none;
 
 	ul {
-		margin-left: 2em;
+		margin-left: 0;
+		padding-left: 2em;
 
 		list-style: none;
 
@@ -310,6 +311,8 @@ ul.tree {
 			border-left: 1px #CCC solid;
 
 			content: "";
+
+			z-index: 1;
 		}
 	}
 
@@ -318,6 +321,8 @@ ul.tree {
 
 		line-height: 1.5em;
 		white-space: nowrap;
+
+		z-index: 3;
 
 		&::after {
 			width: 0.75em;
@@ -334,6 +339,8 @@ ul.tree {
 			border-width: 0 0 1px 1px;
 
 			content: "";
+
+			z-index: 1;
 		}
 
 		&:last-child::before {
@@ -343,5 +350,82 @@ ul.tree {
 
 	> li::after {
 		display: none;
+	}
+
+	&.interactive {
+		padding-left: 1.75em;
+
+		position: relative;
+
+		&::before {
+			display: block;
+
+			position: absolute;
+			top: 0.75em;
+			bottom: 0.75em;
+			left: 0.5em;
+
+			border-left: 1px #CCC solid;
+
+			content: "";
+
+			z-index: 1;
+		}
+
+		> li::after {
+			display: block;
+		}
+
+		ul {
+			&::after {
+				width: 0.8em;
+				height: 0.8em;
+				margin-top: -1px;
+				margin-left: -1px;
+
+				display: block;
+
+				position: absolute;
+				top: 0.35em; //(1.5 - height) / 2
+				left: -1.65em; //1.25 + (width / 2)
+
+				color: #999;
+				font-weight: 400;
+				text-align: center;
+				line-height: 0.8em;
+
+				background-color: #FFF;
+
+				border: 1px #CCC solid;
+
+				content: "-";
+
+				z-index: 2;
+			}
+
+			&.collapsed {
+				height: 0;
+
+				overflow: hidden;
+
+				&::after {
+					content: "+";
+				}
+			}
+		}
+
+		li {
+			cursor: default;
+		}
+
+		a {
+			text-decoration: none;
+
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

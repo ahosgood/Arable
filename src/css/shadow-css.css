@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.0
+ * Version:     3.7.1
  * Date:        02/07/2014
  * ================================================================================
  */
@@ -1304,7 +1304,8 @@ ul.tree {
   margin-left: 1em;
   list-style: none; }
   ul.tree ul {
-    margin-left: 2em;
+    margin-left: 0;
+    padding-left: 2em;
     list-style: none; }
     ul.tree ul::before {
       display: block;
@@ -1313,11 +1314,13 @@ ul.tree {
       bottom: 0.75em;
       left: 0.75em;
       border-left: 1px #CCC solid;
-      content: ""; }
+      content: "";
+      z-index: 1; }
   ul.tree li {
     position: relative;
     line-height: 1.5em;
-    white-space: nowrap; }
+    white-space: nowrap;
+    z-index: 3; }
     ul.tree li::after {
       width: 0.75em;
       height: 1px;
@@ -1328,11 +1331,55 @@ ul.tree {
       left: -1.25em;
       border: #CCC solid;
       border-width: 0 0 1px 1px;
-      content: ""; }
+      content: "";
+      z-index: 1; }
     ul.tree li:last-child::before {
       bottom: 50%; }
   ul.tree > li::after {
     display: none; }
+  ul.tree.interactive {
+    padding-left: 1.75em;
+    position: relative; }
+    ul.tree.interactive::before {
+      display: block;
+      position: absolute;
+      top: 0.75em;
+      bottom: 0.75em;
+      left: 0.5em;
+      border-left: 1px #CCC solid;
+      content: "";
+      z-index: 1; }
+    ul.tree.interactive > li::after {
+      display: block; }
+    ul.tree.interactive ul::after {
+      width: 0.8em;
+      height: 0.8em;
+      margin-top: -1px;
+      margin-left: -1px;
+      display: block;
+      position: absolute;
+      top: 0.35em;
+      left: -1.65em;
+      color: #999;
+      font-weight: 400;
+      text-align: center;
+      line-height: 0.8em;
+      background-color: #FFF;
+      border: 1px #CCC solid;
+      content: "-";
+      z-index: 2; }
+    ul.tree.interactive ul.collapsed {
+      height: 0;
+      overflow: hidden; }
+      ul.tree.interactive ul.collapsed::after {
+        content: "+"; }
+    ul.tree.interactive li {
+      cursor: default; }
+    ul.tree.interactive a {
+      text-decoration: none;
+      cursor: pointer; }
+      ul.tree.interactive a:hover {
+        text-decoration: underline; }
 
 /* ===================================================== TABLES ===================================================== */
 table {
@@ -1471,6 +1518,20 @@ h6 {
   font-weight: 800;
   line-height: 1.25em;
   page-break-after: avoid; }
+  h1.mediumweight,
+  h2.mediumweight,
+  h3.mediumweight,
+  h4.mediumweight,
+  h5.mediumweight,
+  h6.mediumweight {
+    font-weight: 400; }
+  h1.lightweight,
+  h2.lightweight,
+  h3.lightweight,
+  h4.lightweight,
+  h5.lightweight,
+  h6.lightweight {
+    font-weight: 300; }
 
 h1 {
   font-size: 3.5em; }
@@ -1588,7 +1649,7 @@ blockquote {
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.25em;
   white-space: pre-wrap;
   border-left: 0.35em #CCC solid; }

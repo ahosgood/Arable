@@ -11,6 +11,14 @@ h6 {
 	font-weight: 800;
 	line-height: 1.25em;
 	page-break-after: avoid;
+
+	&.mediumweight {
+		font-weight: 400;
+	}
+
+	&.lightweight {
+		font-weight: 300;
+	}
 }
 
 h1 {
@@ -176,7 +184,7 @@ blockquote {
 
 	color: #555;
 	font-size: 1.5em;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.25em;
 	white-space: pre-wrap;
 
