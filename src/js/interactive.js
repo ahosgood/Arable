@@ -11,20 +11,20 @@
 jQuery(
 	function( $ ) {
 		/* ===================================================== TREE NAVIGATION ===================================================== */
-		$( 'ul.tree.interactive' ).on( 'click', 'li',
+		$( 'ul.tree.shdw-interactive' ).on( 'click', 'li',
 			function( e ) {
 				e.stopPropagation();
-				$( this ).children( 'ul' ).toggleClass( 'collapsed' );
+				$( this ).children( 'ul' ).toggleClass( 'open' );
 			}
 		).on( 'click', 'li ul',
 			function( e ) {
 				e.stopPropagation();
-				$( this ).find( '> li ul' ).toggleClass( 'collapsed' );
+				$( this ).find( '> li ul' ).toggleClass( 'open' );
 			}
 		).on( 'click', 'li a',
 			function( e ) {
 				e.stopPropagation();
 			}
-		);
+		).addClass( 'interactive' );
 	}
 );

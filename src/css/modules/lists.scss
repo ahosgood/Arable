@@ -377,6 +377,10 @@ ul.tree {
 		}
 
 		ul {
+			height: 0;
+
+			overflow: hidden;
+
 			&::after {
 				width: 0.8em;
 				height: 0.8em;
@@ -398,18 +402,18 @@ ul.tree {
 
 				border: 1px #CCC solid;
 
-				content: "-";
+				content: "+";
 
 				z-index: 2;
 			}
 
-			&.collapsed {
-				height: 0;
+			&.open {
+				height: auto;
 
-				overflow: hidden;
+				overflow: visible;
 
 				&::after {
-					content: "+";
+					content: "-";
 				}
 			}
 		}

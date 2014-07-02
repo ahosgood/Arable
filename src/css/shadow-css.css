@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.1
+ * Version:     3.7.2
  * Date:        02/07/2014
  * ================================================================================
  */
@@ -1351,28 +1351,31 @@ ul.tree {
       z-index: 1; }
     ul.tree.interactive > li::after {
       display: block; }
-    ul.tree.interactive ul::after {
-      width: 0.8em;
-      height: 0.8em;
-      margin-top: -1px;
-      margin-left: -1px;
-      display: block;
-      position: absolute;
-      top: 0.35em;
-      left: -1.65em;
-      color: #999;
-      font-weight: 400;
-      text-align: center;
-      line-height: 0.8em;
-      background-color: #FFF;
-      border: 1px #CCC solid;
-      content: "-";
-      z-index: 2; }
-    ul.tree.interactive ul.collapsed {
+    ul.tree.interactive ul {
       height: 0;
       overflow: hidden; }
-      ul.tree.interactive ul.collapsed::after {
-        content: "+"; }
+      ul.tree.interactive ul::after {
+        width: 0.8em;
+        height: 0.8em;
+        margin-top: -1px;
+        margin-left: -1px;
+        display: block;
+        position: absolute;
+        top: 0.35em;
+        left: -1.65em;
+        color: #999;
+        font-weight: 400;
+        text-align: center;
+        line-height: 0.8em;
+        background-color: #FFF;
+        border: 1px #CCC solid;
+        content: "+";
+        z-index: 2; }
+      ul.tree.interactive ul.open {
+        height: auto;
+        overflow: visible; }
+        ul.tree.interactive ul.open::after {
+          content: "-"; }
     ul.tree.interactive li {
       cursor: default; }
     ul.tree.interactive a {
