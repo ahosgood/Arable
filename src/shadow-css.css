@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.6.4
- * Date:        28/06/2014
+ * Version:     3.7.0
+ * Date:        02/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -265,13 +264,30 @@ form.block {
   width: 100%;
   display: inline-block;
   text-align: right; }
+  form.inline label,
+  form.block label {
+    width: 23%;
+    margin: 0.4em 2% 0.4em 0;
+    padding: 1px 0;
+    float: left;
+    clear: both;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.3em; }
+  form.inline.labels-right label,
+  form.block.labels-right label {
+    text-align: right; }
   form.inline input,
   form.inline select,
   form.inline textarea,
   form.block input,
   form.block select,
   form.block textarea {
+    width: 75%;
     margin: 0.2em 0;
+    display: block;
+    float: right;
     font-size: 1.3em;
     text-align: left; }
     form.inline input::-webkit-input-placeholder,
@@ -341,74 +357,75 @@ form.block {
   form.block button[type="submit"],
   form.block button[type="reset"],
   form.block button[type="button"] {
+    width: auto;
     margin-top: 0.5em;
     padding: 0.5em 0.75em;
     float: right;
     clear: both; }
-    form.inline input[type="submit"] ~ input[type="submit"], form.inline input[type="submit"] ~ input[type="reset"], form.inline input[type="submit"] ~ input[type="button"],
-    form.inline input[type="submit"] ~ button[type="submit"],
-    form.inline input[type="submit"] ~ button[type="reset"],
-    form.inline input[type="submit"] ~ button[type="button"], form.inline input[type="reset"] ~ input[type="submit"], form.inline input[type="reset"] ~ input[type="reset"], form.inline input[type="reset"] ~ input[type="button"],
-    form.inline input[type="reset"] ~ button[type="submit"],
-    form.inline input[type="reset"] ~ button[type="reset"],
-    form.inline input[type="reset"] ~ button[type="button"], form.inline input[type="button"] ~ input[type="submit"], form.inline input[type="button"] ~ input[type="reset"], form.inline input[type="button"] ~ input[type="button"],
-    form.inline input[type="button"] ~ button[type="submit"],
-    form.inline input[type="button"] ~ button[type="reset"],
-    form.inline input[type="button"] ~ button[type="button"],
-    form.inline button[type="submit"] ~ input[type="submit"],
-    form.inline button[type="submit"] ~ input[type="reset"],
-    form.inline button[type="submit"] ~ input[type="button"],
-    form.inline button[type="submit"] ~ button[type="submit"],
-    form.inline button[type="submit"] ~ button[type="reset"],
-    form.inline button[type="submit"] ~ button[type="button"],
-    form.inline button[type="reset"] ~ input[type="submit"],
-    form.inline button[type="reset"] ~ input[type="reset"],
-    form.inline button[type="reset"] ~ input[type="button"],
-    form.inline button[type="reset"] ~ button[type="submit"],
-    form.inline button[type="reset"] ~ button[type="reset"],
-    form.inline button[type="reset"] ~ button[type="button"],
-    form.inline button[type="button"] ~ input[type="submit"],
-    form.inline button[type="button"] ~ input[type="reset"],
-    form.inline button[type="button"] ~ input[type="button"],
-    form.inline button[type="button"] ~ button[type="submit"],
-    form.inline button[type="button"] ~ button[type="reset"],
-    form.inline button[type="button"] ~ button[type="button"],
-    form.block input[type="submit"] ~ input[type="submit"],
-    form.block input[type="submit"] ~ input[type="reset"],
-    form.block input[type="submit"] ~ input[type="button"],
-    form.block input[type="submit"] ~ button[type="submit"],
-    form.block input[type="submit"] ~ button[type="reset"],
-    form.block input[type="submit"] ~ button[type="button"],
-    form.block input[type="reset"] ~ input[type="submit"],
-    form.block input[type="reset"] ~ input[type="reset"],
-    form.block input[type="reset"] ~ input[type="button"],
-    form.block input[type="reset"] ~ button[type="submit"],
-    form.block input[type="reset"] ~ button[type="reset"],
-    form.block input[type="reset"] ~ button[type="button"],
-    form.block input[type="button"] ~ input[type="submit"],
-    form.block input[type="button"] ~ input[type="reset"],
-    form.block input[type="button"] ~ input[type="button"],
-    form.block input[type="button"] ~ button[type="submit"],
-    form.block input[type="button"] ~ button[type="reset"],
-    form.block input[type="button"] ~ button[type="button"],
-    form.block button[type="submit"] ~ input[type="submit"],
-    form.block button[type="submit"] ~ input[type="reset"],
-    form.block button[type="submit"] ~ input[type="button"],
-    form.block button[type="submit"] ~ button[type="submit"],
-    form.block button[type="submit"] ~ button[type="reset"],
-    form.block button[type="submit"] ~ button[type="button"],
-    form.block button[type="reset"] ~ input[type="submit"],
-    form.block button[type="reset"] ~ input[type="reset"],
-    form.block button[type="reset"] ~ input[type="button"],
-    form.block button[type="reset"] ~ button[type="submit"],
-    form.block button[type="reset"] ~ button[type="reset"],
-    form.block button[type="reset"] ~ button[type="button"],
-    form.block button[type="button"] ~ input[type="submit"],
-    form.block button[type="button"] ~ input[type="reset"],
-    form.block button[type="button"] ~ input[type="button"],
-    form.block button[type="button"] ~ button[type="submit"],
-    form.block button[type="button"] ~ button[type="reset"],
-    form.block button[type="button"] ~ button[type="button"] {
+    form.inline input[type="submit"] + input[type="submit"], form.inline input[type="submit"] + input[type="reset"], form.inline input[type="submit"] + input[type="button"],
+    form.inline input[type="submit"] + button[type="submit"],
+    form.inline input[type="submit"] + button[type="reset"],
+    form.inline input[type="submit"] + button[type="button"], form.inline input[type="reset"] + input[type="submit"], form.inline input[type="reset"] + input[type="reset"], form.inline input[type="reset"] + input[type="button"],
+    form.inline input[type="reset"] + button[type="submit"],
+    form.inline input[type="reset"] + button[type="reset"],
+    form.inline input[type="reset"] + button[type="button"], form.inline input[type="button"] + input[type="submit"], form.inline input[type="button"] + input[type="reset"], form.inline input[type="button"] + input[type="button"],
+    form.inline input[type="button"] + button[type="submit"],
+    form.inline input[type="button"] + button[type="reset"],
+    form.inline input[type="button"] + button[type="button"],
+    form.inline button[type="submit"] + input[type="submit"],
+    form.inline button[type="submit"] + input[type="reset"],
+    form.inline button[type="submit"] + input[type="button"],
+    form.inline button[type="submit"] + button[type="submit"],
+    form.inline button[type="submit"] + button[type="reset"],
+    form.inline button[type="submit"] + button[type="button"],
+    form.inline button[type="reset"] + input[type="submit"],
+    form.inline button[type="reset"] + input[type="reset"],
+    form.inline button[type="reset"] + input[type="button"],
+    form.inline button[type="reset"] + button[type="submit"],
+    form.inline button[type="reset"] + button[type="reset"],
+    form.inline button[type="reset"] + button[type="button"],
+    form.inline button[type="button"] + input[type="submit"],
+    form.inline button[type="button"] + input[type="reset"],
+    form.inline button[type="button"] + input[type="button"],
+    form.inline button[type="button"] + button[type="submit"],
+    form.inline button[type="button"] + button[type="reset"],
+    form.inline button[type="button"] + button[type="button"],
+    form.block input[type="submit"] + input[type="submit"],
+    form.block input[type="submit"] + input[type="reset"],
+    form.block input[type="submit"] + input[type="button"],
+    form.block input[type="submit"] + button[type="submit"],
+    form.block input[type="submit"] + button[type="reset"],
+    form.block input[type="submit"] + button[type="button"],
+    form.block input[type="reset"] + input[type="submit"],
+    form.block input[type="reset"] + input[type="reset"],
+    form.block input[type="reset"] + input[type="button"],
+    form.block input[type="reset"] + button[type="submit"],
+    form.block input[type="reset"] + button[type="reset"],
+    form.block input[type="reset"] + button[type="button"],
+    form.block input[type="button"] + input[type="submit"],
+    form.block input[type="button"] + input[type="reset"],
+    form.block input[type="button"] + input[type="button"],
+    form.block input[type="button"] + button[type="submit"],
+    form.block input[type="button"] + button[type="reset"],
+    form.block input[type="button"] + button[type="button"],
+    form.block button[type="submit"] + input[type="submit"],
+    form.block button[type="submit"] + input[type="reset"],
+    form.block button[type="submit"] + input[type="button"],
+    form.block button[type="submit"] + button[type="submit"],
+    form.block button[type="submit"] + button[type="reset"],
+    form.block button[type="submit"] + button[type="button"],
+    form.block button[type="reset"] + input[type="submit"],
+    form.block button[type="reset"] + input[type="reset"],
+    form.block button[type="reset"] + input[type="button"],
+    form.block button[type="reset"] + button[type="submit"],
+    form.block button[type="reset"] + button[type="reset"],
+    form.block button[type="reset"] + button[type="button"],
+    form.block button[type="button"] + input[type="submit"],
+    form.block button[type="button"] + input[type="reset"],
+    form.block button[type="button"] + input[type="button"],
+    form.block button[type="button"] + button[type="submit"],
+    form.block button[type="button"] + button[type="reset"],
+    form.block button[type="button"] + button[type="button"] {
       margin-right: 0.5em;
       clear: none; }
   form.inline input[type="submit"],
@@ -481,30 +498,6 @@ form.block {
       background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       border-color: #0c63e6;
       box-shadow: none; }
-  form.inline label,
-  form.block label {
-    width: 25%;
-    margin: 0.4em 0;
-    padding: 1px 0;
-    float: left;
-    clear: both;
-    font-size: 1.3em;
-    font-weight: 400;
-    text-align: left;
-    line-height: 1.3em; }
-    form.inline label + input,
-    form.inline label + select,
-    form.inline label + textarea,
-    form.block label + input,
-    form.block label + select,
-    form.block label + textarea {
-      width: 75%;
-      display: block;
-      float: right;
-      text-align: left; }
-  form.inline.labels-right label,
-  form.block.labels-right label {
-    text-align: right; }
   form.inline input[type="checkbox"],
   form.inline input[type="radio"],
   form.block input[type="checkbox"],
@@ -1418,7 +1411,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1431,7 +1423,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1444,7 +1435,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1457,7 +1447,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1470,7 +1459,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
