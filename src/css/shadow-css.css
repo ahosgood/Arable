@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.5
- * Date:        02/07/2014
+ * Version:     3.7.6
+ * Date:        03/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -261,8 +261,7 @@ option:disabled {
 
 form.inline,
 form.block {
-  width: 100%;
-  display: inline-block;
+  display: block;
   text-align: right; }
   form.inline label,
   form.block label {
