@@ -6,7 +6,7 @@ button,
 a.button,
 label.button {
 	width: auto;
-	height: 2.1em;
+	//height: 2.1em;
 	padding: 0 0.75em;
 
 	display: inline-block;
@@ -121,6 +121,7 @@ label.button {
 
 			text-align: center;
 			vertical-align: top;
+			line-height: 1em;
 		}
 	}
 
@@ -132,6 +133,17 @@ label.button {
 				padding-left: 0;
 			}
 		}
+	}
+}
+
+@media all and (min--moz-device-pixel-ratio: 0) {
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	a.button,
+	label.button {
+		height: 2.1em;
 	}
 }
 

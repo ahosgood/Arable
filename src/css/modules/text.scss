@@ -57,7 +57,7 @@ p {
 	orphans: 3;
 	widows: 3;
 
-	&.hypenate {
+	&.hyphenate {
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
@@ -207,16 +207,20 @@ h6,
 p,
 blockquote,
 pre {
+	&.left {
+		text-align: right !important;
+	}
+
 	&.right {
-		text-align: right;
+		text-align: right !important;
 	}
 
 	&.center {
-		text-align: center;
+		text-align: center !important;
 	}
 
 	&.justify {
-		text-align: justify;
+		text-align: justify !important;
 	}
 }
 

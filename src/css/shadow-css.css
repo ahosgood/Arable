@@ -4,8 +4,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.8
- * Date:        04/07/2014
+ * Version:     3.7.11
+ * Date:        05/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -363,7 +363,6 @@ form.block {
   form.block .button {
     width: auto;
     margin-top: 0.5em;
-    padding: 0.5em 0.75em;
     float: right;
     clear: both; }
     form.inline input[type="submit"] + input[type="submit"],
@@ -643,7 +642,6 @@ button,
 a.button,
 label.button {
   width: auto;
-  height: 2.1em;
   padding: 0 0.75em;
   display: inline-block;
   font-size: 1.3em;
@@ -1138,7 +1136,8 @@ label.button {
     display: inline-block;
     float: right;
     text-align: center;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 1em; }
   input[type="submit"]:empty i.fa::before,
   input[type="submit"]:empty i[class^="fa-"]::before,
   input[type="submit"]:empty i[class*=" fa-"]::before,
@@ -1159,6 +1158,14 @@ label.button {
   label.button:empty i[class*=" fa-"]::before {
     padding-left: 0; }
 
+@media all and (min--moz-device-pixel-ratio: 0) {
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  button,
+  a.button,
+  label.button {
+    height: 2.1em; } }
 input[type="submit"],
 button[type="submit"] {
   font-weight: 800;
@@ -1682,7 +1689,7 @@ p {
   word-break: normal;
   orphans: 3;
   widows: 3; }
-  p.hypenate {
+  p.hyphenate {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -1781,6 +1788,16 @@ blockquote {
     font-size: 1em;
     line-height: 0.74em; }
 
+h1.left,
+h2.left,
+h3.left,
+h4.left,
+h5.left,
+h6.left,
+p.left,
+blockquote.left,
+pre.left {
+  text-align: right !important; }
 h1.right,
 h2.right,
 h3.right,
@@ -1790,7 +1807,7 @@ h6.right,
 p.right,
 blockquote.right,
 pre.right {
-  text-align: right; }
+  text-align: right !important; }
 h1.center,
 h2.center,
 h3.center,
@@ -1800,7 +1817,7 @@ h6.center,
 p.center,
 blockquote.center,
 pre.center {
-  text-align: center; }
+  text-align: center !important; }
 h1.justify,
 h2.justify,
 h3.justify,
@@ -1810,7 +1827,7 @@ h6.justify,
 p.justify,
 blockquote.justify,
 pre.justify {
-  text-align: justify; }
+  text-align: justify !important; }
 
 sup,
 sub {
