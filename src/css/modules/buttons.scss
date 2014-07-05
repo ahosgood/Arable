@@ -6,7 +6,8 @@ button,
 a.button,
 label.button {
 	width: auto;
-	padding: 0.5em 0.75em;
+	height: 2.1em;
+	padding: 0 0.75em;
 
 	display: inline-block;
 
@@ -14,8 +15,8 @@ label.button {
 	font-weight: 400;
 	text-align: center;
 	text-decoration: none;
-	line-height: 1em;
-	vertical-align: top;
+	line-height: 2.1em;
+	vertical-align: middle;
 
 	@include grad(#F2F2F2, #D8D8D8);
 
@@ -32,9 +33,9 @@ label.button {
 
 	cursor: pointer;
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 
 	&:hover,
 	&:focus {
@@ -50,8 +51,9 @@ label.button {
 	}
 
 	&.thin {
-		padding-top: 0.2em;
-		padding-bottom: 0.2em;
+		height: 1.5em;
+
+		line-height: 1.5em;
 	}
 
 	&.disabled,
@@ -144,15 +146,11 @@ button {
 
 label.button {
 	width: auto !important;
-	padding: 0.5em 0.75em !important;
+	padding: 0 0.75em !important;
 
 	font-size: 1.3em !important;
-	line-height: 1em !important;
 
-	&.thin {
-		padding-top: 0.2em !important;
-		padding-bottom: 0.2em !important;
-	}
+	&.thin {}
 
 	input[type="checkbox"] {
 		margin: 0 0 0 0.625em !important;
@@ -160,5 +158,7 @@ label.button {
 		display: inline-block !important;
 
 		float: none !important;
+
+		vertical-align: baseline;
 	}
 }

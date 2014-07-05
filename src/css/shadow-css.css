@@ -1,9 +1,10 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.7
+ * Version:     3.7.8
  * Date:        04/07/2014
  * ================================================================================
  */
@@ -642,14 +643,15 @@ button,
 a.button,
 label.button {
   width: auto;
-  padding: 0.5em 0.75em;
+  height: 2.1em;
+  padding: 0 0.75em;
   display: inline-block;
   font-size: 1.3em;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  line-height: 1em;
-  vertical-align: top;
+  line-height: 2.1em;
+  vertical-align: middle;
   background: #f2f2f2 no-repeat scroll;
   background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8)) no-repeat scroll;
@@ -666,9 +668,9 @@ label.button {
   -o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
   input[type="submit"]:hover, input[type="submit"]:focus,
   input[type="reset"]:hover,
   input[type="reset"]:focus,
@@ -702,8 +704,8 @@ label.button {
   button.thin,
   a.button.thin,
   label.button.thin {
-    padding-top: 0.2em;
-    padding-bottom: 0.2em; }
+    height: 1.5em;
+    line-height: 1.5em; }
   input[type="submit"].disabled, input[type="submit"]:disabled,
   input[type="reset"].disabled,
   input[type="reset"]:disabled,
@@ -1210,16 +1212,13 @@ button[type="submit"] {
 
 label.button {
   width: auto !important;
-  padding: 0.5em 0.75em !important;
-  font-size: 1.3em !important;
-  line-height: 1em !important; }
-  label.button.thin {
-    padding-top: 0.2em !important;
-    padding-bottom: 0.2em !important; }
+  padding: 0 0.75em !important;
+  font-size: 1.3em !important; }
   label.button input[type="checkbox"] {
     margin: 0 0 0 0.625em !important;
     display: inline-block !important;
-    float: none !important; }
+    float: none !important;
+    vertical-align: baseline; }
 
 /* ===================================================== LISTS ===================================================== */
 ul,
@@ -1577,6 +1576,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1589,6 +1589,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1601,6 +1602,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1613,6 +1615,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1625,6 +1628,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
