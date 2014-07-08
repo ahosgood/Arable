@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.7.11
- * Date:        05/07/2014
+ * Version:     3.8.0
+ * Date:        08/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -635,12 +634,12 @@ form.block {
       margin-bottom: 0.25em;
       display: inline-block; } }
 /* ===================================================== BUTTONS ===================================================== */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
 a.button,
-label.button {
+label.button,
+form button,
+form input[type="submit"],
+form input[type="reset"],
+form input[type="button"] {
   width: auto;
   padding: 0 0.75em;
   display: inline-block;
@@ -669,25 +668,25 @@ label.button {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
-  input[type="submit"]:hover, input[type="submit"]:focus,
-  input[type="reset"]:hover,
-  input[type="reset"]:focus,
-  input[type="button"]:hover,
-  input[type="button"]:focus,
-  button:hover,
-  button:focus,
-  a.button:hover,
-  a.button:focus,
+  a.button:hover, a.button:focus,
   label.button:hover,
-  label.button:focus {
+  label.button:focus,
+  form button:hover,
+  form button:focus,
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus,
+  form input[type="reset"]:hover,
+  form input[type="reset"]:focus,
+  form input[type="button"]:hover,
+  form input[type="button"]:focus {
     border-color: #999;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
-  input[type="submit"]:active,
-  input[type="reset"]:active,
-  input[type="button"]:active,
-  button:active,
   a.button:active,
-  label.button:active {
+  label.button:active,
+  form button:active,
+  form input[type="submit"]:active,
+  form input[type="reset"]:active,
+  form input[type="button"]:active {
     background: #d8d8d8 no-repeat scroll;
     background: -moz-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d8d8d8), color-stop(100%, #f2f2f2)) no-repeat scroll;
@@ -696,57 +695,57 @@ label.button {
     background: -ms-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2); }
-  input[type="submit"].thin,
-  input[type="reset"].thin,
-  input[type="button"].thin,
-  button.thin,
   a.button.thin,
-  label.button.thin {
+  label.button.thin,
+  form button.thin,
+  form input[type="submit"].thin,
+  form input[type="reset"].thin,
+  form input[type="button"].thin {
     height: 1.5em;
     line-height: 1.5em; }
-  input[type="submit"].disabled, input[type="submit"]:disabled,
-  input[type="reset"].disabled,
-  input[type="reset"]:disabled,
-  input[type="button"].disabled,
-  input[type="button"]:disabled,
-  button.disabled,
-  button:disabled,
-  a.button.disabled,
-  a.button:disabled,
+  a.button.disabled, a.button:disabled,
   label.button.disabled,
-  label.button:disabled {
+  label.button:disabled,
+  form button.disabled,
+  form button:disabled,
+  form input[type="submit"].disabled,
+  form input[type="submit"]:disabled,
+  form input[type="reset"].disabled,
+  form input[type="reset"]:disabled,
+  form input[type="button"].disabled,
+  form input[type="button"]:disabled {
     opacity: 0.35; }
-    input[type="submit"].disabled:hover, input[type="submit"].disabled:focus, input[type="submit"].disabled:active, input[type="submit"]:disabled:hover, input[type="submit"]:disabled:focus, input[type="submit"]:disabled:active,
-    input[type="reset"].disabled:hover,
-    input[type="reset"].disabled:focus,
-    input[type="reset"].disabled:active,
-    input[type="reset"]:disabled:hover,
-    input[type="reset"]:disabled:focus,
-    input[type="reset"]:disabled:active,
-    input[type="button"].disabled:hover,
-    input[type="button"].disabled:focus,
-    input[type="button"].disabled:active,
-    input[type="button"]:disabled:hover,
-    input[type="button"]:disabled:focus,
-    input[type="button"]:disabled:active,
-    button.disabled:hover,
-    button.disabled:focus,
-    button.disabled:active,
-    button:disabled:hover,
-    button:disabled:focus,
-    button:disabled:active,
-    a.button.disabled:hover,
-    a.button.disabled:focus,
-    a.button.disabled:active,
-    a.button:disabled:hover,
-    a.button:disabled:focus,
-    a.button:disabled:active,
+    a.button.disabled:hover, a.button.disabled:focus, a.button.disabled:active, a.button:disabled:hover, a.button:disabled:focus, a.button:disabled:active,
     label.button.disabled:hover,
     label.button.disabled:focus,
     label.button.disabled:active,
     label.button:disabled:hover,
     label.button:disabled:focus,
-    label.button:disabled:active {
+    label.button:disabled:active,
+    form button.disabled:hover,
+    form button.disabled:focus,
+    form button.disabled:active,
+    form button:disabled:hover,
+    form button:disabled:focus,
+    form button:disabled:active,
+    form input[type="submit"].disabled:hover,
+    form input[type="submit"].disabled:focus,
+    form input[type="submit"].disabled:active,
+    form input[type="submit"]:disabled:hover,
+    form input[type="submit"]:disabled:focus,
+    form input[type="submit"]:disabled:active,
+    form input[type="reset"].disabled:hover,
+    form input[type="reset"].disabled:focus,
+    form input[type="reset"].disabled:active,
+    form input[type="reset"]:disabled:hover,
+    form input[type="reset"]:disabled:focus,
+    form input[type="reset"]:disabled:active,
+    form input[type="button"].disabled:hover,
+    form input[type="button"].disabled:focus,
+    form input[type="button"].disabled:active,
+    form input[type="button"]:disabled:hover,
+    form input[type="button"]:disabled:focus,
+    form input[type="button"]:disabled:active {
       background: #f2f2f2 no-repeat scroll;
       background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8)) no-repeat scroll;
@@ -755,12 +754,12 @@ label.button {
       background: -ms-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
       border-color: #CCC; }
-  input[type="submit"].red,
-  input[type="reset"].red,
-  input[type="button"].red,
-  button.red,
   a.button.red,
-  label.button.red {
+  label.button.red,
+  form button.red,
+  form input[type="submit"].red,
+  form input[type="reset"].red,
+  form input[type="button"].red {
     color: white;
     text-shadow: 0 0 3px #ed3434;
     background: #ec4e4e no-repeat scroll;
@@ -771,17 +770,17 @@ label.button {
     background: -ms-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
     border-color: #da1e1e; }
-    input[type="submit"].red:hover, input[type="submit"].red:focus,
-    input[type="reset"].red:hover,
-    input[type="reset"].red:focus,
-    input[type="button"].red:hover,
-    input[type="button"].red:focus,
-    button.red:hover,
-    button.red:focus,
-    a.button.red:hover,
-    a.button.red:focus,
+    a.button.red:hover, a.button.red:focus,
     label.button.red:hover,
-    label.button.red:focus {
+    label.button.red:focus,
+    form button.red:hover,
+    form button.red:focus,
+    form input[type="submit"].red:hover,
+    form input[type="submit"].red:focus,
+    form input[type="reset"].red:hover,
+    form input[type="reset"].red:focus,
+    form input[type="button"].red:hover,
+    form input[type="button"].red:focus {
       background: #ef6565 no-repeat scroll;
       background: -moz-linear-gradient(top, #ef6565 0%, #e61212 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef6565), color-stop(100%, #e61212)) no-repeat scroll;
@@ -790,12 +789,12 @@ label.button {
       background: -ms-linear-gradient(top, #ef6565 0%, #e61212 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #ef6565 0%, #e61212 100%) no-repeat scroll;
       border-color: #c50f0f; }
-    input[type="submit"].red:active,
-    input[type="reset"].red:active,
-    input[type="button"].red:active,
-    button.red:active,
     a.button.red:active,
-    label.button.red:active {
+    label.button.red:active,
+    form button.red:active,
+    form input[type="submit"].red:active,
+    form input[type="reset"].red:active,
+    form input[type="button"].red:active {
       background: #ed1a1a no-repeat scroll;
       background: -moz-linear-gradient(top, #ed1a1a 0%, #ef4b4b 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed1a1a), color-stop(100%, #ef4b4b)) no-repeat scroll;
@@ -804,37 +803,37 @@ label.button {
       background: -ms-linear-gradient(top, #ed1a1a 0%, #ef4b4b 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #ed1a1a 0%, #ef4b4b 100%) no-repeat scroll;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].red.disabled:hover, input[type="submit"].red.disabled:focus, input[type="submit"].red.disabled:active, input[type="submit"].red:disabled:hover, input[type="submit"].red:disabled:focus, input[type="submit"].red:disabled:active,
-    input[type="reset"].red.disabled:hover,
-    input[type="reset"].red.disabled:focus,
-    input[type="reset"].red.disabled:active,
-    input[type="reset"].red:disabled:hover,
-    input[type="reset"].red:disabled:focus,
-    input[type="reset"].red:disabled:active,
-    input[type="button"].red.disabled:hover,
-    input[type="button"].red.disabled:focus,
-    input[type="button"].red.disabled:active,
-    input[type="button"].red:disabled:hover,
-    input[type="button"].red:disabled:focus,
-    input[type="button"].red:disabled:active,
-    button.red.disabled:hover,
-    button.red.disabled:focus,
-    button.red.disabled:active,
-    button.red:disabled:hover,
-    button.red:disabled:focus,
-    button.red:disabled:active,
-    a.button.red.disabled:hover,
-    a.button.red.disabled:focus,
-    a.button.red.disabled:active,
-    a.button.red:disabled:hover,
-    a.button.red:disabled:focus,
-    a.button.red:disabled:active,
+    a.button.red.disabled:hover, a.button.red.disabled:focus, a.button.red.disabled:active, a.button.red:disabled:hover, a.button.red:disabled:focus, a.button.red:disabled:active,
     label.button.red.disabled:hover,
     label.button.red.disabled:focus,
     label.button.red.disabled:active,
     label.button.red:disabled:hover,
     label.button.red:disabled:focus,
-    label.button.red:disabled:active {
+    label.button.red:disabled:active,
+    form button.red.disabled:hover,
+    form button.red.disabled:focus,
+    form button.red.disabled:active,
+    form button.red:disabled:hover,
+    form button.red:disabled:focus,
+    form button.red:disabled:active,
+    form input[type="submit"].red.disabled:hover,
+    form input[type="submit"].red.disabled:focus,
+    form input[type="submit"].red.disabled:active,
+    form input[type="submit"].red:disabled:hover,
+    form input[type="submit"].red:disabled:focus,
+    form input[type="submit"].red:disabled:active,
+    form input[type="reset"].red.disabled:hover,
+    form input[type="reset"].red.disabled:focus,
+    form input[type="reset"].red.disabled:active,
+    form input[type="reset"].red:disabled:hover,
+    form input[type="reset"].red:disabled:focus,
+    form input[type="reset"].red:disabled:active,
+    form input[type="button"].red.disabled:hover,
+    form input[type="button"].red.disabled:focus,
+    form input[type="button"].red.disabled:active,
+    form input[type="button"].red:disabled:hover,
+    form input[type="button"].red:disabled:focus,
+    form input[type="button"].red:disabled:active {
       background: #ec4e4e no-repeat scroll;
       background: -moz-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4e4e), color-stop(100%, #dd1111)) no-repeat scroll;
@@ -844,12 +843,12 @@ label.button {
       background: linear-gradient(to bottom, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
       border-color: #da1e1e;
       box-shadow: none; }
-  input[type="submit"].green,
-  input[type="reset"].green,
-  input[type="button"].green,
-  button.green,
   a.button.green,
-  label.button.green {
+  label.button.green,
+  form button.green,
+  form input[type="submit"].green,
+  form input[type="reset"].green,
+  form input[type="button"].green {
     color: white;
     text-shadow: 0 0 3px #02db18;
     background: #06f01e no-repeat scroll;
@@ -860,17 +859,17 @@ label.button {
     background: -ms-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #06f01e 0%, #00aa11 100%) no-repeat scroll;
     border-color: #09ab19; }
-    input[type="submit"].green:hover, input[type="submit"].green:focus,
-    input[type="reset"].green:hover,
-    input[type="reset"].green:focus,
-    input[type="button"].green:hover,
-    input[type="button"].green:focus,
-    button.green:hover,
-    button.green:focus,
-    a.button.green:hover,
-    a.button.green:focus,
+    a.button.green:hover, a.button.green:focus,
     label.button.green:hover,
-    label.button.green:focus {
+    label.button.green:focus,
+    form button.green:hover,
+    form button.green:focus,
+    form input[type="submit"].green:hover,
+    form input[type="submit"].green:focus,
+    form input[type="reset"].green:hover,
+    form input[type="reset"].green:focus,
+    form input[type="button"].green:hover,
+    form input[type="button"].green:focus {
       background: #17f92e no-repeat scroll;
       background: -moz-linear-gradient(top, #17f92e 0%, #00b412 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #17f92e), color-stop(100%, #00b412)) no-repeat scroll;
@@ -879,12 +878,12 @@ label.button {
       background: -ms-linear-gradient(top, #17f92e 0%, #00b412 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #17f92e 0%, #00b412 100%) no-repeat scroll;
       border-color: #00900e; }
-    input[type="submit"].green:active,
-    input[type="reset"].green:active,
-    input[type="button"].green:active,
-    button.green:active,
     a.button.green:active,
-    label.button.green:active {
+    label.button.green:active,
+    form button.green:active,
+    form input[type="submit"].green:active,
+    form input[type="reset"].green:active,
+    form input[type="button"].green:active {
       background: #00c314 no-repeat scroll;
       background: -moz-linear-gradient(top, #00c314 0%, #02f41b 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00c314), color-stop(100%, #02f41b)) no-repeat scroll;
@@ -893,37 +892,37 @@ label.button {
       background: -ms-linear-gradient(top, #00c314 0%, #02f41b 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #00c314 0%, #02f41b 100%) no-repeat scroll;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].green.disabled:hover, input[type="submit"].green.disabled:focus, input[type="submit"].green.disabled:active, input[type="submit"].green:disabled:hover, input[type="submit"].green:disabled:focus, input[type="submit"].green:disabled:active,
-    input[type="reset"].green.disabled:hover,
-    input[type="reset"].green.disabled:focus,
-    input[type="reset"].green.disabled:active,
-    input[type="reset"].green:disabled:hover,
-    input[type="reset"].green:disabled:focus,
-    input[type="reset"].green:disabled:active,
-    input[type="button"].green.disabled:hover,
-    input[type="button"].green.disabled:focus,
-    input[type="button"].green.disabled:active,
-    input[type="button"].green:disabled:hover,
-    input[type="button"].green:disabled:focus,
-    input[type="button"].green:disabled:active,
-    button.green.disabled:hover,
-    button.green.disabled:focus,
-    button.green.disabled:active,
-    button.green:disabled:hover,
-    button.green:disabled:focus,
-    button.green:disabled:active,
-    a.button.green.disabled:hover,
-    a.button.green.disabled:focus,
-    a.button.green.disabled:active,
-    a.button.green:disabled:hover,
-    a.button.green:disabled:focus,
-    a.button.green:disabled:active,
+    a.button.green.disabled:hover, a.button.green.disabled:focus, a.button.green.disabled:active, a.button.green:disabled:hover, a.button.green:disabled:focus, a.button.green:disabled:active,
     label.button.green.disabled:hover,
     label.button.green.disabled:focus,
     label.button.green.disabled:active,
     label.button.green:disabled:hover,
     label.button.green:disabled:focus,
-    label.button.green:disabled:active {
+    label.button.green:disabled:active,
+    form button.green.disabled:hover,
+    form button.green.disabled:focus,
+    form button.green.disabled:active,
+    form button.green:disabled:hover,
+    form button.green:disabled:focus,
+    form button.green:disabled:active,
+    form input[type="submit"].green.disabled:hover,
+    form input[type="submit"].green.disabled:focus,
+    form input[type="submit"].green.disabled:active,
+    form input[type="submit"].green:disabled:hover,
+    form input[type="submit"].green:disabled:focus,
+    form input[type="submit"].green:disabled:active,
+    form input[type="reset"].green.disabled:hover,
+    form input[type="reset"].green.disabled:focus,
+    form input[type="reset"].green.disabled:active,
+    form input[type="reset"].green:disabled:hover,
+    form input[type="reset"].green:disabled:focus,
+    form input[type="reset"].green:disabled:active,
+    form input[type="button"].green.disabled:hover,
+    form input[type="button"].green.disabled:focus,
+    form input[type="button"].green.disabled:active,
+    form input[type="button"].green:disabled:hover,
+    form input[type="button"].green:disabled:focus,
+    form input[type="button"].green:disabled:active {
       background: #06f01e no-repeat scroll;
       background: -moz-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #06f01e), color-stop(100%, #00aa11)) no-repeat scroll;
@@ -933,12 +932,12 @@ label.button {
       background: linear-gradient(to bottom, #06f01e 0%, #00aa11 100%) no-repeat scroll;
       border-color: #09ab19;
       box-shadow: none; }
-  input[type="submit"].blue,
-  input[type="reset"].blue,
-  input[type="button"].blue,
-  button.blue,
   a.button.blue,
-  label.button.blue {
+  label.button.blue,
+  form button.blue,
+  form input[type="submit"].blue,
+  form input[type="reset"].blue,
+  form input[type="button"].blue {
     color: white;
     text-shadow: 0 0 3px #1e77fd;
     background: #3b87fa no-repeat scroll;
@@ -949,17 +948,17 @@ label.button {
     background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
     border-color: #0c63e6; }
-    input[type="submit"].blue:hover, input[type="submit"].blue:focus,
-    input[type="reset"].blue:hover,
-    input[type="reset"].blue:focus,
-    input[type="button"].blue:hover,
-    input[type="button"].blue:focus,
-    button.blue:hover,
-    button.blue:focus,
-    a.button.blue:hover,
-    a.button.blue:focus,
+    a.button.blue:hover, a.button.blue:focus,
     label.button.blue:hover,
-    label.button.blue:focus {
+    label.button.blue:focus,
+    form button.blue:hover,
+    form button.blue:focus,
+    form input[type="submit"].blue:hover,
+    form input[type="submit"].blue:focus,
+    form input[type="reset"].blue:hover,
+    form input[type="reset"].blue:focus,
+    form input[type="button"].blue:hover,
+    form input[type="button"].blue:focus {
       background: #5396fb no-repeat scroll;
       background: -moz-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5396fb), color-stop(100%, #0061f2)) no-repeat scroll;
@@ -968,12 +967,12 @@ label.button {
       background: -ms-linear-gradient(top, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #5396fb 0%, #0061f2 100%) no-repeat scroll;
       border-color: #0053cf; }
-    input[type="submit"].blue:active,
-    input[type="reset"].blue:active,
-    input[type="button"].blue:active,
-    button.blue:active,
     a.button.blue:active,
-    label.button.blue:active {
+    label.button.blue:active,
+    form button.blue:active,
+    form input[type="submit"].blue:active,
+    form input[type="reset"].blue:active,
+    form input[type="button"].blue:active {
       background: #0268ff no-repeat scroll;
       background: -moz-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0268ff), color-stop(100%, #3887fd)) no-repeat scroll;
@@ -982,37 +981,37 @@ label.button {
       background: -ms-linear-gradient(top, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #0268ff 0%, #3887fd 100%) no-repeat scroll;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].blue.disabled:hover, input[type="submit"].blue.disabled:focus, input[type="submit"].blue.disabled:active, input[type="submit"].blue:disabled:hover, input[type="submit"].blue:disabled:focus, input[type="submit"].blue:disabled:active,
-    input[type="reset"].blue.disabled:hover,
-    input[type="reset"].blue.disabled:focus,
-    input[type="reset"].blue.disabled:active,
-    input[type="reset"].blue:disabled:hover,
-    input[type="reset"].blue:disabled:focus,
-    input[type="reset"].blue:disabled:active,
-    input[type="button"].blue.disabled:hover,
-    input[type="button"].blue.disabled:focus,
-    input[type="button"].blue.disabled:active,
-    input[type="button"].blue:disabled:hover,
-    input[type="button"].blue:disabled:focus,
-    input[type="button"].blue:disabled:active,
-    button.blue.disabled:hover,
-    button.blue.disabled:focus,
-    button.blue.disabled:active,
-    button.blue:disabled:hover,
-    button.blue:disabled:focus,
-    button.blue:disabled:active,
-    a.button.blue.disabled:hover,
-    a.button.blue.disabled:focus,
-    a.button.blue.disabled:active,
-    a.button.blue:disabled:hover,
-    a.button.blue:disabled:focus,
-    a.button.blue:disabled:active,
+    a.button.blue.disabled:hover, a.button.blue.disabled:focus, a.button.blue.disabled:active, a.button.blue:disabled:hover, a.button.blue:disabled:focus, a.button.blue:disabled:active,
     label.button.blue.disabled:hover,
     label.button.blue.disabled:focus,
     label.button.blue.disabled:active,
     label.button.blue:disabled:hover,
     label.button.blue:disabled:focus,
-    label.button.blue:disabled:active {
+    label.button.blue:disabled:active,
+    form button.blue.disabled:hover,
+    form button.blue.disabled:focus,
+    form button.blue.disabled:active,
+    form button.blue:disabled:hover,
+    form button.blue:disabled:focus,
+    form button.blue:disabled:active,
+    form input[type="submit"].blue.disabled:hover,
+    form input[type="submit"].blue.disabled:focus,
+    form input[type="submit"].blue.disabled:active,
+    form input[type="submit"].blue:disabled:hover,
+    form input[type="submit"].blue:disabled:focus,
+    form input[type="submit"].blue:disabled:active,
+    form input[type="reset"].blue.disabled:hover,
+    form input[type="reset"].blue.disabled:focus,
+    form input[type="reset"].blue.disabled:active,
+    form input[type="reset"].blue:disabled:hover,
+    form input[type="reset"].blue:disabled:focus,
+    form input[type="reset"].blue:disabled:active,
+    form input[type="button"].blue.disabled:hover,
+    form input[type="button"].blue.disabled:focus,
+    form input[type="button"].blue.disabled:active,
+    form input[type="button"].blue:disabled:hover,
+    form input[type="button"].blue:disabled:focus,
+    form input[type="button"].blue:disabled:active {
       background: #3b87fa no-repeat scroll;
       background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
@@ -1022,12 +1021,12 @@ label.button {
       background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
       border-color: #0c63e6;
       box-shadow: none; }
-  input[type="submit"].black,
-  input[type="reset"].black,
-  input[type="button"].black,
-  button.black,
   a.button.black,
-  label.button.black {
+  label.button.black,
+  form button.black,
+  form input[type="submit"].black,
+  form input[type="reset"].black,
+  form input[type="button"].black {
     color: white;
     text-shadow: 0 0 3px #3c3c3c;
     background: #484848 no-repeat scroll;
@@ -1038,17 +1037,17 @@ label.button {
     background: -ms-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
     border-color: #272727; }
-    input[type="submit"].black:hover, input[type="submit"].black:focus,
-    input[type="reset"].black:hover,
-    input[type="reset"].black:focus,
-    input[type="button"].black:hover,
-    input[type="button"].black:focus,
-    button.black:hover,
-    button.black:focus,
-    a.button.black:hover,
-    a.button.black:focus,
+    a.button.black:hover, a.button.black:focus,
     label.button.black:hover,
-    label.button.black:focus {
+    label.button.black:focus,
+    form button.black:hover,
+    form button.black:focus,
+    form input[type="submit"].black:hover,
+    form input[type="submit"].black:focus,
+    form input[type="reset"].black:hover,
+    form input[type="reset"].black:focus,
+    form input[type="button"].black:hover,
+    form input[type="button"].black:focus {
       background: #555555 no-repeat scroll;
       background: -moz-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #272727)) no-repeat scroll;
@@ -1057,12 +1056,12 @@ label.button {
       background: -ms-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #555555 0%, #272727 100%) no-repeat scroll;
       border-color: #151515; }
-    input[type="submit"].black:active,
-    input[type="reset"].black:active,
-    input[type="button"].black:active,
-    button.black:active,
     a.button.black:active,
-    label.button.black:active {
+    label.button.black:active,
+    form button.black:active,
+    form input[type="submit"].black:active,
+    form input[type="reset"].black:active,
+    form input[type="button"].black:active {
       background: #2f2f2f no-repeat scroll;
       background: -moz-linear-gradient(top, #2f2f2f 0%, #484848 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2f2f2f), color-stop(100%, #484848)) no-repeat scroll;
@@ -1071,37 +1070,37 @@ label.button {
       background: -ms-linear-gradient(top, #2f2f2f 0%, #484848 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #2f2f2f 0%, #484848 100%) no-repeat scroll;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    input[type="submit"].black.disabled:hover, input[type="submit"].black.disabled:focus, input[type="submit"].black.disabled:active, input[type="submit"].black:disabled:hover, input[type="submit"].black:disabled:focus, input[type="submit"].black:disabled:active,
-    input[type="reset"].black.disabled:hover,
-    input[type="reset"].black.disabled:focus,
-    input[type="reset"].black.disabled:active,
-    input[type="reset"].black:disabled:hover,
-    input[type="reset"].black:disabled:focus,
-    input[type="reset"].black:disabled:active,
-    input[type="button"].black.disabled:hover,
-    input[type="button"].black.disabled:focus,
-    input[type="button"].black.disabled:active,
-    input[type="button"].black:disabled:hover,
-    input[type="button"].black:disabled:focus,
-    input[type="button"].black:disabled:active,
-    button.black.disabled:hover,
-    button.black.disabled:focus,
-    button.black.disabled:active,
-    button.black:disabled:hover,
-    button.black:disabled:focus,
-    button.black:disabled:active,
-    a.button.black.disabled:hover,
-    a.button.black.disabled:focus,
-    a.button.black.disabled:active,
-    a.button.black:disabled:hover,
-    a.button.black:disabled:focus,
-    a.button.black:disabled:active,
+    a.button.black.disabled:hover, a.button.black.disabled:focus, a.button.black.disabled:active, a.button.black:disabled:hover, a.button.black:disabled:focus, a.button.black:disabled:active,
     label.button.black.disabled:hover,
     label.button.black.disabled:focus,
     label.button.black.disabled:active,
     label.button.black:disabled:hover,
     label.button.black:disabled:focus,
-    label.button.black:disabled:active {
+    label.button.black:disabled:active,
+    form button.black.disabled:hover,
+    form button.black.disabled:focus,
+    form button.black.disabled:active,
+    form button.black:disabled:hover,
+    form button.black:disabled:focus,
+    form button.black:disabled:active,
+    form input[type="submit"].black.disabled:hover,
+    form input[type="submit"].black.disabled:focus,
+    form input[type="submit"].black.disabled:active,
+    form input[type="submit"].black:disabled:hover,
+    form input[type="submit"].black:disabled:focus,
+    form input[type="submit"].black:disabled:active,
+    form input[type="reset"].black.disabled:hover,
+    form input[type="reset"].black.disabled:focus,
+    form input[type="reset"].black.disabled:active,
+    form input[type="reset"].black:disabled:hover,
+    form input[type="reset"].black:disabled:focus,
+    form input[type="reset"].black:disabled:active,
+    form input[type="button"].black.disabled:hover,
+    form input[type="button"].black.disabled:focus,
+    form input[type="button"].black.disabled:active,
+    form input[type="button"].black:disabled:hover,
+    form input[type="button"].black:disabled:focus,
+    form input[type="button"].black:disabled:active {
       background: #484848 no-repeat scroll;
       background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484848), color-stop(100%, #222222)) no-repeat scroll;
@@ -1111,24 +1110,24 @@ label.button {
       background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
       border-color: #272727;
       box-shadow: none; }
-  input[type="submit"] i.fa::before,
-  input[type="submit"] i[class^="fa-"]::before,
-  input[type="submit"] i[class*=" fa-"]::before,
-  input[type="reset"] i.fa::before,
-  input[type="reset"] i[class^="fa-"]::before,
-  input[type="reset"] i[class*=" fa-"]::before,
-  input[type="button"] i.fa::before,
-  input[type="button"] i[class^="fa-"]::before,
-  input[type="button"] i[class*=" fa-"]::before,
-  button i.fa::before,
-  button i[class^="fa-"]::before,
-  button i[class*=" fa-"]::before,
   a.button i.fa::before,
   a.button i[class^="fa-"]::before,
   a.button i[class*=" fa-"]::before,
   label.button i.fa::before,
   label.button i[class^="fa-"]::before,
-  label.button i[class*=" fa-"]::before {
+  label.button i[class*=" fa-"]::before,
+  form button i.fa::before,
+  form button i[class^="fa-"]::before,
+  form button i[class*=" fa-"]::before,
+  form input[type="submit"] i.fa::before,
+  form input[type="submit"] i[class^="fa-"]::before,
+  form input[type="submit"] i[class*=" fa-"]::before,
+  form input[type="reset"] i.fa::before,
+  form input[type="reset"] i[class^="fa-"]::before,
+  form input[type="reset"] i[class*=" fa-"]::before,
+  form input[type="button"] i.fa::before,
+  form input[type="button"] i[class^="fa-"]::before,
+  form input[type="button"] i[class*=" fa-"]::before {
     width: 1em;
     height: 1em;
     padding-right: 0;
@@ -1138,24 +1137,24 @@ label.button {
     text-align: center;
     vertical-align: top;
     line-height: 1em; }
-  input[type="submit"]:empty i.fa::before,
-  input[type="submit"]:empty i[class^="fa-"]::before,
-  input[type="submit"]:empty i[class*=" fa-"]::before,
-  input[type="reset"]:empty i.fa::before,
-  input[type="reset"]:empty i[class^="fa-"]::before,
-  input[type="reset"]:empty i[class*=" fa-"]::before,
-  input[type="button"]:empty i.fa::before,
-  input[type="button"]:empty i[class^="fa-"]::before,
-  input[type="button"]:empty i[class*=" fa-"]::before,
-  button:empty i.fa::before,
-  button:empty i[class^="fa-"]::before,
-  button:empty i[class*=" fa-"]::before,
   a.button:empty i.fa::before,
   a.button:empty i[class^="fa-"]::before,
   a.button:empty i[class*=" fa-"]::before,
   label.button:empty i.fa::before,
   label.button:empty i[class^="fa-"]::before,
-  label.button:empty i[class*=" fa-"]::before {
+  label.button:empty i[class*=" fa-"]::before,
+  form button:empty i.fa::before,
+  form button:empty i[class^="fa-"]::before,
+  form button:empty i[class*=" fa-"]::before,
+  form input[type="submit"]:empty i.fa::before,
+  form input[type="submit"]:empty i[class^="fa-"]::before,
+  form input[type="submit"]:empty i[class*=" fa-"]::before,
+  form input[type="reset"]:empty i.fa::before,
+  form input[type="reset"]:empty i[class^="fa-"]::before,
+  form input[type="reset"]:empty i[class*=" fa-"]::before,
+  form input[type="button"]:empty i.fa::before,
+  form input[type="button"]:empty i[class^="fa-"]::before,
+  form input[type="button"]:empty i[class*=" fa-"]::before {
     padding-left: 0; }
 
 @media all and (min--moz-device-pixel-ratio: 0) {
@@ -1583,7 +1582,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1596,7 +1594,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1609,7 +1606,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1622,7 +1618,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1635,7 +1630,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
@@ -1952,3 +1946,19 @@ tbody.searchables-searching tr {
   table.searchables-searching tr.disabled,
   tbody.searchables-searching tr.disabled {
     background-color: #F4F4F4; }
+
+/* ===================================================== TINYMCE ===================================================== */
+.mce-tinymce button {
+  margin-top: 0 !important;
+  font-size: 10px;
+  border-radius: 0; }
+  .mce-tinymce button:hover {
+    box-shadow: none; }
+
+form.inline label + .mce-tinymce {
+  width: 75%;
+  margin: 0.2em 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right; }

@@ -11,3 +11,33 @@ tbody {
 		}
 	}
 }
+
+/* ===================================================== TINYMCE ===================================================== */
+.mce-tinymce {
+	button {
+		margin-top: 0 !important;
+
+		font-size: 10px;
+
+		border-radius: 0;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+
+form.inline {
+	label {
+		+ .mce-tinymce {
+			width: 75%;
+			margin: 0.2em 0;
+
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			float: right;
+		}
+	}
+}

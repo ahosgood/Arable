@@ -1,10 +1,10 @@
 /* ===================================================== BUTTONS ===================================================== */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
 a.button,
-label.button {
+label.button,
+form button,
+form input[type="submit"],
+form input[type="reset"],
+form input[type="button"] {
 	width: auto;
 	//height: 2.1em;
 	padding: 0 0.75em;
