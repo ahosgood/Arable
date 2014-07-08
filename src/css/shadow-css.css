@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.8.0
+ * Version:     3.9.0
  * Date:        08/07/2014
  * ================================================================================
  */
@@ -604,6 +604,88 @@ form.block {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
     display: inline-block; }
+
+form.linear {
+  display: block;
+  overflow: hidden; }
+  form.linear label,
+  form.linear input,
+  form.linear select,
+  form.linear button {
+    float: left;
+    font-size: 1.3em;
+    line-height: 1.3em; }
+  form.linear label {
+    margin: 1px 0.5em 1px 0;
+    padding: 0.25em 0;
+    font-weight: 400; }
+  form.linear select {
+    margin-top: 1px;
+    height: 1.8em; }
+  form.linear button,
+  form.linear input[type="submit"],
+  form.linear input[type="reset"],
+  form.linear input[type="button"],
+  form.linear button[type="submit"],
+  form.linear button[type="reset"],
+  form.linear button[type="button"] {
+    height: 1.7em;
+    margin-left: 1.5em;
+    line-height: 1.7em; }
+    form.linear button + input[type="submit"],
+    form.linear button + input[type="reset"],
+    form.linear button + input[type="button"],
+    form.linear button + button[type="submit"],
+    form.linear button + button[type="reset"],
+    form.linear button + button[type="button"],
+    form.linear button + .button,
+    form.linear input[type="submit"] + input[type="submit"],
+    form.linear input[type="submit"] + input[type="reset"],
+    form.linear input[type="submit"] + input[type="button"],
+    form.linear input[type="submit"] + button[type="submit"],
+    form.linear input[type="submit"] + button[type="reset"],
+    form.linear input[type="submit"] + button[type="button"],
+    form.linear input[type="submit"] + .button,
+    form.linear input[type="reset"] + input[type="submit"],
+    form.linear input[type="reset"] + input[type="reset"],
+    form.linear input[type="reset"] + input[type="button"],
+    form.linear input[type="reset"] + button[type="submit"],
+    form.linear input[type="reset"] + button[type="reset"],
+    form.linear input[type="reset"] + button[type="button"],
+    form.linear input[type="reset"] + .button,
+    form.linear input[type="button"] + input[type="submit"],
+    form.linear input[type="button"] + input[type="reset"],
+    form.linear input[type="button"] + input[type="button"],
+    form.linear input[type="button"] + button[type="submit"],
+    form.linear input[type="button"] + button[type="reset"],
+    form.linear input[type="button"] + button[type="button"],
+    form.linear input[type="button"] + .button,
+    form.linear button[type="submit"] + input[type="submit"],
+    form.linear button[type="submit"] + input[type="reset"],
+    form.linear button[type="submit"] + input[type="button"],
+    form.linear button[type="submit"] + button[type="submit"],
+    form.linear button[type="submit"] + button[type="reset"],
+    form.linear button[type="submit"] + button[type="button"],
+    form.linear button[type="submit"] + .button,
+    form.linear button[type="reset"] + input[type="submit"],
+    form.linear button[type="reset"] + input[type="reset"],
+    form.linear button[type="reset"] + input[type="button"],
+    form.linear button[type="reset"] + button[type="submit"],
+    form.linear button[type="reset"] + button[type="reset"],
+    form.linear button[type="reset"] + button[type="button"],
+    form.linear button[type="reset"] + .button,
+    form.linear button[type="button"] + input[type="submit"],
+    form.linear button[type="button"] + input[type="reset"],
+    form.linear button[type="button"] + input[type="button"],
+    form.linear button[type="button"] + button[type="submit"],
+    form.linear button[type="button"] + button[type="reset"],
+    form.linear button[type="button"] + button[type="button"],
+    form.linear button[type="button"] + .button {
+      margin-left: 0.5em; }
+  form.linear input + label,
+  form.linear select + label,
+  form.linear button + label {
+    margin-left: 1.5em; }
 
 @media screen and (max-width: 658px) {
   form.inline.foldable {

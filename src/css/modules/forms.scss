@@ -193,6 +193,66 @@ form.block {
 	@include blockform();
 }
 
+form.linear {
+	display: block;
+
+	overflow: hidden;
+
+	label,
+	input,
+	select,
+	button {
+		float: left;
+
+		font-size: 1.3em;
+		line-height: 1.3em;
+	}
+
+	label {
+		margin: 1px 0.5em 1px 0;
+		padding: 0.25em 0;
+
+		font-weight: 400;
+	}
+
+	select {
+		margin-top: 1px;
+
+		height: 1.8em;
+	}
+
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button[type="submit"],
+	button[type="reset"],
+	button[type="button"] {
+		height: 1.7em;
+		margin-left: 1.5em;
+
+		line-height: 1.7em;
+
+		+ input[type="submit"],
+		+ input[type="reset"],
+		+ input[type="button"],
+		+ button[type="submit"],
+		+ button[type="reset"],
+		+ button[type="button"],
+		+ .button {
+			margin-left: 0.5em;
+		}
+	}
+
+	input,
+	select,
+	button {
+		+ label {
+			margin-left: 1.5em;
+		}
+	}
+}
+
 @media screen and (max-width: $intTabletSmall - 1) {
 	form.inline.foldable {
 		@include blockform();
