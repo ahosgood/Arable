@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.9.0
- * Date:        08/07/2014
+ * Version:     3.9.1
+ * Date:        09/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -274,6 +274,9 @@ form.block {
     font-weight: 400;
     text-align: left;
     line-height: 1.3em; }
+    form.inline label.button,
+    form.block label.button {
+      line-height: 2.1em; }
   form.inline.labels-right label,
   form.block.labels-right label {
     text-align: right; }
@@ -1957,6 +1960,14 @@ hr {
   line-height: 1.25em;
   border: #CCC solid;
   border-width: 1px 0 0; }
+
+p + hr {
+  margin-top: 1em; }
+
+ul + hr,
+ol + hr,
+dl + hr {
+  margin-top: 0; }
 
 /* ===================================================== GENERIC CLASSES ===================================================== */
 .float-right {

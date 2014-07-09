@@ -48,6 +48,10 @@ form.block {
 		font-weight: 400;
 		text-align: left;
 		line-height: 1.3em;
+
+		&.button {
+			line-height: 2.1em;
+		}
 	}
 
 	&.labels-right label {

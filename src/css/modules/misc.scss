@@ -15,6 +15,20 @@ hr {
 	border-width: 1px 0 0;
 }
 
+p {
+	+ hr {
+		margin-top: 1em;
+	}
+}
+
+ul,
+ol,
+dl {
+	+ hr {
+		margin-top: 0;
+	}
+}
+
 /* ===================================================== GENERIC CLASSES ===================================================== */
 .float-right {
 	float: right;
