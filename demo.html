@@ -175,14 +175,12 @@ WHERE `sites`.`ext_client_code` = '123'
 		<hr>
 
 		<form class="inline foldable">
-			<label for="input-name">Name</label>
-			<input type="text" id="input-name">
+			<input type="text" id="input-name" class="full large" placeholder="Name">
 
-			<label for="input-middlename">Middle Name</label>
-			<input type="text" id="input-middlename">
+			<input type="text" id="input-middlename" class="full" placeholder="Middle Name">
 
 			<label for="input-email">Email</label>
-			<input type="email" id="input-email">
+			<input type="email" id="input-email" placeholder="Email">
 
 			<label for="select-age">Age</label>
 			<select id="select-age">
@@ -228,23 +226,22 @@ WHERE `sites`.`ext_client_code` = '123'
 			<input type="file" id="input-cv">
 
 			<label for="textarea-about">About You</label>
-			<textarea id="textarea-about"></textarea>
+			<textarea id="textarea-about" placeholder="About You"></textarea>
 
 			<button type="submit">Save</button>
 			<button type="reset">Reset</button>
+			<label class="button">Remember<input type="checkbox"></label>
 		</form>
 
 		<hr>
 
 		<form class="block">
-			<label for="input-name-2">Name</label>
-			<input type="text" id="input-name-2" value="MC" readonly>
+			<input type="text" id="input-name-2" value="MC" class="full large" placeholder="Name" readonly>
 
-			<label for="input-middlename-2">Middle Name</label>
-			<input type="text" id="input-middlename-2" value="Hammer" readonly>
+			<input type="text" id="input-middlename-2" value="Hammer" class="full" placeholder="Middle Name" readonly>
 
 			<label for="input-email-2">Email</label>
-			<input type="email" id="input-email-2" value="cant.touch@this.com" readonly>
+			<input type="email" id="input-email-2" value="cant.touch@this.com" placeholder="Email" readonly>
 
 			<label for="select-age-2">Age</label>
 			<select id="select-age-2" readonly>
@@ -290,10 +287,11 @@ WHERE `sites`.`ext_client_code` = '123'
 			<input type="file" id="input-cv-2" readonly>
 
 			<label for="textarea-about-2">About You</label>
-			<textarea id="textarea-about-2" readonly>Can't touch this...</textarea>
+			<textarea id="textarea-about-2" placeholder="About You" readonly>Can't touch this...</textarea>
 
 			<button type="submit" disabled>Save</button>
 			<button type="reset" disabled>Reset</button>
+			<label class="button disabled">Remember<input type="checkbox" disabled></label>
 		</form>
 
 		<hr>

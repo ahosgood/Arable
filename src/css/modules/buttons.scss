@@ -17,6 +17,7 @@ form input[type="button"] {
 	text-decoration: none;
 	line-height: 2.1em;
 	vertical-align: middle;
+	white-space: nowrap;
 
 	@include grad(#F2F2F2, #D8D8D8);
 

@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.9.1
- * Date:        09/07/2014
+ * Version:     3.9.2
+ * Date:        10/07/2014
  * ================================================================================
  */
 @media screen and (max-width: 400px) {
@@ -337,6 +338,21 @@ form.block {
     form.block textarea[readonly] {
       color: #AAA;
       background-color: #EEE; }
+    form.inline input.full,
+    form.inline select.full,
+    form.inline textarea.full,
+    form.block input.full,
+    form.block select.full,
+    form.block textarea.full {
+      width: 100%;
+      float: none; }
+    form.inline input.large,
+    form.inline select.large,
+    form.inline textarea.large,
+    form.block input.large,
+    form.block select.large,
+    form.block textarea.large {
+      font-size: 2.1em; }
   form.inline textarea,
   form.block textarea {
     min-height: 2em;
@@ -352,16 +368,12 @@ form.block {
   form.inline input[type="submit"],
   form.inline input[type="reset"],
   form.inline input[type="button"],
-  form.inline button[type="submit"],
-  form.inline button[type="reset"],
-  form.inline button[type="button"],
+  form.inline button,
   form.inline .button,
   form.block input[type="submit"],
   form.block input[type="reset"],
   form.block input[type="button"],
-  form.block button[type="submit"],
-  form.block button[type="reset"],
-  form.block button[type="button"],
+  form.block button,
   form.block .button {
     width: auto;
     margin-top: 0.5em;
@@ -370,100 +382,52 @@ form.block {
     form.inline input[type="submit"] + input[type="submit"],
     form.inline input[type="submit"] + input[type="reset"],
     form.inline input[type="submit"] + input[type="button"],
-    form.inline input[type="submit"] + button[type="submit"],
-    form.inline input[type="submit"] + button[type="reset"],
-    form.inline input[type="submit"] + button[type="button"],
+    form.inline input[type="submit"] + button,
     form.inline input[type="submit"] + .button,
     form.inline input[type="reset"] + input[type="submit"],
     form.inline input[type="reset"] + input[type="reset"],
     form.inline input[type="reset"] + input[type="button"],
-    form.inline input[type="reset"] + button[type="submit"],
-    form.inline input[type="reset"] + button[type="reset"],
-    form.inline input[type="reset"] + button[type="button"],
+    form.inline input[type="reset"] + button,
     form.inline input[type="reset"] + .button,
     form.inline input[type="button"] + input[type="submit"],
     form.inline input[type="button"] + input[type="reset"],
     form.inline input[type="button"] + input[type="button"],
-    form.inline input[type="button"] + button[type="submit"],
-    form.inline input[type="button"] + button[type="reset"],
-    form.inline input[type="button"] + button[type="button"],
+    form.inline input[type="button"] + button,
     form.inline input[type="button"] + .button,
-    form.inline button[type="submit"] + input[type="submit"],
-    form.inline button[type="submit"] + input[type="reset"],
-    form.inline button[type="submit"] + input[type="button"],
-    form.inline button[type="submit"] + button[type="submit"],
-    form.inline button[type="submit"] + button[type="reset"],
-    form.inline button[type="submit"] + button[type="button"],
-    form.inline button[type="submit"] + .button,
-    form.inline button[type="reset"] + input[type="submit"],
-    form.inline button[type="reset"] + input[type="reset"],
-    form.inline button[type="reset"] + input[type="button"],
-    form.inline button[type="reset"] + button[type="submit"],
-    form.inline button[type="reset"] + button[type="reset"],
-    form.inline button[type="reset"] + button[type="button"],
-    form.inline button[type="reset"] + .button,
-    form.inline button[type="button"] + input[type="submit"],
-    form.inline button[type="button"] + input[type="reset"],
-    form.inline button[type="button"] + input[type="button"],
-    form.inline button[type="button"] + button[type="submit"],
-    form.inline button[type="button"] + button[type="reset"],
-    form.inline button[type="button"] + button[type="button"],
-    form.inline button[type="button"] + .button,
+    form.inline button + input[type="submit"],
+    form.inline button + input[type="reset"],
+    form.inline button + input[type="button"],
+    form.inline button + button,
+    form.inline button + .button,
     form.inline .button + input[type="submit"],
     form.inline .button + input[type="reset"],
     form.inline .button + input[type="button"],
-    form.inline .button + button[type="submit"],
-    form.inline .button + button[type="reset"],
-    form.inline .button + button[type="button"],
+    form.inline .button + button,
     form.inline .button + .button,
     form.block input[type="submit"] + input[type="submit"],
     form.block input[type="submit"] + input[type="reset"],
     form.block input[type="submit"] + input[type="button"],
-    form.block input[type="submit"] + button[type="submit"],
-    form.block input[type="submit"] + button[type="reset"],
-    form.block input[type="submit"] + button[type="button"],
+    form.block input[type="submit"] + button,
     form.block input[type="submit"] + .button,
     form.block input[type="reset"] + input[type="submit"],
     form.block input[type="reset"] + input[type="reset"],
     form.block input[type="reset"] + input[type="button"],
-    form.block input[type="reset"] + button[type="submit"],
-    form.block input[type="reset"] + button[type="reset"],
-    form.block input[type="reset"] + button[type="button"],
+    form.block input[type="reset"] + button,
     form.block input[type="reset"] + .button,
     form.block input[type="button"] + input[type="submit"],
     form.block input[type="button"] + input[type="reset"],
     form.block input[type="button"] + input[type="button"],
-    form.block input[type="button"] + button[type="submit"],
-    form.block input[type="button"] + button[type="reset"],
-    form.block input[type="button"] + button[type="button"],
+    form.block input[type="button"] + button,
     form.block input[type="button"] + .button,
-    form.block button[type="submit"] + input[type="submit"],
-    form.block button[type="submit"] + input[type="reset"],
-    form.block button[type="submit"] + input[type="button"],
-    form.block button[type="submit"] + button[type="submit"],
-    form.block button[type="submit"] + button[type="reset"],
-    form.block button[type="submit"] + button[type="button"],
-    form.block button[type="submit"] + .button,
-    form.block button[type="reset"] + input[type="submit"],
-    form.block button[type="reset"] + input[type="reset"],
-    form.block button[type="reset"] + input[type="button"],
-    form.block button[type="reset"] + button[type="submit"],
-    form.block button[type="reset"] + button[type="reset"],
-    form.block button[type="reset"] + button[type="button"],
-    form.block button[type="reset"] + .button,
-    form.block button[type="button"] + input[type="submit"],
-    form.block button[type="button"] + input[type="reset"],
-    form.block button[type="button"] + input[type="button"],
-    form.block button[type="button"] + button[type="submit"],
-    form.block button[type="button"] + button[type="reset"],
-    form.block button[type="button"] + button[type="button"],
-    form.block button[type="button"] + .button,
+    form.block button + input[type="submit"],
+    form.block button + input[type="reset"],
+    form.block button + input[type="button"],
+    form.block button + button,
+    form.block button + .button,
     form.block .button + input[type="submit"],
     form.block .button + input[type="reset"],
     form.block .button + input[type="button"],
-    form.block .button + button[type="submit"],
-    form.block .button + button[type="reset"],
-    form.block .button + button[type="button"],
+    form.block .button + button,
     form.block .button + .button {
       margin-right: 0.5em;
       clear: none; }
@@ -629,61 +593,35 @@ form.linear {
   form.linear input[type="submit"],
   form.linear input[type="reset"],
   form.linear input[type="button"],
-  form.linear button[type="submit"],
-  form.linear button[type="reset"],
-  form.linear button[type="button"] {
+  form.linear button {
     height: 1.7em;
     margin-left: 1.5em;
     line-height: 1.7em; }
     form.linear button + input[type="submit"],
     form.linear button + input[type="reset"],
     form.linear button + input[type="button"],
-    form.linear button + button[type="submit"],
-    form.linear button + button[type="reset"],
-    form.linear button + button[type="button"],
+    form.linear button + button,
     form.linear button + .button,
     form.linear input[type="submit"] + input[type="submit"],
     form.linear input[type="submit"] + input[type="reset"],
     form.linear input[type="submit"] + input[type="button"],
-    form.linear input[type="submit"] + button[type="submit"],
-    form.linear input[type="submit"] + button[type="reset"],
-    form.linear input[type="submit"] + button[type="button"],
+    form.linear input[type="submit"] + button,
     form.linear input[type="submit"] + .button,
     form.linear input[type="reset"] + input[type="submit"],
     form.linear input[type="reset"] + input[type="reset"],
     form.linear input[type="reset"] + input[type="button"],
-    form.linear input[type="reset"] + button[type="submit"],
-    form.linear input[type="reset"] + button[type="reset"],
-    form.linear input[type="reset"] + button[type="button"],
+    form.linear input[type="reset"] + button,
     form.linear input[type="reset"] + .button,
     form.linear input[type="button"] + input[type="submit"],
     form.linear input[type="button"] + input[type="reset"],
     form.linear input[type="button"] + input[type="button"],
-    form.linear input[type="button"] + button[type="submit"],
-    form.linear input[type="button"] + button[type="reset"],
-    form.linear input[type="button"] + button[type="button"],
+    form.linear input[type="button"] + button,
     form.linear input[type="button"] + .button,
-    form.linear button[type="submit"] + input[type="submit"],
-    form.linear button[type="submit"] + input[type="reset"],
-    form.linear button[type="submit"] + input[type="button"],
-    form.linear button[type="submit"] + button[type="submit"],
-    form.linear button[type="submit"] + button[type="reset"],
-    form.linear button[type="submit"] + button[type="button"],
-    form.linear button[type="submit"] + .button,
-    form.linear button[type="reset"] + input[type="submit"],
-    form.linear button[type="reset"] + input[type="reset"],
-    form.linear button[type="reset"] + input[type="button"],
-    form.linear button[type="reset"] + button[type="submit"],
-    form.linear button[type="reset"] + button[type="reset"],
-    form.linear button[type="reset"] + button[type="button"],
-    form.linear button[type="reset"] + .button,
-    form.linear button[type="button"] + input[type="submit"],
-    form.linear button[type="button"] + input[type="reset"],
-    form.linear button[type="button"] + input[type="button"],
-    form.linear button[type="button"] + button[type="submit"],
-    form.linear button[type="button"] + button[type="reset"],
-    form.linear button[type="button"] + button[type="button"],
-    form.linear button[type="button"] + .button {
+    form.linear button + input[type="submit"],
+    form.linear button + input[type="reset"],
+    form.linear button + input[type="button"],
+    form.linear button + button,
+    form.linear button + .button {
       margin-left: 0.5em; }
   form.linear input + label,
   form.linear select + label,
@@ -734,6 +672,7 @@ form input[type="button"] {
   text-decoration: none;
   line-height: 2.1em;
   vertical-align: middle;
+  white-space: nowrap;
   background: #f2f2f2 no-repeat scroll;
   background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8)) no-repeat scroll;
@@ -1667,6 +1606,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1679,6 +1619,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1691,6 +1632,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1703,6 +1645,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1715,6 +1658,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
