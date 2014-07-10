@@ -145,15 +145,6 @@ form.block {
 		}
 	}
 
-	input,
-	button {
-		&[type="submit"] {
-			@include button-colour(#005DE8);
-
-			font-weight: 800;
-		}
-	}
-
 	input[type="checkbox"],
 	input[type="radio"] {
 		width: auto;

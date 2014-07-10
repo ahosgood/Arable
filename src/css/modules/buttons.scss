@@ -1,10 +1,10 @@
 /* ===================================================== BUTTONS ===================================================== */
 a.button,
 label.button,
-form button,
-form input[type="submit"],
-form input[type="reset"],
-form input[type="button"] {
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
 	width: auto;
 	//height: 2.1em;
 	padding: 0 0.75em;
@@ -162,8 +162,6 @@ label.button {
 	padding: 0 0.75em !important;
 
 	font-size: 1.3em !important;
-
-	&.thin {}
 
 	input[type="checkbox"] {
 		margin: 0 0 0 0.625em !important;
