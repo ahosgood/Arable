@@ -14,6 +14,10 @@ tbody {
 
 /* ===================================================== TINYMCE ===================================================== */
 .mce-tinymce {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
 	button {
 		margin-top: 0 !important;
 
@@ -27,17 +31,35 @@ tbody {
 	}
 }
 
+form.block {
+	label {
+		+ .mce-tinymce {
+			clear: both;
+		}
+	}
+}
+
 form.inline {
 	label {
 		+ .mce-tinymce {
 			width: 75%;
 			margin: 0.2em 0;
 
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-
 			float: right;
+		}
+	}
+}
+
+@media screen and (max-width: $intTabletSmall - 1) {
+	form.inline.foldable {
+		label {
+			+ .mce-tinymce {
+				width: auto;
+
+				float: none;
+
+				clear: both;
+			}
 		}
 	}
 }
