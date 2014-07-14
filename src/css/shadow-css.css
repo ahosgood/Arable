@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.9.4
+ * Version:     3.9.5
  * Date:        14/07/2014
  * ================================================================================
  */
@@ -1110,14 +1110,6 @@ input[type="button"] {
   input[type="button"]:empty i[class*=" fa-"]::before {
     padding-left: 0; }
 
-@media all and (min--moz-device-pixel-ratio: 0) {
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
-  button,
-  a.button,
-  label.button {
-    height: 2.1em; } }
 input[type="submit"],
 button[type="submit"] {
   font-weight: 800;
@@ -1179,6 +1171,17 @@ label.button {
     float: none !important;
     vertical-align: baseline; }
 
+@media all and (min--moz-device-pixel-ratio: 0) {
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  button,
+  a.button,
+  label.button {
+    height: 2.1em; } }
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+  label.button input[type="checkbox"] {
+    vertical-align: middle; } }
 /* ===================================================== LISTS ===================================================== */
 ul,
 ol,

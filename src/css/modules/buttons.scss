@@ -137,17 +137,6 @@ input[type="button"] {
 	}
 }
 
-@media all and (min--moz-device-pixel-ratio: 0) {
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	a.button,
-	label.button {
-		height: 2.1em;
-	}
-}
-
 input,
 button {
 	&[type="submit"] {
@@ -171,5 +160,24 @@ label.button {
 		float: none !important;
 
 		vertical-align: baseline;
+	}
+}
+
+@media all and (min--moz-device-pixel-ratio: 0) {
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	a.button,
+	label.button {
+		height: 2.1em;
+	}
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+	label.button {
+		input[type="checkbox"] {
+			vertical-align: middle;
+		}
 	}
 }
