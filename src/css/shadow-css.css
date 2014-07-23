@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.10.0
- * Date:        22/07/2014
+ * Version:     3.10.1
+ * Date:        23/07/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -1739,45 +1739,45 @@ blockquote {
     font-size: 1em;
     line-height: 0.74em; }
 
-h1.left,
-h2.left,
-h3.left,
-h4.left,
-h5.left,
-h6.left,
-p.left,
-blockquote.left,
-pre.left {
+h1.align-left,
+h2.align-left,
+h3.align-left,
+h4.align-left,
+h5.align-left,
+h6.align-left,
+p.align-left,
+blockquote.align-left,
+pre.align-left {
+  text-align: left !important; }
+h1.align-right,
+h2.align-right,
+h3.align-right,
+h4.align-right,
+h5.align-right,
+h6.align-right,
+p.align-right,
+blockquote.align-right,
+pre.align-right {
   text-align: right !important; }
-h1.right,
-h2.right,
-h3.right,
-h4.right,
-h5.right,
-h6.right,
-p.right,
-blockquote.right,
-pre.right {
-  text-align: right !important; }
-h1.center,
-h2.center,
-h3.center,
-h4.center,
-h5.center,
-h6.center,
-p.center,
-blockquote.center,
-pre.center {
+h1.align-center,
+h2.align-center,
+h3.align-center,
+h4.align-center,
+h5.align-center,
+h6.align-center,
+p.align-center,
+blockquote.align-center,
+pre.align-center {
   text-align: center !important; }
-h1.justify,
-h2.justify,
-h3.justify,
-h4.justify,
-h5.justify,
-h6.justify,
-p.justify,
-blockquote.justify,
-pre.justify {
+h1.align-justify,
+h2.align-justify,
+h3.align-justify,
+h4.align-justify,
+h5.align-justify,
+h6.align-justify,
+p.align-justify,
+blockquote.align-justify,
+pre.align-justify {
   text-align: justify !important; }
 
 sup,
@@ -1847,6 +1847,12 @@ dl + hr {
 
 .float-left {
   float: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
 
 .no-top-margin {
   margin-top: 0 !important; }
