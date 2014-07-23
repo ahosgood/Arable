@@ -207,19 +207,19 @@ h6,
 p,
 blockquote,
 pre {
-	&.left {
+	&.align-left {
+		text-align: left !important;
+	}
+
+	&.align-right {
 		text-align: right !important;
 	}
 
-	&.right {
-		text-align: right !important;
-	}
-
-	&.center {
+	&.align-center {
 		text-align: center !important;
 	}
 
-	&.justify {
+	&.align-justify {
 		text-align: justify !important;
 	}
 }
