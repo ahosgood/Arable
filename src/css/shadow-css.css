@@ -1,16 +1,19 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.10.1
- * Date:        23/07/2014
+ * Version:     3.10.2
+ * Date:        24/07/2014
  * ================================================================================
  */
 @-ms-viewport {
   width: device-width; }
+
 @viewport {
   width: device-width; }
+
 /* ===================================================== RESET ===================================================== */
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, content, data, datalist, dd, decorator, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, shadow, small, source, span, strong, style, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
@@ -1465,7 +1468,7 @@ ul.tree {
 /* ===================================================== TABLES ===================================================== */
 table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px #CCC solid;
   border-radius: 3px;
@@ -1479,9 +1482,9 @@ table {
   table label {
     font-size: 1em; }
   table p {
-    margin: 5px 0; }
+    margin: 0.5em 0; }
   table ul {
-    margin-left: 15px; }
+    margin-left: 1.5em; }
   table button {
     font-size: 1.16666em; }
 
@@ -1520,8 +1523,7 @@ tr.highlight,
 
 th,
 td {
-  min-width: 5px;
-  padding: 5px 10px;
+  padding: 0.35em 0.75em;
   text-align: left;
   border-width: 1px 0;
   border-color: #CCC;
@@ -1539,6 +1541,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1551,6 +1554,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1563,6 +1567,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1575,6 +1580,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1587,6 +1593,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,

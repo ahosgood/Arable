@@ -1,7 +1,7 @@
 /* ===================================================== TABLES ===================================================== */
 table {
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 1.5em;
 
 	background-color: rgba(255, 255, 255, 0.85);
 
@@ -22,11 +22,11 @@ table {
 	}
 
 	p {
-		margin: 5px 0;
+		margin: 0.5em 0;
 	}
 
 	ul {
-		margin-left: 15px;
+		margin-left: 1.5em;
 	}
 
 	button {
@@ -79,8 +79,7 @@ table {
 
 				th,
 				td {
-					min-width: 5px;
-					padding: 5px 10px;
+					padding: 0.35em 0.75em;
 
 					text-align: left;
 
