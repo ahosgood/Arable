@@ -31,19 +31,31 @@ dl {
 
 /* ===================================================== GENERIC CLASSES ===================================================== */
 .float-right {
-	float: right;
+	float: right !important;
 }
 
 .float-left {
-	float: left;
+	float: left !important;
+}
+
+.no-float {
+	float: none !important;
 }
 
 .align-right {
-	text-align: right;
+	text-align: right !important;
 }
 
 .align-left {
-	text-align: left;
+	text-align: left !important;
+}
+
+.align-center {
+	text-align: center !important;
+}
+
+.align-justify {
+	text-align: justify !important;
 }
 
 .no-top-margin {
