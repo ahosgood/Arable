@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.10.4
- * Date:        29/07/2014
+ * Version:     3.11.0
+ * Date:        30/07/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -227,7 +227,7 @@ button {
 /* ===================================================== GENERIC ===================================================== */
 body {
   color: #222;
-  font-family: Helvetica, Arial, Tahoma, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 .clear {
@@ -436,7 +436,7 @@ form.block {
   form.block input[type="checkbox"],
   form.block input[type="radio"] {
     width: auto;
-    margin-top: 0.4em;
+    margin-top: 0.5em;
     float: left; }
   form.inline input[type="radio"] + label,
   form.block input[type="radio"] + label {
@@ -491,16 +491,20 @@ form.block {
   form.block input[type="checkbox"],
   form.block input[type="radio"] {
     width: auto;
-    margin-top: 0.25em;
     margin-right: 0.5em;
     margin-left: 0.5em;
-    display: inline-block;
+    display: inline-block; }
+  form.block input[type="checkbox"] {
+    margin-top: 0.5em;
+    clear: none; }
+  form.block input[type="radio"] {
+    margin-top: 0.35em;
     float: left;
     clear: both; }
-  form.block input[type="radio"] + label {
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    display: inline-block; }
+    form.block input[type="radio"] + label {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+      display: inline-block; }
 
 form.linear {
   display: block;
@@ -576,16 +580,20 @@ form.linear {
     form.inline.foldable input[type="checkbox"],
     form.inline.foldable input[type="radio"] {
       width: auto;
-      margin-top: 0.25em;
       margin-right: 0.5em;
       margin-left: 0.5em;
-      display: inline-block;
+      display: inline-block; }
+    form.inline.foldable input[type="checkbox"] {
+      margin-top: 0.5em;
+      clear: none; }
+    form.inline.foldable input[type="radio"] {
+      margin-top: 0.35em;
       float: left;
       clear: both; }
-    form.inline.foldable input[type="radio"] + label {
-      margin-top: 0.25em;
-      margin-bottom: 0.25em;
-      display: inline-block; } }
+      form.inline.foldable input[type="radio"] + label {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        display: inline-block; } }
 /* ===================================================== BUTTONS ===================================================== */
 a.button,
 label.button,
@@ -1466,6 +1474,7 @@ ul.tree {
 table {
   width: 100%;
   margin-bottom: 1.5em;
+  clear: both;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px #CCC solid;
   border-radius: 3px;
@@ -1594,7 +1603,6 @@ h4,
 h5,
 h6 {
   margin: 1.5em 0 1em;
-  font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 800;
   line-height: 1.25em;
   page-break-after: avoid; }
@@ -1635,15 +1643,16 @@ p {
   margin-bottom: 0.5em;
   font-size: 1.3em;
   font-weight: 300;
-  line-height: 1.4em;
+  line-height: 1.5em;
   word-break: normal;
   orphans: 3;
   widows: 3; }
-  p.hyphenate {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto; }
+
+.hyphenate p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
 
 small {
   font-size: 0.75em;
@@ -1681,10 +1690,8 @@ pre.code[title] {
     top: 0;
     right: 0;
     left: 0;
-    color: #222;
-    font-family: Helvetica, Arial, Tahoma, sans-serif;
-    font-weight: 300;
     color: #FFF;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: 800;
     line-height: 1.5em;
     white-space: nowrap;
@@ -1696,10 +1703,8 @@ pre.code[lang]::after {
   position: absolute;
   top: 0;
   right: 0.5em;
-  color: #222;
-  font-family: Helvetica, Arial, Tahoma, sans-serif;
-  font-weight: 300;
   color: #FFF;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5em;
   text-transform: uppercase;
@@ -1738,45 +1743,16 @@ blockquote {
     font-size: 1em;
     line-height: 0.74em; }
 
-h1.align-left,
-h2.align-left,
-h3.align-left,
-h4.align-left,
-h5.align-left,
-h6.align-left,
-p.align-left,
-blockquote.align-left,
-pre.align-left {
+.align-left {
   text-align: left !important; }
-h1.align-right,
-h2.align-right,
-h3.align-right,
-h4.align-right,
-h5.align-right,
-h6.align-right,
-p.align-right,
-blockquote.align-right,
-pre.align-right {
+
+.align-right {
   text-align: right !important; }
-h1.align-center,
-h2.align-center,
-h3.align-center,
-h4.align-center,
-h5.align-center,
-h6.align-center,
-p.align-center,
-blockquote.align-center,
-pre.align-center {
+
+.align-center {
   text-align: center !important; }
-h1.align-justify,
-h2.align-justify,
-h3.align-justify,
-h4.align-justify,
-h5.align-justify,
-h6.align-justify,
-p.align-justify,
-blockquote.align-justify,
-pre.align-justify {
+
+.align-justify {
   text-align: justify !important; }
 
 sup,
@@ -1794,31 +1770,6 @@ strong {
 
 em {
   font-style: italic; }
-
-h1.right,
-h2.right,
-h3.right,
-h4.right,
-h5.right,
-h6.right,
-p.right {
-  text-align: right; }
-h1.center,
-h2.center,
-h3.center,
-h4.center,
-h5.center,
-h6.center,
-p.center {
-  text-align: center; }
-h1.justify,
-h2.justify,
-h3.justify,
-h4.justify,
-h5.justify,
-h6.justify,
-p.justify {
-  text-align: justify; }
 
 /* ===================================================== OTHER ===================================================== */
 hr {

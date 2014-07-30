@@ -7,7 +7,6 @@ h5,
 h6 {
 	margin: 1.5em 0 1em;
 
-	font-family: Helvetica, Arial, Tahoma, sans-serif;
 	font-weight: 800;
 	line-height: 1.25em;
 	page-break-after: avoid;
@@ -50,14 +49,16 @@ p {
 
 	font-size: 1.3em;
 	font-weight: 300;
-	line-height: 1.4em;
+	line-height: 1.5em;
 
 	word-break: normal;
 
 	orphans: 3;
 	widows: 3;
+}
 
-	&.hyphenate {
+.hyphenate {
+	p {
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
@@ -118,8 +119,8 @@ pre.code {
 			right: 0;
 			left: 0;
 
-			@include basefont;
 			color: #FFF;
+			@include basefontface;
 			font-weight: 800;
 			line-height: 1.5em;
 			white-space: nowrap;
@@ -139,8 +140,8 @@ pre.code {
 			top: 0;
 			right: 0.5em;
 
-			@include basefont;
 			color: #FFF;
+			@include basefontface;
 			font-weight: 400;
 			line-height: 1.5em;
 			text-transform: uppercase;
@@ -198,30 +199,20 @@ blockquote {
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre {
-	&.align-left {
-		text-align: left !important;
-	}
+.align-left {
+	text-align: left !important;
+}
 
-	&.align-right {
-		text-align: right !important;
-	}
+.align-right {
+	text-align: right !important;
+}
 
-	&.align-center {
-		text-align: center !important;
-	}
+.align-center {
+	text-align: center !important;
+}
 
-	&.align-justify {
-		text-align: justify !important;
-	}
+.align-justify {
+	text-align: justify !important;
 }
 
 sup,
@@ -243,24 +234,4 @@ strong {
 
 em {
 	font-style: italic;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	&.right {
-		text-align: right;
-	}
-
-	&.center {
-		text-align: center;
-	}
-
-	&.justify {
-		text-align: justify;
-	}
 }

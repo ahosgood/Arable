@@ -1,6 +1,8 @@
 /* ===================================================== GENERIC ===================================================== */
 body {
-	@include basefont;
+	@include basefontcolour;
+	@include basefontface;
+	font-weight: 300;
 }
 
 .clear {
