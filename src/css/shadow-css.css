@@ -1,16 +1,19 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.11.0
- * Date:        30/07/2014
+ * Version:     3.12.0
+ * Date:        04/08/2014
  * ================================================================================
  */
 @-ms-viewport {
   width: device-width; }
+
 @viewport {
   width: device-width; }
+
 /* ===================================================== RESET ===================================================== */
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, content, data, datalist, dd, decorator, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, shadow, small, source, span, strong, style, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
@@ -227,7 +230,7 @@ button {
 /* ===================================================== GENERIC ===================================================== */
 body {
   color: #222;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 .clear {
@@ -1547,6 +1550,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1559,6 +1563,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1571,6 +1576,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1583,6 +1589,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1595,6 +1602,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
@@ -1691,7 +1699,7 @@ pre.code[title] {
     right: 0;
     left: 0;
     color: #FFF;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 800;
     line-height: 1.5em;
     white-space: nowrap;
@@ -1704,7 +1712,7 @@ pre.code[lang]::after {
   top: 0;
   right: 0.5em;
   color: #FFF;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5em;
   text-transform: uppercase;
@@ -1742,18 +1750,6 @@ blockquote {
     margin-bottom: 0;
     font-size: 1em;
     line-height: 0.74em; }
-
-.align-left {
-  text-align: left !important; }
-
-.align-right {
-  text-align: right !important; }
-
-.align-center {
-  text-align: center !important; }
-
-.align-justify {
-  text-align: justify !important; }
 
 sup,
 sub {
@@ -1798,14 +1794,14 @@ dl + hr {
 .float-left {
   float: left !important; }
 
-.no-float {
+.float-none {
   float: none !important; }
-
-.align-right {
-  text-align: right !important; }
 
 .align-left {
   text-align: left !important; }
+
+.align-right {
+  text-align: right !important; }
 
 .align-center {
   text-align: center !important; }
@@ -1818,6 +1814,12 @@ dl + hr {
 
 .no-bottom-margin {
   margin-bottom: 0 !important; }
+
+.no-top-padding {
+  padding-top: 0 !important; }
+
+.no-bottom-padding {
+  padding-bottom: 0 !important; }
 
 /* ===================================================== NOTICES ===================================================== */
 .error,
