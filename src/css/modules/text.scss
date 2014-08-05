@@ -186,7 +186,7 @@ blockquote {
 	color: #555;
 	font-size: 1.5em;
 	font-weight: 300;
-	line-height: 1.25em;
+	line-height: 1.75em;
 	white-space: pre-wrap;
 
 	border-left: 0.35em #CCC solid;
@@ -197,22 +197,6 @@ blockquote {
 		font-size: 1em;
 		line-height: 0.74em;
 	}
-}
-
-.align-left {
-	text-align: left !important;
-}
-
-.align-right {
-	text-align: right !important;
-}
-
-.align-center {
-	text-align: center !important;
-}
-
-.align-justify {
-	text-align: justify !important;
 }
 
 sup,

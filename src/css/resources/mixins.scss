@@ -36,7 +36,7 @@
 }
 
 @mixin basefontface() {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @mixin button-colour($base) {
