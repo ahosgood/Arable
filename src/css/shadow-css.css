@@ -1,16 +1,19 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.12.1
+ * Version:     3.12.2
  * Date:        05/08/2014
  * ================================================================================
  */
 @-ms-viewport {
   width: device-width; }
+
 @viewport {
   width: device-width; }
+
 /* ===================================================== RESET ===================================================== */
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, content, data, datalist, dd, decorator, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, shadow, small, source, span, strong, style, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
@@ -1321,7 +1324,7 @@ ul.tabs {
   margin-top: 0.5em;
   margin-bottom: 1em;
   margin-left: 0;
-  padding: 0 0.25em;
+  padding: 1px 0.25em 0;
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
@@ -1338,7 +1341,7 @@ ul.tabs {
     border-radius: 3px 3px 0 0;
     z-index: 1; }
     ul.tabs li a {
-      padding: 0.5em 1em;
+      padding: 0.5em 1em 0.65em;
       display: block;
       font-weight: 400;
       line-height: 1em;
@@ -1547,6 +1550,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1559,6 +1563,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1571,6 +1576,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1583,6 +1589,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1595,6 +1602,7 @@ td {
 
   100% {
     background-color: transparent; } }
+
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
