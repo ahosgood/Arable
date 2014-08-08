@@ -1,19 +1,16 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.12.2
- * Date:        05/08/2014
+ * Version:     3.12.3
+ * Date:        08/08/2014
  * ================================================================================
  */
 @-ms-viewport {
   width: device-width; }
-
 @viewport {
   width: device-width; }
-
 /* ===================================================== RESET ===================================================== */
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, content, data, datalist, dd, decorator, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, shadow, small, source, span, strong, style, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
@@ -1488,7 +1485,8 @@ table {
   table p,
   table ul,
   table ol,
-  table label {
+  table button,
+  table .button {
     font-size: 1em; }
   table p {
     margin: 0.5em 0; }
@@ -1538,6 +1536,10 @@ td {
   border-color: #CCC;
   border-style: solid; }
 
+form table label,
+form table input {
+  font-size: 1.08333em; }
+
 @-webkit-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1550,7 +1552,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1563,7 +1564,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1576,7 +1576,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1589,7 +1588,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -1602,7 +1600,6 @@ td {
 
   100% {
     background-color: transparent; } }
-
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,

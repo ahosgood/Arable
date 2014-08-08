@@ -19,7 +19,8 @@ table {
 	p,
 	ul,
 	ol,
-	label {
+	button,
+	.button {
 		font-size: 1em;
 	}
 
@@ -93,6 +94,15 @@ table {
 				th {}
 
 				td {}
+
+form {
+	table {
+		label,
+		input {
+			font-size: 1.08333em;
+		}
+	}
+}
 
 @include keyframes(highlight-fade) {
 	0% {
