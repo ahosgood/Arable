@@ -15,6 +15,10 @@ textarea {
 
 	border: 1px #CCC solid;
 	border-radius: 3px;
+
+	&:focus {
+		box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
+	}
 }
 
 	optgroup,
@@ -31,6 +35,80 @@ textarea {
 		}
 
 form.inline,
+form.block,
+form.linear {
+	textarea {
+		min-height: 2em;
+
+		resize: vertical;
+	}
+
+	input:not([type="text"]) {
+		&:valid {
+			&:focus {
+				background-color: #E6FAE6;
+
+				border-color: #0C0;
+
+				box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5);
+			}
+		}
+	}
+
+	input,
+	select,
+	textarea {
+		&:invalid {
+			background-color: #FAE6E6;
+
+			border-color: #C00;
+
+			box-shadow: none;
+
+			&:focus {
+				box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
+			}
+
+			/*&:required {
+				//background-color: #FFF5CC;
+
+				border-color: #FC0;
+
+				&:focus {
+					box-shadow: none;
+				}
+			}*/
+		}
+
+		&:disabled,
+		&[readonly] {
+			color: #AAA;
+
+			background-color: #EEE;
+
+			&:focus {
+				box-shadow: none !important;
+			}
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol,
+	dl {
+		clear: both;
+
+		text-align: left;
+	}
+}
+
+form.inline,
 form.block {
 	display: block;
 
@@ -44,10 +122,10 @@ form.block {
 		float: left;
 		clear: both;
 
-		font-size: 1.3em;
+		@include basefontsize;
 		font-weight: 400;
 		text-align: left;
-		line-height: 1.3em;
+		line-height: #{$baseFontSize}em;
 
 		&.button {
 			line-height: 2.1em;
@@ -68,7 +146,7 @@ form.block {
 
 		float: right;
 
-		font-size: 1.3em;
+		@include basefontsize;
 		text-align: left;
 
 		&::-webkit-input-placeholder {
@@ -91,13 +169,6 @@ form.block {
 			font-weight: 400;
 		}
 
-		&:disabled,
-		&[readonly] {
-			color: #AAA;
-
-			background-color: #EEE;
-		}
-
 		&.full {
 			width: 100%;
 
@@ -107,20 +178,6 @@ form.block {
 		&.large {
 			font-size: 2.1em;
 		}
-	}
-
-	textarea {
-		min-height: 2em;
-
-		resize: vertical;
-	}
-
-	input:invalid,
-	select:invalid,
-	textarea:invalid {
-		border-color: #F99;
-
-		box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
 	}
 
 	input[type="submit"],
@@ -148,12 +205,17 @@ form.block {
 	input[type="checkbox"],
 	input[type="radio"] {
 		width: auto;
-		margin-top: 0.5em;
 
 		float: left;
 	}
 
+	input[type="checkbox"] {
+		margin-top: 0.65em;
+	}
+
 	input[type="radio"] {
+		margin-top: 0.55em;
+
 		+ label {
 			width: auto;
 			margin-top: 0.4em;
@@ -173,21 +235,6 @@ form.block {
 			}
 		}
 	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ul,
-	ol,
-	dl {
-		clear: both;
-
-		text-align: left;
-	}
 }
 
 form.block {
@@ -195,6 +242,8 @@ form.block {
 }
 
 form.linear {
+	padding: 0.5em 0;
+
 	display: block;
 
 	overflow: hidden;
@@ -205,13 +254,12 @@ form.linear {
 	button {
 		float: left;
 
-		font-size: 1.3em;
+		@include basefontsize;
 	}
 
 	label,
-	input,
-	select {
-		line-height: 1.3em;
+	input {
+		line-height: #{$baseFontSize}em;
 	}
 
 	label {
@@ -222,9 +270,9 @@ form.linear {
 	}
 
 	select {
-		margin-top: 1px;
-
 		height: 1.8em;
+		margin-top: 1px;
+		padding: 2px;
 	}
 
 	button,

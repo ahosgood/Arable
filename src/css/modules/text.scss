@@ -5,51 +5,54 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 1.5em 0 1em;
+	padding: 0.75em 0;
 
+	line-height: 1em;
 	font-weight: 800;
-	line-height: 1.25em;
 	page-break-after: avoid;
 
-	&.mediumweight {
-		font-weight: 400;
+	// Legacy
+	&.no-top-margin {
+		padding-top: 0 !important;
+
+		line-height: 1em;
 	}
 
-	&.lightweight {
-		font-weight: 300;
+	&.no-bottom-margin {
+		padding-bottom: 0.125em !important;
 	}
 }
 
 h1 {
-	font-size: 3.5em;
+	font-size: #{1.33 * exponent(1.2, 6)}em;
 }
 
 h2 {
-	font-size: 3em;
+	font-size: #{1.33 * exponent(1.2, 5)}em;
 }
 
 h3 {
-	font-size: 2.5em;
+	font-size: #{1.33 * exponent(1.2, 4)}em;
 }
 
 h4 {
-	font-size: 2em;
+	font-size: #{1.33 * exponent(1.2, 3)}em;
 }
 
 h5 {
-	font-size: 1.75em;
+	font-size: #{1.33 * exponent(1.2, 2)}em;
 }
 
 h6 {
-	font-size: 1.5em;
+	font-size: #{1.33 * exponent(1.2, 1)}em;
 }
 
 p {
-	margin-bottom: 0.5em;
+	padding: 0 0 #{$baseLineHeight / 2}em;
 
-	font-size: 1.35em;
+	@include basefontsize;
+	@include basefontlineheight;
 	font-weight: 300;
-	line-height: 1.618em;
 
 	word-break: normal;
 
@@ -67,9 +70,13 @@ p {
 }
 
 small {
-	font-size: 0.75em;
+	font-size: 0.85em;
 	vertical-align: baseline;
-	line-height: 0.75em;
+	line-height: 1em;
+}
+
+pre {
+	font-family: "Courier New", Courier, monospace, mono;
 }
 
 pre,
@@ -78,8 +85,7 @@ code {
 
 	display: block;
 
-	font-family: "Courier New", Courier, monospace, mono;
-	font-size: 1.3em;
+	@include basefontsize;
 	font-weight: 400;
 	line-height: 1.25em;
 	white-space: pre-wrap;
@@ -93,27 +99,35 @@ pre.code {
 
 	overflow: auto;
 
+	color: #333;
+	font-family: Monaco, "Courier New", Courier, monospace, mono;
 	white-space: pre;
 
-	background-color: #EEE;
+	background-color: #F4F4F4;
 
 	border: 1px #CCC solid;
 	border-radius: 3px;
 }
 
 pre.code {
+	font-size: 1.25em;
+
 	em {
 		font-style: normal;
-		font-weight: 800;
+		//font-weight: 800;
 
 		background-color: #FF9;
+
+		box-shadow: 0 0 5px #FF9;
+
+		border-radius: 3px;
 	}
 
 	&[title] {
-		padding-top: 2.5em;
+		padding-top: 3em;
 
 		&::before {
-			padding: 0 0.75em;
+			padding: 0.25em 0.75em;
 
 			position: absolute;
 			top: 0;
@@ -138,8 +152,8 @@ pre.code {
 			padding: 0 0.5em;
 
 			position: absolute;
-			top: 0;
-			right: 0.5em;
+			top: 0.25em;
+			right: 0.25em;
 
 			color: #FFF;
 			@include basefontface;
@@ -149,7 +163,7 @@ pre.code {
 
 			background-color: #CCC;
 
-			border-radius: 0 0 3px 3px;
+			border-radius: 3px;
 
 			content: attr(lang);
 		}
@@ -185,7 +199,7 @@ blockquote {
 	padding: 0.25em 0.25em 0.25em 1em;
 
 	color: #555;
-	font-size: 1.6em;
+	font-size: 1.55em;
 	font-weight: 300;
 	line-height: 1.75em;
 	white-space: pre-wrap;

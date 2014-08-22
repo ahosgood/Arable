@@ -4,7 +4,7 @@ ol,
 dl {
 	margin-bottom: 1.5em;
 
-	font-size: 1.3em;
+	@include basefontsize;
 }
 
 li,
@@ -38,7 +38,7 @@ ol {
 }
 
 	li {
-		line-height: 1.5em;
+		@include basefontlineheight;
 	}
 
 ul.plain,
@@ -316,7 +316,7 @@ ul.tree {
 	li {
 		position: relative;
 
-		line-height: 1.5em;
+		@include basefontlineheight;
 		white-space: nowrap;
 
 		z-index: 3;

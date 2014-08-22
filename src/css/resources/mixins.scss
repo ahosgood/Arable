@@ -31,6 +31,14 @@
 	}
 }
 
+@mixin basefontsize() {
+	font-size: #{$baseFontSize}em;
+}
+
+@mixin basefontlineheight() {
+	line-height: #{$baseLineHeight}em;
+}
+
 @mixin basefontcolour() {
 	color: #222;
 }
@@ -105,13 +113,14 @@
 	}
 
 	input[type="checkbox"] {
-		margin-top: 0.5em;
+		margin-top: 0.65em;
 
+		float: left;
 		clear: none;
 	}
 
 	input[type="radio"] {
-		margin-top: 0.35em;
+		margin-top: 0.45em;
 
 		float: left;
 		clear: both;

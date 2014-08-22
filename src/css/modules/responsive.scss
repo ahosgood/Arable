@@ -48,6 +48,12 @@ $intDesktop: 1025px;
 	.show-on-mobile {
 		display: block;
 	}
+
+	html {
+		&.grow-device {
+			font-size: 12px;
+		}
+	}
 }
 
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
@@ -80,6 +86,12 @@ $intDesktop: 1025px;
 
 	.show-on-tablet {
 		display: block;
+	}
+
+	html {
+		&.grow-device {
+			font-size: 11px;
+		}
 	}
 }
 

@@ -1,7 +1,7 @@
 /* ===================================================== TABLES ===================================================== */
 table {
 	width: 100%;
-	margin-bottom: 1.5em;
+	margin-bottom: #{$baseLineHeight}em;
 
 	clear: both;
 
@@ -40,14 +40,14 @@ table {
 	thead {
 		font-family: Helvetica, Arial, Tahoma, sans-serif;
 		font-weight: 800;
-		font-size: 1.3em;
+		@include basefontsize;
 
 		@include grad(#EEE, #D8D8D8);
 	}
 
 	tbody,
 	tfoot {
-		font-size: 1.3em;
+		font-size: 1.25em;
 	}
 
 		tbody {
@@ -99,7 +99,7 @@ form {
 	table {
 		label,
 		input {
-			font-size: 1.08333em;
+			font-size: 1em;
 		}
 	}
 }

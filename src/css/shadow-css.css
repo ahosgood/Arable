@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.13.0
+ * Version:     4.0.0
  * Date:        22/08/2014
  * ================================================================================
  */
@@ -195,7 +195,10 @@ button {
     display: none; }
 
   .show-on-mobile {
-    display: block; } }
+    display: block; }
+
+  html.grow-device {
+    font-size: 12px; } }
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
 @media screen and (min-width: 659px) and (max-width: 768px) {
   .noshow-on-tablet-p {
@@ -216,7 +219,10 @@ button {
     display: none; }
 
   .show-on-tablet {
-    display: block; } }
+    display: block; }
+
+  html.grow-device {
+    font-size: 11px; } }
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
 @media screen and (min-width: 1025px) {
   .noshow-on-desktop {
@@ -249,6 +255,10 @@ textarea {
   background-color: #FFF;
   border: 1px #CCC solid;
   border-radius: 3px; }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 
 optgroup,
 option {
@@ -259,6 +269,118 @@ optgroup option {
 
 option:disabled {
   color: #AAA; }
+
+form.inline textarea,
+form.block textarea,
+form.linear textarea {
+  min-height: 2em;
+  resize: vertical; }
+form.inline input:not([type="text"]):valid:focus,
+form.block input:not([type="text"]):valid:focus,
+form.linear input:not([type="text"]):valid:focus {
+  background-color: #E6FAE6;
+  border-color: #0C0;
+  box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5); }
+form.inline input:invalid,
+form.inline select:invalid,
+form.inline textarea:invalid,
+form.block input:invalid,
+form.block select:invalid,
+form.block textarea:invalid,
+form.linear input:invalid,
+form.linear select:invalid,
+form.linear textarea:invalid {
+  background-color: #FAE6E6;
+  border-color: #C00;
+  box-shadow: none;
+  			/*&:required {
+  				//background-color: #FFF5CC;
+  
+  				border-color: #FC0;
+  
+  				&:focus {
+  					box-shadow: none;
+  				}
+  			}*/ }
+  form.inline input:invalid:focus,
+  form.inline select:invalid:focus,
+  form.inline textarea:invalid:focus,
+  form.block input:invalid:focus,
+  form.block select:invalid:focus,
+  form.block textarea:invalid:focus,
+  form.linear input:invalid:focus,
+  form.linear select:invalid:focus,
+  form.linear textarea:invalid:focus {
+    box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
+form.inline input:disabled, form.inline input[readonly],
+form.inline select:disabled,
+form.inline select[readonly],
+form.inline textarea:disabled,
+form.inline textarea[readonly],
+form.block input:disabled,
+form.block input[readonly],
+form.block select:disabled,
+form.block select[readonly],
+form.block textarea:disabled,
+form.block textarea[readonly],
+form.linear input:disabled,
+form.linear input[readonly],
+form.linear select:disabled,
+form.linear select[readonly],
+form.linear textarea:disabled,
+form.linear textarea[readonly] {
+  color: #AAA;
+  background-color: #EEE; }
+  form.inline input:disabled:focus, form.inline input[readonly]:focus,
+  form.inline select:disabled:focus,
+  form.inline select[readonly]:focus,
+  form.inline textarea:disabled:focus,
+  form.inline textarea[readonly]:focus,
+  form.block input:disabled:focus,
+  form.block input[readonly]:focus,
+  form.block select:disabled:focus,
+  form.block select[readonly]:focus,
+  form.block textarea:disabled:focus,
+  form.block textarea[readonly]:focus,
+  form.linear input:disabled:focus,
+  form.linear input[readonly]:focus,
+  form.linear select:disabled:focus,
+  form.linear select[readonly]:focus,
+  form.linear textarea:disabled:focus,
+  form.linear textarea[readonly]:focus {
+    box-shadow: none !important; }
+form.inline h1,
+form.inline h2,
+form.inline h3,
+form.inline h4,
+form.inline h5,
+form.inline h6,
+form.inline p,
+form.inline ul,
+form.inline ol,
+form.inline dl,
+form.block h1,
+form.block h2,
+form.block h3,
+form.block h4,
+form.block h5,
+form.block h6,
+form.block p,
+form.block ul,
+form.block ol,
+form.block dl,
+form.linear h1,
+form.linear h2,
+form.linear h3,
+form.linear h4,
+form.linear h5,
+form.linear h6,
+form.linear p,
+form.linear ul,
+form.linear ol,
+form.linear dl {
+  clear: both;
+  text-align: left; }
 
 form.inline,
 form.block {
@@ -271,10 +393,10 @@ form.block {
     padding: 1px 0;
     float: left;
     clear: both;
-    font-size: 1.3em;
+    font-size: 1.33em;
     font-weight: 400;
     text-align: left;
-    line-height: 1.3em; }
+    line-height: 1.33em; }
     form.inline label.button,
     form.block label.button {
       line-height: 2.1em; }
@@ -291,7 +413,7 @@ form.block {
     margin: 0.2em 0;
     display: block;
     float: right;
-    font-size: 1.3em;
+    font-size: 1.33em;
     text-align: left; }
     form.inline input::-webkit-input-placeholder,
     form.inline select::-webkit-input-placeholder,
@@ -325,19 +447,6 @@ form.block {
     form.block textarea:-ms-input-placeholder {
       color: #999;
       font-weight: 400; }
-    form.inline input:disabled, form.inline input[readonly],
-    form.inline select:disabled,
-    form.inline select[readonly],
-    form.inline textarea:disabled,
-    form.inline textarea[readonly],
-    form.block input:disabled,
-    form.block input[readonly],
-    form.block select:disabled,
-    form.block select[readonly],
-    form.block textarea:disabled,
-    form.block textarea[readonly] {
-      color: #AAA;
-      background-color: #EEE; }
     form.inline input.full,
     form.inline select.full,
     form.inline textarea.full,
@@ -353,18 +462,6 @@ form.block {
     form.block select.large,
     form.block textarea.large {
       font-size: 2.1em; }
-  form.inline textarea,
-  form.block textarea {
-    min-height: 2em;
-    resize: vertical; }
-  form.inline input:invalid,
-  form.inline select:invalid,
-  form.inline textarea:invalid,
-  form.block input:invalid,
-  form.block select:invalid,
-  form.block textarea:invalid {
-    border-color: #F99;
-    box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
   form.inline input[type="submit"],
   form.inline input[type="reset"],
   form.inline input[type="button"],
@@ -436,43 +533,26 @@ form.block {
   form.block input[type="checkbox"],
   form.block input[type="radio"] {
     width: auto;
-    margin-top: 0.5em;
     float: left; }
-  form.inline input[type="radio"] + label,
-  form.block input[type="radio"] + label {
-    width: auto;
-    margin-top: 0.4em;
-    margin-right: 1.5em;
-    padding: 0 0.5em;
-    float: left;
-    clear: none;
-    font-weight: inherit; }
-  form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
-  form.block input[type="radio"]:disabled + label,
-  form.block input[type="radio"][readonly] + label {
-    color: #AAA; }
-  form.inline h1,
-  form.inline h2,
-  form.inline h3,
-  form.inline h4,
-  form.inline h5,
-  form.inline h6,
-  form.inline p,
-  form.inline ul,
-  form.inline ol,
-  form.inline dl,
-  form.block h1,
-  form.block h2,
-  form.block h3,
-  form.block h4,
-  form.block h5,
-  form.block h6,
-  form.block p,
-  form.block ul,
-  form.block ol,
-  form.block dl {
-    clear: both;
-    text-align: left; }
+  form.inline input[type="checkbox"],
+  form.block input[type="checkbox"] {
+    margin-top: 0.65em; }
+  form.inline input[type="radio"],
+  form.block input[type="radio"] {
+    margin-top: 0.55em; }
+    form.inline input[type="radio"] + label,
+    form.block input[type="radio"] + label {
+      width: auto;
+      margin-top: 0.4em;
+      margin-right: 1.5em;
+      padding: 0 0.5em;
+      float: left;
+      clear: none;
+      font-weight: inherit; }
+    form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
+    form.block input[type="radio"]:disabled + label,
+    form.block input[type="radio"][readonly] + label {
+      color: #AAA; }
 
 form.block {
   text-align: left; }
@@ -495,10 +575,11 @@ form.block {
     margin-left: 0.5em;
     display: inline-block; }
   form.block input[type="checkbox"] {
-    margin-top: 0.5em;
+    margin-top: 0.65em;
+    float: left;
     clear: none; }
   form.block input[type="radio"] {
-    margin-top: 0.35em;
+    margin-top: 0.45em;
     float: left;
     clear: both; }
     form.block input[type="radio"] + label {
@@ -507,6 +588,7 @@ form.block {
       display: inline-block; }
 
 form.linear {
+  padding: 0.5em 0;
   display: block;
   overflow: hidden; }
   form.linear label,
@@ -514,18 +596,18 @@ form.linear {
   form.linear select,
   form.linear button {
     float: left;
-    font-size: 1.3em; }
+    font-size: 1.33em; }
   form.linear label,
-  form.linear input,
-  form.linear select {
-    line-height: 1.3em; }
+  form.linear input {
+    line-height: 1.33em; }
   form.linear label {
     margin: 1px 0.5em 1px 0;
     padding: 0.25em 0;
     font-weight: 400; }
   form.linear select {
+    height: 1.8em;
     margin-top: 1px;
-    height: 1.8em; }
+    padding: 2px; }
   form.linear button,
   form.linear input[type="submit"],
   form.linear input[type="reset"],
@@ -587,10 +669,11 @@ form.linear {
       margin-left: 0.5em;
       display: inline-block; }
     form.inline.foldable input[type="checkbox"] {
-      margin-top: 0.5em;
+      margin-top: 0.65em;
+      float: left;
       clear: none; }
     form.inline.foldable input[type="radio"] {
-      margin-top: 0.35em;
+      margin-top: 0.45em;
       float: left;
       clear: both; }
       form.inline.foldable input[type="radio"] + label {
@@ -607,7 +690,7 @@ input[type="button"] {
   width: auto;
   padding: 0 0.75em;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.33em;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -1203,7 +1286,7 @@ ul,
 ol,
 dl {
   margin-bottom: 1.5em;
-  font-size: 1.3em; }
+  font-size: 1.33em; }
 
 li > ul,
 li > ol,
@@ -1241,7 +1324,7 @@ ol {
   margin-left: 2em; }
 
 li {
-  line-height: 1.5em; }
+  line-height: 1.618em; }
 
 ul.plain,
 ol.plain {
@@ -1491,7 +1574,7 @@ ul.tree {
       z-index: 1; }
   ul.tree li {
     position: relative;
-    line-height: 1.5em;
+    line-height: 1.618em;
     white-space: nowrap;
     z-index: 3; }
     ul.tree li::after {
@@ -1514,7 +1597,7 @@ ul.tree {
 /* ===================================================== TABLES ===================================================== */
 table {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.618em;
   clear: both;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px #CCC solid;
@@ -1539,7 +1622,7 @@ table {
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 800;
-  font-size: 1.3em;
+  font-size: 1.33em;
   background: #EEE no-repeat scroll;
   background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #D8D8D8)) no-repeat scroll;
@@ -1550,7 +1633,7 @@ thead {
 
 tbody,
 tfoot {
-  font-size: 1.3em; }
+  font-size: 1.25em; }
 
 tbody tr:nth-child(even) {
   background-color: #EEE; }
@@ -1579,7 +1662,7 @@ td {
 
 form table label,
 form table input {
-  font-size: 1.08333em; }
+  font-size: 1em; }
 
 @-webkit-keyframes highlight-fade {
   0% {
@@ -1633,48 +1716,49 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1.5em 0 1em;
+  padding: 0.75em 0;
+  line-height: 1em;
   font-weight: 800;
-  line-height: 1.25em;
   page-break-after: avoid; }
-  h1.mediumweight,
-  h2.mediumweight,
-  h3.mediumweight,
-  h4.mediumweight,
-  h5.mediumweight,
-  h6.mediumweight {
-    font-weight: 400; }
-  h1.lightweight,
-  h2.lightweight,
-  h3.lightweight,
-  h4.lightweight,
-  h5.lightweight,
-  h6.lightweight {
-    font-weight: 300; }
+  h1.no-top-margin,
+  h2.no-top-margin,
+  h3.no-top-margin,
+  h4.no-top-margin,
+  h5.no-top-margin,
+  h6.no-top-margin {
+    padding-top: 0 !important;
+    line-height: 1em; }
+  h1.no-bottom-margin,
+  h2.no-bottom-margin,
+  h3.no-bottom-margin,
+  h4.no-bottom-margin,
+  h5.no-bottom-margin,
+  h6.no-bottom-margin {
+    padding-bottom: 0.125em !important; }
 
 h1 {
-  font-size: 3.5em; }
+  font-size: 3.97136em; }
 
 h2 {
-  font-size: 3em; }
+  font-size: 3.30947em; }
 
 h3 {
-  font-size: 2.5em; }
+  font-size: 2.75789em; }
 
 h4 {
-  font-size: 2em; }
+  font-size: 2.29824em; }
 
 h5 {
-  font-size: 1.75em; }
+  font-size: 1.9152em; }
 
 h6 {
-  font-size: 1.5em; }
+  font-size: 1.596em; }
 
 p {
-  margin-bottom: 0.5em;
-  font-size: 1.35em;
-  font-weight: 300;
+  padding: 0 0 0.809em;
+  font-size: 1.33em;
   line-height: 1.618em;
+  font-weight: 300;
   word-break: normal;
   orphans: 3;
   widows: 3; }
@@ -1686,16 +1770,18 @@ p {
   hyphens: auto; }
 
 small {
-  font-size: 0.75em;
+  font-size: 0.85em;
   vertical-align: baseline;
-  line-height: 0.75em; }
+  line-height: 1em; }
+
+pre {
+  font-family: "Courier New", Courier, monospace, mono; }
 
 pre,
 code {
   margin-bottom: 1em;
   display: block;
-  font-family: "Courier New", Courier, monospace, mono;
-  font-size: 1.3em;
+  font-size: 1.33em;
   font-weight: 400;
   line-height: 1.25em;
   white-space: pre-wrap; }
@@ -1705,48 +1791,53 @@ pre.code {
   padding: 1em;
   position: relative;
   overflow: auto;
+  color: #333;
+  font-family: Monaco, "Courier New", Courier, monospace, mono;
   white-space: pre;
-  background-color: #EEE;
+  background-color: #F4F4F4;
   border: 1px #CCC solid;
   border-radius: 3px; }
 
-pre.code em {
-  font-style: normal;
-  font-weight: 800;
-  background-color: #FF9; }
-pre.code[title] {
-  padding-top: 2.5em; }
-  pre.code[title]::before {
-    padding: 0 0.75em;
+pre.code {
+  font-size: 1.25em; }
+  pre.code em {
+    font-style: normal;
+    background-color: #FF9;
+    box-shadow: 0 0 5px #FF9;
+    border-radius: 3px; }
+  pre.code[title] {
+    padding-top: 3em; }
+    pre.code[title]::before {
+      padding: 0.25em 0.75em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      color: #FFF;
+      font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      line-height: 1.5em;
+      white-space: nowrap;
+      background-color: #CCC;
+      content: attr(title); }
+  pre.code[lang]::after {
+    height: 1.5em;
+    padding: 0 0.5em;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: 0.25em;
+    right: 0.25em;
     color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     line-height: 1.5em;
-    white-space: nowrap;
+    text-transform: uppercase;
     background-color: #CCC;
-    content: attr(title); }
-pre.code[lang]::after {
-  height: 1.5em;
-  padding: 0 0.5em;
-  position: absolute;
-  top: 0;
-  right: 0.5em;
-  color: #FFF;
-  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  background-color: #CCC;
-  border-radius: 0 0 3px 3px;
-  content: attr(lang); }
-pre.code[lang][title]::after {
-  padding: 0;
-  right: 0.75em;
-  background-color: transparent; }
+    border-radius: 3px;
+    content: attr(lang); }
+  pre.code[lang][title]::after {
+    padding: 0;
+    right: 0.75em;
+    background-color: transparent; }
 
 p code {
   margin: 0 0.1em;
@@ -1765,7 +1856,7 @@ blockquote {
   margin: 0.25em 0.5em 0.75em;
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
-  font-size: 1.6em;
+  font-size: 1.55em;
   font-weight: 300;
   line-height: 1.75em;
   white-space: pre-wrap;
@@ -1844,6 +1935,12 @@ dl + hr {
 
 .no-bottom-padding {
   padding-bottom: 0 !important; }
+
+.mediumweight {
+  font-weight: 400; }
+
+.lightweight {
+  font-weight: 300; }
 
 /* ===================================================== NOTICES ===================================================== */
 .error,
