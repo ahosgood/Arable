@@ -6,7 +6,6 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	width: auto;
-	//height: 2.1em;
 	padding: 0 0.75em;
 
 	display: inline-block;
@@ -153,7 +152,7 @@ label.button {
 	font-size: 1.3em !important;
 
 	input[type="checkbox"] {
-		margin: 0 0 0 0.625em !important;
+		margin: 0 0 0 0.5em !important;
 
 		display: inline-block !important;
 
@@ -167,17 +166,24 @@ label.button {
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
+	button/*,
 	a.button,
-	label.button {
+	label.button*/ {
 		height: 2.1em;
+
+		//line-height: 2em;
+		line-height: 1em;
+
+		&.thin {
+			line-height: 1em;
+		}
 	}
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) {
 	label.button {
 		input[type="checkbox"] {
-			vertical-align: middle;
+			vertical-align: baseline;
 		}
 	}
 }

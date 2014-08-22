@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     3.12.3
- * Date:        08/08/2014
+ * Version:     3.13.0
+ * Date:        22/08/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -514,7 +514,10 @@ form.linear {
   form.linear select,
   form.linear button {
     float: left;
-    font-size: 1.3em;
+    font-size: 1.3em; }
+  form.linear label,
+  form.linear input,
+  form.linear select {
     line-height: 1.3em; }
   form.linear label {
     margin: 1px 0.5em 1px 0;
@@ -530,7 +533,7 @@ form.linear {
   form.linear button {
     height: 1.7em;
     margin-left: 1.5em;
-    line-height: 1.7em; }
+    line-height: 1em; }
     form.linear button + input[type="submit"],
     form.linear button + input[type="reset"],
     form.linear button + input[type="button"],
@@ -611,13 +614,13 @@ input[type="button"] {
   line-height: 2.1em;
   vertical-align: middle;
   white-space: nowrap;
-  background: #f2f2f2 no-repeat scroll;
-  background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8)) no-repeat scroll;
-  background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -o-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -ms-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
+  background: #F2F2F2 no-repeat scroll;
+  background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F2F2F2), color-stop(100%, #D8D8D8)) no-repeat scroll;
+  background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -o-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -ms-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
   border: 1px #CCC solid;
   border-radius: 3px;
   box-shadow: none;
@@ -649,13 +652,13 @@ input[type="button"] {
   input[type="submit"]:active,
   input[type="reset"]:active,
   input[type="button"]:active {
-    background: #d8d8d8 no-repeat scroll;
-    background: -moz-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d8d8d8), color-stop(100%, #f2f2f2)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #d8d8d8 0%, #f2f2f2 100%) no-repeat scroll;
+    background: #D8D8D8 no-repeat scroll;
+    background: -moz-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D8D8D8), color-stop(100%, #F2F2F2)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #D8D8D8 0%, #F2F2F2 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #D8D8D8 0%, #F2F2F2 100%) no-repeat scroll;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2); }
   a.button.thin,
   label.button.thin,
@@ -708,13 +711,13 @@ input[type="button"] {
     input[type="button"]:disabled:hover,
     input[type="button"]:disabled:focus,
     input[type="button"]:disabled:active {
-      background: #f2f2f2 no-repeat scroll;
-      background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d8d8d8)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
+      background: #F2F2F2 no-repeat scroll;
+      background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F2F2F2), color-stop(100%, #D8D8D8)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
       border-color: #CCC; }
   a.button.red,
   label.button.red,
@@ -722,15 +725,15 @@ input[type="button"] {
   input[type="submit"].red,
   input[type="reset"].red,
   input[type="button"].red {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #ed3434;
     background: #ec4e4e no-repeat scroll;
-    background: -moz-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4e4e), color-stop(100%, #dd1111)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4e4e), color-stop(100%, #D11)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #ec4e4e 0%, #D11 100%) no-repeat scroll;
     border-color: #da1e1e; }
     a.button.red:hover, a.button.red:focus,
     label.button.red:hover,
@@ -797,12 +800,12 @@ input[type="button"] {
     input[type="button"].red:disabled:focus,
     input[type="button"].red:disabled:active {
       background: #ec4e4e no-repeat scroll;
-      background: -moz-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4e4e), color-stop(100%, #dd1111)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #ec4e4e 0%, #dd1111 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec4e4e), color-stop(100%, #D11)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #ec4e4e 0%, #D11 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #ec4e4e 0%, #D11 100%) no-repeat scroll;
       border-color: #da1e1e;
       box-shadow: none; }
   a.button.green,
@@ -811,15 +814,15 @@ input[type="button"] {
   input[type="submit"].green,
   input[type="reset"].green,
   input[type="button"].green {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #02db18;
     background: #06f01e no-repeat scroll;
-    background: -moz-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #06f01e), color-stop(100%, #00aa11)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #06f01e 0%, #00aa11 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #06f01e), color-stop(100%, #0A1)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #06f01e 0%, #0A1 100%) no-repeat scroll;
     border-color: #09ab19; }
     a.button.green:hover, a.button.green:focus,
     label.button.green:hover,
@@ -886,12 +889,12 @@ input[type="button"] {
     input[type="button"].green:disabled:focus,
     input[type="button"].green:disabled:active {
       background: #06f01e no-repeat scroll;
-      background: -moz-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #06f01e), color-stop(100%, #00aa11)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #06f01e 0%, #00aa11 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #06f01e 0%, #00aa11 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #06f01e), color-stop(100%, #0A1)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #06f01e 0%, #0A1 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #06f01e 0%, #0A1 100%) no-repeat scroll;
       border-color: #09ab19;
       box-shadow: none; }
   a.button.blue,
@@ -900,15 +903,15 @@ input[type="button"] {
   input[type="submit"].blue,
   input[type="reset"].blue,
   input[type="button"].blue {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #1e77fd;
     background: #3b87fa no-repeat scroll;
-    background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005DE8)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
     border-color: #0c63e6; }
     a.button.blue:hover, a.button.blue:focus,
     label.button.blue:hover,
@@ -975,12 +978,12 @@ input[type="button"] {
     input[type="button"].blue:disabled:focus,
     input[type="button"].blue:disabled:active {
       background: #3b87fa no-repeat scroll;
-      background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005DE8)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
       border-color: #0c63e6;
       box-shadow: none; }
   a.button.black,
@@ -989,15 +992,15 @@ input[type="button"] {
   input[type="submit"].black,
   input[type="reset"].black,
   input[type="button"].black {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #3c3c3c;
     background: #484848 no-repeat scroll;
-    background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484848), color-stop(100%, #222222)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484848), color-stop(100%, #222)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #484848 0%, #222 100%) no-repeat scroll;
     border-color: #272727; }
     a.button.black:hover, a.button.black:focus,
     label.button.black:hover,
@@ -1064,12 +1067,12 @@ input[type="button"] {
     input[type="button"].black:disabled:focus,
     input[type="button"].black:disabled:active {
       background: #484848 no-repeat scroll;
-      background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484848), color-stop(100%, #222222)) no-repeat scroll;
-      background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -o-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -ms-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484848), color-stop(100%, #222)) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+      background: -o-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+      background: -ms-linear-gradient(top, #484848 0%, #222 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #484848 0%, #222 100%) no-repeat scroll;
       border-color: #272727;
       box-shadow: none; }
   a.button i.fa::before,
@@ -1122,15 +1125,15 @@ input[type="button"] {
 input[type="submit"],
 button[type="submit"] {
   font-weight: 800;
-  color: white;
+  color: #FFF;
   text-shadow: 0 0 3px #1e77fd;
   background: #3b87fa no-repeat scroll;
-  background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-  background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-  background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-  background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005DE8)) no-repeat scroll;
+  background: -webkit-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+  background: -o-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+  background: -ms-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
   border-color: #0c63e6; }
   input[type="submit"]:hover, input[type="submit"]:focus,
   button[type="submit"]:hover,
@@ -1161,12 +1164,12 @@ button[type="submit"] {
   button[type="submit"]:disabled:focus,
   button[type="submit"]:disabled:active {
     background: #3b87fa no-repeat scroll;
-    background: -moz-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005de8)) no-repeat scroll;
-    background: -webkit-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -o-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: -ms-linear-gradient(top, #3b87fa 0%, #005de8 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #3b87fa 0%, #005de8 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b87fa), color-stop(100%, #005DE8)) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -o-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: -ms-linear-gradient(top, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #3b87fa 0%, #005DE8 100%) no-repeat scroll;
     border-color: #0c63e6;
     box-shadow: none; }
 
@@ -1175,7 +1178,7 @@ label.button {
   padding: 0 0.75em !important;
   font-size: 1.3em !important; }
   label.button input[type="checkbox"] {
-    margin: 0 0 0 0.625em !important;
+    margin: 0 0 0 0.5em !important;
     display: inline-block !important;
     float: none !important;
     vertical-align: baseline; }
@@ -1184,13 +1187,17 @@ label.button {
   input[type="submit"],
   input[type="reset"],
   input[type="button"],
-  button,
-  a.button,
-  label.button {
-    height: 2.1em; } }
+  button {
+    height: 2.1em;
+    line-height: 1em; }
+    input[type="submit"].thin,
+    input[type="reset"].thin,
+    input[type="button"].thin,
+    button.thin {
+      line-height: 1em; } }
 @media all and (-webkit-min-device-pixel-ratio: 0) {
   label.button input[type="checkbox"] {
-    vertical-align: middle; } }
+    vertical-align: baseline; } }
 /* ===================================================== LISTS ===================================================== */
 ul,
 ol,
@@ -1292,14 +1299,14 @@ dl.inline > dd {
   float: left; }
 
 dl.inline > dt {
-  width: 35%;
+  width: 38.2%;
   clear: both; }
 
 dl.inline > dd {
-  width: 65%; }
+  width: 61.8%; }
 
 dl.inline > dd + dd {
-  margin-left: 35%; }
+  margin-left: 38.2%; }
 
 dd ul {
   margin-left: 0;
@@ -1388,7 +1395,87 @@ ul.tabs {
 
 ul.tree {
   margin-left: 1em;
-  list-style: none; }
+  list-style: none;
+  	/*&.interactive {
+  		padding-left: 1.75em;
+  
+  		position: relative;
+  
+  		&::before {
+  			display: block;
+  
+  			position: absolute;
+  			top: 0.75em;
+  			bottom: 0.75em;
+  			left: 0.5em;
+  
+  			border-left: 1px #CCC solid;
+  
+  			content: "";
+  
+  			z-index: 1;
+  		}
+  
+  		> li::after {
+  			display: block;
+  		}
+  
+  		ul {
+  			height: 0;
+  
+  			overflow: hidden;
+  
+  			&::after {
+  				width: 0.8em;
+  				height: 0.8em;
+  				margin-top: -1px;
+  				margin-left: -1px;
+  
+  				display: block;
+  
+  				position: absolute;
+  				top: 0.35em; //(1.5 - height) / 2
+  				left: -1.65em; //1.25 + (width / 2)
+  
+  				color: #999;
+  				font-weight: 400;
+  				text-align: center;
+  				line-height: 0.8em;
+  
+  				background-color: #FFF;
+  
+  				border: 1px #CCC solid;
+  
+  				content: "+";
+  
+  				z-index: 2;
+  			}
+  
+  			&.open {
+  				height: auto;
+  
+  				overflow: visible;
+  
+  				&::after {
+  					content: "-";
+  				}
+  			}
+  		}
+  
+  		li {
+  			cursor: default;
+  		}
+  
+  		a {
+  			text-decoration: none;
+  
+  			cursor: pointer;
+  
+  			&:hover {
+  				text-decoration: underline;
+  			}
+  		}
+  	}*/ }
   ul.tree ul {
     margin-left: 0;
     padding-left: 2em;
@@ -1423,52 +1510,6 @@ ul.tree {
       bottom: 50%; }
   ul.tree > li::after {
     display: none; }
-  ul.tree.interactive {
-    padding-left: 1.75em;
-    position: relative; }
-    ul.tree.interactive::before {
-      display: block;
-      position: absolute;
-      top: 0.75em;
-      bottom: 0.75em;
-      left: 0.5em;
-      border-left: 1px #CCC solid;
-      content: "";
-      z-index: 1; }
-    ul.tree.interactive > li::after {
-      display: block; }
-    ul.tree.interactive ul {
-      height: 0;
-      overflow: hidden; }
-      ul.tree.interactive ul::after {
-        width: 0.8em;
-        height: 0.8em;
-        margin-top: -1px;
-        margin-left: -1px;
-        display: block;
-        position: absolute;
-        top: 0.35em;
-        left: -1.65em;
-        color: #999;
-        font-weight: 400;
-        text-align: center;
-        line-height: 0.8em;
-        background-color: #FFF;
-        border: 1px #CCC solid;
-        content: "+";
-        z-index: 2; }
-      ul.tree.interactive ul.open {
-        height: auto;
-        overflow: visible; }
-        ul.tree.interactive ul.open::after {
-          content: "-"; }
-    ul.tree.interactive li {
-      cursor: default; }
-    ul.tree.interactive a {
-      text-decoration: none;
-      cursor: pointer; }
-      ul.tree.interactive a:hover {
-        text-decoration: underline; }
 
 /* ===================================================== TABLES ===================================================== */
 table {
@@ -1493,23 +1534,23 @@ table {
   table ul {
     margin-left: 1.5em; }
   table button {
-    font-size: 1.16666em; }
+    font-size: 1em; }
 
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 800;
   font-size: 1.3em;
-  background: #eeeeee no-repeat scroll;
-  background: -moz-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #d8d8d8)) no-repeat scroll;
-  background: -webkit-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -o-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -ms-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll; }
+  background: #EEE no-repeat scroll;
+  background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #D8D8D8)) no-repeat scroll;
+  background: -webkit-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -o-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -ms-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll; }
 
 tbody,
 tfoot {
-  font-size: 1.2em; }
+  font-size: 1.3em; }
 
 tbody tr:nth-child(even) {
   background-color: #EEE; }
@@ -1543,61 +1584,46 @@ form table input {
 @-webkit-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
     background-color: #FFB; }
-
   75% {
     background-color: #FFB; }
-
   100% {
     background-color: transparent; } }
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
     background-color: #FFB; }
-
   75% {
     background-color: #FFB; }
-
   100% {
     background-color: transparent; } }
 @-ms-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
     background-color: #FFB; }
-
   75% {
     background-color: #FFB; }
-
   100% {
     background-color: transparent; } }
 @-o-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
     background-color: #FFB; }
-
   75% {
     background-color: #FFB; }
-
   100% {
     background-color: transparent; } }
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
     background-color: #FFB; }
-
   75% {
     background-color: #FFB; }
-
   100% {
     background-color: transparent; } }
 /* ===================================================== TEXT ===================================================== */
@@ -1646,9 +1672,9 @@ h6 {
 
 p {
   margin-bottom: 0.5em;
-  font-size: 1.3em;
+  font-size: 1.35em;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.618em;
   word-break: normal;
   orphans: 3;
   widows: 3; }
@@ -1661,7 +1687,8 @@ p {
 
 small {
   font-size: 0.75em;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  line-height: 0.75em; }
 
 pre,
 code {
@@ -1738,7 +1765,7 @@ blockquote {
   margin: 0.25em 0.5em 0.75em;
   padding: 0.25em 0.25em 0.25em 1em;
   color: #555;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 300;
   line-height: 1.75em;
   white-space: pre-wrap;
@@ -1828,8 +1855,7 @@ dl + hr {
   padding: 10px;
   position: relative;
   border: 1px #000 solid;
-  border-radius: 3px;
-  z-index: 3; }
+  border-radius: 3px; }
 
 .error > :first-child,
 .warning > :first-child,
@@ -1901,3 +1927,5 @@ form.inline label + .mce-tinymce {
     width: auto;
     float: none;
     clear: both; } }
+
+/*# sourceMappingURL=shadow-css.css.map */

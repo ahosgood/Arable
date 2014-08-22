@@ -206,6 +206,11 @@ form.linear {
 		float: left;
 
 		font-size: 1.3em;
+	}
+
+	label,
+	input,
+	select {
 		line-height: 1.3em;
 	}
 
@@ -230,7 +235,7 @@ form.linear {
 		height: 1.7em;
 		margin-left: 1.5em;
 
-		line-height: 1.7em;
+		line-height: 1em;
 
 		+ input[type="submit"],
 		+ input[type="reset"],

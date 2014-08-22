@@ -47,9 +47,9 @@ h6 {
 p {
 	margin-bottom: 0.5em;
 
-	font-size: 1.3em;
+	font-size: 1.35em;
 	font-weight: 300;
-	line-height: 1.5em;
+	line-height: 1.618em;
 
 	word-break: normal;
 
@@ -69,6 +69,7 @@ p {
 small {
 	font-size: 0.75em;
 	vertical-align: baseline;
+	line-height: 0.75em;
 }
 
 pre,
@@ -184,7 +185,7 @@ blockquote {
 	padding: 0.25em 0.25em 0.25em 1em;
 
 	color: #555;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-weight: 300;
 	line-height: 1.75em;
 	white-space: pre-wrap;
