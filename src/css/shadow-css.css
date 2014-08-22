@@ -3,7 +3,7 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.0.0
+ * Version:     4.0.1
  * Date:        22/08/2014
  * ================================================================================
  */
@@ -255,10 +255,6 @@ textarea {
   background-color: #FFF;
   border: 1px #CCC solid;
   border-radius: 3px; }
-  input:focus,
-  select:focus,
-  textarea:focus {
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 
 optgroup,
 option {
@@ -275,12 +271,35 @@ form.block textarea,
 form.linear textarea {
   min-height: 2em;
   resize: vertical; }
-form.inline input:not([type="text"]):valid:focus,
-form.block input:not([type="text"]):valid:focus,
-form.linear input:not([type="text"]):valid:focus {
+form.inline input:valid:focus,
+form.block input:valid:focus,
+form.linear input:valid:focus {
   background-color: #E6FAE6;
   border-color: #0C0;
   box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5); }
+form.inline input[type="text"]:valid:focus,
+form.inline input[type="checkbox"]:valid:focus,
+form.inline input[type="radio"]:valid:focus,
+form.block input[type="text"]:valid:focus,
+form.block input[type="checkbox"]:valid:focus,
+form.block input[type="radio"]:valid:focus,
+form.linear input[type="text"]:valid:focus,
+form.linear input[type="checkbox"]:valid:focus,
+form.linear input[type="radio"]:valid:focus {
+  background-color: #FFF;
+  border-color: #FB0;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
+form.inline input:focus,
+form.inline select:focus,
+form.inline textarea:focus,
+form.block input:focus,
+form.block select:focus,
+form.block textarea:focus,
+form.linear input:focus,
+form.linear select:focus,
+form.linear textarea:focus {
+  border-color: #FB0;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 form.inline input:invalid,
 form.inline select:invalid,
 form.inline textarea:invalid,

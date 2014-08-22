@@ -15,10 +15,6 @@ textarea {
 
 	border: 1px #CCC solid;
 	border-radius: 3px;
-
-	&:focus {
-		box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
-	}
 }
 
 	optgroup,
@@ -43,7 +39,7 @@ form.linear {
 		resize: vertical;
 	}
 
-	input:not([type="text"]) {
+	input {
 		&:valid {
 			&:focus {
 				background-color: #E6FAE6;
@@ -55,9 +51,29 @@ form.linear {
 		}
 	}
 
+	input[type="text"],
+	input[type="checkbox"],
+	input[type="radio"] {
+		&:valid {
+			&:focus {
+				background-color: #FFF;
+
+				border-color: #FB0;
+
+				box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+
 	input,
 	select,
 	textarea {
+		&:focus {
+			border-color: #FB0;
+
+			box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
+		}
+
 		&:invalid {
 			background-color: #FAE6E6;
 
