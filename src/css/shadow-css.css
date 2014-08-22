@@ -3,8 +3,8 @@
  * Shadow CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.0.1
- * Date:        22/08/2014
+ * Version:     4.0.2
+ * Date:        23/08/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -1625,18 +1625,10 @@ table {
   table a {
     color: #222;
     font-style: normal; }
-  table p,
-  table ul,
-  table ol,
-  table button,
-  table .button {
-    font-size: 1em; }
   table p {
     margin: 0.5em 0; }
   table ul {
     margin-left: 1.5em; }
-  table button {
-    font-size: 1em; }
 
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
@@ -1649,10 +1641,27 @@ thead {
   background: -o-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background: -ms-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll; }
+  thead p,
+  thead ul,
+  thead ol,
+  thead button,
+  thead .button {
+    font-size: 1em; }
 
 tbody,
 tfoot {
   font-size: 1.25em; }
+  tbody p,
+  tbody ul,
+  tbody ol,
+  tbody button,
+  tbody .button,
+  tfoot p,
+  tfoot ul,
+  tfoot ol,
+  tfoot button,
+  tfoot .button {
+    font-size: 0.1064em; }
 
 tbody tr:nth-child(even) {
   background-color: #EEE; }

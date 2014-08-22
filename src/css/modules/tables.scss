@@ -16,24 +16,12 @@ table {
 		font-style: normal;
 	}
 
-	p,
-	ul,
-	ol,
-	button,
-	.button {
-		font-size: 1em;
-	}
-
 	p {
 		margin: 0.5em 0;
 	}
 
 	ul {
 		margin-left: 1.5em;
-	}
-
-	button {
-		font-size: 1em;
 	}
 }
 
@@ -43,11 +31,27 @@ table {
 		@include basefontsize;
 
 		@include grad(#EEE, #D8D8D8);
+
+		p,
+		ul,
+		ol,
+		button,
+		.button {
+			font-size: 1em;
+		}
 	}
 
 	tbody,
 	tfoot {
 		font-size: 1.25em;
+
+		p,
+		ul,
+		ol,
+		button,
+		.button {
+			font-size: #{$baseFontSize / 12.5}em;
+		}
 	}
 
 		tbody {
