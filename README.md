@@ -1,6 +1,6 @@
 #Arable
 
-Useful and stylish CSS
+Useful and stylish CSS. [Demo site](https://rawgit.com/ahosgood/shadow-css/master/demo/index.html)
 
 
 
