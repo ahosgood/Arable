@@ -1,6 +1,6 @@
-#ShadowCSS
+#Arable
 
-A useful and stylish CSS framework
+Useful and stylish CSS
 
 
 

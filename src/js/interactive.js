@@ -1,6 +1,6 @@
 /**
  * ================================================================================
- * Shadow CSS Interactivity
+ * Arable Interactivity
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
  * Version:     0.9.0
@@ -11,7 +11,7 @@
 jQuery(
 	function( $ ) {
 		/* ===================================================== TREE NAVIGATION ===================================================== */
-		$( 'ul.tree.shdw-interactive' ).on( 'click', 'li',
+		$( 'ul.tree.arable-interactive' ).on( 'click', 'li',
 			function( e ) {
 				e.stopPropagation();
 				$( this ).children( 'ul' ).toggleClass( 'open' );
