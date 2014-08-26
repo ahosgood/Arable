@@ -11,14 +11,11 @@ h6 {
 	font-weight: 800;
 	page-break-after: avoid;
 
-	// Legacy
-	&.no-top-margin {
-		padding-top: 0 !important;
-
+	&.no-top-padding {
 		line-height: 1em;
 	}
 
-	&.no-bottom-margin {
+	&.no-bottom-padding {
 		padding-bottom: 0.125em !important;
 	}
 }
