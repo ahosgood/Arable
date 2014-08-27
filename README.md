@@ -1,6 +1,6 @@
 #Arable
 
-Useful and stylish CSS.
+Useful and stylish CSS
 
 View the [demo](https://rawgit.com/ahosgood/Arable/master/demo/index.html)
 
