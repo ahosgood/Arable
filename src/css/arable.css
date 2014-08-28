@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.0.4
- * Date:        28/08/2014
+ * Version:     4.0.5
+ * Date:        29/08/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -1824,7 +1824,7 @@ p {
 small {
   font-size: 0.85em;
   vertical-align: baseline;
-  line-height: 1em; }
+  line-height: inherit; }
 
 pre {
   font-family: "Courier New", Courier, monospace, mono; }
