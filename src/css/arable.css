@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.0.5
+ * Version:     4.0.6
  * Date:        29/08/2014
  * ================================================================================
  */
@@ -1850,46 +1850,44 @@ pre.code {
   border: 1px #CCC solid;
   border-radius: 3px; }
 
-pre.code {
-  font-size: 1.25em; }
-  pre.code em {
-    font-style: normal;
-    background-color: #FF9;
-    box-shadow: 0 0 5px #FF9;
-    border-radius: 3px; }
-  pre.code[title] {
-    padding-top: 3em; }
-    pre.code[title]::before {
-      padding: 0.25em 0.75em;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      color: #FFF;
-      font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 800;
-      line-height: 1.5em;
-      white-space: nowrap;
-      background-color: #CCC;
-      content: attr(title); }
-  pre.code[lang]::after {
-    height: 1.5em;
-    padding: 0 0.5em;
+pre.code em {
+  font-style: normal;
+  background-color: #FF9;
+  box-shadow: 0 0 5px #FF9;
+  border-radius: 3px; }
+pre.code[title] {
+  padding-top: 3em; }
+  pre.code[title]::before {
+    padding: 0.25em 0.75em;
     position: absolute;
-    top: 0.25em;
-    right: 0.25em;
+    top: 0;
+    right: 0;
+    left: 0;
     color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.5em;
-    text-transform: uppercase;
+    white-space: nowrap;
     background-color: #CCC;
-    border-radius: 3px;
-    content: attr(lang); }
-  pre.code[lang][title]::after {
-    padding: 0;
-    right: 0.75em;
-    background-color: transparent; }
+    content: attr(title); }
+pre.code[lang]::after {
+  height: 1.5em;
+  padding: 0 0.5em;
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  color: #FFF;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  background-color: #CCC;
+  border-radius: 3px;
+  content: attr(lang); }
+pre.code[lang][title]::after {
+  padding: 0;
+  right: 0.75em;
+  background-color: transparent; }
 
 p code {
   margin: 0 0.1em;
