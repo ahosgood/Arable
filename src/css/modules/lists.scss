@@ -149,21 +149,37 @@ ul.inline {
 	overflow: hidden;
 
 	li {
+		padding: 0 1px;
+
 		display: inline-block;
 
 		float: left;
 
 		white-space: nowrap;
+
+		+ li::before {
+			padding: 0 0.5em;
+
+			display: inline-block;
+
+			color: #CCC;
+
+			content: "|";
+		}
 	}
 
-	li + li {}
+	&.breadcrumbs {
+		li {
+			&:first-child {
+				font-weight: bold;
+			}
 
-	li + li::before {
-		padding: 0 0.5em;
+			+ li::before {
+				color: #999;
 
-		display: inline-block;
-
-		content: "|";
+				content: "\203A";
+			}
+		}
 	}
 }
 

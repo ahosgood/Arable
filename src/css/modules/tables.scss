@@ -25,6 +25,13 @@ table {
 	ul {
 		margin-left: 1.5em;
 	}
+
+	&.verticals {
+		th,
+		td {
+			border-width: 1px;
+		}
+	}
 }
 
 	thead {
@@ -59,13 +66,11 @@ table {
 		tbody {
 			tr {
 				&:nth-child(even) {
-					background-color: #EEE;
+					background-color: #F4F4F4;
 				}
 
 				&.disabled {
-					color: #AAA;
-
-					background-color: #F4F4F4;
+					color: #BBB;
 				}
 
 				&.highlight-fade {
@@ -95,11 +100,47 @@ table {
 					border-width: 1px 0;
 					border-color: #CCC;
 					border-style: solid;
+
+					&.no-padding {
+						padding: 0;
+					}
+
+					&.no-padding-x {
+						padding-right: 0;
+						padding-left: 0;
+					}
+
+					&.no-padding-y {
+						padding-top: 0;
+						padding-bottom: 0;
+					}
 				}
 
-				th {}
+table,
+tr {
+	&.no-padding {
+		th,
+		td {
+			padding: 0;
+		}
+	}
 
-				td {}
+	&.no-padding-x {
+		th,
+		td {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	&.no-padding-y {
+		th,
+		td {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
 
 form {
 	table {

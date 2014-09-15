@@ -72,20 +72,20 @@ small {
 	line-height: inherit;
 }
 
-pre {
-	font-family: "Courier New", Courier, monospace, mono;
-}
-
 pre,
 code {
 	margin-bottom: 1em;
 
 	display: block;
 
-	@include basefontsize;
 	font-weight: 400;
 	line-height: 1.25em;
 	white-space: pre-wrap;
+}
+
+pre {
+	@include basefontsize;
+	font-family: "Courier New", Courier, monospace, mono;
 }
 
 code,
@@ -113,7 +113,8 @@ pre.code {
 
 		background-color: #FF9;
 
-		box-shadow: 0 0 5px #FF9;
+		//box-shadow: 0 0 5px #FF9;
+		box-shadow: 0 0 0 1px #FF9;
 
 		border-radius: 3px;
 	}
@@ -173,20 +174,25 @@ pre.code {
 	}
 }
 
-p code {
-	margin: 0 0.1em;
-	padding: 0;
-	display: inline-block;
+p,
+li,
+dl,
+table {
+	code {
+		margin: 0 0.1em;
+		padding: 0;
+		display: inline-block;
 
-	font-size: 1em;
-	font-weight: 400;
-	vertical-align: bottom;
-	line-height: inherit;
-	white-space: nowrap;
+		font-size: 1em;
+		font-weight: 400;
+		vertical-align: bottom;
+		line-height: inherit;
+		white-space: nowrap;
 
-	border: none;
-	border-radius: 0;
-	outline: 1px #CCC solid;
+		border: none;
+		border-radius: 0;
+		outline: 1px #CCC solid;
+	}
 }
 
 blockquote {
@@ -222,10 +228,19 @@ sub {
 	top: 0.4em;
 }
 
-strong {
+em {
+	font-style: italic;
+}
+
+strong,
+.heavyweight {
 	font-weight: 800;
 }
 
-em {
-	font-style: italic;
+.mediumweight {
+	font-weight: 400;
+}
+
+.lightweight {
+	font-weight: 300;
 }
