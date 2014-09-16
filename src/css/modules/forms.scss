@@ -52,6 +52,7 @@ form.linear {
 	}
 
 	input[type="text"],
+	input[type="search"],
 	input[type="checkbox"],
 	input[type="radio"] {
 		&:valid {
@@ -188,7 +189,7 @@ form.block {
 		&.full {
 			width: 100%;
 
-			float: none;
+			clear: both;
 		}
 
 		&.large {

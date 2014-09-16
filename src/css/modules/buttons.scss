@@ -23,7 +23,7 @@ input[type="button"] {
 	border: 1px #CCC solid;
 	border-radius: 3px;
 
-	box-shadow: none;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -37,17 +37,27 @@ input[type="button"] {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 
+	&:focus,
 	&:hover,
-	&:focus {
-		border-color: #999;
+	&:active {
+		border-color: #AAA;
 
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		-webkit-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+	}
+
+	&:focus,
+	&:hover {
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 	}
 
 	&:active {
-		@include grad(#D8D8D8, #F2F2F2);
+		//@include grad(#D8D8D8, #F2F2F2);
 
-		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
 	}
 
 	&.thin {
@@ -58,7 +68,7 @@ input[type="button"] {
 
 	&.disabled,
 	&:disabled {
-		opacity: 0.35;
+		opacity: 0.4;
 
 		&:hover,
 		&:focus,
@@ -66,44 +76,97 @@ input[type="button"] {
 			@include grad(#F2F2F2, #D8D8D8);
 
 			border-color: #CCC;
+
+			box-shadow: none;
 		}
 	}
 
+	/*&.circle {
+		width: #{2.1 * 0.66666}em;
+		height: #{2.1 * 0.66666}em;
+		padding-right: 0;
+		padding-left: 0;
+
+		font-size: #{$baseFontSize * 1.5}em;
+		line-height: 1.25em;
+
+
+		border-radius: 100%;
+
+		&.large {
+			font-size: #{$baseFontSize * 2}em;
+
+		}
+	}*/
+
 	// ===================================================== COLOURS =====================================================
 	&.red {
-		@include button-colour(#D11);
+		@include button-grad(#D11);
 	}
 
 	&.orange {
-		//@include button-colour(#F60);
+		//@include button-grad(#F60);
 	}
 
 	&.yellow {
-		//@include button-colour(#EC0);
+		//@include button-grad(#EC0);
 	}
 
 	&.green {
-		@include button-colour(#0A1);
+		@include button-grad(#1A2);
 	}
 
 	&.aqua {
-		//@include button-colour(#0CB);
+		//@include button-grad(#0CB);
 	}
 
 	&.blue {
-		@include button-colour(#005DE8);
+		@include button-grad(#005DE8);
 	}
 
 	&.purple {
-		//@include button-colour(#551A8B);
+		//@include button-grad(#551A8B);
 	}
 
 	&.pink {
-		//@include button-colour(#E1A);
+		//@include button-grad(#E1A);
 	}
 
 	&.black {
-		@include button-colour(#222);
+		@include button-grad(#222);
+	}
+
+	// ===================================================== FLAT =====================================================
+	&.flat {
+		background: #E4E4E4;
+
+		border: none;
+
+		box-shadow: none;
+
+		&:hover {
+			background: #E8E8E8;
+		}
+
+		&:active {
+			box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
+		}
+
+		&.red {
+			@include button-flat(#D11);
+		}
+
+		&.green {
+			@include button-flat(#1A2);
+		}
+
+		&.blue {
+			@include button-flat(#005DE8);
+		}
+
+		&.black {
+			@include button-flat(#222);
+		}
 	}
 
 	i.fa,
@@ -141,7 +204,7 @@ button {
 	&[type="submit"] {
 		font-weight: 800;
 
-		@include button-colour(#005DE8);
+		@include button-grad(#005DE8);
 	}
 }
 

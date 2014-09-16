@@ -70,7 +70,9 @@ table {
 				}
 
 				&.disabled {
-					color: #BBB;
+					> * {
+						opacity: 0.2;
+					}
 				}
 
 				&.highlight-fade {

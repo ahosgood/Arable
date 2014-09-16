@@ -30,6 +30,11 @@ dl {
 }
 
 /* ===================================================== GENERIC CLASSES ===================================================== */
+.float-right,
+.float-left {
+	display: inline-block;
+}
+
 .float-right {
 	float: right !important;
 }
@@ -40,6 +45,18 @@ dl {
 
 .float-none {
 	float: none !important;
+}
+
+.clear-right {
+	clear: right !important;
+}
+
+.clear-left {
+	clear: left !important;
+}
+
+.clear-none {
+	clear: none !important;
 }
 
 .align-left {
