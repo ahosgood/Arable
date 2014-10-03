@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.2.1
- * Date:        03/09/2014
+ * Version:     4.2.2
+ * Date:        03/10/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -2160,6 +2160,14 @@ h6 {
   h5.no-bottom-padding,
   h6.no-bottom-padding {
     padding-bottom: 0.125em !important; }
+  h1.no-vertical-padding,
+  h2.no-vertical-padding,
+  h3.no-vertical-padding,
+  h4.no-vertical-padding,
+  h5.no-vertical-padding,
+  h6.no-vertical-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
 
 h1 {
   font-size: 3.97136em; }
@@ -2379,10 +2387,18 @@ dl + hr {
 .no-bottom-margin {
   margin-bottom: 0 !important; }
 
+.no-vertical-margin {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
 .no-top-padding {
   padding-top: 0 !important; }
 
 .no-bottom-padding {
+  padding-bottom: 0 !important; }
+
+.no-vertical-padding {
+  padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
 /* ===================================================== NOTICES ===================================================== */

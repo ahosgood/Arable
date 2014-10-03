@@ -18,6 +18,11 @@ h6 {
 	&.no-bottom-padding {
 		padding-bottom: 0.125em !important;
 	}
+
+	&.no-vertical-padding {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
 }
 
 h1 {
