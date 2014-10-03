@@ -202,7 +202,7 @@ input[type="button"] {
 input,
 button {
 	&[type="submit"] {
-		font-weight: 800;
+		font-weight: 700;
 
 		@include button-grad(#005DE8);
 	}

@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.2.0
- * Date:        16/09/2014
+ * Version:     4.2.1
+ * Date:        03/09/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, span, em, strong, pre {
   line-height: inherit; }
 
 h1, h2, h3, h4, h5, h6, strong {
-  font-weight: 800; }
+  font-weight: 700; }
 
 ul,
 ol {
@@ -1589,7 +1589,7 @@ input[type="button"] {
 
 input[type="submit"],
 button[type="submit"] {
-  font-weight: 800;
+  font-weight: 700;
   color: #FFF;
   text-shadow: 0 0 3px #1e77fd;
   background: #3b87fa no-repeat scroll;
@@ -1733,7 +1733,7 @@ dd {
   line-height: 1.35em; }
 
 dt {
-  font-weight: 800; }
+  font-weight: 700; }
 
 dt,
 dl.inline > dt,
@@ -1821,7 +1821,7 @@ ul.tabs {
       text-decoration: none;
       box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15); }
     ul.tabs li.primary a {
-      font-weight: 800; }
+      font-weight: 700; }
     ul.tabs li.current {
       margin-top: 0;
       z-index: 3; }
@@ -2002,7 +2002,7 @@ table {
 
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.33em;
   background: #EEE no-repeat scroll;
   background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
@@ -2144,7 +2144,7 @@ h5,
 h6 {
   padding: 0.75em 0;
   line-height: 1em;
-  font-weight: 800;
+  font-weight: 700;
   page-break-after: avoid; }
   h1.no-top-padding,
   h2.no-top-padding,
@@ -2238,7 +2238,7 @@ pre.code[title] {
     left: 0;
     color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.5em;
     white-space: nowrap;
     background-color: #CCC;
@@ -2305,9 +2305,12 @@ sub {
 em {
   font-style: italic; }
 
+.superheavyweight {
+  font-weight: 800; }
+
 strong,
 .heavyweight {
-  font-weight: 800; }
+  font-weight: 700; }
 
 .mediumweight {
   font-weight: 400; }
