@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.2.2
- * Date:        03/10/2014
+ * Version:     4.2.3
+ * Date:        10/10/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -2211,73 +2211,74 @@ pre,
 code {
   margin-bottom: 1em;
   display: block;
+  font-family: "Courier New", Courier, monospace, mono;
   font-weight: 400;
   line-height: 1.25em;
   white-space: pre-wrap; }
 
 pre {
-  font-size: 1.33em;
-  font-family: "Courier New", Courier, monospace, mono; }
+  font-size: 1.33em; }
+
+code {
+  font-size: 1em; }
 
 code,
 pre.code {
-  padding: 1em;
   position: relative;
   overflow: auto;
   color: #333;
-  font-family: Monaco, "Courier New", Courier, monospace, mono;
   white-space: pre;
   background-color: #F4F4F4;
   border: 1px #CCC solid;
   border-radius: 3px; }
 
-pre.code em {
-  font-style: normal;
-  background-color: #FF9;
-  box-shadow: 0 0 0 1px #FF9;
-  border-radius: 3px; }
-pre.code[title] {
-  padding-top: 3em; }
-  pre.code[title]::before {
-    padding: 0.25em 0.75em;
+pre.code {
+  padding: 1em; }
+  pre.code em {
+    font-style: normal;
+    background-color: #FF9;
+    box-shadow: 0 0 0 1px #FF9;
+    border-radius: 3px; }
+  pre.code[title] {
+    padding-top: 3em; }
+    pre.code[title]::before {
+      padding: 0.25em 0.75em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      color: #FFF;
+      font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      line-height: 1.5em;
+      white-space: nowrap;
+      background-color: #CCC;
+      content: attr(title); }
+  pre.code[lang]::after {
+    height: 1.5em;
+    padding: 0 0.5em;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: 0.25em;
+    right: 0.25em;
     color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5em;
-    white-space: nowrap;
+    text-transform: uppercase;
     background-color: #CCC;
-    content: attr(title); }
-pre.code[lang]::after {
-  height: 1.5em;
-  padding: 0 0.5em;
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  color: #FFF;
-  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  background-color: #CCC;
-  border-radius: 3px;
-  content: attr(lang); }
-pre.code[lang][title]::after {
-  padding: 0;
-  right: 0.75em;
-  background-color: transparent; }
+    border-radius: 3px;
+    content: attr(lang); }
+  pre.code[lang][title]::after {
+    padding: 0;
+    right: 0.75em;
+    background-color: transparent; }
 
 p code,
 li code,
 dl code,
 table code {
   margin: 0 0.1em;
-  padding: 0;
   display: inline-block;
-  font-size: 1em;
   font-weight: 400;
   vertical-align: bottom;
   line-height: inherit;
