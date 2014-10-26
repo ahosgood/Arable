@@ -33,6 +33,7 @@
 
 @mixin basefontsize() {
 	font-size: #{$baseFontSize}em;
+	font-size: #{$baseFontSize}rem;
 }
 
 @mixin basefontlineheight() {

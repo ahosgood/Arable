@@ -35,29 +35,66 @@ dd {
 ul,
 ol {
 	margin-left: 2em;
+
+	&.plain,
+	&.lined {
+		margin: 0;
+
+		list-style: none;
+
+		ul,
+		ol {
+			margin-left: 0;
+
+			list-style: none;
+		}
+
+		ol {
+			list-style: decimal inside;
+		}
+
+		li {
+			line-height: normal;
+		}
+	}
+
+	&.lined {
+		margin-bottom: 1.5em;
+
+		border-bottom: 1px #CCC solid;
+
+		li {
+			margin-bottom: 0.35em;
+			padding: 0.35em 0 0;
+
+			text-indent: 0.5em;
+
+			border-top: 1px #CCC solid;
+		}
+
+		ul,
+		ol {
+			margin-top: 0.35em;
+			padding-left: 1em;
+
+			border-top: 1px #CCC solid;
+
+			> :first-child {
+				border-top: none;
+			}
+		}
+	}
+}
+
+ol {
+	&.lined {
+		list-style: decimal inside;
+	}
 }
 
 	li {
 		@include basefontlineheight;
 	}
-
-ul.plain,
-ol.plain {
-	margin: 0;
-
-	list-style: none;
-
-	ul,
-	ol {
-		margin-left: 0;
-
-		list-style: none;
-	}
-
-	li {
-		line-height: normal;
-	}
-}
 
 dl {
 	padding-bottom: 0.5em;
