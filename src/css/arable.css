@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.3.0
- * Date:        26/10/2014
+ * Version:     4.3.1
+ * Date:        27/10/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -633,6 +633,10 @@ form.linear {
     margin: 1px 0.5em 1px 0;
     padding: 0.25em 0;
     font-weight: 400; }
+  form.linear > input[type="checkbox"] {
+    margin-top: 0.35em;
+    position: relative;
+    top: 1px; }
   form.linear select {
     height: 1.8em;
     margin-top: 1px;
