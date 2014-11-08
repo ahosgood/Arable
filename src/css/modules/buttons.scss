@@ -55,8 +55,6 @@ input[type="button"] {
 	}
 
 	&:active {
-		//@include grad(#D8D8D8, #F2F2F2);
-
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
 	}
 
@@ -104,32 +102,12 @@ input[type="button"] {
 		@include button-grad(#D11);
 	}
 
-	&.orange {
-		//@include button-grad(#F60);
-	}
-
-	&.yellow {
-		//@include button-grad(#EC0);
-	}
-
 	&.green {
 		@include button-grad(#1A2);
 	}
 
-	&.aqua {
-		//@include button-grad(#0CB);
-	}
-
 	&.blue {
 		@include button-grad(#005DE8);
-	}
-
-	&.purple {
-		//@include button-grad(#551A8B);
-	}
-
-	&.pink {
-		//@include button-grad(#E1A);
 	}
 
 	&.black {

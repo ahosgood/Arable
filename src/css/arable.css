@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.3.1
- * Date:        27/10/2014
+ * Version:     4.4.0
+ * Date:        08/11/2014
  * ================================================================================
  */
 @-ms-viewport {
@@ -490,6 +490,69 @@ form.block {
     form.block select.large,
     form.block textarea.large {
       font-size: 2.1em; }
+    form.inline input[class^="inline-"],
+    form.inline select[class^="inline-"],
+    form.inline textarea[class^="inline-"],
+    form.block input[class^="inline-"],
+    form.block select[class^="inline-"],
+    form.block textarea[class^="inline-"] {
+      float: left; }
+      form.inline input[class^="inline-"] + [class^="inline-"],
+      form.inline select[class^="inline-"] + [class^="inline-"],
+      form.inline textarea[class^="inline-"] + [class^="inline-"],
+      form.block input[class^="inline-"] + [class^="inline-"],
+      form.block select[class^="inline-"] + [class^="inline-"],
+      form.block textarea[class^="inline-"] + [class^="inline-"] {
+        margin-left: 1%; }
+    form.inline input.inline-2,
+    form.inline select.inline-2,
+    form.inline textarea.inline-2,
+    form.block input.inline-2,
+    form.block select.inline-2,
+    form.block textarea.inline-2 {
+      width: 38%; }
+    form.inline input.inline-3,
+    form.inline select.inline-3,
+    form.inline textarea.inline-3,
+    form.block input.inline-3,
+    form.block select.inline-3,
+    form.block textarea.inline-3 {
+      width: 24.33333%; }
+    form.inline input.inline-4,
+    form.inline select.inline-4,
+    form.inline textarea.inline-4,
+    form.block input.inline-4,
+    form.block select.inline-4,
+    form.block textarea.inline-4 {
+      width: 18%; }
+    form.inline input.inline-5,
+    form.inline select.inline-5,
+    form.inline textarea.inline-5,
+    form.block input.inline-5,
+    form.block select.inline-5,
+    form.block textarea.inline-5 {
+      width: 14.2%; }
+    form.inline input.inline-small,
+    form.inline select.inline-small,
+    form.inline textarea.inline-small,
+    form.block input.inline-small,
+    form.block select.inline-small,
+    form.block textarea.inline-small {
+      width: 150px; }
+    form.inline input.inline-x-small,
+    form.inline select.inline-x-small,
+    form.inline textarea.inline-x-small,
+    form.block input.inline-x-small,
+    form.block select.inline-x-small,
+    form.block textarea.inline-x-small {
+      width: 100px; }
+    form.inline input.inline-xx-small,
+    form.inline select.inline-xx-small,
+    form.inline textarea.inline-xx-small,
+    form.block input.inline-xx-small,
+    form.block select.inline-xx-small,
+    form.block textarea.inline-xx-small {
+      width: 50px; }
   form.inline input[type="submit"],
   form.inline input[type="reset"],
   form.inline input[type="button"],
@@ -589,13 +652,34 @@ form.block {
     margin-bottom: 0.2em;
     margin-left: 0.2em;
     display: inline-block; }
-    form.block label + input,
-    form.block label + select,
-    form.block label + textarea {
+    form.block label ~ input,
+    form.block label ~ select,
+    form.block label ~ textarea {
       width: 100%;
       margin-top: 0;
       float: none;
       clear: both; }
+      form.block label ~ input[class^="inline-"] + [class^="inline-"],
+      form.block label ~ select[class^="inline-"] + [class^="inline-"],
+      form.block label ~ textarea[class^="inline-"] + [class^="inline-"] {
+        margin-left: 1%;
+        clear: none; }
+      form.block label ~ input.inline-2,
+      form.block label ~ select.inline-2,
+      form.block label ~ textarea.inline-2 {
+        width: 49.5%; }
+      form.block label ~ input.inline-3,
+      form.block label ~ select.inline-3,
+      form.block label ~ textarea.inline-3 {
+        width: 32.66666%; }
+      form.block label ~ input.inline-4,
+      form.block label ~ select.inline-4,
+      form.block label ~ textarea.inline-4 {
+        width: 24.25%; }
+      form.block label ~ input.inline-5,
+      form.block label ~ select.inline-5,
+      form.block label ~ textarea.inline-5 {
+        width: 19.2%; }
   form.block input[type="checkbox"],
   form.block input[type="radio"] {
     width: auto;
@@ -688,13 +772,34 @@ form.linear {
       margin-bottom: 0.2em;
       margin-left: 0.2em;
       display: inline-block; }
-      form.inline.foldable label + input,
-      form.inline.foldable label + select,
-      form.inline.foldable label + textarea {
+      form.inline.foldable label ~ input,
+      form.inline.foldable label ~ select,
+      form.inline.foldable label ~ textarea {
         width: 100%;
         margin-top: 0;
         float: none;
         clear: both; }
+        form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
+        form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
+        form.inline.foldable label ~ textarea[class^="inline-"] + [class^="inline-"] {
+          margin-left: 1%;
+          clear: none; }
+        form.inline.foldable label ~ input.inline-2,
+        form.inline.foldable label ~ select.inline-2,
+        form.inline.foldable label ~ textarea.inline-2 {
+          width: 49.5%; }
+        form.inline.foldable label ~ input.inline-3,
+        form.inline.foldable label ~ select.inline-3,
+        form.inline.foldable label ~ textarea.inline-3 {
+          width: 32.66666%; }
+        form.inline.foldable label ~ input.inline-4,
+        form.inline.foldable label ~ select.inline-4,
+        form.inline.foldable label ~ textarea.inline-4 {
+          width: 24.25%; }
+        form.inline.foldable label ~ input.inline-5,
+        form.inline.foldable label ~ select.inline-5,
+        form.inline.foldable label ~ textarea.inline-5 {
+          width: 19.2%; }
     form.inline.foldable input[type="checkbox"],
     form.inline.foldable input[type="radio"] {
       width: auto;
@@ -1287,21 +1392,8 @@ input[type="button"] {
       input[type="button"].flat.red:focus,
       input[type="button"].flat.red:hover,
       input[type="button"].flat.red:active {
-        box-shadow: none; }
-      a.button.flat.red:hover,
-      label.button.flat.red:hover,
-      button.flat.red:hover,
-      input[type="submit"].flat.red:hover,
-      input[type="reset"].flat.red:hover,
-      input[type="button"].flat.red:hover {
-        background: #ec4e4e; }
-      a.button.flat.red:active,
-      label.button.flat.red:active,
-      button.flat.red:active,
-      input[type="submit"].flat.red:active,
-      input[type="reset"].flat.red:active,
-      input[type="button"].flat.red:active {
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25); }
+        background: #f14949;
+        border-color: #f14949; }
       a.button.flat.red.disabled:hover, a.button.flat.red.disabled:focus, a.button.flat.red.disabled:active, a.button.flat.red:disabled:hover, a.button.flat.red:disabled:focus, a.button.flat.red:disabled:active,
       label.button.flat.red.disabled:hover,
       label.button.flat.red.disabled:focus,
@@ -1333,7 +1425,8 @@ input[type="button"] {
       input[type="button"].flat.red:disabled:hover,
       input[type="button"].flat.red:disabled:focus,
       input[type="button"].flat.red:disabled:active {
-        background: #ea3737;
+        background: #ef3232;
+        border-color: #ef3232;
         box-shadow: none; }
     a.button.flat.green,
     label.button.flat.green,
@@ -1359,21 +1452,8 @@ input[type="button"] {
       input[type="button"].flat.green:focus,
       input[type="button"].flat.green:hover,
       input[type="button"].flat.green:active {
-        box-shadow: none; }
-      a.button.flat.green:hover,
-      label.button.flat.green:hover,
-      button.flat.green:hover,
-      input[type="submit"].flat.green:hover,
-      input[type="reset"].flat.green:hover,
-      input[type="button"].flat.green:hover {
-        background: #25e23a; }
-      a.button.flat.green:active,
-      label.button.flat.green:active,
-      button.flat.green:active,
-      input[type="submit"].flat.green:active,
-      input[type="reset"].flat.green:active,
-      input[type="button"].flat.green:active {
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25); }
+        background: #1fe935;
+        border-color: #1fe935; }
       a.button.flat.green.disabled:hover, a.button.flat.green.disabled:focus, a.button.flat.green.disabled:active, a.button.flat.green:disabled:hover, a.button.flat.green:disabled:focus, a.button.flat.green:disabled:active,
       label.button.flat.green.disabled:hover,
       label.button.flat.green.disabled:focus,
@@ -1405,7 +1485,8 @@ input[type="button"] {
       input[type="button"].flat.green:disabled:hover,
       input[type="button"].flat.green:disabled:focus,
       input[type="button"].flat.green:disabled:active {
-        background: #1cd230;
+        background: #16d82b;
+        border-color: #16d82b;
         box-shadow: none; }
     a.button.flat.blue,
     label.button.flat.blue,
@@ -1431,21 +1512,8 @@ input[type="button"] {
       input[type="button"].flat.blue:focus,
       input[type="button"].flat.blue:hover,
       input[type="button"].flat.blue:active {
-        box-shadow: none; }
-      a.button.flat.blue:hover,
-      label.button.flat.blue:hover,
-      button.flat.blue:hover,
-      input[type="submit"].flat.blue:hover,
-      input[type="reset"].flat.blue:hover,
-      input[type="button"].flat.blue:hover {
-        background: #3b87fa; }
-      a.button.flat.blue:active,
-      label.button.flat.blue:active,
-      button.flat.blue:active,
-      input[type="submit"].flat.blue:active,
-      input[type="reset"].flat.blue:active,
-      input[type="button"].flat.blue:active {
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25); }
+        background: #3686ff;
+        border-color: #3686ff; }
       a.button.flat.blue.disabled:hover, a.button.flat.blue.disabled:focus, a.button.flat.blue.disabled:active, a.button.flat.blue:disabled:hover, a.button.flat.blue:disabled:focus, a.button.flat.blue:disabled:active,
       label.button.flat.blue.disabled:hover,
       label.button.flat.blue.disabled:focus,
@@ -1477,7 +1545,8 @@ input[type="button"] {
       input[type="button"].flat.blue:disabled:hover,
       input[type="button"].flat.blue:disabled:focus,
       input[type="button"].flat.blue:disabled:active {
-        background: #2278f9;
+        background: #1c77ff;
+        border-color: #1c77ff;
         box-shadow: none; }
     a.button.flat.black,
     label.button.flat.black,
@@ -1503,21 +1572,8 @@ input[type="button"] {
       input[type="button"].flat.black:focus,
       input[type="button"].flat.black:hover,
       input[type="button"].flat.black:active {
-        box-shadow: none; }
-      a.button.flat.black:hover,
-      label.button.flat.black:hover,
-      button.flat.black:hover,
-      input[type="submit"].flat.black:hover,
-      input[type="reset"].flat.black:hover,
-      input[type="button"].flat.black:hover {
-        background: #484848; }
-      a.button.flat.black:active,
-      label.button.flat.black:active,
-      button.flat.black:active,
-      input[type="submit"].flat.black:active,
-      input[type="reset"].flat.black:active,
-      input[type="button"].flat.black:active {
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25); }
+        background: #484848;
+        border-color: #484848; }
       a.button.flat.black.disabled:hover, a.button.flat.black.disabled:focus, a.button.flat.black.disabled:active, a.button.flat.black:disabled:hover, a.button.flat.black:disabled:focus, a.button.flat.black:disabled:active,
       label.button.flat.black.disabled:hover,
       label.button.flat.black.disabled:focus,
@@ -1550,6 +1606,7 @@ input[type="button"] {
       input[type="button"].flat.black:disabled:focus,
       input[type="button"].flat.black:disabled:active {
         background: #3c3c3c;
+        border-color: #3c3c3c;
         box-shadow: none; }
   a.button i.fa::before,
   a.button i[class^="fa-"]::before,
@@ -2340,6 +2397,11 @@ pre.code {
     padding: 0;
     right: 0.75em;
     background-color: transparent; }
+  pre.code.dark {
+    color: #FFF;
+    background-color: #222; }
+    pre.code.dark em {
+      color: #222; }
 
 p code,
 li code,
@@ -2481,20 +2543,18 @@ dl + hr {
   position: relative;
   border: 1px #000 solid;
   border-radius: 3px; }
-
-.error > :first-child,
-.warning > :first-child,
-.notice > :first-child,
-.success > :first-child {
-  margin-top: 0;
-  padding-top: 0; }
-
-.error > :last-child,
-.warning > :last-child,
-.notice > :last-child,
-.success > :last-child {
-  margin-bottom: 0;
-  padding-bottom: 0; }
+  .error > :first-child,
+  .warning > :first-child,
+  .notice > :first-child,
+  .success > :first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  .error > :last-child,
+  .warning > :last-child,
+  .notice > :last-child,
+  .success > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
 
 p.error,
 p.warning,
@@ -2506,18 +2566,26 @@ p.success {
 .error {
   background-color: rgba(204, 0, 0, 0.2);
   border-color: #C00; }
+  .error.solid-bg {
+    background-color: #F4CBCB; }
 
 .warning {
   background-color: rgba(255, 204, 0, 0.2);
   border-color: #FC0; }
+  .warning.solid-bg {
+    background-color: #FEF4CB; }
 
 .notice {
   background-color: rgba(0, 102, 204, 0.2);
   border-color: #06C; }
+  .notice.solid-bg {
+    background-color: #CBDFF4; }
 
 .success {
   background-color: rgba(0, 204, 0, 0.2);
   border-color: #0C0; }
+  .success.solid-bg {
+    background-color: #CBF4CB; }
 
 /* ===================================================== SHADOW SEARCHABLES ===================================================== */
 table.searchables-searching tr,

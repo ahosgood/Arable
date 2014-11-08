@@ -180,6 +180,16 @@ pre.code {
 			background-color: transparent;
 		}
 	}
+
+	&.dark {
+		color: #FFF;
+
+		background-color: #222;
+
+		em {
+			color: #222;
+		}
+	}
 }
 
 p,

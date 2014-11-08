@@ -114,22 +114,16 @@ dl {
 
 	border: 1px #000 solid;
 	border-radius: 3px;
-}
 
-.error > :first-child,
-.warning > :first-child,
-.notice > :first-child,
-.success > :first-child {
-	margin-top: 0;
-	padding-top: 0;
-}
+	> :first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
 
-.error > :last-child,
-.warning > :last-child,
-.notice > :last-child,
-.success > :last-child {
-	margin-bottom: 0;
-	padding-bottom: 0;
+	> :last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
 }
 
 p.error,
@@ -145,22 +139,38 @@ p.success {
 	background-color: rgba(204, 0, 0, 0.2);
 
 	border-color: #C00;
+
+	&.solid-bg {
+		background-color: #F4CBCB;
+	}
 }
 
 .warning {
 	background-color: rgba(255, 204, 0, 0.2);
 
 	border-color: #FC0;
+
+	&.solid-bg {
+		background-color: #FEF4CB;
+	}
 }
 
 .notice {
 	background-color: rgba(0, 102, 204, 0.2);
 
 	border-color: #06C;
+
+	&.solid-bg {
+		background-color: #CBDFF4;
+	}
 }
 
 .success {
 	background-color: rgba(0, 204, 0, 0.2);
 
 	border-color: #0C0;
+
+	&.solid-bg {
+		background-color: #CBF4CB;
+	}
 }

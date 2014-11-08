@@ -195,6 +195,42 @@ form.block {
 		&.large {
 			font-size: 2.1em;
 		}
+
+		&[class^="inline-"] {
+			float: left;
+
+			+ [class^="inline-"] {
+				margin-left: 1%;
+			}
+		}
+
+		&.inline-2 {
+			width: 38%;
+		}
+
+		&.inline-3 {
+			width: 24.33333%;
+		}
+
+		&.inline-4 {
+			width: 18%;
+		}
+
+		&.inline-5 {
+			width: 14.2%;
+		}
+
+		&.inline-small {
+			width: 150px;
+		}
+
+		&.inline-x-small {
+			width: 100px;
+		}
+
+		&.inline-xx-small {
+			width: 50px;
+		}
 	}
 
 	input[type="submit"],
