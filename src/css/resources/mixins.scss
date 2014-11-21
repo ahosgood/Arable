@@ -31,21 +31,184 @@
 	}
 }
 
-@mixin basefontsize() {
+@mixin basefontsize {
 	font-size: #{$baseFontSize}em;
 	font-size: #{$baseFontSize}rem;
 }
 
-@mixin basefontlineheight() {
+@mixin basefontlineheight {
 	line-height: #{$baseLineHeight}em;
 }
 
-@mixin basefontcolour() {
+@mixin basefontcolour {
 	color: #222;
 }
 
-@mixin basefontface() {
+@mixin basefontface {
 	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin button {
+	width: auto;
+	padding: 0 0.75em;
+
+	display: inline-block;
+
+	@include basefontsize;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	line-height: 2.1em;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	@include grad(#F2F2F2, #D8D8D8);
+
+	border: 1px #CCC solid;
+	border-radius: 3px;
+
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	-o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+
+	cursor: pointer;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
+	&:focus,
+	&:hover,
+	&:active {
+		border-color: #AAA;
+
+		-webkit-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+	}
+
+	&:focus,
+	&:hover {
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	}
+
+	&:active {
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+	}
+
+	&.thin {
+		height: 1.5em;
+
+		line-height: 1.5em;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.4;
+
+		&:hover,
+		&:focus,
+		&:active {
+			@include grad(#F2F2F2, #D8D8D8);
+
+			border-color: #CCC;
+
+			box-shadow: none;
+		}
+	}
+
+	&.red {
+		@include button-grad(#D11);
+	}
+
+	&.green {
+		@include button-grad(#1A2);
+	}
+
+	&.blue {
+		@include button-grad(#005DE8);
+	}
+
+	&.black {
+		@include button-grad(#222);
+	}
+
+	&.flat {
+		background: #E4E4E4;
+
+		border: none;
+
+		box-shadow: none;
+
+		&:hover {
+			background: #E8E8E8;
+		}
+
+		&:active {
+			box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
+		}
+
+		&.red {
+			@include button-flat(#D11);
+		}
+
+		&.green {
+			@include button-flat(#1A2);
+		}
+
+		&.blue {
+			@include button-flat(#005DE8);
+		}
+
+		&.black {
+			@include button-flat(#222);
+		}
+	}
+
+	i.fa,
+	i[class^="fa-"],
+	i[class*=" fa-"] {
+		&::before {
+			width: 1em;
+			height: 1em;
+			padding-right: 0;
+			padding-left: 0.625em;
+
+			display: inline-block;
+
+			float: right;
+
+			text-align: center;
+			vertical-align: top;
+			line-height: 1em;
+		}
+
+		&.left-icon {
+			&::before {
+				padding-right: 0.625em;
+				padding-left: 0;
+
+				float: left;
+			}
+		}
+	}
+
+	&:empty {
+		i.fa,
+		i[class^="fa-"],
+		i[class*=" fa-"] {
+			&::before {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
 }
 
 @mixin button-grad($base) {
@@ -114,7 +277,7 @@
 	}
 }
 
-@mixin blockform() {
+@mixin blockform {
 	text-align: left;
 
 	label {

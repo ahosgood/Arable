@@ -51,10 +51,10 @@ form.linear {
 		}
 	}
 
-	input[type="text"],
-	input[type="search"],
-	input[type="checkbox"],
-	input[type="radio"] {
+	[type="text"],
+	[type="search"],
+	[type="checkbox"],
+	[type="radio"] {
 		&:valid {
 			&:focus {
 				background-color: #FFF;
@@ -85,16 +85,6 @@ form.linear {
 			&:focus {
 				box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
 			}
-
-			/*&:required {
-				//background-color: #FFF5CC;
-
-				border-color: #FC0;
-
-				&:focus {
-					box-shadow: none;
-				}
-			}*/
 		}
 
 		&:disabled,
@@ -107,6 +97,20 @@ form.linear {
 				box-shadow: none !important;
 			}
 		}
+	}
+
+	[type="submit"],
+	[type="reset"],
+	[type="button"],
+	button,
+	.button {
+		@include button;
+	}
+
+	[type="submit"] {
+		font-weight: 700;
+
+		@include button-grad(#005DE8);
 	}
 
 	h1,
@@ -233,10 +237,10 @@ form.block {
 		}
 	}
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
 	button,
+	[type="submit"],
+	[type="reset"],
+	[type="button"],
 	.button {
 		width: auto;
 		margin-top: 0.5em;
@@ -244,10 +248,10 @@ form.block {
 		float: right;
 		clear: both;
 
-		+ input[type="submit"],
-		+ input[type="reset"],
-		+ input[type="button"],
 		+ button,
+		+ [type="submit"],
+		+ [type="reset"],
+		+ [type="button"],
 		+ .button {
 			margin-right: 0.5em;
 
@@ -255,36 +259,38 @@ form.block {
 		}
 	}
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		width: auto;
-
-		float: left;
-	}
-
-	input[type="checkbox"] {
-		margin-top: 0.65em;
-	}
-
-	input[type="radio"] {
-		margin-top: 0.55em;
-
-		+ label {
+	input {
+		&[type="checkbox"],
+		&[type="radio"] {
 			width: auto;
-			margin-top: 0.4em;
-			margin-right: 1.5em;
-			padding: 0 0.5em;
 
 			float: left;
-			clear: none;
-
-			font-weight: inherit;
 		}
 
-		&:disabled,
-		&[readonly] {
+		&[type="checkbox"] {
+			margin-top: 0.65em;
+		}
+
+		&[type="radio"] {
+			margin-top: 0.55em;
+
 			+ label {
-				color: #AAA;
+				width: auto;
+				margin-top: 0.4em;
+				margin-right: 1.5em;
+				padding: 0 0.5em;
+
+				float: left;
+				clear: none;
+
+				font-weight: inherit;
+			}
+
+			&:disabled,
+			&[readonly] {
+				+ label {
+					color: #AAA;
+				}
 			}
 		}
 	}
@@ -339,18 +345,18 @@ form.linear {
 	}
 
 	button,
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button {
+	[type="submit"],
+	[type="reset"],
+	[type="button"],
+	.button {
 		height: 1.7em;
 		margin-left: 1.5em;
 
 		line-height: 1em;
 
-		+ input[type="submit"],
-		+ input[type="reset"],
-		+ input[type="button"],
+		+ [type="submit"],
+		+ [type="reset"],
+		+ [type="button"],
 		+ button,
 		+ .button {
 			margin-left: 0.5em;
@@ -362,6 +368,26 @@ form.linear {
 	button {
 		+ label {
 			margin-left: 1.5em;
+		}
+	}
+}
+
+@media all and (min--moz-device-pixel-ratio: 0) {
+	form.inline,
+	form.block,
+	form.linear {
+		button,
+		[type="submit"],
+		[type="reset"],
+		[type="button"],
+		.button {
+			height: 2.1em;
+
+			line-height: 1em;
+
+			&.thin {
+				line-height: 1em;
+			}
 		}
 	}
 }
