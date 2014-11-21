@@ -1,0 +1,30 @@
+/* ===================================================== BUTTONS ===================================================== */
+a.button,
+label.button {
+	@include button;
+}
+
+label.button {
+	width: auto !important;
+	padding: 0 0.75em !important;
+
+	font-size: 1.3em !important;
+
+	input[type="checkbox"] {
+		margin: 0 0 0 0.5em !important;
+
+		display: inline-block !important;
+
+		float: none !important;
+
+		vertical-align: baseline;
+	}
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+	label.button {
+		input[type="checkbox"] {
+			vertical-align: baseline;
+		}
+	}
+}
