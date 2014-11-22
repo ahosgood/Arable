@@ -208,7 +208,7 @@ ul.inline {
 	&.breadcrumbs {
 		li {
 			&:first-child {
-				font-weight: bold;
+				font-weight: 700;
 			}
 
 			+ li::before {
