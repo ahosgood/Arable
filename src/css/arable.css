@@ -5,8 +5,11 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.5.1
+ * Version:     4.6.0
  * Date:        22/11/2014
+ * ================================================================================
+ * Please include Open Sans if supporting systems without Helvetica
+ * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
  * ================================================================================
  */
 @-ms-viewport {
@@ -237,7 +240,7 @@ button {
 /* ===================================================== GENERIC ===================================================== */
 body {
   color: #222;
-  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans" Arial, sans-serif;
   font-weight: 300; }
 
 .clear {
@@ -3334,12 +3337,15 @@ ul.inline {
     ul.inline li + li::before {
       padding: 0 0.5em;
       display: inline-block;
-      color: #CCC;
+      color: #999;
       content: "|"; }
   ul.inline.breadcrumbs li:first-child {
     font-weight: 700; }
   ul.inline.breadcrumbs li + li::before {
     color: #999;
+    font-size: 150%;
+    line-height: 75%;
+    vertical-align: text-top;
     content: "\203A"; }
 
 ul.tabs {
@@ -3821,7 +3827,7 @@ pre.code {
       right: 0;
       left: 0;
       color: #FFF;
-      font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans" Arial, sans-serif;
       font-weight: 700;
       line-height: 1.5em;
       white-space: nowrap;
@@ -3834,7 +3840,7 @@ pre.code {
     top: 0.25em;
     right: 0.25em;
     color: #FFF;
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans" Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5em;
     text-transform: uppercase;
@@ -3908,14 +3914,20 @@ strong,
 /* ===================================================== OTHER ===================================================== */
 hr {
   width: 100%;
-  height: 0;
+  height: 1px;
   margin: 1.5em 0;
   display: inline-block;
   clear: both;
   font-size: 1.3em;
   line-height: 1.25em;
-  border: #CCC solid;
-  border-width: 1px 0 0; }
+  background-color: #CCC;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, white), color-stop(0.25, #cccccc), color-stop(0.75, #cccccc), color-stop(1, white));
+  background-image: -o-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
+  background-image: -moz-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
+  background-image: -webkit-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
+  background-image: -ms-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
+  background-image: linear-gradient(to right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
+  border: none; }
 
 p + hr {
   margin-top: 1em; }

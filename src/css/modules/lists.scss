@@ -199,7 +199,7 @@ ul.inline {
 
 			display: inline-block;
 
-			color: #CCC;
+			color: #999;
 
 			content: "|";
 		}
@@ -213,6 +213,9 @@ ul.inline {
 
 			+ li::before {
 				color: #999;
+				font-size: 150%;
+				line-height: 75%;
+				vertical-align: text-top;
 
 				content: "\203A";
 			}
