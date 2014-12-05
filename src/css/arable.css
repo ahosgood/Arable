@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.7.0
+ * Version:     4.7.1
  * Date:        05/12/2014
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -2187,11 +2187,15 @@ form.block {
       margin-top: 0;
       float: none;
       clear: both; }
-      form.block label ~ input[class^="inline-"] + [class^="inline-"],
-      form.block label ~ select[class^="inline-"] + [class^="inline-"],
-      form.block label ~ textarea[class^="inline-"] + [class^="inline-"] {
-        margin-left: 1%;
-        clear: none; }
+      form.block label ~ input[class^="inline-"],
+      form.block label ~ select[class^="inline-"],
+      form.block label ~ textarea[class^="inline-"] {
+        float: left; }
+        form.block label ~ input[class^="inline-"] + [class^="inline-"],
+        form.block label ~ select[class^="inline-"] + [class^="inline-"],
+        form.block label ~ textarea[class^="inline-"] + [class^="inline-"] {
+          margin-left: 1%;
+          clear: none; }
       form.block label ~ input.inline-2,
       form.block label ~ select.inline-2,
       form.block label ~ textarea.inline-2 {
@@ -2341,11 +2345,15 @@ form.linear {
         margin-top: 0;
         float: none;
         clear: both; }
-        form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ textarea[class^="inline-"] + [class^="inline-"] {
-          margin-left: 1%;
-          clear: none; }
+        form.inline.foldable label ~ input[class^="inline-"],
+        form.inline.foldable label ~ select[class^="inline-"],
+        form.inline.foldable label ~ textarea[class^="inline-"] {
+          float: left; }
+          form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ textarea[class^="inline-"] + [class^="inline-"] {
+            margin-left: 1%;
+            clear: none; }
         form.inline.foldable label ~ input.inline-2,
         form.inline.foldable label ~ select.inline-2,
         form.inline.foldable label ~ textarea.inline-2 {

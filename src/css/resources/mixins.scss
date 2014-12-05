@@ -299,6 +299,8 @@
 			clear: both;
 
 			&[class^="inline-"] {
+				float: left;
+
 				+ [class^="inline-"] {
 					margin-left: 1%;
 
