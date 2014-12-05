@@ -110,7 +110,35 @@ form.linear {
 	[type="submit"] {
 		font-weight: 700;
 
-		@include button-grad(#005DE8);
+		@include button-grad($buttonBlue);
+
+		&.red {
+			@include button-grad($buttonRed);
+		}
+
+		&.green {
+			@include button-grad($buttonGreen);
+		}
+
+		&.black {
+			@include button-grad($buttonBlack);
+		}
+
+		&.flat {
+			@include button-flat($buttonBlue);
+
+			&.red {
+				@include button-flat($buttonRed);
+			}
+
+			&.green {
+				@include button-flat($buttonGreen);
+			}
+
+			&.black {
+				@include button-flat($buttonBlack);
+			}
+		}
 	}
 
 	h1,

@@ -124,19 +124,19 @@
 	}
 
 	&.red {
-		@include button-grad(#D11);
+		@include button-grad($buttonRed);
 	}
 
 	&.green {
-		@include button-grad(#1A2);
+		@include button-grad($buttonGreen);
 	}
 
 	&.blue {
-		@include button-grad(#005DE8);
+		@include button-grad($buttonBlue);
 	}
 
 	&.black {
-		@include button-grad(#222);
+		@include button-grad($buttonBlack);
 	}
 
 	&.flat {
@@ -155,19 +155,19 @@
 		}
 
 		&.red {
-			@include button-flat(#D11);
+			@include button-flat($buttonRed);
 		}
 
 		&.green {
-			@include button-flat(#1A2);
+			@include button-flat($buttonGreen);
 		}
 
 		&.blue {
-			@include button-flat(#005DE8);
+			@include button-flat($buttonBlue);
 		}
 
 		&.black {
-			@include button-flat(#222);
+			@include button-flat($buttonBlack);
 		}
 	}
 
