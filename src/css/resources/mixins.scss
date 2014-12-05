@@ -1,12 +1,14 @@
 // ===================================================== MIXINS =====================================================
 @mixin grad($top, $bottom) {
-	background: $top no-repeat scroll;
-	background: -moz-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)) no-repeat scroll;
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)) no-repeat scroll;
 	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
 	background: -ms-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
 	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
+	background-color: $top;
+	background-repeat: no-repeat;
+	background-position: scroll;
 }
 
 @mixin keyframes($name) {
@@ -139,7 +141,7 @@
 		@include button-grad($buttonBlack);
 	}
 
-	&.flat {
+	/*&.flat {
 		background: #E4E4E4;
 
 		border: none;
@@ -169,7 +171,7 @@
 		&.black {
 			@include button-flat($buttonBlack);
 		}
-	}
+	}*/
 
 	i.fa,
 	i[class^="fa-"],

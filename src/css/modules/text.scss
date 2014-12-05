@@ -213,7 +213,7 @@ table {
 
 blockquote {
 	margin: 0.25em 0.5em 0.75em;
-	padding: 0.25em 0.25em 0.25em 1em;
+	padding: 0.5em 0.75em 0.5em 1.25em;
 
 	color: #555;
 	font-size: 1.55em;
@@ -221,7 +221,9 @@ blockquote {
 	line-height: 1.75em;
 	white-space: pre-wrap;
 
-	border-left: 0.35em #CCC solid;
+	background-color: #F4F4F4;
+
+	border-left: 0.3em #CCC solid;
 
 	p {
 		margin-bottom: 0;

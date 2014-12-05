@@ -1,13 +1,10 @@
-/* ===================================================== SHADOW SEARCHABLES ===================================================== */
-table,
-tbody {
-	&.searchables-searching {
-		tr {
-			background-color: transparent;
+/* ===================================================== RUMMAGE ===================================================== */
+.rummage-searching {
+	tr {
+		background-color: transparent;
 
-			&.disabled {
-				background-color: #F4F4F4;
-			}
+		&.disabled {
+			background-color: #F4F4F4;
 		}
 	}
 }

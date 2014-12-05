@@ -11,13 +11,13 @@ hr {
 	font-size: 1.3em;
 	line-height: 1.25em;
 
-	background-color: #CCC;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, #CCC),  color-stop(0.75, #CCC), color-stop(1, #FFF));
-	background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, #CCC),  color-stop(0.75, #CCC), color-stop(1, #FFF));
 	background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+	background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
 	background-image: -ms-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+	background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
 	background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+	background-color: #CCC;
 
 	border: none;
 }
@@ -104,6 +104,13 @@ dl {
 }
 
 .no-vertical-padding {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.no-vertical-spacing {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 }

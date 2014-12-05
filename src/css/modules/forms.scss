@@ -124,7 +124,7 @@ form.linear {
 			@include button-grad($buttonBlack);
 		}
 
-		&.flat {
+		/*&.flat {
 			@include button-flat($buttonBlue);
 
 			&.red {
@@ -138,7 +138,7 @@ form.linear {
 			&.black {
 				@include button-flat($buttonBlack);
 			}
-		}
+		}*/
 	}
 
 	h1,
@@ -237,7 +237,7 @@ form.block {
 		}
 
 		&.inline-2 {
-			width: 38%;
+			width: 37%;
 		}
 
 		&.inline-3 {
