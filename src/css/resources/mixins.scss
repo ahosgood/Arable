@@ -42,6 +42,10 @@
 	line-height: #{$baseLineHeight}em;
 }
 
+@mixin basefontweight {
+	font-weight: $basefontWeight;
+}
+
 @mixin basefontcolour {
 	color: #222;
 }

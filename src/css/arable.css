@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.7.1
+ * Version:     4.7.2
  * Date:        05/12/2014
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -241,7 +241,7 @@ button {
 body {
   color: #222;
   font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
-  font-weight: 300; }
+  font-weight: 400; }
 
 .clear {
   display: block;
@@ -258,7 +258,6 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-weight: 400;
   background-color: #FFF;
   border: 1px #CCC solid;
   border-radius: 3px; }
@@ -273,6 +272,10 @@ optgroup option {
 option:disabled {
   color: #AAA; }
 
+form.inline label,
+form.block label,
+form.linear label {
+  font-weight: 700; }
 form.inline textarea,
 form.block textarea,
 form.linear textarea {
@@ -1950,7 +1953,6 @@ form.block {
     clear: both;
     font-size: 1.33em;
     font-size: 1.33rem;
-    font-weight: 400;
     text-align: left;
     line-height: 1.33em; }
     form.inline label.button,
@@ -1978,32 +1980,28 @@ form.block {
     form.block input::-webkit-input-placeholder,
     form.block select::-webkit-input-placeholder,
     form.block textarea::-webkit-input-placeholder {
-      color: #999;
-      font-weight: 400; }
+      color: #999; }
     form.inline input:-moz-placeholder,
     form.inline select:-moz-placeholder,
     form.inline textarea:-moz-placeholder,
     form.block input:-moz-placeholder,
     form.block select:-moz-placeholder,
     form.block textarea:-moz-placeholder {
-      color: #999;
-      font-weight: 400; }
+      color: #999; }
     form.inline input::-moz-placeholder,
     form.inline select::-moz-placeholder,
     form.inline textarea::-moz-placeholder,
     form.block input::-moz-placeholder,
     form.block select::-moz-placeholder,
     form.block textarea::-moz-placeholder {
-      color: #999;
-      font-weight: 400; }
+      color: #999; }
     form.inline input:-ms-input-placeholder,
     form.inline select:-ms-input-placeholder,
     form.inline textarea:-ms-input-placeholder,
     form.block input:-ms-input-placeholder,
     form.block select:-ms-input-placeholder,
     form.block textarea:-ms-input-placeholder {
-      color: #999;
-      font-weight: 400; }
+      color: #999; }
     form.inline input.full,
     form.inline select.full,
     form.inline textarea.full,
@@ -2172,6 +2170,39 @@ form.block {
     form.block input[type="radio"]:disabled + label,
     form.block input[type="radio"][readonly] + label {
       color: #AAA; }
+  form.inline.large,
+  form.block.large {
+    padding-bottom: 1em; }
+    form.inline.large label,
+    form.inline.large input,
+    form.inline.large select,
+    form.inline.large textarea,
+    form.block.large label,
+    form.block.large input,
+    form.block.large select,
+    form.block.large textarea {
+      font-size: 1.45em; }
+    form.inline.large label,
+    form.inline.large button,
+    form.inline.large [type="submit"],
+    form.inline.large [type="reset"],
+    form.inline.large [type="button"],
+    form.inline.large .button,
+    form.block.large label,
+    form.block.large button,
+    form.block.large [type="submit"],
+    form.block.large [type="reset"],
+    form.block.large [type="button"],
+    form.block.large .button {
+      margin-top: 1.4em; }
+    form.inline.large input,
+    form.inline.large select,
+    form.inline.large textarea,
+    form.block.large input,
+    form.block.large select,
+    form.block.large textarea {
+      margin-top: 1.2em;
+      padding: 0.5em 0.75em; }
 
 form.block {
   text-align: left; }
@@ -3325,7 +3356,6 @@ p {
   font-size: 1.33em;
   font-size: 1.33rem;
   line-height: 1.618em;
-  font-weight: 300;
   word-break: normal;
   orphans: 3;
   widows: 3; }
@@ -3346,7 +3376,6 @@ code {
   margin-bottom: 1em;
   display: block;
   font-family: "Courier New", Courier, monospace, mono;
-  font-weight: 400;
   line-height: 1.25em;
   white-space: pre-wrap; }
 
@@ -3397,7 +3426,6 @@ pre.code {
     right: 0.25em;
     color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
-    font-weight: 400;
     line-height: 1.5em;
     text-transform: uppercase;
     background-color: #CCC;
@@ -3419,7 +3447,6 @@ dl code,
 table code {
   margin: 0 0.1em;
   display: inline-block;
-  font-weight: 400;
   vertical-align: bottom;
   line-height: inherit;
   white-space: nowrap;
@@ -3585,8 +3612,7 @@ p.error,
 p.warning,
 p.notice,
 p.success {
-  padding: 0.25em 0.5em;
-  font-weight: 400; }
+  padding: 0.25em 0.5em; }
 
 .error {
   background-color: rgba(204, 0, 0, 0.2);

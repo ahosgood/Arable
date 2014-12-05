@@ -2,7 +2,7 @@
 body {
 	@include basefontcolour;
 	@include basefontface;
-	font-weight: 300;
+	@include basefontweight;
 }
 
 .clear {

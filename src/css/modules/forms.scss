@@ -9,8 +9,6 @@ textarea {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	font-weight: 400;
-
 	background-color: #FFF;
 
 	border: 1px #CCC solid;
@@ -33,6 +31,10 @@ textarea {
 form.inline,
 form.block,
 form.linear {
+	label {
+		font-weight: 700;
+	}
+
 	textarea {
 		min-height: 2em;
 
@@ -172,7 +174,6 @@ form.block {
 		clear: both;
 
 		@include basefontsize;
-		font-weight: 400;
 		text-align: left;
 		line-height: #{$baseFontSize}em;
 
@@ -200,22 +201,18 @@ form.block {
 
 		&::-webkit-input-placeholder {
 			color: #999;
-			font-weight: 400;
 		}
 
 		&:-moz-placeholder {
 			color: #999;
-			font-weight: 400;
 		}
 
 		&::-moz-placeholder {
 			color: #999;
-			font-weight: 400;
 		}
 
 		&:-ms-input-placeholder {
 			color: #999;
-			font-weight: 400;
 		}
 
 		&.full {
@@ -320,6 +317,33 @@ form.block {
 					color: #AAA;
 				}
 			}
+		}
+	}
+
+	&.large {
+		padding-bottom: 1em;
+
+		label,
+		input,
+		select,
+		textarea {
+			font-size: 1.45em;
+		}
+
+		label,
+		button,
+		[type="submit"],
+		[type="reset"],
+		[type="button"],
+		.button {
+			margin-top: 1.4em;
+		}
+
+		input,
+		select,
+		textarea {
+			margin-top: 1.2em;
+			padding: 0.5em 0.75em;
 		}
 	}
 }

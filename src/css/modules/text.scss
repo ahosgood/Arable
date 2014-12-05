@@ -26,27 +26,27 @@ h6 {
 }
 
 h1 {
-	font-size: #{1.33 * exponent(1.2, 6)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 6)}em;
 }
 
 h2 {
-	font-size: #{1.33 * exponent(1.2, 5)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 5)}em;
 }
 
 h3 {
-	font-size: #{1.33 * exponent(1.2, 4)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 4)}em;
 }
 
 h4 {
-	font-size: #{1.33 * exponent(1.2, 3)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 3)}em;
 }
 
 h5 {
-	font-size: #{1.33 * exponent(1.2, 2)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 2)}em;
 }
 
 h6 {
-	font-size: #{1.33 * exponent(1.2, 1)}em;
+	font-size: #{$baseFontSize * exponent(1.2, 1)}em;
 }
 
 p {
@@ -54,7 +54,6 @@ p {
 
 	@include basefontsize;
 	@include basefontlineheight;
-	font-weight: 300;
 
 	word-break: normal;
 
@@ -84,7 +83,6 @@ code {
 	display: block;
 
 	font-family: "Courier New", Courier, monospace, mono;
-	font-weight: 400;
 	line-height: 1.25em;
 	white-space: pre-wrap;
 }
@@ -161,7 +159,6 @@ pre.code {
 
 			color: #FFF;
 			@include basefontface;
-			font-weight: 400;
 			line-height: 1.5em;
 			text-transform: uppercase;
 
@@ -200,7 +197,6 @@ table {
 		margin: 0 0.1em;
 		display: inline-block;
 
-		font-weight: 400;
 		vertical-align: bottom;
 		line-height: inherit;
 		white-space: nowrap;
