@@ -214,6 +214,7 @@ ul.inline {
 			+ li::before {
 				color: #999;
 				font-size: 150%;
+				font-weight: 200;
 				line-height: 75%;
 				vertical-align: text-top;
 
@@ -248,7 +249,7 @@ ul.tabs {
 
 		background-color: #FFF;
 
-		border: #CCC solid;
+		border: #FFF solid;
 		border-width: 1px 1px 0;
 		border-radius: 3px 3px 0 0;
 
@@ -263,8 +264,6 @@ ul.tabs {
 			line-height: 1em;
 			white-space: nowrap;
 			text-decoration: none;
-
-			box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15);
 		}
 
 		&.primary {
@@ -275,6 +274,8 @@ ul.tabs {
 
 		&.current {
 			margin-top: 0;
+
+			border-color: #CCC;
 
 			z-index: 3;
 
@@ -290,23 +291,39 @@ ul.tabs {
 
 				content: "";
 			}
-
-			a {
-				box-shadow: none;
-			}
 		}
 
 		&.disabled {
 			color: #999;
 
-			background-color: #EEE;
+			a {
+				cursor: default;
+			}
+		}
+	}
 
-			border-color: #DDD;
+	&.grad {
+		li {
+			border-color: #CCC;
 
 			a {
-				border-top-color: #EEE;
+				box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15);
+			}
 
-				cursor: default;
+			&.current {
+				a {
+					box-shadow: none;
+				}
+			}
+
+			&.disabled {
+				background-color: #EEE;
+
+				border-color: #DDD;
+
+				a {
+					border-top-color: #EEE;
+				}
 			}
 		}
 	}

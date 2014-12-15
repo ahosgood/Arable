@@ -182,10 +182,6 @@ form.block {
 		}
 	}
 
-	&.labels-right label {
-		text-align: right;
-	}
-
 	input,
 	select,
 	textarea {
@@ -348,8 +344,28 @@ form.block {
 	}
 }
 
+form.inline {
+	&.large {
+		input {
+			&[type="radio"] {
+				+ label {
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+}
+
 form.block {
 	@include blockform();
+
+	&.large {
+		input {
+			&[type="checkbox"] {
+				margin-top: 1.4em;
+			}
+		}
+	}
 }
 
 form.linear {
@@ -431,8 +447,7 @@ form.linear {
 		button,
 		[type="submit"],
 		[type="reset"],
-		[type="button"],
-		.button {
+		[type="button"] {
 			height: 2.1em;
 
 			line-height: 1em;

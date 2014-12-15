@@ -15,6 +15,7 @@
 
 			@import "http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800";
 		</style>
+        <script src="../src/js/interactive.js"></script>
 	</head>
 	<body>
 		<h1 class="no-top-margin">Heading 1 - <span class="superheavyweight">Super-heavy</span> Heavy <span class="mediumweight">Medium</span> <span class="lightweight">Light</span> <span class="superlightweight">Super-light</span></h1>
@@ -76,6 +77,13 @@
                 </ol></li>
 		</ul>
 		<ul class="tabs">
+			<li class="primary"><a href="#">Alpha</a></li><!--
+			--><li class="current"><a href="#">Beta</a></li><!--
+			--><li><a href="#">Gamma</a></li><!--
+			--><li class="disabled"><a href="#">Delta</a></li><!--
+			--><li><a href="#">Epsilon</a></li>
+		</ul>
+		<ul class="tabs grad">
 			<li class="primary"><a href="#">Alpha</a></li><!--
 			--><li class="current"><a href="#">Beta</a></li><!--
 			--><li><a href="#">Gamma</a></li><!--
@@ -295,9 +303,26 @@ WHERE `sites`.`ext_client_code` = '123'
 			<input type="text" class="inline-5">
 			<input type="text" class="inline-5">
 
+            <label>Mix 1/1/2</label>
+            <input type="text" class="inline-4">
+            <input type="text" class="inline-4">
+            <input type="text" class="inline-2">
+
+            <label>Mix 1/2/1</label>
+            <input type="text" class="inline-4">
+            <input type="text" class="inline-2">
+            <input type="text" class="inline-4">
+
+            <label>Mix 2/1/1</label>
+            <input type="text" class="inline-2">
+            <input type="text" class="inline-4">
+            <input type="text" class="inline-4">
+
 			<button type="submit">Save</button>
 			<button type="reset">Reset</button>
 			<label class="button">Remember<input type="checkbox"></label>
+            <button class="red">Delete</button>
+            <button class="green">Add</button>
 		</form>
 		<hr>
 		<form class="block">
@@ -378,6 +403,54 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label class="button disabled">Remember<input type="checkbox" disabled></label>
 		</form>
 		<hr>
+		<form class="block large">
+			<label for="input-name-4">Name</label>
+			<input type="text" id="input-name-4">
+
+			<label for="select-age-4">Age</label>
+			<select id="select-age-4">
+				<option>Please select</option>
+				<optgroup label="Child">
+					<option>0-9</option>
+					<option>10-14</option>
+					<option>15-17</option>
+				</optgroup>
+				<optgroup label="Adult">
+					<option>18-24</option>
+					<option>25-29</option>
+					<option>30-34</option>
+					<option>35-39</option>
+				</optgroup>
+				<optgroup label="Middle aged">
+					<option>40-44</option>
+					<option>45-49</option>
+					<option>50-54</option>
+					<option>55-59</option>
+				</optgroup>
+				<optgroup label="Old">
+					<option>60-64</option>
+					<option>65-69</option>
+					<option>70-74</option>
+					<option>75-79</option>
+					<option>80+</option>
+				</optgroup>
+			</select>
+
+            <label>Sex</label>
+            <input type="radio" id="radio-sex-m-3" name="sex" disabled>
+            <label for="radio-sex-m-3">Male</label>
+            <input type="radio" id="radio-sex-f-3" name="sex" disabled>
+            <label for="radio-sex-f-3">Female</label>
+            <input type="radio" id="radio-sex-n-3" name="sex" disabled>
+            <label for="radio-sex-n-3">Prefer not to disclose</label>
+
+			<label for="input-enabled-2">Enabled</label>
+			<input type="checkbox" id="input-enabled-2">
+
+			<button type="reset">Reset</button>
+			<button type="submit">Search</button>
+		</form>
+		<hr>
 		<form class="linear">
 			<label for="input-name-3">Name</label>
 			<input type="text" id="input-name-3">
@@ -433,30 +506,30 @@ WHERE `sites`.`ext_client_code` = '123'
 		<a href="#" class="button black">Anchor</a>
 		<a href="#" class="button disabled">Anchor</a>
 		<a href="#" class="button thin">Anchor</a>
-		<hr>
-		<a href="#" class="button flat">Flat</a>
-		<a href="#" class="button flat red">Flat</a>
-		<a href="#" class="button flat green">Flat</a>
-		<a href="#" class="button flat blue">Flat</a>
-		<a href="#" class="button flat black">Flat</a>
-		<a href="#" class="button flat disabled">Flat</a>
-		<a href="#" class="button flat thin">Flat</a>
-		<!--<hr>
-		<button>Button</button>
-		<button class="red">Button</button>
-		<button class="green">Button</button>
-		<button class="blue">Button</button>
-		<button class="black">Button</button>
-		<button disabled>Button</button>
-		<button class="thin">Button</button>
-		<hr>
-		<input type="button" value="Input">
-		<input type="button" class="red" value="Input">
-		<input type="button" class="green" value="Input">
-		<input type="button" class="blue" value="Input">
-		<input type="button" class="black" value="Input">
-		<input type="button" value="Input" disabled>
-		<input type="button" class="thin" value="Input">-->
+        <!--<hr>
+        <a href="#" class="button flat">Flat</a>
+        <a href="#" class="button flat red">Flat</a>
+        <a href="#" class="button flat green">Flat</a>
+        <a href="#" class="button flat blue">Flat</a>
+        <a href="#" class="button flat black">Flat</a>
+        <a href="#" class="button flat disabled">Flat</a>
+        <a href="#" class="button flat thin">Flat</a>
+        <hr>
+        <button>Button</button>
+        <button class="red">Button</button>
+        <button class="green">Button</button>
+        <button class="blue">Button</button>
+        <button class="black">Button</button>
+        <button disabled>Button</button>
+        <button class="thin">Button</button>
+        <hr>
+        <input type="button" value="Input">
+        <input type="button" class="red" value="Input">
+        <input type="button" class="green" value="Input">
+        <input type="button" class="blue" value="Input">
+        <input type="button" class="black" value="Input">
+        <input type="button" value="Input" disabled>
+        <input type="button" class="thin" value="Input">-->
 		<hr>
 		<label class="button">Label<input type="checkbox"></label>
 		<label class="button red">Label<input type="checkbox"></label>
