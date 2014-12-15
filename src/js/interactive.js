@@ -30,7 +30,6 @@ jQuery(
 		if( !window.isFontAvailable( 'Helvetica Neue' )
 				&& !window.isFontAvailable( 'HelveticaNeue' )
 				&& !window.isFontAvailable( 'Helvetica' ) ) {
-			alert( 'No Helvetica' );
 			$( 'head' ).append( '<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" type="text/css" rel="stylesheet">' );
 		}
 	}
