@@ -1,8 +1,16 @@
 /* ===================================================== GENERIC ===================================================== */
+html {
+	background-color: #FFF;
+}
+
 body {
 	@include basefontcolour;
 	@include basefontface;
 	@include basefontweight;
+}
+
+address, article, aside, blockquote, body, button, canvas, caption, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, header, hgroup, iframe, ins, kbd, keygen, label, legend, li, main, map, mark, menu, meter, nav, object, ol, output, param, section, select, summary, table, tbody, td, tfoot, th, thead, title, tr, track, ul, video, wbr {
+	background-color: inherit;
 }
 
 .clear {

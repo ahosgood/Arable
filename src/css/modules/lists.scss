@@ -296,7 +296,7 @@ ul.tabs {
 		}
 
 		&.disabled {
-			color: #999;
+			color: #CCC;
 
 			a {
 				cursor: default;
@@ -306,8 +306,6 @@ ul.tabs {
 
 	&.grad {
 		li {
-			background-color: #FFF;
-
 			border-color: #CCC;
 
 			a {
@@ -323,8 +321,6 @@ ul.tabs {
 			}
 
 			&.disabled {
-				background-color: #EEE;
-
 				border-color: #DDD;
 
 				a {

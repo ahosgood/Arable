@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     4.8.1
+ * Version:     4.8.2
  * Date:        20/12/2014
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -19,7 +19,7 @@
   width: device-width; }
 
 /* ===================================================== RESET ===================================================== */
-a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, content, data, datalist, dd, decorator, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, shadow, small, source, span, strong, style, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
+a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
   padding: 0;
   color: inherit;
@@ -238,10 +238,16 @@ button {
   .show-on-desktop {
     display: block; } }
 /* ===================================================== GENERIC ===================================================== */
+html {
+  background-color: #FFF; }
+
 body {
   color: #222;
   font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
   font-weight: 400; }
+
+address, article, aside, blockquote, body, button, canvas, caption, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, embed, fieldset, figcaption, figure, footer, form, header, hgroup, iframe, ins, kbd, keygen, label, legend, li, main, map, mark, menu, meter, nav, object, ol, output, param, section, select, summary, table, tbody, td, tfoot, th, thead, title, tr, track, ul, video, wbr {
+  background-color: inherit; }
 
 .clear {
   display: block;
@@ -2974,11 +2980,10 @@ ul.tabs {
         background-color: inherit;
         content: ""; }
     ul.tabs li.disabled {
-      color: #999; }
+      color: #CCC; }
       ul.tabs li.disabled a {
         cursor: default; }
   ul.tabs.grad li {
-    background-color: #FFF;
     border-color: #CCC; }
     ul.tabs.grad li a {
       box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15); }
@@ -2987,7 +2992,6 @@ ul.tabs {
       ul.tabs.grad li.current a {
         box-shadow: none; }
     ul.tabs.grad li.disabled {
-      background-color: #EEE;
       border-color: #DDD; }
       ul.tabs.grad li.disabled a {
         border-top-color: #EEE; }
