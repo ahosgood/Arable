@@ -237,6 +237,8 @@ ul.tabs {
 
 	white-space: nowrap;
 
+	background-color: inherit;
+
 	li {
 		margin: 0 0.25em;
 
@@ -247,9 +249,9 @@ ul.tabs {
 		white-space: nowrap;
 		vertical-align: bottom;
 
-		background-color: #FFF;
+		background-color: inherit;
 
-		border: #FFF solid;
+		border: transparent solid;
 		border-width: 1px 1px 0;
 		border-radius: 3px 3px 0 0;
 
@@ -280,14 +282,14 @@ ul.tabs {
 			z-index: 3;
 
 			&::after {
-				height: 0;
+				height: 1px;
 
 				position: absolute;
-				top: 100%;
 				right: 0;
+				bottom: 0;
 				left: 0;
 
-				border-top: 1px #FFF solid;
+				background-color: inherit;
 
 				content: "";
 			}
@@ -304,6 +306,8 @@ ul.tabs {
 
 	&.grad {
 		li {
+			background-color: #FFF;
+
 			border-color: #CCC;
 
 			a {
@@ -311,6 +315,8 @@ ul.tabs {
 			}
 
 			&.current {
+				background-color: inherit;
+
 				a {
 					box-shadow: none;
 				}
