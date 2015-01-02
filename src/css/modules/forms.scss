@@ -15,6 +15,26 @@ textarea {
 	border-radius: 3px;
 }
 
+/*::-webkit-input-placeholder {
+	color: $borderGrey;
+	text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+	color: $borderGrey;
+	text-overflow: ellipsis;
+}
+
+:-ms-input-placeholder {
+	color: $borderGrey;
+	text-overflow: ellipsis;
+}
+
+::placeholder {
+	color: $borderGrey;
+	text-overflow: ellipsis;
+}*/
+
 	optgroup,
 	option {
 		padding-right: 1em;
