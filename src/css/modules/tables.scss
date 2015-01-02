@@ -7,19 +7,19 @@ table {
 
 	background-color: rgba(255, 255, 255, 0.85);
 
-	border: 1px #CCC solid;
+	border: 1px $borderGrey solid;
 	border-radius: 3px;
 	border-collapse: collapse;
 
 	a {
-		color: #222;
+		@include basefontcolour;
 		font-style: normal;
 	}
 
 	p {
 		margin: 0.25em 0;
 
-		line-height: #{$baseLineHeight}em;
+		@include basefontlineheight;
 	}
 
 	ul {
@@ -30,6 +30,30 @@ table {
 		th,
 		td {
 			border-width: 1px;
+		}
+	}
+
+	&.highlight-on-hover {
+		tfoot,
+		tbody {
+			tr {
+
+				-webkit-transition: background ease 200ms;
+				-moz-transition: background ease 200ms;
+				-ms-transition: background ease 200ms;
+				-o-transition: background ease 200ms;
+				transition: background ease 200ms;
+
+				&:hover {
+					background-color: #EEF;
+
+					-webkit-transition: background ease 50ms;
+					-moz-transition: background ease 50ms;
+					-ms-transition: background ease 50ms;
+					-o-transition: background ease 50ms;
+					transition: background ease 50ms;
+				}
+			}
 		}
 	}
 }
@@ -50,8 +74,8 @@ table {
 		}
 	}
 
-	tbody,
-	tfoot {
+	tfoot,
+	tbody {
 		font-size: 1.25em;
 
 		p,
@@ -66,7 +90,7 @@ table {
 		tbody {
 			tr {
 				&:nth-child(even) {
-					background-color: #F4F4F4;
+					background-color: $bgLightGrey;
 				}
 
 				&.disabled {
@@ -88,9 +112,8 @@ table {
 			}
 		}
 
-			tr.highlight,
-			.highlight-on-hover tr:hover {
-				background-color: #FFB;
+			tr.highlight {
+				background-color: $highlightTable;
 			}
 
 				th,
@@ -100,7 +123,7 @@ table {
 					text-align: left;
 
 					border-width: 1px 0;
-					border-color: #CCC;
+					border-color: $borderGrey;
 					border-style: solid;
 
 					&.no-padding {
@@ -159,11 +182,11 @@ form {
 	}
 
 	10% {
-		background-color: #FFB;
+		background-color: $highlightTable;
 	}
 
 	75% {
-		background-color: #FFB;
+		background-color: $highlightTable;
 	}
 
 	100% {

@@ -2,7 +2,7 @@
 input,
 select,
 textarea {
-	padding: 0.25em;
+	padding: 0.25em 0.35em;
 
 	display: inline-block;
 	-webkit-box-sizing: border-box;
@@ -11,7 +11,7 @@ textarea {
 
 	background-color: #FFF;
 
-	border: 1px #CCC solid;
+	border: 1px $borderGrey solid;
 	border-radius: 3px;
 }
 
@@ -35,12 +35,6 @@ form.linear {
 		font-weight: 700;
 	}
 
-	textarea {
-		min-height: 2em;
-
-		resize: vertical;
-	}
-
 	input {
 		&:valid {
 			&:focus {
@@ -53,6 +47,12 @@ form.linear {
 		}
 	}
 
+	textarea {
+		min-height: 2em;
+
+		resize: vertical;
+	}
+
 	[type="text"],
 	[type="search"],
 	[type="checkbox"],
@@ -61,7 +61,7 @@ form.linear {
 			&:focus {
 				background-color: #FFF;
 
-				border-color: #FB0;
+				border-color: $activeHighlight;
 
 				box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
 			}
@@ -70,9 +70,16 @@ form.linear {
 
 	input,
 	select,
+	textarea,
+	.label {
+		vertical-align: top;
+	}
+
+	input,
+	select,
 	textarea {
 		&:focus {
-			border-color: #FB0;
+			border-color: $activeHighlight;
 
 			box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
 		}
@@ -101,6 +108,118 @@ form.linear {
 		}
 	}
 
+	.label {
+		margin: 0.2em 0;
+
+		display: block;
+
+		float: right;
+
+		overflow: hidden;
+
+		.prefix,
+		.suffix,
+		.input {
+			display: block;
+
+			overflow: hidden;
+		}
+
+		.prefix,
+		.suffix {
+			padding: 0.25em 0.5em;
+
+			@include basefontcolour;
+			@include basefontsize;
+
+			background-color: $bgLightGrey;
+
+			border: 1px $borderGrey solid;
+		}
+
+		.prefix {
+			//padding-right: 3px !important;
+
+			float: left;
+
+			border-right-width: 0;
+			border-radius: 3px 0 0 3px;
+
+			+ .input {
+				input {
+					//padding-left: 3px !important;
+
+					border-left-style: dotted;
+					border-radius: 0 3px 3px 0;
+				}
+			}
+		}
+
+		.suffix {
+			//padding-left: 3px !important;
+
+			float: right;
+
+			border-left-width: 0;
+			border-radius: 0 3px 3px 0;
+
+			+ .input {
+				input {
+					//padding-right: 3px !important;
+
+					//text-align: right;
+
+					border-right-style: dotted;
+					border-radius: 3px 0 0 3px;
+				}
+			}
+		}
+
+		.input {
+			input {
+				width: 100%;
+				margin: 0;
+
+				float: none;
+			}
+		}
+
+		&.no-space {
+			.prefix,
+			.suffix {
+				padding-right: 0.35em;
+				padding-left: 0.35em;
+				color: $borderGrey;
+
+				background-color: transparent;
+			}
+
+			.prefix {
+				padding-right: 0 !important;
+
+				+ .input {
+					input {
+						padding-left: 0 !important;
+
+						border-left-width: 0 !important;
+					}
+				}
+			}
+
+			.suffix {
+				padding-left: 0 !important;
+
+				+ .input {
+					input {
+						padding-right: 0 !important;
+
+						border-right-width: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
 	[type="submit"],
 	[type="reset"],
 	[type="button"],
@@ -112,7 +231,7 @@ form.linear {
 	[type="submit"] {
 		font-weight: 700;
 
-		@include button-grad($buttonBlue);
+		@include button-grad($buttonSubmit);
 
 		&.red {
 			@include button-grad($buttonRed);
@@ -220,32 +339,31 @@ form.block {
 		&.large {
 			font-size: 2.1em;
 		}
+	}
 
-		&[class^="inline-"] {
+	input,
+	select,
+	textarea,
+	.label {
+		&[class^="inline-"],
+		&[class*=" inline-"] {
+			//display: inline-block;
+
 			float: left;
 
-			+ [class^="inline-"] {
+			+ [class^="inline-"],
+			+ [class*=" inline-"] {
 				margin-left: 1%;
 			}
 		}
 
-		&.inline-2 {
-			width: 37%;
+		@for $splitInput from 2 through 8 {
+			&.inline-#{$splitInput} {
+				width: ( 75% - ( $splitInput - 1 ) ) / $splitInput;
+			}
 		}
 
-		&.inline-3 {
-			width: 24.33333%;
-		}
-
-		&.inline-4 {
-			width: 18%;
-		}
-
-		&.inline-5 {
-			width: 14.2%;
-		}
-
-		&.inline-small {
+		/*&.inline-small {
 			width: 150px;
 		}
 
@@ -255,7 +373,7 @@ form.block {
 
 		&.inline-xx-small {
 			width: 50px;
-		}
+		}*/
 	}
 
 	button,
@@ -337,14 +455,37 @@ form.block {
 
 		input,
 		select,
-		textarea {
+		textarea,
+		.label {
 			margin-top: 1.2em;
-			padding: 0.5em 0.75em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+
+		input,
+		select,
+		textarea {
+			padding-right: 0.5em;
+			padding-left: 0.5em;
+		}
+
+		.label {
+			.prefix,
+			.suffix {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+
+				font-size: 1.45em;
+			}
 		}
 	}
 }
 
 form.inline {
+	.label {
+		width: 75%;
+	}
+
 	&.large {
 		input {
 			&[type="radio"] {
@@ -358,6 +499,10 @@ form.inline {
 
 form.block {
 	@include blockform();
+
+	.label {
+		width: 100%;
+	}
 
 	&.large {
 		input {

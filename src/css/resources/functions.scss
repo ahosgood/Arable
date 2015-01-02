@@ -1,13 +1,13 @@
 // ===================================================== FUNCTIONS =====================================================
-@function black( $opacity ) {
+@function black($opacity) {
 	@return rgba(0, 0, 0, $opacity);
 }
 
-@function white( $opacity ) {
+@function white($opacity) {
 	@return rgba(255, 255, 255, $opacity);
 }
 
-@function exponent( $base, $exponent ) {
+@function exponent($base, $exponent) {
 	$value: $base;
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {

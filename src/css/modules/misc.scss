@@ -12,12 +12,12 @@ hr {
 	line-height: 1.25em;
 
 	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, #CCC),  color-stop(0.75, #CCC), color-stop(1, #FFF));
-	background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -ms-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-color: #CCC;
+	background-image: -webkit-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: -moz-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: -ms-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: -o-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: linear-gradient(to right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-color: $borderGrey;
 
 	border: none;
 }
@@ -147,7 +147,7 @@ p.success {
 	padding: 0.25em 0.5em;
 }
 
-.error {
+/*.error {
 	background-color: rgba(204, 0, 0, 0.2);
 
 	border-color: #C00;
@@ -185,4 +185,28 @@ p.success {
 	&.solid-bg {
 		background-color: #CBF4CB;
 	}
+}*/
+
+.error {
+	background-color: $errorBackground;
+
+	border-color: $errorBorder;
+}
+
+.warning {
+	background-color: $warningBackground;
+
+	border-color: $warningBorder;
+}
+
+.success {
+	background-color: $successBackground;
+
+	border-color: $successBorder;
+}
+
+.notice {
+	background-color: $noticeBackground;
+
+	border-color: $noticeBorder;
 }
