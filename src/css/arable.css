@@ -3166,7 +3166,7 @@ ul.tabs {
       ul.tabs.grad li.disabled a {
         border-top-color: #EEE; }
   ul.tabs::before {
-    width: 1000%;
+    width: 100%;
     height: 1px;
     position: absolute;
     right: 0;
