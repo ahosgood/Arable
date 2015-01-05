@@ -2357,53 +2357,66 @@ form.block {
       margin-top: 0;
       float: none;
       clear: both; }
-    form.block label ~ input[class^="inline-"], form.block label ~ input[class*=" inline-"],
-    form.block label ~ select[class^="inline-"],
-    form.block label ~ select[class*=" inline-"],
-    form.block label ~ .label[class^="inline-"],
-    form.block label ~ .label[class*=" inline-"] {
-      float: left; }
-      form.block label ~ input[class^="inline-"] + [class^="inline-"],
-      form.block label ~ input[class^="inline-"] + [class*=" inline-"], form.block label ~ input[class*=" inline-"] + [class^="inline-"],
-      form.block label ~ input[class*=" inline-"] + [class*=" inline-"],
-      form.block label ~ select[class^="inline-"] + [class^="inline-"],
-      form.block label ~ select[class^="inline-"] + [class*=" inline-"],
-      form.block label ~ select[class*=" inline-"] + [class^="inline-"],
-      form.block label ~ select[class*=" inline-"] + [class*=" inline-"],
-      form.block label ~ .label[class^="inline-"] + [class^="inline-"],
-      form.block label ~ .label[class^="inline-"] + [class*=" inline-"],
-      form.block label ~ .label[class*=" inline-"] + [class^="inline-"],
-      form.block label ~ .label[class*=" inline-"] + [class*=" inline-"] {
-        margin-left: 1%;
-        clear: none; }
-    form.block label ~ input.inline-2,
-    form.block label ~ select.inline-2,
-    form.block label ~ .label.inline-2 {
-      width: 49.5%; }
-    form.block label ~ input.inline-3,
-    form.block label ~ select.inline-3,
-    form.block label ~ .label.inline-3 {
-      width: 32.66667%; }
-    form.block label ~ input.inline-4,
-    form.block label ~ select.inline-4,
-    form.block label ~ .label.inline-4 {
-      width: 24.25%; }
-    form.block label ~ input.inline-5,
-    form.block label ~ select.inline-5,
-    form.block label ~ .label.inline-5 {
-      width: 19.2%; }
-    form.block label ~ input.inline-6,
-    form.block label ~ select.inline-6,
-    form.block label ~ .label.inline-6 {
-      width: 15.83333%; }
-    form.block label ~ input.inline-7,
-    form.block label ~ select.inline-7,
-    form.block label ~ .label.inline-7 {
-      width: 13.42857%; }
-    form.block label ~ input.inline-8,
-    form.block label ~ select.inline-8,
-    form.block label ~ .label.inline-8 {
-      width: 11.625%; }
+      form.block label ~ input[class^="inline-"], form.block label ~ input[class*=" inline-"],
+      form.block label ~ select[class^="inline-"],
+      form.block label ~ select[class*=" inline-"],
+      form.block label ~ textarea[class^="inline-"],
+      form.block label ~ textarea[class*=" inline-"],
+      form.block label ~ .label[class^="inline-"],
+      form.block label ~ .label[class*=" inline-"] {
+        float: left; }
+        form.block label ~ input[class^="inline-"] + [class^="inline-"],
+        form.block label ~ input[class^="inline-"] + [class*=" inline-"], form.block label ~ input[class*=" inline-"] + [class^="inline-"],
+        form.block label ~ input[class*=" inline-"] + [class*=" inline-"],
+        form.block label ~ select[class^="inline-"] + [class^="inline-"],
+        form.block label ~ select[class^="inline-"] + [class*=" inline-"],
+        form.block label ~ select[class*=" inline-"] + [class^="inline-"],
+        form.block label ~ select[class*=" inline-"] + [class*=" inline-"],
+        form.block label ~ textarea[class^="inline-"] + [class^="inline-"],
+        form.block label ~ textarea[class^="inline-"] + [class*=" inline-"],
+        form.block label ~ textarea[class*=" inline-"] + [class^="inline-"],
+        form.block label ~ textarea[class*=" inline-"] + [class*=" inline-"],
+        form.block label ~ .label[class^="inline-"] + [class^="inline-"],
+        form.block label ~ .label[class^="inline-"] + [class*=" inline-"],
+        form.block label ~ .label[class*=" inline-"] + [class^="inline-"],
+        form.block label ~ .label[class*=" inline-"] + [class*=" inline-"] {
+          margin-left: 1%;
+          clear: none; }
+      form.block label ~ input.inline-2,
+      form.block label ~ select.inline-2,
+      form.block label ~ textarea.inline-2,
+      form.block label ~ .label.inline-2 {
+        width: 49.5%; }
+      form.block label ~ input.inline-3,
+      form.block label ~ select.inline-3,
+      form.block label ~ textarea.inline-3,
+      form.block label ~ .label.inline-3 {
+        width: 32.66667%; }
+      form.block label ~ input.inline-4,
+      form.block label ~ select.inline-4,
+      form.block label ~ textarea.inline-4,
+      form.block label ~ .label.inline-4 {
+        width: 24.25%; }
+      form.block label ~ input.inline-5,
+      form.block label ~ select.inline-5,
+      form.block label ~ textarea.inline-5,
+      form.block label ~ .label.inline-5 {
+        width: 19.2%; }
+      form.block label ~ input.inline-6,
+      form.block label ~ select.inline-6,
+      form.block label ~ textarea.inline-6,
+      form.block label ~ .label.inline-6 {
+        width: 15.83333%; }
+      form.block label ~ input.inline-7,
+      form.block label ~ select.inline-7,
+      form.block label ~ textarea.inline-7,
+      form.block label ~ .label.inline-7 {
+        width: 13.42857%; }
+      form.block label ~ input.inline-8,
+      form.block label ~ select.inline-8,
+      form.block label ~ textarea.inline-8,
+      form.block label ~ .label.inline-8 {
+        width: 11.625%; }
   form.block .label {
     margin-bottom: 0.2em; }
   form.block input[type="checkbox"],
@@ -2536,53 +2549,66 @@ form.linear {
         margin-top: 0;
         float: none;
         clear: both; }
-      form.inline.foldable label ~ input[class^="inline-"], form.inline.foldable label ~ input[class*=" inline-"],
-      form.inline.foldable label ~ select[class^="inline-"],
-      form.inline.foldable label ~ select[class*=" inline-"],
-      form.inline.foldable label ~ .label[class^="inline-"],
-      form.inline.foldable label ~ .label[class*=" inline-"] {
-        float: left; }
-        form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ input[class^="inline-"] + [class*=" inline-"], form.inline.foldable label ~ input[class*=" inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ input[class*=" inline-"] + [class*=" inline-"],
-        form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ select[class^="inline-"] + [class*=" inline-"],
-        form.inline.foldable label ~ select[class*=" inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ select[class*=" inline-"] + [class*=" inline-"],
-        form.inline.foldable label ~ .label[class^="inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ .label[class^="inline-"] + [class*=" inline-"],
-        form.inline.foldable label ~ .label[class*=" inline-"] + [class^="inline-"],
-        form.inline.foldable label ~ .label[class*=" inline-"] + [class*=" inline-"] {
-          margin-left: 1%;
-          clear: none; }
-      form.inline.foldable label ~ input.inline-2,
-      form.inline.foldable label ~ select.inline-2,
-      form.inline.foldable label ~ .label.inline-2 {
-        width: 49.5%; }
-      form.inline.foldable label ~ input.inline-3,
-      form.inline.foldable label ~ select.inline-3,
-      form.inline.foldable label ~ .label.inline-3 {
-        width: 32.66667%; }
-      form.inline.foldable label ~ input.inline-4,
-      form.inline.foldable label ~ select.inline-4,
-      form.inline.foldable label ~ .label.inline-4 {
-        width: 24.25%; }
-      form.inline.foldable label ~ input.inline-5,
-      form.inline.foldable label ~ select.inline-5,
-      form.inline.foldable label ~ .label.inline-5 {
-        width: 19.2%; }
-      form.inline.foldable label ~ input.inline-6,
-      form.inline.foldable label ~ select.inline-6,
-      form.inline.foldable label ~ .label.inline-6 {
-        width: 15.83333%; }
-      form.inline.foldable label ~ input.inline-7,
-      form.inline.foldable label ~ select.inline-7,
-      form.inline.foldable label ~ .label.inline-7 {
-        width: 13.42857%; }
-      form.inline.foldable label ~ input.inline-8,
-      form.inline.foldable label ~ select.inline-8,
-      form.inline.foldable label ~ .label.inline-8 {
-        width: 11.625%; }
+        form.inline.foldable label ~ input[class^="inline-"], form.inline.foldable label ~ input[class*=" inline-"],
+        form.inline.foldable label ~ select[class^="inline-"],
+        form.inline.foldable label ~ select[class*=" inline-"],
+        form.inline.foldable label ~ textarea[class^="inline-"],
+        form.inline.foldable label ~ textarea[class*=" inline-"],
+        form.inline.foldable label ~ .label[class^="inline-"],
+        form.inline.foldable label ~ .label[class*=" inline-"] {
+          float: left; }
+          form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ input[class^="inline-"] + [class*=" inline-"], form.inline.foldable label ~ input[class*=" inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ input[class*=" inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ select[class^="inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ select[class*=" inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ select[class*=" inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ textarea[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ textarea[class^="inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ textarea[class*=" inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ textarea[class*=" inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ .label[class^="inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ .label[class^="inline-"] + [class*=" inline-"],
+          form.inline.foldable label ~ .label[class*=" inline-"] + [class^="inline-"],
+          form.inline.foldable label ~ .label[class*=" inline-"] + [class*=" inline-"] {
+            margin-left: 1%;
+            clear: none; }
+        form.inline.foldable label ~ input.inline-2,
+        form.inline.foldable label ~ select.inline-2,
+        form.inline.foldable label ~ textarea.inline-2,
+        form.inline.foldable label ~ .label.inline-2 {
+          width: 49.5%; }
+        form.inline.foldable label ~ input.inline-3,
+        form.inline.foldable label ~ select.inline-3,
+        form.inline.foldable label ~ textarea.inline-3,
+        form.inline.foldable label ~ .label.inline-3 {
+          width: 32.66667%; }
+        form.inline.foldable label ~ input.inline-4,
+        form.inline.foldable label ~ select.inline-4,
+        form.inline.foldable label ~ textarea.inline-4,
+        form.inline.foldable label ~ .label.inline-4 {
+          width: 24.25%; }
+        form.inline.foldable label ~ input.inline-5,
+        form.inline.foldable label ~ select.inline-5,
+        form.inline.foldable label ~ textarea.inline-5,
+        form.inline.foldable label ~ .label.inline-5 {
+          width: 19.2%; }
+        form.inline.foldable label ~ input.inline-6,
+        form.inline.foldable label ~ select.inline-6,
+        form.inline.foldable label ~ textarea.inline-6,
+        form.inline.foldable label ~ .label.inline-6 {
+          width: 15.83333%; }
+        form.inline.foldable label ~ input.inline-7,
+        form.inline.foldable label ~ select.inline-7,
+        form.inline.foldable label ~ textarea.inline-7,
+        form.inline.foldable label ~ .label.inline-7 {
+          width: 13.42857%; }
+        form.inline.foldable label ~ input.inline-8,
+        form.inline.foldable label ~ select.inline-8,
+        form.inline.foldable label ~ textarea.inline-8,
+        form.inline.foldable label ~ .label.inline-8 {
+          width: 11.625%; }
     form.inline.foldable .label {
       margin-bottom: 0.2em; }
     form.inline.foldable input[type="checkbox"],

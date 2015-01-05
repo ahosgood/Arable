@@ -310,11 +310,7 @@
 
 			float: none;
 			clear: both;
-		}
-
-		~ input,
-		~ select,
-		~ .label {
+			
 			&[class^="inline-"],
 			&[class*=" inline-"] {
 				float: left;
