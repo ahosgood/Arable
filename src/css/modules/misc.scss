@@ -115,6 +115,10 @@ dl {
 	padding-bottom: 0 !important;
 }
 
+.no-wrap {
+	white-space: nowrap !important;
+}
+
 /* ===================================================== NOTICES ===================================================== */
 .error,
 .warning,
@@ -140,52 +144,14 @@ dl {
 	}
 }
 
-p.error,
-p.warning,
-p.notice,
-p.success {
-	padding: 0.25em 0.5em;
-}
-
-/*.error {
-	background-color: rgba(204, 0, 0, 0.2);
-
-	border-color: #C00;
-
-	&.solid-bg {
-		background-color: #F4CBCB;
+p {
+	&.error,
+	&.warning,
+	&.notice,
+	&.success {
+		padding: 0.25em 0.5em;
 	}
 }
-
-.warning {
-	background-color: rgba(255, 204, 0, 0.2);
-
-	border-color: #FC0;
-
-	&.solid-bg {
-		background-color: #FEF4CB;
-	}
-}
-
-.notice {
-	background-color: rgba(0, 102, 204, 0.2);
-
-	border-color: #06C;
-
-	&.solid-bg {
-		background-color: #CBDFF4;
-	}
-}
-
-.success {
-	background-color: rgba(0, 204, 0, 0.2);
-
-	border-color: #0C0;
-
-	&.solid-bg {
-		background-color: #CBF4CB;
-	}
-}*/
 
 .error {
 	background-color: $errorBackground;
@@ -209,4 +175,56 @@ p.success {
 	background-color: $noticeBackground;
 
 	border-color: $noticeBorder;
+}
+
+/* ===================================================== TAGS ===================================================== */
+.tag {
+	padding: 0 0.35em;
+
+	display: inline-block;
+
+	color: #FFF;
+	font-weight: 700;
+	@include basefontlineheight;
+	vertical-align: baseline;
+
+	background-color: $tagStandard;
+
+	border-radius: 3px;
+
+	&.caps {
+		text-transform: uppercase;
+	}
+
+	&.red {
+		background-color: $tagRed;
+	}
+
+	&.orange {
+		background-color: $tagOrange;
+	}
+
+	&.yellow {
+		background-color: $tagYellow;
+	}
+
+	&.green {
+		background-color: $tagGreen;
+	}
+
+	&.blue {
+		background-color: $tagBlue;
+	}
+
+	&.purple {
+		background-color: $tagPurple;
+	}
+
+	&.grey {
+		background-color: $tagGrey;
+	}
+
+	&.black {
+		background-color: $tagBlack;
+	}
 }

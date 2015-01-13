@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
@@ -6,7 +5,7 @@
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
  * Version:     5.0.0 Pre-release
- * Date:        02/01/2015
+ * Date:        13/01/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -40,10 +39,8 @@
 }*/
 @-ms-viewport {
   width: device-width; }
-
 @viewport {
   width: device-width; }
-
 /* ===================================================== RESET ===================================================== */
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
   margin: 0;
@@ -108,94 +105,6 @@ body,
 input,
 button {
   -webkit-font-smoothing: antialiased; }
-
-/* ===================================================== MODERNIZR IMPROVEMENTS ===================================================== */
-.hidden,
-.js .hide-on-js,
-.flexbox .hide-on-flexbox,
-.canvas .hide-on-canvas,
-.canvastext .hide-on-canvastext,
-.webgl .hide-on-webgl,
-.touch .hide-on-touch,
-.geolocation .hide-on-geolocation,
-.postmessage .hide-on-postmessage,
-.websqldatabase .hide-on-websqldatabase,
-.indexeddb .hide-on-indexeddb,
-.hashchange .hide-on-hashchange,
-.history .hide-on-history,
-.draganddrop .hide-on-draganddrop,
-.websockets .hide-on-websockets,
-.rgba .hide-on-rgba,
-.hsla .hide-on-hsla,
-.multiplebgs .hide-on-multiplebgs,
-.backgroundsize .hide-on-backgroundsize,
-.borderimage .hide-on-borderimage,
-.borderradius .hide-on-borderradius,
-.boxshadow .hide-on-boxshadow,
-.textshadow .hide-on-textshadow,
-.opacity .hide-on-opacity,
-.cssanimations .hide-on-cssanimations,
-.csscolumns .hide-on-csscolumns,
-.cssgradients .hide-on-cssgradients,
-.cssreflections .hide-on-cssreflections,
-.csstransforms .hide-on-csstransforms,
-.csstransforms3d .hide-on-csstransforms3d,
-.csstransitions .hide-on-csstransitions,
-.fontface .hide-on-fontface,
-.generatedcontent .hide-on-generatedcontent,
-.video .hide-on-video,
-.audio .hide-on-audio,
-.localstorage .hide-on-localstorage,
-.sessionstorage .hide-on-sessionstorage,
-.webworkers .hide-on-webworkers,
-.applicationcache .hide-on-applicationcache,
-.svg .hide-on-svg,
-.inlinesvg .hide-on-inlinesvg,
-.smil .hide-on-smil,
-.svgclippaths .hide-on-svgclippaths,
-.no-js .hide-on-no-js,
-.no-flexbox .hide-on-no-flexbox,
-.no-canvas .hide-on-no-canvas,
-.no-canvastext .hide-on-no-canvastext,
-.no-webgl .hide-on-no-webgl,
-.no-touch .hide-on-no-touch,
-.no-geolocation .hide-on-no-geolocation,
-.no-postmessage .hide-on-no-postmessage,
-.no-websqldatabase .hide-on-no-websqldatabase,
-.no-indexeddb .hide-on-no-indexeddb,
-.no-hashchange .hide-on-no-hashchange,
-.no-history .hide-on-no-history,
-.no-draganddrop .hide-on-no-draganddrop,
-.no-websockets .hide-on-no-websockets,
-.no-rgba .hide-on-no-rgba,
-.no-hsla .hide-on-no-hsla,
-.no-multiplebgs .hide-on-no-multiplebgs,
-.no-backgroundsize .hide-on-no-backgroundsize,
-.no-borderimage .hide-on-no-borderimage,
-.no-borderradius .hide-on-no-borderradius,
-.no-boxshadow .hide-on-no-boxshadow,
-.no-textshadow .hide-on-no-textshadow,
-.no-opacity .hide-on-no-opacity,
-.no-cssanimations .hide-on-no-cssanimations,
-.no-csscolumns .hide-on-no-csscolumns,
-.no-cssgradients .hide-on-no-cssgradients,
-.no-cssreflections .hide-on-no-cssreflections,
-.no-csstransforms .hide-on-no-csstransforms,
-.no-csstransforms3d .hide-on-no-csstransforms3d,
-.no-csstransitions .hide-on-no-csstransitions,
-.no-fontface .hide-on-no-fontface,
-.no-generatedcontent .hide-on-no-generatedcontent,
-.no-video .hide-on-no-video,
-.no-audio .hide-on-no-audio,
-.no-localstorage .hide-on-no-localstorage,
-.no-sessionstorage .hide-on-no-sessionstorage,
-.no-webworkers .hide-on-no-webworkers,
-.no-applicationcache .hide-on-no-applicationcache,
-.no-svg .hide-on-no-svg,
-.no-inlinesvg .hide-on-no-inlinesvg,
-.no-smil .hide-on-no-smil,
-.no-svgclippaths .hide-on-no-svgclippaths {
-  display: none !important; }
 
 /* ===================================================== RESPONSIVE ELEMENTS ===================================================== */
 [class^="show-on-"],
@@ -263,6 +172,16 @@ button {
 
   .show-on-desktop {
     display: block; } }
+/* ===================================================== CONDITIONAL VISIBILITY ===================================================== */
+.hidden {
+  display: none !important; }
+
+@media screen {
+  .hide-on-screen {
+    display: none !important; } }
+@media print {
+  .hide-on-print {
+    display: none !important; } }
 /* ===================================================== GENERIC ===================================================== */
 html {
   background-color: #FFF; }
@@ -288,7 +207,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #FFF;
-  border: 1px #cccccc solid;
+  border: 1px #CCC solid;
   border-radius: 3px; }
 
 /*::-webkit-input-placeholder {
@@ -348,7 +267,7 @@ form.linear [type="search"]:valid:focus,
 form.linear [type="checkbox"]:valid:focus,
 form.linear [type="radio"]:valid:focus {
   background-color: #FFF;
-  border-color: #fbc02d;
+  border-color: #FBC02D;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 form.inline input,
 form.inline select,
@@ -372,7 +291,7 @@ form.block textarea:focus,
 form.linear input:focus,
 form.linear select:focus,
 form.linear textarea:focus {
-  border-color: #fbc02d;
+  border-color: #FBC02D;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 form.inline input:invalid,
 form.inline select:invalid,
@@ -461,8 +380,8 @@ form.linear .label {
     color: #212121;
     font-size: 1.33em;
     font-size: 1.33rem;
-    background-color: whitesmoke;
-    border: 1px #cccccc solid; }
+    background-color: #F5F5F5;
+    border: 1px #CCC solid; }
   form.inline .label .prefix,
   form.block .label .prefix,
   form.linear .label .prefix {
@@ -499,7 +418,7 @@ form.linear .label {
   form.linear .label.no-space .suffix {
     padding-right: 0.35em;
     padding-left: 0.35em;
-    color: #cccccc;
+    color: #CCC;
     background-color: transparent; }
   form.inline .label.no-space .prefix,
   form.block .label.no-space .prefix,
@@ -546,13 +465,13 @@ form.linear .button {
   line-height: 2.1em;
   vertical-align: middle;
   white-space: nowrap;
-  background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background-color: #f2f2f2;
+  background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background-color: #F2F2F2;
   background-repeat: no-repeat;
   background-position: scroll;
-  border: 1px #cccccc solid;
+  border: 1px #CCC solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -854,13 +773,13 @@ form.linear .button {
     form.linear .button:disabled:hover,
     form.linear .button:disabled:focus,
     form.linear .button:disabled:active {
-      background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background-color: #f2f2f2;
+      background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background-color: #F2F2F2;
       background-repeat: no-repeat;
       background-position: scroll;
-      border-color: #cccccc;
+      border-color: #CCC;
       box-shadow: none; }
   form.inline [type="submit"].red,
   form.inline [type="reset"].red,
@@ -877,11 +796,11 @@ form.linear .button {
   form.linear [type="button"].red,
   form.linear button.red,
   form.linear .button.red {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #fd0b0b;
-    background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -929,7 +848,7 @@ form.linear .button {
     form.linear .button.red:focus,
     form.linear .button.red:hover,
     form.linear .button.red:active {
-      color: white;
+      color: #FFF;
       border-color: #bc0000; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover,
     form.inline [type="reset"].red:focus,
@@ -1067,9 +986,9 @@ form.linear .button {
     form.linear .button.red:disabled:hover,
     form.linear .button.red:disabled:focus,
     form.linear .button.red:disabled:active {
-      background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -1090,11 +1009,11 @@ form.linear .button {
   form.linear [type="button"].green,
   form.linear button.green,
   form.linear .button.green {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #5eb862;
-    background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -1142,7 +1061,7 @@ form.linear .button {
     form.linear .button.green:focus,
     form.linear .button.green:hover,
     form.linear .button.green:active {
-      color: white;
+      color: #FFF;
       border-color: #3b8e3f; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover,
     form.inline [type="reset"].green:focus,
@@ -1280,9 +1199,9 @@ form.linear .button {
     form.linear .button.green:disabled:hover,
     form.linear .button.green:disabled:focus,
     form.linear .button.green:disabled:active {
-      background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -1303,11 +1222,11 @@ form.linear .button {
   form.linear [type="button"].blue,
   form.linear button.blue,
   form.linear .button.blue {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #398fe5;
-    background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -1355,7 +1274,7 @@ form.linear .button {
     form.linear .button.blue:focus,
     form.linear .button.blue:hover,
     form.linear .button.blue:active {
-      color: white;
+      color: #FFF;
       border-color: #1669bb; }
     form.inline [type="submit"].blue:focus, form.inline [type="submit"].blue:hover,
     form.inline [type="reset"].blue:focus,
@@ -1493,9 +1412,9 @@ form.linear .button {
     form.linear .button.blue:disabled:hover,
     form.linear .button.blue:disabled:focus,
     form.linear .button.blue:disabled:active {
-      background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
       background-color: #539ce5;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -1516,15 +1435,15 @@ form.linear .button {
   form.linear [type="button"].black,
   form.linear button.black,
   form.linear .button.black {
-    color: white;
-    text-shadow: 0 0 3px #3c3c3c;
-    background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-    background-color: #484848;
+    color: #FFF;
+    text-shadow: 0 0 3px #3b3b3b;
+    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+    background-color: #474747;
     background-repeat: no-repeat;
     background-position: scroll;
-    border-color: #272727; }
+    border-color: #262626; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
     form.inline [type="reset"].black:focus,
     form.inline [type="reset"].black:hover,
@@ -1568,8 +1487,8 @@ form.linear .button {
     form.linear .button.black:focus,
     form.linear .button.black:hover,
     form.linear .button.black:active {
-      color: white;
-      border-color: #151515; }
+      color: #FFF;
+      border-color: #141414; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover,
     form.inline [type="reset"].black:focus,
     form.inline [type="reset"].black:hover,
@@ -1599,10 +1518,10 @@ form.linear .button {
     form.linear button.black:hover,
     form.linear .button.black:focus,
     form.linear .button.black:hover {
-      background: -webkit-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #555555 0%, #272727 100%) no-repeat scroll;
-      background-color: #555555;
+      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
+      background-color: #545454;
       background-repeat: no-repeat;
       background-position: scroll; }
     form.inline [type="submit"].black:active,
@@ -1706,23 +1625,23 @@ form.linear .button {
     form.linear .button.black:disabled:hover,
     form.linear .button.black:disabled:focus,
     form.linear .button.black:disabled:active {
-      background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-      background-color: #484848;
+      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+      background-color: #474747;
       background-repeat: no-repeat;
       background-position: scroll;
-      border-color: #272727;
+      border-color: #262626;
       box-shadow: none; }
 form.inline [type="submit"],
 form.block [type="submit"],
 form.linear [type="submit"] {
   font-weight: 700;
-  color: white;
+  color: #FFF;
   text-shadow: 0 0 3px #398fe5;
-  background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+  background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
   background-color: #539ce5;
   background-repeat: no-repeat;
   background-position: scroll;
@@ -1749,7 +1668,7 @@ form.linear [type="submit"] {
   form.linear [type="submit"]:focus,
   form.linear [type="submit"]:hover,
   form.linear [type="submit"]:active {
-    color: white;
+    color: #FFF;
     border-color: #1669bb; }
   form.inline [type="submit"]:focus, form.inline [type="submit"]:hover,
   form.block [type="submit"]:focus,
@@ -1779,9 +1698,9 @@ form.linear [type="submit"] {
   form.linear [type="submit"]:disabled:hover,
   form.linear [type="submit"]:disabled:focus,
   form.linear [type="submit"]:disabled:active {
-    background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -1790,11 +1709,11 @@ form.linear [type="submit"] {
   form.inline [type="submit"].red,
   form.block [type="submit"].red,
   form.linear [type="submit"].red {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #fd0b0b;
-    background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -1806,7 +1725,7 @@ form.linear [type="submit"] {
     form.linear [type="submit"].red:focus,
     form.linear [type="submit"].red:hover,
     form.linear [type="submit"].red:active {
-      color: white;
+      color: #FFF;
       border-color: #bc0000; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover,
     form.block [type="submit"].red:focus,
@@ -1836,9 +1755,9 @@ form.linear [type="submit"] {
     form.linear [type="submit"].red:disabled:hover,
     form.linear [type="submit"].red:disabled:focus,
     form.linear [type="submit"].red:disabled:active {
-      background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -1847,11 +1766,11 @@ form.linear [type="submit"] {
   form.inline [type="submit"].green,
   form.block [type="submit"].green,
   form.linear [type="submit"].green {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #5eb862;
-    background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -1863,7 +1782,7 @@ form.linear [type="submit"] {
     form.linear [type="submit"].green:focus,
     form.linear [type="submit"].green:hover,
     form.linear [type="submit"].green:active {
-      color: white;
+      color: #FFF;
       border-color: #3b8e3f; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover,
     form.block [type="submit"].green:focus,
@@ -1893,9 +1812,9 @@ form.linear [type="submit"] {
     form.linear [type="submit"].green:disabled:hover,
     form.linear [type="submit"].green:disabled:focus,
     form.linear [type="submit"].green:disabled:active {
-      background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -1904,15 +1823,15 @@ form.linear [type="submit"] {
   form.inline [type="submit"].black,
   form.block [type="submit"].black,
   form.linear [type="submit"].black {
-    color: white;
-    text-shadow: 0 0 3px #3c3c3c;
-    background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-    background-color: #484848;
+    color: #FFF;
+    text-shadow: 0 0 3px #3b3b3b;
+    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+    background-color: #474747;
     background-repeat: no-repeat;
     background-position: scroll;
-    border-color: #272727; }
+    border-color: #262626; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
     form.block [type="submit"].black:focus,
     form.block [type="submit"].black:hover,
@@ -1920,17 +1839,17 @@ form.linear [type="submit"] {
     form.linear [type="submit"].black:focus,
     form.linear [type="submit"].black:hover,
     form.linear [type="submit"].black:active {
-      color: white;
-      border-color: #151515; }
+      color: #FFF;
+      border-color: #141414; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover,
     form.block [type="submit"].black:focus,
     form.block [type="submit"].black:hover,
     form.linear [type="submit"].black:focus,
     form.linear [type="submit"].black:hover {
-      background: -webkit-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #555555 0%, #272727 100%) no-repeat scroll;
-      background-color: #555555;
+      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
+      background-color: #545454;
       background-repeat: no-repeat;
       background-position: scroll; }
     form.inline [type="submit"].black:active,
@@ -1950,13 +1869,13 @@ form.linear [type="submit"] {
     form.linear [type="submit"].black:disabled:hover,
     form.linear [type="submit"].black:disabled:focus,
     form.linear [type="submit"].black:disabled:active {
-      background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-      background-color: #484848;
+      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+      background-color: #474747;
       background-repeat: no-repeat;
       background-position: scroll;
-      border-color: #272727;
+      border-color: #262626;
       box-shadow: none; }
 form.inline h1,
 form.inline h2,
@@ -2642,13 +2561,13 @@ label.button {
   line-height: 2.1em;
   vertical-align: middle;
   white-space: nowrap;
-  background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-  background-color: #f2f2f2;
+  background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+  background-color: #F2F2F2;
   background-repeat: no-repeat;
   background-position: scroll;
-  border: 1px #cccccc solid;
+  border: 1px #CCC solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -2755,21 +2674,21 @@ label.button {
     label.button:disabled:hover,
     label.button:disabled:focus,
     label.button:disabled:active {
-      background: -webkit-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f2f2f2 0%, #d8d8d8 100%) no-repeat scroll;
-      background-color: #f2f2f2;
+      background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
+      background-color: #F2F2F2;
       background-repeat: no-repeat;
       background-position: scroll;
-      border-color: #cccccc;
+      border-color: #CCC;
       box-shadow: none; }
   a.button.red,
   label.button.red {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #fd0b0b;
-    background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -2778,7 +2697,7 @@ label.button {
     label.button.red:focus,
     label.button.red:hover,
     label.button.red:active {
-      color: white;
+      color: #FFF;
       border-color: #bc0000; }
     a.button.red:focus, a.button.red:hover,
     label.button.red:focus,
@@ -2799,9 +2718,9 @@ label.button {
     label.button.red:disabled:hover,
     label.button.red:disabled:focus,
     label.button.red:disabled:active {
-      background: -webkit-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #f92828 0%, #d50000 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #f92828 0%, #d50000 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -2809,11 +2728,11 @@ label.button {
       box-shadow: none; }
   a.button.green,
   label.button.green {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #5eb862;
-    background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -2822,7 +2741,7 @@ label.button {
     label.button.green:focus,
     label.button.green:hover,
     label.button.green:active {
-      color: white;
+      color: #FFF;
       border-color: #3b8e3f; }
     a.button.green:focus, a.button.green:hover,
     label.button.green:focus,
@@ -2843,9 +2762,9 @@ label.button {
     label.button.green:disabled:hover,
     label.button.green:disabled:focus,
     label.button.green:disabled:active {
-      background: -webkit-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #73bd76 0%, #43a047 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #73bd76 0%, #43a047 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -2853,11 +2772,11 @@ label.button {
       box-shadow: none; }
   a.button.blue,
   label.button.blue {
-    color: white;
+    color: #FFF;
     text-shadow: 0 0 3px #398fe5;
-    background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+    background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
     background-position: scroll;
@@ -2866,7 +2785,7 @@ label.button {
     label.button.blue:focus,
     label.button.blue:hover,
     label.button.blue:active {
-      color: white;
+      color: #FFF;
       border-color: #1669bb; }
     a.button.blue:focus, a.button.blue:hover,
     label.button.blue:focus,
@@ -2887,9 +2806,9 @@ label.button {
     label.button.blue:disabled:hover,
     label.button.blue:disabled:focus,
     label.button.blue:disabled:active {
-      background: -webkit-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #539ce5 0%, #1976d2 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #539ce5 0%, #1976d2 100%) no-repeat scroll;
+      background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
       background-color: #539ce5;
       background-repeat: no-repeat;
       background-position: scroll;
@@ -2897,28 +2816,28 @@ label.button {
       box-shadow: none; }
   a.button.black,
   label.button.black {
-    color: white;
-    text-shadow: 0 0 3px #3c3c3c;
-    background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-    background-color: #484848;
+    color: #FFF;
+    text-shadow: 0 0 3px #3b3b3b;
+    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+    background-color: #474747;
     background-repeat: no-repeat;
     background-position: scroll;
-    border-color: #272727; }
+    border-color: #262626; }
     a.button.black:focus, a.button.black:hover, a.button.black:active,
     label.button.black:focus,
     label.button.black:hover,
     label.button.black:active {
-      color: white;
-      border-color: #151515; }
+      color: #FFF;
+      border-color: #141414; }
     a.button.black:focus, a.button.black:hover,
     label.button.black:focus,
     label.button.black:hover {
-      background: -webkit-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #555555 0%, #272727 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #555555 0%, #272727 100%) no-repeat scroll;
-      background-color: #555555;
+      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
+      background-color: #545454;
       background-repeat: no-repeat;
       background-position: scroll; }
     a.button.black:active,
@@ -2931,13 +2850,13 @@ label.button {
     label.button.black:disabled:hover,
     label.button.black:disabled:focus,
     label.button.black:disabled:active {
-      background: -webkit-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #484848 0%, #222222 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #484848 0%, #222222 100%) no-repeat scroll;
-      background-color: #484848;
+      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
+      background-color: #474747;
       background-repeat: no-repeat;
       background-position: scroll;
-      border-color: #272727;
+      border-color: #262626;
       box-shadow: none; }
 
 label.button {
@@ -3020,20 +2939,20 @@ ol {
   ul.lined,
   ol.lined {
     margin-bottom: 1.5em;
-    border-bottom: 1px #cccccc solid; }
+    border-bottom: 1px #CCC solid; }
     ul.lined li,
     ol.lined li {
       margin-bottom: 0.35em;
       padding: 0.35em 0 0;
       text-indent: 0.5em;
-      border-top: 1px #cccccc solid; }
+      border-top: 1px #CCC solid; }
     ul.lined ul,
     ul.lined ol,
     ol.lined ul,
     ol.lined ol {
       margin-top: 0.35em;
       padding-left: 1em;
-      border-top: 1px #cccccc solid; }
+      border-top: 1px #CCC solid; }
       ul.lined ul > :first-child,
       ul.lined ol > :first-child,
       ol.lined ul > :first-child,
@@ -3048,7 +2967,7 @@ li {
 
 dl {
   padding-bottom: 0.5em;
-  border-bottom: 1px #cccccc solid; }
+  border-bottom: 1px #CCC solid; }
   dl dl {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -3068,7 +2987,7 @@ dl.inline > dt,
 dl.inline > dd {
   margin-top: 0.5em;
   padding-top: 0.5em;
-  border-top: 1px #cccccc solid; }
+  border-top: 1px #CCC solid; }
 
 dl dl dt:first-child,
 dl dl dt:first-child + dd {
@@ -3134,7 +3053,7 @@ ul.tabs {
   overflow-y: hidden;
   white-space: nowrap;
   background-color: #FFF;
-  border-color: #cccccc; }
+  border-color: #CCC; }
   ul.tabs li {
     margin: 0 0.25em;
     display: inline-block;
@@ -3156,13 +3075,11 @@ ul.tabs {
       white-space: nowrap;
       text-decoration: none; }
       ul.tabs li a:hover {
-        color: #1976d2; }
+        color: #1976D2; }
       ul.tabs li a:active {
-        color: #e64a19; }
+        color: #E64A19; }
     ul.tabs li.primary a {
       font-weight: 700; }
-    ul.tabs li.current a, ul.tabs li.disabled a {
-      cursor: text; }
     ul.tabs li.current {
       margin-top: 0;
       border-color: inherit;
@@ -3178,7 +3095,8 @@ ul.tabs {
         background-color: inherit;
         content: ""; }
     ul.tabs li.disabled a {
-      color: #AAA; }
+      color: #AAA;
+      cursor: text; }
   ul.tabs.grad li {
     border-color: inherit; }
     ul.tabs.grad li a {
@@ -3198,7 +3116,7 @@ ul.tabs {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #cccccc;
+    background-color: #CCC;
     z-index: 2;
     content: ""; }
   ul.tabs::after {
@@ -3303,7 +3221,7 @@ ul.tree {
       top: 1.5em;
       bottom: 0.75em;
       left: 0.75em;
-      border-left: 1px #cccccc solid;
+      border-left: 1px #CCC solid;
       content: "";
       z-index: 1; }
   ul.tree li {
@@ -3319,7 +3237,7 @@ ul.tree {
       position: absolute;
       top: 0.75em;
       left: -1.25em;
-      border: #cccccc solid;
+      border: #CCC solid;
       border-width: 0 0 1px 1px;
       content: "";
       z-index: 1; }
@@ -3334,7 +3252,7 @@ table {
   margin-bottom: 1.618em;
   clear: both;
   background-color: rgba(255, 255, 255, 0.85);
-  border: 1px #cccccc solid;
+  border: 1px #CCC solid;
   border-radius: 3px;
   border-collapse: collapse; }
   table a {
@@ -3357,7 +3275,7 @@ table {
     transition: background ease 200ms; }
     table.highlight-on-hover tfoot tr:hover,
     table.highlight-on-hover tbody tr:hover {
-      background-color: #EEF;
+      background-color: #E3F2FD;
       -webkit-transition: background ease 50ms;
       -moz-transition: background ease 50ms;
       -ms-transition: background ease 50ms;
@@ -3369,10 +3287,10 @@ thead {
   font-weight: 700;
   font-size: 1.33em;
   font-size: 1.33rem;
-  background: -webkit-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #eeeeee 0%, #d8d8d8 100%) no-repeat scroll;
-  background-color: #eeeeee;
+  background: -webkit-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
+  background-color: #EEE;
   background-repeat: no-repeat;
   background-position: scroll; }
   thead p,
@@ -3398,7 +3316,7 @@ tbody {
     font-size: 1.064em; }
 
 tbody tr:nth-child(even) {
-  background-color: whitesmoke; }
+  background-color: #F5F5F5; }
 tbody tr.disabled > * {
   opacity: 0.2; }
 tbody tr.highlight-fade th,
@@ -3410,14 +3328,14 @@ tbody tr.highlight-fade td {
   animation: highlight-fade 6s; }
 
 tr.highlight {
-  background-color: #fff9c4; }
+  background-color: #FFF9C4; }
 
 th,
 td {
   padding: 0.5em 0.75em;
   text-align: left;
   border-width: 1px 0;
-  border-color: #cccccc;
+  border-color: #CCC;
   border-style: solid; }
   th.no-padding,
   td.no-padding {
@@ -3456,29 +3374,21 @@ form table input {
 @-webkit-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   75% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   100% {
     background-color: transparent; } }
-
 @-moz-keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   75% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   100% {
     background-color: transparent; } }
-
 	/*@-ms-keyframes highlight-fade {
 		@content;
 	}
@@ -3489,16 +3399,12 @@ form table input {
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
-
   10% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   75% {
-    background-color: #fff9c4; }
-
+    background-color: #FFF9C4; }
   100% {
     background-color: transparent; } }
-
 /* ===================================================== TEXT ===================================================== */
 h1,
 h2,
@@ -3592,16 +3498,16 @@ pre.code {
   overflow: auto;
   color: #333;
   white-space: pre;
-  background-color: whitesmoke;
-  border: 1px #cccccc solid;
+  background-color: #F5F5F5;
+  border: 1px #CCC solid;
   border-radius: 3px; }
 
 pre.code {
   padding: 1em; }
   pre.code em {
     font-style: normal;
-    background-color: #fff59d;
-    box-shadow: 0 0 0 1px #fff59d;
+    background-color: #FFF59D;
+    box-shadow: 0 0 0 1px #FFF59D;
     border-radius: 3px; }
   pre.code[title] {
     padding-top: 3em; }
@@ -3611,12 +3517,12 @@ pre.code {
       top: 0;
       right: 0;
       left: 0;
-      color: #111111;
+      color: #111;
       font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
       font-weight: 700;
       line-height: 1.5em;
       white-space: nowrap;
-      background-color: #cccccc;
+      background-color: #CCC;
       content: attr(title); }
   pre.code[lang]::after {
     height: 1.5em;
@@ -3624,11 +3530,11 @@ pre.code {
     position: absolute;
     top: 0.25em;
     right: 0.25em;
-    color: #111111;
+    color: #111;
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
     line-height: 1.5em;
     text-transform: uppercase;
-    background-color: #cccccc;
+    background-color: #CCC;
     border-radius: 3px;
     content: attr(lang); }
   pre.code[lang][title]::after {
@@ -3652,7 +3558,7 @@ table code {
   white-space: nowrap;
   border: none;
   border-radius: 0;
-  outline: 1px #cccccc solid; }
+  outline: 1px #CCC solid; }
 
 blockquote {
   margin: 0.25em 0.5em 0.75em;
@@ -3662,8 +3568,8 @@ blockquote {
   font-weight: 300;
   line-height: 1.75em;
   white-space: pre-wrap;
-  background-color: whitesmoke;
-  border-left: 0.3em #cccccc solid; }
+  background-color: #F5F5F5;
+  border-left: 0.3em #CCC solid; }
   blockquote p {
     margin-bottom: 0;
     font-size: 1em;
@@ -3683,11 +3589,11 @@ em {
   font-style: italic; }
 
 a {
-  color: #0d47a1; }
+  color: #0D47A1; }
   a:hover {
-    color: #1976d2; }
+    color: #1976D2; }
   a:active {
-    color: #e64a19; }
+    color: #E64A19; }
 
 .superheavyweight {
   font-weight: 900; }
@@ -3714,12 +3620,12 @@ hr {
   clear: both;
   font-size: 1.3em;
   line-height: 1.25em;
-  background-image: -webkit-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
-  background-image: -moz-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
-  background-image: -ms-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
-  background-image: -o-linear-gradient(right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
-  background-image: linear-gradient(to right, white 0%, #cccccc 25%, #cccccc 75%, white 100%);
-  background-color: #cccccc;
+  background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+  background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+  background-image: -ms-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+  background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+  background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
+  background-color: #CCC;
   border: none; }
 
 p + hr {
@@ -3791,6 +3697,9 @@ dl + hr {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
 
+.no-wrap {
+  white-space: nowrap !important; }
+
 /* ===================================================== NOTICES ===================================================== */
 .error,
 .warning,
@@ -3815,72 +3724,59 @@ dl + hr {
     margin-bottom: 0;
     padding-bottom: 0; }
 
-p.error,
-p.warning,
-p.notice,
-p.success {
+p.error, p.warning, p.notice, p.success {
   padding: 0.25em 0.5em; }
 
-/*.error {
-	background-color: rgba(204, 0, 0, 0.2);
-
-	border-color: #C00;
-
-	&.solid-bg {
-		background-color: #F4CBCB;
-	}
-}
-
-.warning {
-	background-color: rgba(255, 204, 0, 0.2);
-
-	border-color: #FC0;
-
-	&.solid-bg {
-		background-color: #FEF4CB;
-	}
-}
-
-.notice {
-	background-color: rgba(0, 102, 204, 0.2);
-
-	border-color: #06C;
-
-	&.solid-bg {
-		background-color: #CBDFF4;
-	}
-}
-
-.success {
-	background-color: rgba(0, 204, 0, 0.2);
-
-	border-color: #0C0;
-
-	&.solid-bg {
-		background-color: #CBF4CB;
-	}
-}*/
 .error {
-  background-color: #ffcdd2;
-  border-color: #d32f2f; }
+  background-color: #FFCDD2;
+  border-color: #D32F2F; }
 
 .warning {
-  background-color: #ffecb3;
-  border-color: #ffa000; }
+  background-color: #FFECB3;
+  border-color: #FFA000; }
 
 .success {
-  background-color: #dcedc8;
-  border-color: #689f38; }
+  background-color: #DCEDC8;
+  border-color: #689F38; }
 
 .notice {
-  background-color: #bbdefb;
-  border-color: #1976d2; }
+  background-color: #BBDEFB;
+  border-color: #1976D2; }
+
+/* ===================================================== TAGS ===================================================== */
+.tag {
+  padding: 0 0.35em;
+  display: inline-block;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 1.618em;
+  vertical-align: baseline;
+  background-color: #CCC;
+  border-radius: 3px; }
+  .tag.caps {
+    text-transform: uppercase; }
+  .tag.red {
+    background-color: #E53935; }
+  .tag.orange {
+    background-color: #FB8C00; }
+  .tag.yellow {
+    background-color: #FDD835; }
+  .tag.green {
+    background-color: #7CB342; }
+  .tag.blue {
+    background-color: #1E88E5; }
+  .tag.purple {
+    background-color: #5E35B1; }
+  .tag.grey {
+    background-color: #546E7A; }
+  .tag.black {
+    background-color: #212121; }
 
 /* ===================================================== RUMMAGE ===================================================== */
 .rummage-searching tr {
   background-color: transparent; }
   .rummage-searching tr.disabled {
-    background-color: whitesmoke; }
+    background-color: #F5F5F5; }
 
 /* ===================================================== TINYMCE ===================================================== */
 .mce-tinymce {
@@ -3907,3 +3803,91 @@ form.inline label + .mce-tinymce {
     width: auto;
     float: none;
     clear: both; } }
+/* ===================================================== MODERNIZR ===================================================== */
+.js .hide-on-js,
+.flexbox .hide-on-flexbox,
+.canvas .hide-on-canvas,
+.canvastext .hide-on-canvastext,
+.webgl .hide-on-webgl,
+.touch .hide-on-touch,
+.geolocation .hide-on-geolocation,
+.postmessage .hide-on-postmessage,
+.websqldatabase .hide-on-websqldatabase,
+.indexeddb .hide-on-indexeddb,
+.hashchange .hide-on-hashchange,
+.history .hide-on-history,
+.draganddrop .hide-on-draganddrop,
+.websockets .hide-on-websockets,
+.rgba .hide-on-rgba,
+.hsla .hide-on-hsla,
+.multiplebgs .hide-on-multiplebgs,
+.backgroundsize .hide-on-backgroundsize,
+.borderimage .hide-on-borderimage,
+.borderradius .hide-on-borderradius,
+.boxshadow .hide-on-boxshadow,
+.textshadow .hide-on-textshadow,
+.opacity .hide-on-opacity,
+.cssanimations .hide-on-cssanimations,
+.csscolumns .hide-on-csscolumns,
+.cssgradients .hide-on-cssgradients,
+.cssreflections .hide-on-cssreflections,
+.csstransforms .hide-on-csstransforms,
+.csstransforms3d .hide-on-csstransforms3d,
+.csstransitions .hide-on-csstransitions,
+.fontface .hide-on-fontface,
+.generatedcontent .hide-on-generatedcontent,
+.video .hide-on-video,
+.audio .hide-on-audio,
+.localstorage .hide-on-localstorage,
+.sessionstorage .hide-on-sessionstorage,
+.webworkers .hide-on-webworkers,
+.applicationcache .hide-on-applicationcache,
+.svg .hide-on-svg,
+.inlinesvg .hide-on-inlinesvg,
+.smil .hide-on-smil,
+.svgclippaths .hide-on-svgclippaths,
+.no-js .hide-on-no-js,
+.no-flexbox .hide-on-no-flexbox,
+.no-canvas .hide-on-no-canvas,
+.no-canvastext .hide-on-no-canvastext,
+.no-webgl .hide-on-no-webgl,
+.no-touch .hide-on-no-touch,
+.no-geolocation .hide-on-no-geolocation,
+.no-postmessage .hide-on-no-postmessage,
+.no-websqldatabase .hide-on-no-websqldatabase,
+.no-indexeddb .hide-on-no-indexeddb,
+.no-hashchange .hide-on-no-hashchange,
+.no-history .hide-on-no-history,
+.no-draganddrop .hide-on-no-draganddrop,
+.no-websockets .hide-on-no-websockets,
+.no-rgba .hide-on-no-rgba,
+.no-hsla .hide-on-no-hsla,
+.no-multiplebgs .hide-on-no-multiplebgs,
+.no-backgroundsize .hide-on-no-backgroundsize,
+.no-borderimage .hide-on-no-borderimage,
+.no-borderradius .hide-on-no-borderradius,
+.no-boxshadow .hide-on-no-boxshadow,
+.no-textshadow .hide-on-no-textshadow,
+.no-opacity .hide-on-no-opacity,
+.no-cssanimations .hide-on-no-cssanimations,
+.no-csscolumns .hide-on-no-csscolumns,
+.no-cssgradients .hide-on-no-cssgradients,
+.no-cssreflections .hide-on-no-cssreflections,
+.no-csstransforms .hide-on-no-csstransforms,
+.no-csstransforms3d .hide-on-no-csstransforms3d,
+.no-csstransitions .hide-on-no-csstransitions,
+.no-fontface .hide-on-no-fontface,
+.no-generatedcontent .hide-on-no-generatedcontent,
+.no-video .hide-on-no-video,
+.no-audio .hide-on-no-audio,
+.no-localstorage .hide-on-no-localstorage,
+.no-sessionstorage .hide-on-no-sessionstorage,
+.no-webworkers .hide-on-no-webworkers,
+.no-applicationcache .hide-on-no-applicationcache,
+.no-svg .hide-on-no-svg,
+.no-inlinesvg .hide-on-no-inlinesvg,
+.no-smil .hide-on-no-smil,
+.no-svgclippaths .hide-on-no-svgclippaths {
+  display: none !important; }
+
+/*# sourceMappingURL=arable.css.map */

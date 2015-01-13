@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
  * Version:     5.0.0 Pre-release
- * Date:        02/01/2015
+ * Date:        13/01/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -29,14 +29,10 @@ $baseLinkActiveColour: #E64A19;
 
 $activeHighlight: #FBC02D;
 
-//$buttonRed: #D11;
 $buttonRed: #D50000;
-//$buttonGreen: #1A2;
-//$buttonGreen: #388E3C;
 $buttonGreen: #43A047;
-//$buttonBlue: #005DE8;
 $buttonBlue: #1976D2;
-$buttonBlack: #222;
+$buttonBlack: #212121;
 $buttonSubmit: $buttonBlue;
 
 $errorBorder: #D32F2F;
@@ -48,35 +44,34 @@ $successBackground: #DCEDC8;
 $noticeBorder: #1976D2;
 $noticeBackground: #BBDEFB;
 
+$tagStandard: #CCC;
+$tagRed: #E53935;
+$tagOrange: #FB8C00;
+$tagYellow: #FDD835;
+$tagGreen: #7CB342;
+$tagBlue: #1E88E5;
+$tagPurple: #5E35B1;
+$tagGrey: #546E7A;
+$tagBlack: #212121;
+
 $bgLightGrey: #F5F5F5;
 $borderGrey: #CCC;
-//$highlight: #FF9;
 $highlight: #FFF59D;
-//$highlightTable: #FFB;
 $highlightTable: #FFF9C4;
+$hoverTable: #E3F2FD;
 
 // ===================================================== RESOURCES =====================================================
 @import "resources/functions";
-
 @import "resources/mixins";
 
 // ===================================================== MODULES =====================================================
 @import "modules/reset";
-
-@import "modules/responsive";
-
+@import "modules/conditional";
 @import "modules/generic";
-
 @import "modules/forms";
-
 @import "modules/buttons";
-
 @import "modules/lists";
-
 @import "modules/tables";
-
 @import "modules/text";
-
 @import "modules/misc";
-
 @import "modules/projects";

@@ -286,13 +286,6 @@ ul.tabs {
 			}
 		}
 
-		&.current,
-		&.disabled {
-			a {
-				cursor: text;
-			}
-		}
-
 		&.current {
 			margin-top: 0;
 
@@ -321,6 +314,8 @@ ul.tabs {
 		&.disabled {
 			a {
 				color: #AAA;
+
+				cursor: text;
 			}
 		}
 	}

@@ -105,3 +105,20 @@ $intDesktop: 1025px;
 		display: block;
 	}
 }
+
+/* ===================================================== CONDITIONAL VISIBILITY ===================================================== */
+.hidden {
+	display: none !important;
+}
+
+@media screen {
+	.hide-on-screen {
+		display: none !important;
+	}
+}
+
+@media print {
+	.hide-on-print {
+		display: none !important;
+	}
+}

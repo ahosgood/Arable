@@ -45,7 +45,7 @@ table {
 				transition: background ease 200ms;
 
 				&:hover {
-					background-color: #EEF;
+					background-color: $hoverTable;
 
 					-webkit-transition: background ease 50ms;
 					-moz-transition: background ease 50ms;
