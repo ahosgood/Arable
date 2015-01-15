@@ -8,7 +8,7 @@
 	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
 	background-color: $top;
 	background-repeat: no-repeat;
-	background-position: scroll;
+	background-attachment: scroll;
 }
 
 @mixin keyframes($name) {

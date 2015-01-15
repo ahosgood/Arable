@@ -118,69 +118,73 @@ button {
   display: none; }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .noshow-on-mobile-p {
     display: none; }
 
   .show-on-mobile-p {
     display: block; } }
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media screen and (min-width: 481px) and (max-width: 658px) {
+@media (min-width: 481px) and (max-width: 658px) {
   .noshow-on-mobile-l {
     display: none; }
 
   .show-on-mobile-l {
     display: block; } }
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media screen and (max-width: 658px) {
+@media (max-width: 658px) {
   .noshow-on-mobile {
     display: none; }
 
   .show-on-mobile {
-    display: block; }
-
-  html.grow-device {
-    font-size: 12px; } }
+    display: block; } }
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
-@media screen and (min-width: 659px) and (max-width: 768px) {
+@media (min-width: 659px) and (max-width: 768px) {
   .noshow-on-tablet-p {
     display: none; }
 
   .show-on-tablet-p {
     display: block; } }
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .noshow-on-tablet-l {
     display: none; }
 
   .show-on-tablet-l {
     display: block; } }
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: 659px) and (max-width: 1024px) {
+@media (min-width: 659px) and (max-width: 1024px) {
   .noshow-on-tablet {
     display: none; }
 
   .show-on-tablet {
-    display: block; }
-
-  html.grow-device {
-    font-size: 11px; } }
+    display: block; } }
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
-@media screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
   .noshow-on-desktop {
     display: none; }
 
   .show-on-desktop {
     display: block; } }
+/* ===================================================== GROWING TEXT ===================================================== */
+/* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
+@media (max-device-width: 658px) {
+  html.grow-font {
+    font-size: 12px; } }
+/* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
+@media (min-device-width: 659px) and (max-device-width: 1024px) {
+  html.grow-font {
+    font-size: 11px; } }
 /* ===================================================== CONDITIONAL VISIBILITY ===================================================== */
-.hidden {
+.hidden,
+.no-show {
   display: none !important; }
 
 @media screen {
-  .hide-on-screen {
+  .no-show-on-screen {
     display: none !important; } }
 @media print {
-  .hide-on-print {
+  .no-show-on-print {
     display: none !important; } }
 /* ===================================================== GENERIC ===================================================== */
 html {
@@ -470,7 +474,7 @@ form.linear .button {
   background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
   background-color: #F2F2F2;
   background-repeat: no-repeat;
-  background-position: scroll;
+  background-attachment: scroll;
   border: 1px #CCC solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -778,7 +782,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
       background-color: #F2F2F2;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #CCC;
       box-shadow: none; }
   form.inline [type="submit"].red,
@@ -803,7 +807,7 @@ form.linear .button {
     background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #d40b0b; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.inline [type="submit"].red:active,
     form.inline [type="reset"].red:focus,
@@ -884,7 +888,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background-color: #fa4141;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].red:active,
     form.inline [type="reset"].red:active,
     form.inline [type="button"].red:active,
@@ -991,7 +995,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #d40b0b;
       box-shadow: none; }
   form.inline [type="submit"].green,
@@ -1016,7 +1020,7 @@ form.linear .button {
     background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #529b55; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.inline [type="submit"].green:active,
     form.inline [type="reset"].green:focus,
@@ -1097,7 +1101,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background-color: #84c587;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].green:active,
     form.inline [type="reset"].green:active,
     form.inline [type="button"].green:active,
@@ -1204,7 +1208,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #529b55;
       box-shadow: none; }
   form.inline [type="submit"].blue,
@@ -1229,7 +1233,7 @@ form.linear .button {
     background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #267bcf; }
     form.inline [type="submit"].blue:focus, form.inline [type="submit"].blue:hover, form.inline [type="submit"].blue:active,
     form.inline [type="reset"].blue:focus,
@@ -1310,7 +1314,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
       background-color: #69a9e8;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].blue:active,
     form.inline [type="reset"].blue:active,
     form.inline [type="button"].blue:active,
@@ -1417,7 +1421,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
       background-color: #539ce5;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #267bcf;
       box-shadow: none; }
   form.inline [type="submit"].black,
@@ -1442,7 +1446,7 @@ form.linear .button {
     background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
     background-color: #474747;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #262626; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
     form.inline [type="reset"].black:focus,
@@ -1523,7 +1527,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
       background-color: #545454;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].black:active,
     form.inline [type="reset"].black:active,
     form.inline [type="button"].black:active,
@@ -1630,7 +1634,7 @@ form.linear .button {
       background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
       background-color: #474747;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #262626;
       box-shadow: none; }
 form.inline [type="submit"],
@@ -1644,7 +1648,7 @@ form.linear [type="submit"] {
   background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
   background-color: #539ce5;
   background-repeat: no-repeat;
-  background-position: scroll;
+  background-attachment: scroll;
   border-color: #267bcf;
   		/*&.flat {
   			@include button-flat($buttonBlue);
@@ -1680,7 +1684,7 @@ form.linear [type="submit"] {
     background: linear-gradient(to bottom, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
     background-color: #69a9e8;
     background-repeat: no-repeat;
-    background-position: scroll; }
+    background-attachment: scroll; }
   form.inline [type="submit"]:active,
   form.block [type="submit"]:active,
   form.linear [type="submit"]:active {
@@ -1703,7 +1707,7 @@ form.linear [type="submit"] {
     background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #267bcf;
     box-shadow: none; }
   form.inline [type="submit"].red,
@@ -1716,7 +1720,7 @@ form.linear [type="submit"] {
     background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #d40b0b; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.inline [type="submit"].red:active,
     form.block [type="submit"].red:focus,
@@ -1737,7 +1741,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background-color: #fa4141;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].red:active,
     form.block [type="submit"].red:active,
     form.linear [type="submit"].red:active {
@@ -1760,7 +1764,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #d40b0b;
       box-shadow: none; }
   form.inline [type="submit"].green,
@@ -1773,7 +1777,7 @@ form.linear [type="submit"] {
     background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #529b55; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.inline [type="submit"].green:active,
     form.block [type="submit"].green:focus,
@@ -1794,7 +1798,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background-color: #84c587;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].green:active,
     form.block [type="submit"].green:active,
     form.linear [type="submit"].green:active {
@@ -1817,7 +1821,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #529b55;
       box-shadow: none; }
   form.inline [type="submit"].black,
@@ -1830,7 +1834,7 @@ form.linear [type="submit"] {
     background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
     background-color: #474747;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #262626; }
     form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
     form.block [type="submit"].black:focus,
@@ -1851,7 +1855,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
       background-color: #545454;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     form.inline [type="submit"].black:active,
     form.block [type="submit"].black:active,
     form.linear [type="submit"].black:active {
@@ -1874,7 +1878,7 @@ form.linear [type="submit"] {
       background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
       background-color: #474747;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #262626;
       box-shadow: none; }
 form.inline h1,
@@ -1969,14 +1973,6 @@ form.block {
     form.block select:-ms-input-placeholder,
     form.block textarea:-ms-input-placeholder {
       color: #999; }
-    form.inline input.full,
-    form.inline select.full,
-    form.inline textarea.full,
-    form.block input.full,
-    form.block select.full,
-    form.block textarea.full {
-      width: 100%;
-      clear: both; }
     form.inline input.large,
     form.inline select.large,
     form.inline textarea.large,
@@ -2256,6 +2252,11 @@ form.block {
       padding-bottom: 0.5em;
       font-size: 1.45em; }
 
+form.inline input.full,
+form.inline select.full,
+form.inline textarea.full {
+  width: 100%;
+  clear: both; }
 form.inline .label {
   width: 75%; }
 form.inline.large input[type="radio"] + label {
@@ -2452,100 +2453,164 @@ form.linear {
     form.linear [type="reset"].thin,
     form.linear [type="button"].thin {
       line-height: 1em; } }
-@media screen and (max-width: 658px) {
-  form.inline.foldable {
+@media (max-width: 658px) {
+  form.foldable.inline, form.foldable.linear {
     text-align: left; }
-    form.inline.foldable label {
+    form.foldable.inline label, form.foldable.linear label {
       width: auto;
       margin-bottom: 0.2em;
       margin-left: 0.2em;
       display: inline-block; }
-      form.inline.foldable label ~ input,
-      form.inline.foldable label ~ select,
-      form.inline.foldable label ~ textarea,
-      form.inline.foldable label ~ .label {
+      form.foldable.inline label ~ input,
+      form.foldable.inline label ~ select,
+      form.foldable.inline label ~ textarea,
+      form.foldable.inline label ~ .label, form.foldable.linear label ~ input,
+      form.foldable.linear label ~ select,
+      form.foldable.linear label ~ textarea,
+      form.foldable.linear label ~ .label {
         width: 100%;
         margin-top: 0;
         float: none;
         clear: both; }
-        form.inline.foldable label ~ input[class^="inline-"], form.inline.foldable label ~ input[class*=" inline-"],
-        form.inline.foldable label ~ select[class^="inline-"],
-        form.inline.foldable label ~ select[class*=" inline-"],
-        form.inline.foldable label ~ textarea[class^="inline-"],
-        form.inline.foldable label ~ textarea[class*=" inline-"],
-        form.inline.foldable label ~ .label[class^="inline-"],
-        form.inline.foldable label ~ .label[class*=" inline-"] {
+        form.foldable.inline label ~ input[class^="inline-"], form.foldable.inline label ~ input[class*=" inline-"],
+        form.foldable.inline label ~ select[class^="inline-"],
+        form.foldable.inline label ~ select[class*=" inline-"],
+        form.foldable.inline label ~ textarea[class^="inline-"],
+        form.foldable.inline label ~ textarea[class*=" inline-"],
+        form.foldable.inline label ~ .label[class^="inline-"],
+        form.foldable.inline label ~ .label[class*=" inline-"], form.foldable.linear label ~ input[class^="inline-"], form.foldable.linear label ~ input[class*=" inline-"],
+        form.foldable.linear label ~ select[class^="inline-"],
+        form.foldable.linear label ~ select[class*=" inline-"],
+        form.foldable.linear label ~ textarea[class^="inline-"],
+        form.foldable.linear label ~ textarea[class*=" inline-"],
+        form.foldable.linear label ~ .label[class^="inline-"],
+        form.foldable.linear label ~ .label[class*=" inline-"] {
           float: left; }
-          form.inline.foldable label ~ input[class^="inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ input[class^="inline-"] + [class*=" inline-"], form.inline.foldable label ~ input[class*=" inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ input[class*=" inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ select[class^="inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ select[class^="inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ select[class*=" inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ select[class*=" inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ textarea[class^="inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ textarea[class^="inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ textarea[class*=" inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ textarea[class*=" inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ .label[class^="inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ .label[class^="inline-"] + [class*=" inline-"],
-          form.inline.foldable label ~ .label[class*=" inline-"] + [class^="inline-"],
-          form.inline.foldable label ~ .label[class*=" inline-"] + [class*=" inline-"] {
+          form.foldable.inline label ~ input[class^="inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ input[class^="inline-"] + [class*=" inline-"], form.foldable.inline label ~ input[class*=" inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ input[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ select[class^="inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ select[class^="inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ select[class*=" inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ select[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ textarea[class^="inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ textarea[class^="inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ textarea[class*=" inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ textarea[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ .label[class^="inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ .label[class^="inline-"] + [class*=" inline-"],
+          form.foldable.inline label ~ .label[class*=" inline-"] + [class^="inline-"],
+          form.foldable.inline label ~ .label[class*=" inline-"] + [class*=" inline-"], form.foldable.linear label ~ input[class^="inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ input[class^="inline-"] + [class*=" inline-"], form.foldable.linear label ~ input[class*=" inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ input[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ select[class^="inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ select[class^="inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ select[class*=" inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ select[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ textarea[class^="inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ textarea[class^="inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ textarea[class*=" inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ textarea[class*=" inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ .label[class^="inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ .label[class^="inline-"] + [class*=" inline-"],
+          form.foldable.linear label ~ .label[class*=" inline-"] + [class^="inline-"],
+          form.foldable.linear label ~ .label[class*=" inline-"] + [class*=" inline-"] {
             margin-left: 1%;
             clear: none; }
-        form.inline.foldable label ~ input.inline-2,
-        form.inline.foldable label ~ select.inline-2,
-        form.inline.foldable label ~ textarea.inline-2,
-        form.inline.foldable label ~ .label.inline-2 {
+        form.foldable.inline label ~ input.inline-2,
+        form.foldable.inline label ~ select.inline-2,
+        form.foldable.inline label ~ textarea.inline-2,
+        form.foldable.inline label ~ .label.inline-2, form.foldable.linear label ~ input.inline-2,
+        form.foldable.linear label ~ select.inline-2,
+        form.foldable.linear label ~ textarea.inline-2,
+        form.foldable.linear label ~ .label.inline-2 {
           width: 49.5%; }
-        form.inline.foldable label ~ input.inline-3,
-        form.inline.foldable label ~ select.inline-3,
-        form.inline.foldable label ~ textarea.inline-3,
-        form.inline.foldable label ~ .label.inline-3 {
+        form.foldable.inline label ~ input.inline-3,
+        form.foldable.inline label ~ select.inline-3,
+        form.foldable.inline label ~ textarea.inline-3,
+        form.foldable.inline label ~ .label.inline-3, form.foldable.linear label ~ input.inline-3,
+        form.foldable.linear label ~ select.inline-3,
+        form.foldable.linear label ~ textarea.inline-3,
+        form.foldable.linear label ~ .label.inline-3 {
           width: 32.66667%; }
-        form.inline.foldable label ~ input.inline-4,
-        form.inline.foldable label ~ select.inline-4,
-        form.inline.foldable label ~ textarea.inline-4,
-        form.inline.foldable label ~ .label.inline-4 {
+        form.foldable.inline label ~ input.inline-4,
+        form.foldable.inline label ~ select.inline-4,
+        form.foldable.inline label ~ textarea.inline-4,
+        form.foldable.inline label ~ .label.inline-4, form.foldable.linear label ~ input.inline-4,
+        form.foldable.linear label ~ select.inline-4,
+        form.foldable.linear label ~ textarea.inline-4,
+        form.foldable.linear label ~ .label.inline-4 {
           width: 24.25%; }
-        form.inline.foldable label ~ input.inline-5,
-        form.inline.foldable label ~ select.inline-5,
-        form.inline.foldable label ~ textarea.inline-5,
-        form.inline.foldable label ~ .label.inline-5 {
+        form.foldable.inline label ~ input.inline-5,
+        form.foldable.inline label ~ select.inline-5,
+        form.foldable.inline label ~ textarea.inline-5,
+        form.foldable.inline label ~ .label.inline-5, form.foldable.linear label ~ input.inline-5,
+        form.foldable.linear label ~ select.inline-5,
+        form.foldable.linear label ~ textarea.inline-5,
+        form.foldable.linear label ~ .label.inline-5 {
           width: 19.2%; }
-        form.inline.foldable label ~ input.inline-6,
-        form.inline.foldable label ~ select.inline-6,
-        form.inline.foldable label ~ textarea.inline-6,
-        form.inline.foldable label ~ .label.inline-6 {
+        form.foldable.inline label ~ input.inline-6,
+        form.foldable.inline label ~ select.inline-6,
+        form.foldable.inline label ~ textarea.inline-6,
+        form.foldable.inline label ~ .label.inline-6, form.foldable.linear label ~ input.inline-6,
+        form.foldable.linear label ~ select.inline-6,
+        form.foldable.linear label ~ textarea.inline-6,
+        form.foldable.linear label ~ .label.inline-6 {
           width: 15.83333%; }
-        form.inline.foldable label ~ input.inline-7,
-        form.inline.foldable label ~ select.inline-7,
-        form.inline.foldable label ~ textarea.inline-7,
-        form.inline.foldable label ~ .label.inline-7 {
+        form.foldable.inline label ~ input.inline-7,
+        form.foldable.inline label ~ select.inline-7,
+        form.foldable.inline label ~ textarea.inline-7,
+        form.foldable.inline label ~ .label.inline-7, form.foldable.linear label ~ input.inline-7,
+        form.foldable.linear label ~ select.inline-7,
+        form.foldable.linear label ~ textarea.inline-7,
+        form.foldable.linear label ~ .label.inline-7 {
           width: 13.42857%; }
-        form.inline.foldable label ~ input.inline-8,
-        form.inline.foldable label ~ select.inline-8,
-        form.inline.foldable label ~ textarea.inline-8,
-        form.inline.foldable label ~ .label.inline-8 {
+        form.foldable.inline label ~ input.inline-8,
+        form.foldable.inline label ~ select.inline-8,
+        form.foldable.inline label ~ textarea.inline-8,
+        form.foldable.inline label ~ .label.inline-8, form.foldable.linear label ~ input.inline-8,
+        form.foldable.linear label ~ select.inline-8,
+        form.foldable.linear label ~ textarea.inline-8,
+        form.foldable.linear label ~ .label.inline-8 {
           width: 11.625%; }
-    form.inline.foldable .label {
+    form.foldable.inline .label, form.foldable.linear .label {
       margin-bottom: 0.2em; }
-    form.inline.foldable input[type="checkbox"],
-    form.inline.foldable input[type="radio"] {
+    form.foldable.inline input[type="checkbox"],
+    form.foldable.inline input[type="radio"], form.foldable.linear input[type="checkbox"],
+    form.foldable.linear input[type="radio"] {
       width: auto;
       margin-right: 0.5em;
       margin-left: 0.5em;
       display: inline-block;
       float: left; }
-    form.inline.foldable input[type="checkbox"] {
+    form.foldable.inline input[type="checkbox"], form.foldable.linear input[type="checkbox"] {
       margin-top: 0.65em;
       clear: none; }
-    form.inline.foldable input[type="radio"] {
+    form.foldable.inline input[type="radio"], form.foldable.linear input[type="radio"] {
       margin-top: 0.45em; }
-      form.inline.foldable input[type="radio"] + label {
+      form.foldable.inline input[type="radio"] + label, form.foldable.linear input[type="radio"] + label {
         margin-top: 0.25em;
         margin-bottom: 0.25em;
-        display: inline-block; } }
+        display: inline-block; }
+  form.foldable.linear input.full,
+  form.foldable.linear select.full,
+  form.foldable.linear textarea.full {
+    width: 100%;
+    clear: both; }
+  form.foldable.linear button,
+  form.foldable.linear [type="submit"],
+  form.foldable.linear [type="reset"],
+  form.foldable.linear [type="button"],
+  form.foldable.linear .button {
+    width: 100%;
+    margin-top: 0.5em;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both; } }
 /* ===================================================== BUTTONS ===================================================== */
 a.button,
 label.button {
@@ -2566,7 +2631,7 @@ label.button {
   background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
   background-color: #F2F2F2;
   background-repeat: no-repeat;
-  background-position: scroll;
+  background-attachment: scroll;
   border: 1px #CCC solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -2679,7 +2744,7 @@ label.button {
       background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
       background-color: #F2F2F2;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #CCC;
       box-shadow: none; }
   a.button.red,
@@ -2691,7 +2756,7 @@ label.button {
     background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
     background-color: #f92828;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #d40b0b; }
     a.button.red:focus, a.button.red:hover, a.button.red:active,
     label.button.red:focus,
@@ -2707,7 +2772,7 @@ label.button {
       background: linear-gradient(to bottom, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background-color: #fa4141;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     a.button.red:active,
     label.button.red:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
@@ -2723,7 +2788,7 @@ label.button {
       background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
       background-color: #f92828;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #d40b0b;
       box-shadow: none; }
   a.button.green,
@@ -2735,7 +2800,7 @@ label.button {
     background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background-color: #73bd76;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #529b55; }
     a.button.green:focus, a.button.green:hover, a.button.green:active,
     label.button.green:focus,
@@ -2751,7 +2816,7 @@ label.button {
       background: linear-gradient(to bottom, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background-color: #84c587;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     a.button.green:active,
     label.button.green:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
@@ -2767,7 +2832,7 @@ label.button {
       background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background-color: #73bd76;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #529b55;
       box-shadow: none; }
   a.button.blue,
@@ -2779,7 +2844,7 @@ label.button {
     background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background-color: #539ce5;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #267bcf; }
     a.button.blue:focus, a.button.blue:hover, a.button.blue:active,
     label.button.blue:focus,
@@ -2795,7 +2860,7 @@ label.button {
       background: linear-gradient(to bottom, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
       background-color: #69a9e8;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     a.button.blue:active,
     label.button.blue:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
@@ -2811,7 +2876,7 @@ label.button {
       background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
       background-color: #539ce5;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #267bcf;
       box-shadow: none; }
   a.button.black,
@@ -2823,7 +2888,7 @@ label.button {
     background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
     background-color: #474747;
     background-repeat: no-repeat;
-    background-position: scroll;
+    background-attachment: scroll;
     border-color: #262626; }
     a.button.black:focus, a.button.black:hover, a.button.black:active,
     label.button.black:focus,
@@ -2839,7 +2904,7 @@ label.button {
       background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
       background-color: #545454;
       background-repeat: no-repeat;
-      background-position: scroll; }
+      background-attachment: scroll; }
     a.button.black:active,
     label.button.black:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
@@ -2855,7 +2920,7 @@ label.button {
       background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
       background-color: #474747;
       background-repeat: no-repeat;
-      background-position: scroll;
+      background-attachment: scroll;
       border-color: #262626;
       box-shadow: none; }
 
@@ -3292,7 +3357,7 @@ thead {
   background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background-color: #EEE;
   background-repeat: no-repeat;
-  background-position: scroll; }
+  background-attachment: scroll; }
   thead p,
   thead ul,
   thead ol,
@@ -3622,8 +3687,6 @@ hr {
   line-height: 1.25em;
   background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
   background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-  background-image: -ms-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-  background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
   background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
   background-color: #CCC;
   border: none; }
@@ -3732,8 +3795,8 @@ p.error, p.warning, p.notice, p.success {
   border-color: #D32F2F; }
 
 .warning {
-  background-color: #FFECB3;
-  border-color: #FFA000; }
+  background-color: #FFF9C4;
+  border-color: #FBC02D; }
 
 .success {
   background-color: #DCEDC8;
@@ -3749,8 +3812,10 @@ p.error, p.warning, p.notice, p.success {
   display: inline-block;
   color: #FFF;
   font-weight: 700;
-  line-height: 1.618em;
-  vertical-align: baseline;
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  vertical-align: top;
   background-color: #CCC;
   border-radius: 3px; }
   .tag.caps {
@@ -3798,7 +3863,7 @@ form.inline label + .mce-tinymce {
   margin: 0.2em 0;
   float: right; }
 
-@media screen and (max-width: 658px) {
+@media (max-width: 658px) {
   form.inline.foldable label + .mce-tinymce {
     width: auto;
     float: none;

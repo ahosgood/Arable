@@ -14,8 +14,8 @@ hr {
 	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, #CCC),  color-stop(0.75, #CCC), color-stop(1, #FFF));
 	background-image: -webkit-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
 	background-image: -moz-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
-	background-image: -ms-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
-	background-image: -o-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	//background-image: -ms-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	//background-image: -o-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
 	background-image: linear-gradient(to right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
 	background-color: $borderGrey;
 
@@ -185,8 +185,10 @@ p {
 
 	color: #FFF;
 	font-weight: 700;
-	@include basefontlineheight;
-	vertical-align: baseline;
+	font-size: 11px;
+	font-size: 1.1rem;
+	line-height: 1.5em;
+	vertical-align: top;
 
 	background-color: $tagStandard;
 

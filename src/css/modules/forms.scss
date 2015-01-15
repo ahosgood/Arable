@@ -350,12 +350,6 @@ form.block {
 			color: #999;
 		}
 
-		&.full {
-			width: 100%;
-
-			clear: both;
-		}
-
 		&.large {
 			font-size: 2.1em;
 		}
@@ -502,6 +496,16 @@ form.block {
 }
 
 form.inline {
+	input,
+	select,
+	textarea {
+		&.full {
+			width: 100%;
+
+			clear: both;
+		}
+	}
+
 	.label {
 		width: 75%;
 	}
@@ -624,8 +628,41 @@ form.linear {
 	}
 }
 
-@media screen and (max-width: $intTabletSmall - 1) {
-	form.inline.foldable {
-		@include blockform();
+@media (max-width: $intTabletSmall - 1) {
+	form.foldable {
+		&.inline,
+		&.linear {
+			@include blockform();
+		}
+
+		&.linear {
+			input,
+			select,
+			textarea {
+				&.full {
+					width: 100%;
+
+					clear: both;
+				}
+			}
+
+			button,
+			[type="submit"],
+			[type="reset"],
+			[type="button"],
+			.button {
+				width: 100%;
+				margin-top: 0.5em;
+				margin-right: 0 !important;
+				margin-left: 0 !important;
+
+				display: block;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+				clear: both;
+			}
+		}
 	}
 }

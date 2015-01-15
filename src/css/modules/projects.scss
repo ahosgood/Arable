@@ -28,36 +28,24 @@
 	}
 }
 
-form.block {
-	label {
-		+ .mce-tinymce {
-			clear: both;
-		}
-	}
+form.block label + .mce-tinymce {
+	clear: both;
 }
 
-form.inline {
-	label {
-		+ .mce-tinymce {
-			width: 75%;
-			margin: 0.2em 0;
+form.inline label + .mce-tinymce {
+	width: 75%;
+	margin: 0.2em 0;
 
-			float: right;
-		}
-	}
+	float: right;
 }
 
-@media screen and (max-width: $intTabletSmall - 1) {
-	form.inline.foldable {
-		label {
-			+ .mce-tinymce {
-				width: auto;
+@media (max-width: $intTabletSmall - 1) {
+	form.inline.foldable label + .mce-tinymce {
+		width: auto;
 
-				float: none;
+		float: none;
 
-				clear: both;
-			}
-		}
+		clear: both;
 	}
 }
 

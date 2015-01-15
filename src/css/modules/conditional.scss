@@ -18,7 +18,7 @@ $intDesktop: 1025px;
 }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
-@media screen and (max-width: $intMobileLarge - 1) {
+@media (max-width: $intMobileLarge - 1) {
 	.noshow-on-mobile-p {
 		display: none;
 	}
@@ -29,7 +29,7 @@ $intDesktop: 1025px;
 }
 
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media screen and (min-width: $intMobileLarge) and (max-width: $intTabletSmall - 1) {
+@media (min-width: $intMobileLarge) and (max-width: $intTabletSmall - 1) {
 	.noshow-on-mobile-l {
 		display: none;
 	}
@@ -40,7 +40,7 @@ $intDesktop: 1025px;
 }
 
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media screen and (max-width: $intTabletSmall - 1) {
+@media (max-width: $intTabletSmall - 1) {
 	.noshow-on-mobile {
 		display: none;
 	}
@@ -48,16 +48,10 @@ $intDesktop: 1025px;
 	.show-on-mobile {
 		display: block;
 	}
-
-	html {
-		&.grow-device {
-			font-size: 12px;
-		}
-	}
 }
 
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
-@media screen and (min-width: $intTabletSmall) and (max-width: $intTabletLarge - 1) {
+@media (min-width: $intTabletSmall) and (max-width: $intTabletLarge - 1) {
 	.noshow-on-tablet-p {
 		display: none;
 	}
@@ -68,7 +62,7 @@ $intDesktop: 1025px;
 }
 
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: $intTabletLarge) and (max-width: $intDesktop - 1) {
+@media (min-width: $intTabletLarge) and (max-width: $intDesktop - 1) {
 	.noshow-on-tablet-l {
 		display: none;
 	}
@@ -79,7 +73,7 @@ $intDesktop: 1025px;
 }
 
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media screen and (min-width: $intTabletSmall) and (max-width: $intDesktop - 1) {
+@media (min-width: $intTabletSmall) and (max-width: $intDesktop - 1) {
 	.noshow-on-tablet {
 		display: none;
 	}
@@ -87,16 +81,10 @@ $intDesktop: 1025px;
 	.show-on-tablet {
 		display: block;
 	}
-
-	html {
-		&.grow-device {
-			font-size: 11px;
-		}
-	}
 }
 
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
-@media screen and (min-width: $intDesktop) {
+@media (min-width: $intDesktop) {
 	.noshow-on-desktop {
 		display: none;
 	}
@@ -106,19 +94,39 @@ $intDesktop: 1025px;
 	}
 }
 
+/* ===================================================== GROWING TEXT ===================================================== */
+/* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
+@media (max-device-width: $intTabletSmall - 1) {
+	html {
+		&.grow-font {
+			font-size: 12px;
+		}
+	}
+}
+
+/* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
+@media (min-device-width: $intTabletSmall) and (max-device-width: $intDesktop - 1) {
+	html {
+		&.grow-font {
+			font-size: 11px;
+		}
+	}
+}
+
 /* ===================================================== CONDITIONAL VISIBILITY ===================================================== */
-.hidden {
+.hidden,
+.no-show {
 	display: none !important;
 }
 
 @media screen {
-	.hide-on-screen {
+	.no-show-on-screen {
 		display: none !important;
 	}
 }
 
 @media print {
-	.hide-on-print {
+	.no-show-on-print {
 		display: none !important;
 	}
 }
