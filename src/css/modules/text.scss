@@ -101,7 +101,7 @@ pre.code {
 
 	overflow: auto;
 
-	color: #333;
+	color: $baseTextColour;
 	white-space: pre;
 
 	background-color: $bgLightGrey;
@@ -135,7 +135,7 @@ pre.code {
 			left: 0;
 
 			//color: #FFF;
-			color: if(lightness($borderGrey) > 50, #111, #FFF);
+			color: blackorwhite($borderGrey);
 			@include basefontface;
 			font-weight: 700;
 			line-height: 1.5em;

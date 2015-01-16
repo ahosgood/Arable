@@ -62,10 +62,17 @@ $tagBlack: #212121;
 $tagGrey: #757575;
 
 $bgLightGrey: #F5F5F5;
+//$borderGrey: #BDBDBD;
 $borderGrey: #CCC;
 $highlight: #FFF59D;
 $highlightTable: #FFF9C4;
 $hoverTable: #E3F2FD;
+
+// ----------------------------------------------------- BREAKPOINTS -----------------------------------------------------
+$intMobileLarge: 481px;
+$intTabletSmall: 659px;
+$intTabletLarge: 769px;
+$intDesktop: 1025px;
 
 // ===================================================== RESOURCES =====================================================
 @import "resources/functions";
