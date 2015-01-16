@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
@@ -3815,27 +3816,47 @@ p.error, p.warning, p.notice, p.success {
   font-size: 11px;
   font-size: 1.1rem;
   line-height: 1.5em;
-  vertical-align: top;
-  background-color: #CCC;
+  vertical-align: text-top;
+  background-color: #B0BEC5;
   border-radius: 3px; }
   .tag.caps {
-    text-transform: uppercase; }
+    text-transform: uppercase !important; }
+  .tag.large {
+    font-size: 13px;
+    font-size: 1.3rem; }
+  .tag.huge {
+    font-size: 16px;
+    font-size: 1.6rem; }
   .tag.red {
     background-color: #E53935; }
   .tag.orange {
     background-color: #FB8C00; }
+  .tag.amber {
+    background-color: #FFB300; }
   .tag.yellow {
     background-color: #FDD835; }
+  .tag.lime {
+    background-color: #C0CA33; }
   .tag.green {
     background-color: #7CB342; }
+  .tag.teal {
+    background-color: #00897B; }
+  .tag.cyan {
+    background-color: #00ACC1; }
   .tag.blue {
     background-color: #1E88E5; }
+  .tag.indigo {
+    background-color: #3949AB; }
   .tag.purple {
     background-color: #5E35B1; }
-  .tag.grey {
-    background-color: #546E7A; }
+  .tag.pink {
+    background-color: #D81B60; }
+  .tag.brown {
+    background-color: #6D4C41; }
   .tag.black {
     background-color: #212121; }
+  .tag.grey {
+    background-color: #757575; }
 
 /* ===================================================== RUMMAGE ===================================================== */
 .rummage-searching tr {

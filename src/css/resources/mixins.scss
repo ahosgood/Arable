@@ -223,7 +223,7 @@
 }
 
 @mixin button-grad($base) {
-	color: if(lightness($base) > 50, #111, #FFF);
+	color: blackorwhite($base);
 	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
 
 	@include grad(desaturate(lighten($base, 15%), 5%), $base);

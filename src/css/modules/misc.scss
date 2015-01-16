@@ -188,14 +188,24 @@ p {
 	font-size: 11px;
 	font-size: 1.1rem;
 	line-height: 1.5em;
-	vertical-align: top;
+	vertical-align: text-top;
 
 	background-color: $tagStandard;
 
 	border-radius: 3px;
 
 	&.caps {
-		text-transform: uppercase;
+		text-transform: uppercase !important;
+	}
+
+	&.large {
+		font-size: 13px;
+		font-size: 1.3rem;
+	}
+
+	&.huge {
+		font-size: 16px;
+		font-size: 1.6rem;
 	}
 
 	&.red {
@@ -206,27 +216,55 @@ p {
 		background-color: $tagOrange;
 	}
 
+	&.amber {
+		background-color: $tagAmber;
+	}
+
 	&.yellow {
 		background-color: $tagYellow;
+	}
+
+	&.lime {
+		background-color: $tagLime;
 	}
 
 	&.green {
 		background-color: $tagGreen;
 	}
 
+	&.teal {
+		background-color: $tagTeal;
+	}
+
+	&.cyan {
+		background-color: $tagCyan;
+	}
+
 	&.blue {
 		background-color: $tagBlue;
+	}
+
+	&.indigo {
+		background-color: $tagIndigo;
 	}
 
 	&.purple {
 		background-color: $tagPurple;
 	}
 
-	&.grey {
-		background-color: $tagGrey;
+	&.pink {
+		background-color: $tagPink;
+	}
+
+	&.brown {
+		background-color: $tagBrown;
 	}
 
 	&.black {
 		background-color: $tagBlack;
+	}
+
+	&.grey {
+		background-color: $tagGrey;
 	}
 }

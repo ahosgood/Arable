@@ -7,6 +7,10 @@
 	@return rgba(255, 255, 255, $opacity);
 }
 
+@function blackorwhite($colour) {
+	@return if(lightness($colour) > 50, $baseTextColour, #FFF);
+}
+
 @function exponent($base, $exponent) {
 	$value: $base;
 
