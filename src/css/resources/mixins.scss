@@ -300,34 +300,38 @@
 		margin-left: 0.2em;
 
 		display: inline-block;
+	}
 
-		~ input,
-		~ select,
-		~ textarea,
-		~ .label,
-		~ .twistupload-wrapper {
-			width: 100%;
-			margin-top: 0;
+	input,
+	select,
+	textarea,
+	.label,
+	.twistupload-wrapper {
+		width: 100%;
+		margin-top: 0;
 
-			float: none;
-			clear: both;
+		float: none;
+		clear: both;
 
-			&[class^="inline-"],
-			&[class*=" inline-"] {
-				float: left;
+		&[class^="inline-"],
+		&[class*=" inline-"] {
+			float: left;
 
-				+ [class^="inline-"],
-				+ [class*=" inline-"] {
-					margin-left: 1%;
+			+ [class^="inline-"],
+			+ [class*=" inline-"] {
+				margin-left: 1%;
 
-					clear: none;
-				}
+				clear: none;
 			}
+		}
+	}
 
-			@for $splitInput from 2 through 8 {
-				&.inline-#{$splitInput} {
-					width: ( 100% - ( $splitInput - 1 ) ) / $splitInput;
-				}
+	input,
+	select,
+	.label {
+		@for $splitInput from 2 through 8 {
+			&.inline-#{$splitInput} {
+				width: ( 100% - ( $splitInput - 1 ) ) / $splitInput;
 			}
 		}
 	}

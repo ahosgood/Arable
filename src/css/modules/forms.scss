@@ -361,8 +361,6 @@ form.block {
 	.label {
 		&[class^="inline-"],
 		&[class*=" inline-"] {
-			//display: inline-block;
-
 			float: left;
 
 			+ [class^="inline-"],
@@ -370,24 +368,16 @@ form.block {
 				margin-left: 1%;
 			}
 		}
+	}
 
+	input,
+	select,
+	.label {
 		@for $splitInput from 2 through 8 {
 			&.inline-#{$splitInput} {
 				width: ( 75% - ( $splitInput - 1 ) ) / $splitInput;
 			}
 		}
-
-		/*&.inline-small {
-			width: 150px;
-		}
-
-		&.inline-x-small {
-			width: 100px;
-		}
-
-		&.inline-xx-small {
-			width: 50px;
-		}*/
 	}
 
 	button,

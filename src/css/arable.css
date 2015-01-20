@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
@@ -1981,136 +1980,103 @@ form.block {
     form.block select.large,
     form.block textarea.large {
       font-size: 2.1em; }
-  form.inline input,
-  form.inline select,
-  form.inline textarea,
-  form.inline .label,
-  form.block input,
-  form.block select,
-  form.block textarea,
-  form.block .label {
-    		/*&.inline-small {
-    			width: 150px;
-    		}
-    
-    		&.inline-x-small {
-    			width: 100px;
-    		}
-    
-    		&.inline-xx-small {
-    			width: 50px;
-    		}*/ }
-    form.inline input[class^="inline-"], form.inline input[class*=" inline-"],
-    form.inline select[class^="inline-"],
-    form.inline select[class*=" inline-"],
-    form.inline textarea[class^="inline-"],
-    form.inline textarea[class*=" inline-"],
-    form.inline .label[class^="inline-"],
-    form.inline .label[class*=" inline-"],
-    form.block input[class^="inline-"],
-    form.block input[class*=" inline-"],
-    form.block select[class^="inline-"],
-    form.block select[class*=" inline-"],
-    form.block textarea[class^="inline-"],
-    form.block textarea[class*=" inline-"],
-    form.block .label[class^="inline-"],
-    form.block .label[class*=" inline-"] {
-      float: left; }
-      form.inline input[class^="inline-"] + [class^="inline-"],
-      form.inline input[class^="inline-"] + [class*=" inline-"], form.inline input[class*=" inline-"] + [class^="inline-"],
-      form.inline input[class*=" inline-"] + [class*=" inline-"],
-      form.inline select[class^="inline-"] + [class^="inline-"],
-      form.inline select[class^="inline-"] + [class*=" inline-"],
-      form.inline select[class*=" inline-"] + [class^="inline-"],
-      form.inline select[class*=" inline-"] + [class*=" inline-"],
-      form.inline textarea[class^="inline-"] + [class^="inline-"],
-      form.inline textarea[class^="inline-"] + [class*=" inline-"],
-      form.inline textarea[class*=" inline-"] + [class^="inline-"],
-      form.inline textarea[class*=" inline-"] + [class*=" inline-"],
-      form.inline .label[class^="inline-"] + [class^="inline-"],
-      form.inline .label[class^="inline-"] + [class*=" inline-"],
-      form.inline .label[class*=" inline-"] + [class^="inline-"],
-      form.inline .label[class*=" inline-"] + [class*=" inline-"],
-      form.block input[class^="inline-"] + [class^="inline-"],
-      form.block input[class^="inline-"] + [class*=" inline-"],
-      form.block input[class*=" inline-"] + [class^="inline-"],
-      form.block input[class*=" inline-"] + [class*=" inline-"],
-      form.block select[class^="inline-"] + [class^="inline-"],
-      form.block select[class^="inline-"] + [class*=" inline-"],
-      form.block select[class*=" inline-"] + [class^="inline-"],
-      form.block select[class*=" inline-"] + [class*=" inline-"],
-      form.block textarea[class^="inline-"] + [class^="inline-"],
-      form.block textarea[class^="inline-"] + [class*=" inline-"],
-      form.block textarea[class*=" inline-"] + [class^="inline-"],
-      form.block textarea[class*=" inline-"] + [class*=" inline-"],
-      form.block .label[class^="inline-"] + [class^="inline-"],
-      form.block .label[class^="inline-"] + [class*=" inline-"],
-      form.block .label[class*=" inline-"] + [class^="inline-"],
-      form.block .label[class*=" inline-"] + [class*=" inline-"] {
-        margin-left: 1%; }
-    form.inline input.inline-2,
-    form.inline select.inline-2,
-    form.inline textarea.inline-2,
-    form.inline .label.inline-2,
-    form.block input.inline-2,
-    form.block select.inline-2,
-    form.block textarea.inline-2,
-    form.block .label.inline-2 {
-      width: 37%; }
-    form.inline input.inline-3,
-    form.inline select.inline-3,
-    form.inline textarea.inline-3,
-    form.inline .label.inline-3,
-    form.block input.inline-3,
-    form.block select.inline-3,
-    form.block textarea.inline-3,
-    form.block .label.inline-3 {
-      width: 24.33333%; }
-    form.inline input.inline-4,
-    form.inline select.inline-4,
-    form.inline textarea.inline-4,
-    form.inline .label.inline-4,
-    form.block input.inline-4,
-    form.block select.inline-4,
-    form.block textarea.inline-4,
-    form.block .label.inline-4 {
-      width: 18%; }
-    form.inline input.inline-5,
-    form.inline select.inline-5,
-    form.inline textarea.inline-5,
-    form.inline .label.inline-5,
-    form.block input.inline-5,
-    form.block select.inline-5,
-    form.block textarea.inline-5,
-    form.block .label.inline-5 {
-      width: 14.2%; }
-    form.inline input.inline-6,
-    form.inline select.inline-6,
-    form.inline textarea.inline-6,
-    form.inline .label.inline-6,
-    form.block input.inline-6,
-    form.block select.inline-6,
-    form.block textarea.inline-6,
-    form.block .label.inline-6 {
-      width: 11.66667%; }
-    form.inline input.inline-7,
-    form.inline select.inline-7,
-    form.inline textarea.inline-7,
-    form.inline .label.inline-7,
-    form.block input.inline-7,
-    form.block select.inline-7,
-    form.block textarea.inline-7,
-    form.block .label.inline-7 {
-      width: 9.85714%; }
-    form.inline input.inline-8,
-    form.inline select.inline-8,
-    form.inline textarea.inline-8,
-    form.inline .label.inline-8,
-    form.block input.inline-8,
-    form.block select.inline-8,
-    form.block textarea.inline-8,
-    form.block .label.inline-8 {
-      width: 8.5%; }
+  form.inline input[class^="inline-"], form.inline input[class*=" inline-"],
+  form.inline select[class^="inline-"],
+  form.inline select[class*=" inline-"],
+  form.inline textarea[class^="inline-"],
+  form.inline textarea[class*=" inline-"],
+  form.inline .label[class^="inline-"],
+  form.inline .label[class*=" inline-"],
+  form.block input[class^="inline-"],
+  form.block input[class*=" inline-"],
+  form.block select[class^="inline-"],
+  form.block select[class*=" inline-"],
+  form.block textarea[class^="inline-"],
+  form.block textarea[class*=" inline-"],
+  form.block .label[class^="inline-"],
+  form.block .label[class*=" inline-"] {
+    float: left; }
+    form.inline input[class^="inline-"] + [class^="inline-"],
+    form.inline input[class^="inline-"] + [class*=" inline-"], form.inline input[class*=" inline-"] + [class^="inline-"],
+    form.inline input[class*=" inline-"] + [class*=" inline-"],
+    form.inline select[class^="inline-"] + [class^="inline-"],
+    form.inline select[class^="inline-"] + [class*=" inline-"],
+    form.inline select[class*=" inline-"] + [class^="inline-"],
+    form.inline select[class*=" inline-"] + [class*=" inline-"],
+    form.inline textarea[class^="inline-"] + [class^="inline-"],
+    form.inline textarea[class^="inline-"] + [class*=" inline-"],
+    form.inline textarea[class*=" inline-"] + [class^="inline-"],
+    form.inline textarea[class*=" inline-"] + [class*=" inline-"],
+    form.inline .label[class^="inline-"] + [class^="inline-"],
+    form.inline .label[class^="inline-"] + [class*=" inline-"],
+    form.inline .label[class*=" inline-"] + [class^="inline-"],
+    form.inline .label[class*=" inline-"] + [class*=" inline-"],
+    form.block input[class^="inline-"] + [class^="inline-"],
+    form.block input[class^="inline-"] + [class*=" inline-"],
+    form.block input[class*=" inline-"] + [class^="inline-"],
+    form.block input[class*=" inline-"] + [class*=" inline-"],
+    form.block select[class^="inline-"] + [class^="inline-"],
+    form.block select[class^="inline-"] + [class*=" inline-"],
+    form.block select[class*=" inline-"] + [class^="inline-"],
+    form.block select[class*=" inline-"] + [class*=" inline-"],
+    form.block textarea[class^="inline-"] + [class^="inline-"],
+    form.block textarea[class^="inline-"] + [class*=" inline-"],
+    form.block textarea[class*=" inline-"] + [class^="inline-"],
+    form.block textarea[class*=" inline-"] + [class*=" inline-"],
+    form.block .label[class^="inline-"] + [class^="inline-"],
+    form.block .label[class^="inline-"] + [class*=" inline-"],
+    form.block .label[class*=" inline-"] + [class^="inline-"],
+    form.block .label[class*=" inline-"] + [class*=" inline-"] {
+      margin-left: 1%; }
+  form.inline input.inline-2,
+  form.inline select.inline-2,
+  form.inline .label.inline-2,
+  form.block input.inline-2,
+  form.block select.inline-2,
+  form.block .label.inline-2 {
+    width: 37%; }
+  form.inline input.inline-3,
+  form.inline select.inline-3,
+  form.inline .label.inline-3,
+  form.block input.inline-3,
+  form.block select.inline-3,
+  form.block .label.inline-3 {
+    width: 24.33333%; }
+  form.inline input.inline-4,
+  form.inline select.inline-4,
+  form.inline .label.inline-4,
+  form.block input.inline-4,
+  form.block select.inline-4,
+  form.block .label.inline-4 {
+    width: 18%; }
+  form.inline input.inline-5,
+  form.inline select.inline-5,
+  form.inline .label.inline-5,
+  form.block input.inline-5,
+  form.block select.inline-5,
+  form.block .label.inline-5 {
+    width: 14.2%; }
+  form.inline input.inline-6,
+  form.inline select.inline-6,
+  form.inline .label.inline-6,
+  form.block input.inline-6,
+  form.block select.inline-6,
+  form.block .label.inline-6 {
+    width: 11.66667%; }
+  form.inline input.inline-7,
+  form.inline select.inline-7,
+  form.inline .label.inline-7,
+  form.block input.inline-7,
+  form.block select.inline-7,
+  form.block .label.inline-7 {
+    width: 9.85714%; }
+  form.inline input.inline-8,
+  form.inline select.inline-8,
+  form.inline .label.inline-8,
+  form.block input.inline-8,
+  form.block select.inline-8,
+  form.block .label.inline-8 {
+    width: 8.5%; }
   form.inline button,
   form.inline [type="submit"],
   form.inline [type="reset"],
@@ -2270,88 +2236,74 @@ form.block {
     margin-bottom: 0.2em;
     margin-left: 0.2em;
     display: inline-block; }
-    form.block label ~ input,
-    form.block label ~ select,
-    form.block label ~ textarea,
-    form.block label ~ .label,
-    form.block label ~ .twistupload-wrapper {
-      width: 100%;
-      margin-top: 0;
-      float: none;
-      clear: both; }
-      form.block label ~ input[class^="inline-"], form.block label ~ input[class*=" inline-"],
-      form.block label ~ select[class^="inline-"],
-      form.block label ~ select[class*=" inline-"],
-      form.block label ~ textarea[class^="inline-"],
-      form.block label ~ textarea[class*=" inline-"],
-      form.block label ~ .label[class^="inline-"],
-      form.block label ~ .label[class*=" inline-"],
-      form.block label ~ .twistupload-wrapper[class^="inline-"],
-      form.block label ~ .twistupload-wrapper[class*=" inline-"] {
-        float: left; }
-        form.block label ~ input[class^="inline-"] + [class^="inline-"],
-        form.block label ~ input[class^="inline-"] + [class*=" inline-"], form.block label ~ input[class*=" inline-"] + [class^="inline-"],
-        form.block label ~ input[class*=" inline-"] + [class*=" inline-"],
-        form.block label ~ select[class^="inline-"] + [class^="inline-"],
-        form.block label ~ select[class^="inline-"] + [class*=" inline-"],
-        form.block label ~ select[class*=" inline-"] + [class^="inline-"],
-        form.block label ~ select[class*=" inline-"] + [class*=" inline-"],
-        form.block label ~ textarea[class^="inline-"] + [class^="inline-"],
-        form.block label ~ textarea[class^="inline-"] + [class*=" inline-"],
-        form.block label ~ textarea[class*=" inline-"] + [class^="inline-"],
-        form.block label ~ textarea[class*=" inline-"] + [class*=" inline-"],
-        form.block label ~ .label[class^="inline-"] + [class^="inline-"],
-        form.block label ~ .label[class^="inline-"] + [class*=" inline-"],
-        form.block label ~ .label[class*=" inline-"] + [class^="inline-"],
-        form.block label ~ .label[class*=" inline-"] + [class*=" inline-"],
-        form.block label ~ .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
-        form.block label ~ .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
-        form.block label ~ .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
-        form.block label ~ .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"] {
-          margin-left: 1%;
-          clear: none; }
-      form.block label ~ input.inline-2,
-      form.block label ~ select.inline-2,
-      form.block label ~ textarea.inline-2,
-      form.block label ~ .label.inline-2,
-      form.block label ~ .twistupload-wrapper.inline-2 {
-        width: 49.5%; }
-      form.block label ~ input.inline-3,
-      form.block label ~ select.inline-3,
-      form.block label ~ textarea.inline-3,
-      form.block label ~ .label.inline-3,
-      form.block label ~ .twistupload-wrapper.inline-3 {
-        width: 32.66667%; }
-      form.block label ~ input.inline-4,
-      form.block label ~ select.inline-4,
-      form.block label ~ textarea.inline-4,
-      form.block label ~ .label.inline-4,
-      form.block label ~ .twistupload-wrapper.inline-4 {
-        width: 24.25%; }
-      form.block label ~ input.inline-5,
-      form.block label ~ select.inline-5,
-      form.block label ~ textarea.inline-5,
-      form.block label ~ .label.inline-5,
-      form.block label ~ .twistupload-wrapper.inline-5 {
-        width: 19.2%; }
-      form.block label ~ input.inline-6,
-      form.block label ~ select.inline-6,
-      form.block label ~ textarea.inline-6,
-      form.block label ~ .label.inline-6,
-      form.block label ~ .twistupload-wrapper.inline-6 {
-        width: 15.83333%; }
-      form.block label ~ input.inline-7,
-      form.block label ~ select.inline-7,
-      form.block label ~ textarea.inline-7,
-      form.block label ~ .label.inline-7,
-      form.block label ~ .twistupload-wrapper.inline-7 {
-        width: 13.42857%; }
-      form.block label ~ input.inline-8,
-      form.block label ~ select.inline-8,
-      form.block label ~ textarea.inline-8,
-      form.block label ~ .label.inline-8,
-      form.block label ~ .twistupload-wrapper.inline-8 {
-        width: 11.625%; }
+  form.block input,
+  form.block select,
+  form.block textarea,
+  form.block .label,
+  form.block .twistupload-wrapper {
+    width: 100%;
+    margin-top: 0;
+    float: none;
+    clear: both; }
+    form.block input[class^="inline-"], form.block input[class*=" inline-"],
+    form.block select[class^="inline-"],
+    form.block select[class*=" inline-"],
+    form.block textarea[class^="inline-"],
+    form.block textarea[class*=" inline-"],
+    form.block .label[class^="inline-"],
+    form.block .label[class*=" inline-"],
+    form.block .twistupload-wrapper[class^="inline-"],
+    form.block .twistupload-wrapper[class*=" inline-"] {
+      float: left; }
+      form.block input[class^="inline-"] + [class^="inline-"],
+      form.block input[class^="inline-"] + [class*=" inline-"], form.block input[class*=" inline-"] + [class^="inline-"],
+      form.block input[class*=" inline-"] + [class*=" inline-"],
+      form.block select[class^="inline-"] + [class^="inline-"],
+      form.block select[class^="inline-"] + [class*=" inline-"],
+      form.block select[class*=" inline-"] + [class^="inline-"],
+      form.block select[class*=" inline-"] + [class*=" inline-"],
+      form.block textarea[class^="inline-"] + [class^="inline-"],
+      form.block textarea[class^="inline-"] + [class*=" inline-"],
+      form.block textarea[class*=" inline-"] + [class^="inline-"],
+      form.block textarea[class*=" inline-"] + [class*=" inline-"],
+      form.block .label[class^="inline-"] + [class^="inline-"],
+      form.block .label[class^="inline-"] + [class*=" inline-"],
+      form.block .label[class*=" inline-"] + [class^="inline-"],
+      form.block .label[class*=" inline-"] + [class*=" inline-"],
+      form.block .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
+      form.block .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
+      form.block .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
+      form.block .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"] {
+        margin-left: 1%;
+        clear: none; }
+  form.block input.inline-2,
+  form.block select.inline-2,
+  form.block .label.inline-2 {
+    width: 49.5%; }
+  form.block input.inline-3,
+  form.block select.inline-3,
+  form.block .label.inline-3 {
+    width: 32.66667%; }
+  form.block input.inline-4,
+  form.block select.inline-4,
+  form.block .label.inline-4 {
+    width: 24.25%; }
+  form.block input.inline-5,
+  form.block select.inline-5,
+  form.block .label.inline-5 {
+    width: 19.2%; }
+  form.block input.inline-6,
+  form.block select.inline-6,
+  form.block .label.inline-6 {
+    width: 15.83333%; }
+  form.block input.inline-7,
+  form.block select.inline-7,
+  form.block .label.inline-7 {
+    width: 13.42857%; }
+  form.block input.inline-8,
+  form.block select.inline-8,
+  form.block .label.inline-8 {
+    width: 11.625%; }
   form.block .label {
     margin-bottom: 0.2em; }
   form.block input[type="checkbox"],
@@ -2476,146 +2428,118 @@ form.linear {
       margin-bottom: 0.2em;
       margin-left: 0.2em;
       display: inline-block; }
-      form.foldable.inline label ~ input,
-      form.foldable.inline label ~ select,
-      form.foldable.inline label ~ textarea,
-      form.foldable.inline label ~ .label,
-      form.foldable.inline label ~ .twistupload-wrapper, form.foldable.linear label ~ input,
-      form.foldable.linear label ~ select,
-      form.foldable.linear label ~ textarea,
-      form.foldable.linear label ~ .label,
-      form.foldable.linear label ~ .twistupload-wrapper {
-        width: 100%;
-        margin-top: 0;
-        float: none;
-        clear: both; }
-        form.foldable.inline label ~ input[class^="inline-"], form.foldable.inline label ~ input[class*=" inline-"],
-        form.foldable.inline label ~ select[class^="inline-"],
-        form.foldable.inline label ~ select[class*=" inline-"],
-        form.foldable.inline label ~ textarea[class^="inline-"],
-        form.foldable.inline label ~ textarea[class*=" inline-"],
-        form.foldable.inline label ~ .label[class^="inline-"],
-        form.foldable.inline label ~ .label[class*=" inline-"],
-        form.foldable.inline label ~ .twistupload-wrapper[class^="inline-"],
-        form.foldable.inline label ~ .twistupload-wrapper[class*=" inline-"], form.foldable.linear label ~ input[class^="inline-"], form.foldable.linear label ~ input[class*=" inline-"],
-        form.foldable.linear label ~ select[class^="inline-"],
-        form.foldable.linear label ~ select[class*=" inline-"],
-        form.foldable.linear label ~ textarea[class^="inline-"],
-        form.foldable.linear label ~ textarea[class*=" inline-"],
-        form.foldable.linear label ~ .label[class^="inline-"],
-        form.foldable.linear label ~ .label[class*=" inline-"],
-        form.foldable.linear label ~ .twistupload-wrapper[class^="inline-"],
-        form.foldable.linear label ~ .twistupload-wrapper[class*=" inline-"] {
-          float: left; }
-          form.foldable.inline label ~ input[class^="inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ input[class^="inline-"] + [class*=" inline-"], form.foldable.inline label ~ input[class*=" inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ input[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ select[class^="inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ select[class^="inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ select[class*=" inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ select[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ textarea[class^="inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ textarea[class^="inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ textarea[class*=" inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ textarea[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ .label[class^="inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ .label[class^="inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ .label[class*=" inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ .label[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
-          form.foldable.inline label ~ .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
-          form.foldable.inline label ~ .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"], form.foldable.linear label ~ input[class^="inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ input[class^="inline-"] + [class*=" inline-"], form.foldable.linear label ~ input[class*=" inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ input[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ select[class^="inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ select[class^="inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ select[class*=" inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ select[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ textarea[class^="inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ textarea[class^="inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ textarea[class*=" inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ textarea[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ .label[class^="inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ .label[class^="inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ .label[class*=" inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ .label[class*=" inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
-          form.foldable.linear label ~ .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
-          form.foldable.linear label ~ .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"] {
-            margin-left: 1%;
-            clear: none; }
-        form.foldable.inline label ~ input.inline-2,
-        form.foldable.inline label ~ select.inline-2,
-        form.foldable.inline label ~ textarea.inline-2,
-        form.foldable.inline label ~ .label.inline-2,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-2, form.foldable.linear label ~ input.inline-2,
-        form.foldable.linear label ~ select.inline-2,
-        form.foldable.linear label ~ textarea.inline-2,
-        form.foldable.linear label ~ .label.inline-2,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-2 {
-          width: 49.5%; }
-        form.foldable.inline label ~ input.inline-3,
-        form.foldable.inline label ~ select.inline-3,
-        form.foldable.inline label ~ textarea.inline-3,
-        form.foldable.inline label ~ .label.inline-3,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-3, form.foldable.linear label ~ input.inline-3,
-        form.foldable.linear label ~ select.inline-3,
-        form.foldable.linear label ~ textarea.inline-3,
-        form.foldable.linear label ~ .label.inline-3,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-3 {
-          width: 32.66667%; }
-        form.foldable.inline label ~ input.inline-4,
-        form.foldable.inline label ~ select.inline-4,
-        form.foldable.inline label ~ textarea.inline-4,
-        form.foldable.inline label ~ .label.inline-4,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-4, form.foldable.linear label ~ input.inline-4,
-        form.foldable.linear label ~ select.inline-4,
-        form.foldable.linear label ~ textarea.inline-4,
-        form.foldable.linear label ~ .label.inline-4,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-4 {
-          width: 24.25%; }
-        form.foldable.inline label ~ input.inline-5,
-        form.foldable.inline label ~ select.inline-5,
-        form.foldable.inline label ~ textarea.inline-5,
-        form.foldable.inline label ~ .label.inline-5,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-5, form.foldable.linear label ~ input.inline-5,
-        form.foldable.linear label ~ select.inline-5,
-        form.foldable.linear label ~ textarea.inline-5,
-        form.foldable.linear label ~ .label.inline-5,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-5 {
-          width: 19.2%; }
-        form.foldable.inline label ~ input.inline-6,
-        form.foldable.inline label ~ select.inline-6,
-        form.foldable.inline label ~ textarea.inline-6,
-        form.foldable.inline label ~ .label.inline-6,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-6, form.foldable.linear label ~ input.inline-6,
-        form.foldable.linear label ~ select.inline-6,
-        form.foldable.linear label ~ textarea.inline-6,
-        form.foldable.linear label ~ .label.inline-6,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-6 {
-          width: 15.83333%; }
-        form.foldable.inline label ~ input.inline-7,
-        form.foldable.inline label ~ select.inline-7,
-        form.foldable.inline label ~ textarea.inline-7,
-        form.foldable.inline label ~ .label.inline-7,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-7, form.foldable.linear label ~ input.inline-7,
-        form.foldable.linear label ~ select.inline-7,
-        form.foldable.linear label ~ textarea.inline-7,
-        form.foldable.linear label ~ .label.inline-7,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-7 {
-          width: 13.42857%; }
-        form.foldable.inline label ~ input.inline-8,
-        form.foldable.inline label ~ select.inline-8,
-        form.foldable.inline label ~ textarea.inline-8,
-        form.foldable.inline label ~ .label.inline-8,
-        form.foldable.inline label ~ .twistupload-wrapper.inline-8, form.foldable.linear label ~ input.inline-8,
-        form.foldable.linear label ~ select.inline-8,
-        form.foldable.linear label ~ textarea.inline-8,
-        form.foldable.linear label ~ .label.inline-8,
-        form.foldable.linear label ~ .twistupload-wrapper.inline-8 {
-          width: 11.625%; }
+    form.foldable.inline input,
+    form.foldable.inline select,
+    form.foldable.inline textarea,
+    form.foldable.inline .label,
+    form.foldable.inline .twistupload-wrapper, form.foldable.linear input,
+    form.foldable.linear select,
+    form.foldable.linear textarea,
+    form.foldable.linear .label,
+    form.foldable.linear .twistupload-wrapper {
+      width: 100%;
+      margin-top: 0;
+      float: none;
+      clear: both; }
+      form.foldable.inline input[class^="inline-"], form.foldable.inline input[class*=" inline-"],
+      form.foldable.inline select[class^="inline-"],
+      form.foldable.inline select[class*=" inline-"],
+      form.foldable.inline textarea[class^="inline-"],
+      form.foldable.inline textarea[class*=" inline-"],
+      form.foldable.inline .label[class^="inline-"],
+      form.foldable.inline .label[class*=" inline-"],
+      form.foldable.inline .twistupload-wrapper[class^="inline-"],
+      form.foldable.inline .twistupload-wrapper[class*=" inline-"], form.foldable.linear input[class^="inline-"], form.foldable.linear input[class*=" inline-"],
+      form.foldable.linear select[class^="inline-"],
+      form.foldable.linear select[class*=" inline-"],
+      form.foldable.linear textarea[class^="inline-"],
+      form.foldable.linear textarea[class*=" inline-"],
+      form.foldable.linear .label[class^="inline-"],
+      form.foldable.linear .label[class*=" inline-"],
+      form.foldable.linear .twistupload-wrapper[class^="inline-"],
+      form.foldable.linear .twistupload-wrapper[class*=" inline-"] {
+        float: left; }
+        form.foldable.inline input[class^="inline-"] + [class^="inline-"],
+        form.foldable.inline input[class^="inline-"] + [class*=" inline-"], form.foldable.inline input[class*=" inline-"] + [class^="inline-"],
+        form.foldable.inline input[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.inline select[class^="inline-"] + [class^="inline-"],
+        form.foldable.inline select[class^="inline-"] + [class*=" inline-"],
+        form.foldable.inline select[class*=" inline-"] + [class^="inline-"],
+        form.foldable.inline select[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.inline textarea[class^="inline-"] + [class^="inline-"],
+        form.foldable.inline textarea[class^="inline-"] + [class*=" inline-"],
+        form.foldable.inline textarea[class*=" inline-"] + [class^="inline-"],
+        form.foldable.inline textarea[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.inline .label[class^="inline-"] + [class^="inline-"],
+        form.foldable.inline .label[class^="inline-"] + [class*=" inline-"],
+        form.foldable.inline .label[class*=" inline-"] + [class^="inline-"],
+        form.foldable.inline .label[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.inline .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
+        form.foldable.inline .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
+        form.foldable.inline .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
+        form.foldable.inline .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"], form.foldable.linear input[class^="inline-"] + [class^="inline-"],
+        form.foldable.linear input[class^="inline-"] + [class*=" inline-"], form.foldable.linear input[class*=" inline-"] + [class^="inline-"],
+        form.foldable.linear input[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.linear select[class^="inline-"] + [class^="inline-"],
+        form.foldable.linear select[class^="inline-"] + [class*=" inline-"],
+        form.foldable.linear select[class*=" inline-"] + [class^="inline-"],
+        form.foldable.linear select[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.linear textarea[class^="inline-"] + [class^="inline-"],
+        form.foldable.linear textarea[class^="inline-"] + [class*=" inline-"],
+        form.foldable.linear textarea[class*=" inline-"] + [class^="inline-"],
+        form.foldable.linear textarea[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.linear .label[class^="inline-"] + [class^="inline-"],
+        form.foldable.linear .label[class^="inline-"] + [class*=" inline-"],
+        form.foldable.linear .label[class*=" inline-"] + [class^="inline-"],
+        form.foldable.linear .label[class*=" inline-"] + [class*=" inline-"],
+        form.foldable.linear .twistupload-wrapper[class^="inline-"] + [class^="inline-"],
+        form.foldable.linear .twistupload-wrapper[class^="inline-"] + [class*=" inline-"],
+        form.foldable.linear .twistupload-wrapper[class*=" inline-"] + [class^="inline-"],
+        form.foldable.linear .twistupload-wrapper[class*=" inline-"] + [class*=" inline-"] {
+          margin-left: 1%;
+          clear: none; }
+    form.foldable.inline input.inline-2,
+    form.foldable.inline select.inline-2,
+    form.foldable.inline .label.inline-2, form.foldable.linear input.inline-2,
+    form.foldable.linear select.inline-2,
+    form.foldable.linear .label.inline-2 {
+      width: 49.5%; }
+    form.foldable.inline input.inline-3,
+    form.foldable.inline select.inline-3,
+    form.foldable.inline .label.inline-3, form.foldable.linear input.inline-3,
+    form.foldable.linear select.inline-3,
+    form.foldable.linear .label.inline-3 {
+      width: 32.66667%; }
+    form.foldable.inline input.inline-4,
+    form.foldable.inline select.inline-4,
+    form.foldable.inline .label.inline-4, form.foldable.linear input.inline-4,
+    form.foldable.linear select.inline-4,
+    form.foldable.linear .label.inline-4 {
+      width: 24.25%; }
+    form.foldable.inline input.inline-5,
+    form.foldable.inline select.inline-5,
+    form.foldable.inline .label.inline-5, form.foldable.linear input.inline-5,
+    form.foldable.linear select.inline-5,
+    form.foldable.linear .label.inline-5 {
+      width: 19.2%; }
+    form.foldable.inline input.inline-6,
+    form.foldable.inline select.inline-6,
+    form.foldable.inline .label.inline-6, form.foldable.linear input.inline-6,
+    form.foldable.linear select.inline-6,
+    form.foldable.linear .label.inline-6 {
+      width: 15.83333%; }
+    form.foldable.inline input.inline-7,
+    form.foldable.inline select.inline-7,
+    form.foldable.inline .label.inline-7, form.foldable.linear input.inline-7,
+    form.foldable.linear select.inline-7,
+    form.foldable.linear .label.inline-7 {
+      width: 13.42857%; }
+    form.foldable.inline input.inline-8,
+    form.foldable.inline select.inline-8,
+    form.foldable.inline .label.inline-8, form.foldable.linear input.inline-8,
+    form.foldable.linear select.inline-8,
+    form.foldable.linear .label.inline-8 {
+      width: 11.625%; }
     form.foldable.inline .label, form.foldable.linear .label {
       margin-bottom: 0.2em; }
     form.foldable.inline input[type="checkbox"],
