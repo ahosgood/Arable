@@ -3,12 +3,12 @@
 	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)) no-repeat scroll;
 	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
 	background: -moz-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: -ms-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	//background: -ms-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
+	//background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
 	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
 	background-color: $top;
 	background-repeat: no-repeat;
-	background-position: scroll;
+	background-attachment: scroll;
 }
 
 @mixin keyframes($name) {
@@ -20,13 +20,13 @@
 		@content;
 	}
 
-	@-ms-keyframes #{$name} {
+	/*@-ms-keyframes #{$name} {
 		@content;
 	}
 
 	@-o-keyframes #{$name} {
 		@content;
-	}
+	}*/
 
 	@keyframes #{$name} {
 		@content;
@@ -47,7 +47,7 @@
 }
 
 @mixin basefontcolour {
-	color: #222;
+	color: $baseTextColour;
 }
 
 @mixin basefontface {
@@ -60,6 +60,7 @@
 
 	display: inline-block;
 
+	@include basefontcolour;
 	@include basefontsize;
 	font-weight: 400;
 	text-align: center;
@@ -70,15 +71,15 @@
 
 	@include grad(#F2F2F2, #D8D8D8);
 
-	border: 1px #CCC solid;
+	border: 1px $borderGrey solid;
 	border-radius: 3px;
 
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	-o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	//-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	//-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
+	//-o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 
 	cursor: pointer;
@@ -90,22 +91,26 @@
 	&:focus,
 	&:hover,
 	&:active {
+		@include basefontcolour;
+
 		border-color: #AAA;
 
 		-webkit-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		//-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		//-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
+		//-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
 		transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
 	}
 
 	&:focus,
 	&:hover {
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		//box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	}
 
 	&:active {
-		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+		//box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25);
 	}
 
 	&.thin {
@@ -123,7 +128,7 @@
 		&:active {
 			@include grad(#F2F2F2, #D8D8D8);
 
-			border-color: #CCC;
+			border-color: $borderGrey;
 
 			box-shadow: none;
 		}
@@ -177,7 +182,7 @@
 		}
 	}*/
 
-	i.fa,
+	/*i.fa,
 	i[class^="fa-"],
 	i[class*=" fa-"] {
 		&::before {
@@ -214,11 +219,11 @@
 				padding-left: 0;
 			}
 		}
-	}
+	}*/
 }
 
 @mixin button-grad($base) {
-	color: if(lightness($base) > 50, #111, #FFF);
+	color: blackorwhite($base);
 	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
 
 	@include grad(desaturate(lighten($base, 15%), 5%), $base);
@@ -228,9 +233,12 @@
 	&:focus,
 	&:hover,
 	&:active {
+		color: if(lightness($base) > 50, #111, #FFF);
+
 		border-color: darken($base, 5%);
 	}
 
+	&:focus,
 	&:hover {
 		@include grad(desaturate(lighten($base, 20%), 5%), lighten($base, 2%));
 	}
@@ -238,8 +246,8 @@
 	&:active {
 		//@include grad(lighten($base, 5%), desaturate(lighten($base, 15%), 2%));
 
-		//box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
-		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+		//box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
 	}
 
 	&.disabled,
@@ -256,7 +264,7 @@
 	}
 }
 
-@mixin button-flat($base) {
+/*@mixin button-flat($base) {
 	color: if(lightness($base) > 50, #111, #FFF);
 
 	background: desaturate(lighten($base, 10%), 5%);
@@ -281,7 +289,7 @@
 			box-shadow: none;
 		}
 	}
-}
+}*/
 
 @mixin blockform {
 	text-align: left;
@@ -292,42 +300,44 @@
 		margin-left: 0.2em;
 
 		display: inline-block;
+	}
 
-		~ input,
-		~ select,
-		~ textarea {
-			width: 100%;
-			margin-top: 0;
+	input,
+	select,
+	textarea,
+	.label,
+	.twistupload-wrapper {
+		width: 100%;
+		margin-top: 0;
 
-			float: none;
-			clear: both;
+		float: none;
+		clear: both;
 
-			&[class^="inline-"] {
-				float: left;
+		&[class^="inline-"],
+		&[class*=" inline-"] {
+			float: left;
 
-				+ [class^="inline-"] {
-					margin-left: 1%;
+			+ [class^="inline-"],
+			+ [class*=" inline-"] {
+				margin-left: 1%;
 
-					clear: none;
-				}
-			}
-
-			&.inline-2 {
-				width: 49.5%;
-			}
-
-			&.inline-3 {
-				width: 32.66666%;
-			}
-
-			&.inline-4 {
-				width: 24.25%;
-			}
-
-			&.inline-5 {
-				width: 19.2%;
+				clear: none;
 			}
 		}
+	}
+
+	input,
+	select,
+	.label {
+		@for $splitInput from 2 through 8 {
+			&.inline-#{$splitInput} {
+				width: ( 100% - ( $splitInput - 1 ) ) / $splitInput;
+			}
+		}
+	}
+
+	.label {
+		margin-bottom: 0.2em;
 	}
 
 	input[type="checkbox"],
@@ -337,20 +347,20 @@
 		margin-left: 0.5em;
 
 		display: inline-block;
+
+		float: left;
 	}
 
 	input[type="checkbox"] {
 		margin-top: 0.65em;
 
-		float: left;
 		clear: none;
 	}
 
 	input[type="radio"] {
 		margin-top: 0.45em;
 
-		float: left;
-		clear: both;
+		//clear: both;
 
 		+ label {
 			margin-top: 0.25em;

@@ -12,12 +12,12 @@ hr {
 	line-height: 1.25em;
 
 	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, #CCC),  color-stop(0.75, #CCC), color-stop(1, #FFF));
-	background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -ms-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: -o-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-	background-color: #CCC;
+	background-image: -webkit-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: -moz-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	//background-image: -ms-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	//background-image: -o-linear-gradient(right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-image: linear-gradient(to right, #FFF 0%, $borderGrey 25%, $borderGrey 75%, #FFF 100%);
+	background-color: $borderGrey;
 
 	border: none;
 }
@@ -115,6 +115,10 @@ dl {
 	padding-bottom: 0 !important;
 }
 
+.no-wrap {
+	white-space: nowrap !important;
+}
+
 /* ===================================================== NOTICES ===================================================== */
 .error,
 .warning,
@@ -140,49 +144,127 @@ dl {
 	}
 }
 
-p.error,
-p.warning,
-p.notice,
-p.success {
-	padding: 0.25em 0.5em;
+p {
+	&.error,
+	&.warning,
+	&.notice,
+	&.success {
+		padding: 0.25em 0.5em;
+	}
 }
 
 .error {
-	background-color: rgba(204, 0, 0, 0.2);
+	background-color: $errorBackground;
 
-	border-color: #C00;
-
-	&.solid-bg {
-		background-color: #F4CBCB;
-	}
+	border-color: $errorBorder;
 }
 
 .warning {
-	background-color: rgba(255, 204, 0, 0.2);
+	background-color: $warningBackground;
 
-	border-color: #FC0;
-
-	&.solid-bg {
-		background-color: #FEF4CB;
-	}
-}
-
-.notice {
-	background-color: rgba(0, 102, 204, 0.2);
-
-	border-color: #06C;
-
-	&.solid-bg {
-		background-color: #CBDFF4;
-	}
+	border-color: $warningBorder;
 }
 
 .success {
-	background-color: rgba(0, 204, 0, 0.2);
+	background-color: $successBackground;
 
-	border-color: #0C0;
+	border-color: $successBorder;
+}
 
-	&.solid-bg {
-		background-color: #CBF4CB;
+.notice {
+	background-color: $noticeBackground;
+
+	border-color: $noticeBorder;
+}
+
+/* ===================================================== TAGS ===================================================== */
+.tag {
+	padding: 0 0.35em;
+
+	display: inline-block;
+
+	color: #FFF;
+	font-weight: 700;
+	font-size: 11px;
+	font-size: 1.1rem;
+	line-height: 1.5em;
+	vertical-align: text-top;
+
+	background-color: $tagStandard;
+
+	border-radius: 3px;
+
+	&.caps {
+		text-transform: uppercase !important;
+	}
+
+	&.large {
+		font-size: 13px;
+		font-size: 1.3rem;
+	}
+
+	&.huge {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	&.red {
+		background-color: $tagRed;
+	}
+
+	&.orange {
+		background-color: $tagOrange;
+	}
+
+	&.amber {
+		background-color: $tagAmber;
+	}
+
+	&.yellow {
+		background-color: $tagYellow;
+	}
+
+	&.lime {
+		background-color: $tagLime;
+	}
+
+	&.green {
+		background-color: $tagGreen;
+	}
+
+	&.teal {
+		background-color: $tagTeal;
+	}
+
+	&.cyan {
+		background-color: $tagCyan;
+	}
+
+	&.blue {
+		background-color: $tagBlue;
+	}
+
+	&.indigo {
+		background-color: $tagIndigo;
+	}
+
+	&.purple {
+		background-color: $tagPurple;
+	}
+
+	&.pink {
+		background-color: $tagPink;
+	}
+
+	&.brown {
+		background-color: $tagBrown;
+	}
+
+	&.black {
+		background-color: $tagBlack;
+	}
+
+	&.grey {
+		background-color: $tagGrey;
 	}
 }

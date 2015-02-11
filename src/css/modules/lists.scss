@@ -61,7 +61,7 @@ ol {
 	&.lined {
 		margin-bottom: 1.5em;
 
-		border-bottom: 1px #CCC solid;
+		border-bottom: 1px $borderGrey solid;
 
 		li {
 			margin-bottom: 0.35em;
@@ -69,7 +69,7 @@ ol {
 
 			text-indent: 0.5em;
 
-			border-top: 1px #CCC solid;
+			border-top: 1px $borderGrey solid;
 		}
 
 		ul,
@@ -77,7 +77,7 @@ ol {
 			margin-top: 0.35em;
 			padding-left: 1em;
 
-			border-top: 1px #CCC solid;
+			border-top: 1px $borderGrey solid;
 
 			> :first-child {
 				border-top: none;
@@ -99,7 +99,7 @@ ol {
 dl {
 	padding-bottom: 0.5em;
 
-	border-bottom: 1px #CCC solid;
+	border-bottom: 1px $borderGrey solid;
 
 	dl {
 		margin-bottom: 0;
@@ -128,7 +128,7 @@ dl {
 		margin-top: 0.5em;
 		padding-top: 0.5em;
 
-		border-top: 1px #CCC solid;
+		border-top: 1px $borderGrey solid;
 	}
 
 	dl dl dt,
@@ -237,7 +237,9 @@ ul.tabs {
 
 	white-space: nowrap;
 
-	background-color: inherit;
+	background-color: #FFF;
+
+	border-color: $borderGrey;
 
 	li {
 		margin: 0 0.25em;
@@ -251,8 +253,9 @@ ul.tabs {
 
 		background-color: inherit;
 
-		border: transparent solid;
 		border-width: 1px 1px 0;
+		border-color: transparent;
+		border-style: solid;
 		border-radius: 3px 3px 0 0;
 
 		z-index: 1;
@@ -262,10 +265,19 @@ ul.tabs {
 
 			display: block;
 
+			color: $baseTextColour;
 			font-weight: 400;
 			line-height: 1em;
 			white-space: nowrap;
 			text-decoration: none;
+
+			&:hover {
+				color: $baseLinkHoverColour;
+			}
+
+			&:active {
+				color: $baseLinkActiveColour;
+			}
 		}
 
 		&.primary {
@@ -277,9 +289,13 @@ ul.tabs {
 		&.current {
 			margin-top: 0;
 
-			border-color: #CCC;
+			border-color: inherit;
 
 			z-index: 3;
+
+			a {
+				color: $baseTextColour;
+			}
 
 			&::after {
 				height: 1px;
@@ -296,17 +312,17 @@ ul.tabs {
 		}
 
 		&.disabled {
-			color: #CCC;
-
 			a {
-				cursor: default;
+				color: #AAA;
+
+				cursor: text;
 			}
 		}
 	}
 
 	&.grad {
 		li {
-			border-color: #CCC;
+			border-color: inherit;
 
 			a {
 				box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15);
@@ -339,7 +355,7 @@ ul.tabs {
 		bottom: 0;
 		left: 0;
 
-		background-color: #CCC;
+		background-color: $borderGrey;
 
 		z-index: 2;
 
@@ -380,7 +396,7 @@ ul.tree {
 			bottom: 0.75em;
 			left: 0.75em;
 
-			border-left: 1px #CCC solid;
+			border-left: 1px $borderGrey solid;
 
 			content: "";
 
@@ -407,7 +423,7 @@ ul.tree {
 			top: 0.75em;
 			left: -1.25em;
 
-			border: #CCC solid;
+			border: $borderGrey solid;
 			border-width: 0 0 1px 1px;
 
 			content: "";
@@ -437,7 +453,7 @@ ul.tree {
 			bottom: 0.75em;
 			left: 0.5em;
 
-			border-left: 1px #CCC solid;
+			border-left: 1px $borderGrey solid;
 
 			content: "";
 
@@ -472,7 +488,7 @@ ul.tree {
 
 				background-color: #FFF;
 
-				border: 1px #CCC solid;
+				border: 1px $borderGrey solid;
 
 				content: "+";
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="grow-device">
+<html xmlns="http://www.w3.org/1999/xhtml" class="grow-font">
 	<head>
 		<title>Arable - Useful and stylish CSS</title>
 		<meta charset="utf-8">
@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<h1 class="no-top-margin">Heading 1 - <span class="superheavyweight">Super-heavy</span> Heavy <span class="mediumweight">Medium</span> <span class="lightweight">Light</span> <span class="superlightweight">Super-light</span></h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper leo quam. Donec fringilla condimentum justo id mattis. <em>Nullam posuere arcu sed fermentum viverra. Donec egestas sem et tortor imperdiet, in tristique sapien porttitor.</em> Nulla et sem consequat, vehicula augue et, fringilla enim. Mauris vitae tortor sed mauris faucibus consectetur. <strong>Integer tincidunt nibh sem, a bibendum nisl tincidunt sit amet.</strong> Mauris bibendum condimentum magna in iaculis. Suspendisse lobortis mauris at nunc aliquet, sed venenatis nunc viverra. In consequat, tortor at mollis suscipit, justo libero congue justo, id volutpat magna nunc non sem. Nam hendrerit faucibus ante, eu semper diam suscipit eu. Duis mattis iaculis tellus, ut lobortis neque facilisis in.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper leo quam. Donec fringilla condimentum justo id mattis. <em>Nullam posuere arcu sed fermentum viverra. Donec egestas sem et tortor imperdiet, in tristique sapien porttitor.</em> Nulla et sem consequat, vehicula augue et, fringilla enim. Mauris vitae tortor sed mauris faucibus consectetur. <strong>Integer tincidunt nibh sem, a bibendum nisl tincidunt sit amet.</strong> Mauris bibendum condimentum magna in iaculis. Suspendisse lobortis mauris at nunc aliquet, sed venenatis nunc viverra. In consequat, tortor at mollis suscipit, justo libero congue justo, id volutpat magna nunc non sem. Nam hendrerit faucibus ante, eu semper diam suscipit eu. <a href="#">Duis mattis iaculis tellus, ut lobortis neque facilisis in.</a></p>
 		<h2>Heading 2 - <span class="superheavyweight">Super-heavy</span> Heavy <span class="mediumweight">Medium</span> <span class="lightweight">Light</span> <span class="superlightweight">Super-light</span></h2>
 		<p class="align-right">In faucibus ipsum ut dignissim rutrum. Aenean sit amet leo at dui semper aliquam. Mauris eget risus dui. Aliquam erat volutpat. Nam eget sapien nec sapien egestas sodales. Fusce mattis dui imperdiet, tincidunt mauris a, fringilla quam.</p>
 		<p>Aenean neque massa, pharetra aliquam diam vitae, ullamcorper eleifend est. Aliquam lobortis interdum aliquam. Cras suscipit nec elit eget pharetra. Sed iaculis tortor non tellus blandit, non lobortis urna iaculis. Vivamus adipiscing, mi a vestibulum ullamcorper, orci dui dictum quam, adipiscing sagittis velit felis nec mi. <strong>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</strong> Maecenas sollicitudin, turpis quis fringilla adipiscing, nunc turpis lobortis enim, eu varius tortor enim vel mauris. Suspendisse potenti. Mauris auctor lorem blandit massa lacinia, eu suscipit odio tempor.</p>
@@ -127,8 +127,10 @@
 				</dl></dd>
 			<dt>CSS</dt>
 			<dd>Cascading Style Sheets</dd>
+			<dt>JS</dt>
+			<dd>JavaScript</dd>
 		</dl>
-		<table>
+		<table class="highlight-on-hover">
 			<thead>
 				<tr>
 					<th>Day</th>
@@ -167,7 +169,7 @@
 					<td>Weekend</td>
 					<td>8</td>
 				</tr>
-				<tr>
+				<tr class="disabled">
 					<th>Sunday</th>
 					<td>Weekend</td>
 					<td>6</td>
@@ -195,17 +197,43 @@ WHERE `sites`.`ext_client_code` = '123'
     ...
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-		<pre class="code dark">&lt;!DOCTYPE html&gt;
-  &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-  &lt;head&gt;
-    &lt;title&gt;Shadow CSS Demo&lt;/title&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    <em>&lt;link href=&quot;src/shadow-css.min.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</em>
-  &lt;/head&gt;
-  &lt;body&gt;
-    ...
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+		<pre class="code dark">top - 13:29:59 up 47 days, 19:57,  0 users,  load average: 0.04, 0.09, 0.06
+Tasks: 185 total,   1 running, 184 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.1 sy,  0.0 ni, 99.8 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:  15960392 total,  3263500 used, 12696892 free,   191628 buffers
+KiB Swap:  8388540 total,        0 used,  8388540 free.  1524728 cached Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+    1 root      20   0  195136   4092   2312 S   0.0  0.0   4:31.02 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.29 kthreadd
+    3 root      20   0       0      0      0 S   0.0  0.0   0:03.91 ksoftirqd/0
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:+
+    7 root      rt   0       0      0      0 S   0.0  0.0   0:00.02 migration/0
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcuob/0
+   10 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcuob/1
+   11 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcuob/2</pre>
+		<hr>
+		<p>Tags:
+			<span class="tag red">Red</span>
+			<span class="tag orange">Orange</span>
+			<span class="tag amber">Amber</span>
+			<span class="tag yellow">Yellow</span>
+			<span class="tag lime">Lime</span>
+			<span class="tag green">Green</span>
+			<span class="tag teal">Teal</span>
+			<span class="tag cyan">Cyan</span>
+			<span class="tag blue">Blue</span>
+			<span class="tag indigo">Indigo</span>
+			<span class="tag purple">Purple</span>
+			<span class="tag pink">Pink</span>
+			<span class="tag brown">Brown</span>
+			<span class="tag black">Black</span>
+			<span class="tag grey">Grey</span>
+			<span class="tag">Standard</span>
+			<span class="tag caps">Caps</span>
+			<span class="tag large">Large</span>
+			<span class="tag huge">Huge</span></p>
 		<hr>
 		<form class="inline foldable">
 			<input type="text" id="input-name" class="full large" placeholder="Name">
@@ -214,6 +242,12 @@ WHERE `sites`.`ext_client_code` = '123'
 
 			<label for="input-email">Email</label>
 			<input type="email" id="input-email" placeholder="Email">
+
+			<label for="input-twitter">Twitter</label>
+			<span class="label"><span class="prefix">@</span><span class="input"><input type="text" id="input-twitter" placeholder="ahosgood"></span></span>
+
+			<label for="input-url">Sitemap URL</label>
+			<span class="label"><span class="suffix">/sitemap.xml</span><span class="input"><input type="url" id="input-url" placeholder="https://twistphp.com"></span></span>
 
 			<label>DOB</label>
 			<input type="number" class="inline-3" placeholder="Day">
@@ -232,7 +266,7 @@ WHERE `sites`.`ext_client_code` = '123'
 				<option>November</option>
 				<option>December</option>
 			</select>
-			<input type="number" class="inline-3" placeholder="Year">
+			<span class="label no-space inline-3"><span class="prefix">19</span><span class="input"><input type="number" min="00" max="99" step="1" placeholder="86"></span></span>
 
 			<label for="select-age">Age</label>
 			<select id="select-age">
@@ -277,6 +311,16 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label for="input-cv">CV</label>
 			<input type="file" id="input-cv">
 
+			<label for="input-cv">CV</label>
+			<div class="twistupload-wrapper">
+				<input class="twistupload" name="file[]" type="file">
+				<div class="twistupload-progress-wrapper">
+					<progress class="twistupload-progress" value="0" max="100"></progress>
+					<span class="twistupload-count-wrapper">2/5</span>
+					<a href="#" class="twistupload-cancel">Cancel</a>
+				</div>
+			</div>
+
 			<label for="textarea-about">About You</label>
 			<textarea id="textarea-about" placeholder="About You"></textarea>
 
@@ -302,26 +346,86 @@ WHERE `sites`.`ext_client_code` = '123'
 			<input type="text" class="inline-5">
 			<input type="text" class="inline-5">
 
-            <label>Mix 1/1/2</label>
-            <input type="text" class="inline-4">
+            <label>Six</label>
+            <input type="text" class="inline-6">
+            <input type="text" class="inline-6">
+            <input type="text" class="inline-6">
+            <input type="text" class="inline-6">
+            <input type="text" class="inline-6">
+            <input type="text" class="inline-6">
+
+            <label>Seven</label>
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+            <input type="text" class="inline-7">
+
+            <label>Eight</label>
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
+
+            <label>8/8/4/2</label>
+            <input type="text" class="inline-8">
+            <input type="text" class="inline-8">
             <input type="text" class="inline-4">
             <input type="text" class="inline-2">
 
-            <label>Mix 1/2/1</label>
-            <input type="text" class="inline-4">
-            <input type="text" class="inline-2">
-            <input type="text" class="inline-4">
+            <label>8/4/8/3/6</label>
+            <input type="text" class="inline-8">
+			<input type="text" class="inline-4">
+			<input type="text" class="inline-8">
+			<input type="text" class="inline-3">
+			<input type="text" class="inline-6">
 
-            <label>Mix 2/1/1</label>
-            <input type="text" class="inline-2">
-            <input type="text" class="inline-4">
-            <input type="text" class="inline-4">
+            <label>Different Types</label>
+			<input type="text" class="inline-3">
+			<input type="file" class="inline-3">
+			<select class="inline-3">
+				<option selected>Please Select</option>
+				<option>Alpha</option>
+				<option>Beta</option>
+				<option>Gamma</option>
+			</select>
 
 			<button type="submit">Save</button>
 			<button type="reset">Reset</button>
 			<label class="button">Remember<input type="checkbox"></label>
             <button class="red">Delete</button>
             <button class="green">Add</button>
+		</form>
+		<hr>
+		<form class="block large">
+			<label for="input-name-4">Name</label>
+			<input type="text" id="input-name-4">
+
+			<label for="input-email-4">Email</label>
+			<input type="email" id="input-email-4" placeholder="Email">
+
+			<label for="input-twitter-2">Twitter</label>
+			<span class="label"><span class="prefix">@</span><span class="input"><input type="text" id="input-twitter-2" placeholder="ahosgood"></span></span>
+
+			<label for="input-url-2">Sitemap URL</label>
+			<span class="label"><span class="suffix">/sitemap.xml</span><span class="input"><input type="url" id="input-url-2" placeholder="https://twistphp.com"></span></span>
+
+			<label>Sex</label>
+			<input type="radio" id="radio-sex-m2" name="sex">
+			<label for="radio-sex-m2">Male</label>
+			<input type="radio" id="radio-sex-f2" name="sex">
+			<label for="radio-sex-f2">Female</label>
+			<input type="radio" id="radio-sex-n2" name="sex">
+			<label for="radio-sex-n2">Prefer not to disclose</label>
+
+			<button type="submit">Search</button>
+			<button type="reset">Reset</button>
 		</form>
 		<hr>
 		<form class="block">
@@ -332,68 +436,6 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label for="input-email-2">Email</label>
 			<input type="email" id="input-email-2" value="cant.touch@this.com" placeholder="Email" readonly>
 
-			<label>DOB</label>
-			<input type="number" class="inline-3" placeholder="Day" readonly>
-			<select class="inline-3" readonly>
-				<option>Month</option>
-				<option>January</option>
-				<option>February</option>
-				<option>March</option>
-				<option>April</option>
-				<option>May</option>
-				<option>June</option>
-				<option>July</option>
-				<option>August</option>
-				<option>September</option>
-				<option>October</option>
-				<option>November</option>
-				<option>December</option>
-			</select>
-			<input type="number" class="inline-3" placeholder="Year" readonly>
-
-			<label for="select-age-2">Age</label>
-			<select id="select-age-2" readonly>
-				<option>Please select</option>
-				<optgroup label="Child">
-					<option>0-9</option>
-					<option>10-14</option>
-					<option>15-17</option>
-				</optgroup>
-				<optgroup label="Adult">
-					<option>18-24</option>
-					<option>25-29</option>
-					<option>30-34</option>
-					<option>35-39</option>
-				</optgroup>
-				<optgroup label="Middle aged">
-					<option>40-44</option>
-					<option>45-49</option>
-					<option>50-54</option>
-					<option>55-59</option>
-				</optgroup>
-				<optgroup label="Old">
-					<option>60-64</option>
-					<option>65-69</option>
-					<option>70-74</option>
-					<option>75-79</option>
-					<option>80+</option>
-				</optgroup>
-			</select>
-
-			<label>Sex</label>
-			<input type="radio" id="radio-sex-m-2" name="sex" disabled>
-			<label for="radio-sex-m-2">Male</label>
-			<input type="radio" id="radio-sex-f-2" name="sex" disabled>
-			<label for="radio-sex-f-2">Female</label>
-			<input type="radio" id="radio-sex-n-2" name="sex" disabled>
-			<label for="radio-sex-n-2">Prefer not to disclose</label>
-
-			<label for="input-human-2">Human</label>
-			<input type="checkbox" id="input-human-2" checked disabled>
-
-			<label for="input-cv-2">CV</label>
-			<input type="file" id="input-cv-2" readonly>
-
 			<label for="textarea-about-2">About You</label>
 			<textarea id="textarea-about-2" placeholder="About You" readonly>Can't touch this...</textarea>
 
@@ -402,55 +444,7 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label class="button disabled">Remember<input type="checkbox" disabled></label>
 		</form>
 		<hr>
-		<form class="block large">
-			<label for="input-name-4">Name</label>
-			<input type="text" id="input-name-4">
-
-			<label for="select-age-4">Age</label>
-			<select id="select-age-4">
-				<option>Please select</option>
-				<optgroup label="Child">
-					<option>0-9</option>
-					<option>10-14</option>
-					<option>15-17</option>
-				</optgroup>
-				<optgroup label="Adult">
-					<option>18-24</option>
-					<option>25-29</option>
-					<option>30-34</option>
-					<option>35-39</option>
-				</optgroup>
-				<optgroup label="Middle aged">
-					<option>40-44</option>
-					<option>45-49</option>
-					<option>50-54</option>
-					<option>55-59</option>
-				</optgroup>
-				<optgroup label="Old">
-					<option>60-64</option>
-					<option>65-69</option>
-					<option>70-74</option>
-					<option>75-79</option>
-					<option>80+</option>
-				</optgroup>
-			</select>
-
-            <label>Sex</label>
-            <input type="radio" id="radio-sex-m-3" name="sex" disabled>
-            <label for="radio-sex-m-3">Male</label>
-            <input type="radio" id="radio-sex-f-3" name="sex" disabled>
-            <label for="radio-sex-f-3">Female</label>
-            <input type="radio" id="radio-sex-n-3" name="sex" disabled>
-            <label for="radio-sex-n-3">Prefer not to disclose</label>
-
-			<label for="input-enabled-2">Enabled</label>
-			<input type="checkbox" id="input-enabled-2">
-
-			<button type="reset">Reset</button>
-			<button type="submit">Search</button>
-		</form>
-		<hr>
-		<form class="linear">
+		<form class="linear foldable">
 			<label for="input-name-3">Name</label>
 			<input type="text" id="input-name-3">
 
@@ -489,8 +483,8 @@ WHERE `sites`.`ext_client_code` = '123'
 			<label for="input-enabled">Enabled</label>
 			<input type="checkbox" id="input-enabled">
 
-			<button type="reset">Reset</button>
 			<button type="submit">Search</button>
+			<button type="reset">Reset</button>
 		</form>
 		<hr>
 		<p class="error"><strong>Error:</strong> An error occurred on line 29 - invalid property <em>length</em></p>

@@ -101,12 +101,12 @@ pre.code {
 
 	overflow: auto;
 
-	color: #333;
+	color: $baseTextColour;
 	white-space: pre;
 
-	background-color: #F4F4F4;
+	background-color: $bgLightGrey;
 
-	border: 1px #CCC solid;
+	border: 1px $borderGrey solid;
 	border-radius: 3px;
 }
 
@@ -115,12 +115,10 @@ pre.code {
 
 	em {
 		font-style: normal;
-		//font-weight: 700;
 
-		background-color: #FF9;
+		background-color: $highlight;
 
-		//box-shadow: 0 0 5px #FF9;
-		box-shadow: 0 0 0 1px #FF9;
+		box-shadow: 0 0 0 1px $highlight;
 
 		border-radius: 3px;
 	}
@@ -136,13 +134,14 @@ pre.code {
 			right: 0;
 			left: 0;
 
-			color: #FFF;
+			//color: #FFF;
+			color: blackorwhite($borderGrey);
 			@include basefontface;
 			font-weight: 700;
 			line-height: 1.5em;
 			white-space: nowrap;
 
-			background-color: #CCC;
+			background-color: $borderGrey;
 
 			content: attr(title);
 		}
@@ -157,12 +156,13 @@ pre.code {
 			top: 0.25em;
 			right: 0.25em;
 
-			color: #FFF;
+			//color: #FFF;
+			color: if(lightness($borderGrey) > 50, #111, #FFF);
 			@include basefontface;
 			line-height: 1.5em;
 			text-transform: uppercase;
 
-			background-color: #CCC;
+			background-color: $borderGrey;
 
 			border-radius: 3px;
 
@@ -203,7 +203,7 @@ table {
 
 		border: none;
 		border-radius: 0;
-		outline: 1px #CCC solid;
+		outline: 1px $borderGrey solid;
 	}
 }
 
@@ -217,9 +217,9 @@ blockquote {
 	line-height: 1.75em;
 	white-space: pre-wrap;
 
-	background-color: #F4F4F4;
+	background-color: $bgLightGrey;
 
-	border-left: 0.3em #CCC solid;
+	border-left: 0.3em $borderGrey solid;
 
 	p {
 		margin-bottom: 0;
@@ -244,6 +244,22 @@ sub {
 
 em {
 	font-style: italic;
+}
+
+a {
+	color: $baseLinkColour;
+
+	&:visited {
+		//color: $baseLinkVisitedColour;
+	}
+
+	&:hover {
+		color: $baseLinkHoverColour;
+	}
+
+	&:active {
+		color: $baseLinkActiveColour;
+	}
 }
 
 .superheavyweight {
