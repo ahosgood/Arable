@@ -134,7 +134,6 @@ pre.code {
 			right: 0;
 			left: 0;
 
-			//color: #FFF;
 			color: blackorwhite($borderGrey);
 			@include basefontface;
 			font-weight: 700;
@@ -156,7 +155,6 @@ pre.code {
 			top: 0.25em;
 			right: 0.25em;
 
-			//color: #FFF;
 			color: if(lightness($borderGrey) > 50, #111, #FFF);
 			@include basefontface;
 			line-height: 1.5em;

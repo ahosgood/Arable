@@ -35,7 +35,6 @@
 
 @mixin basefontsize {
 	font-size: #{$baseFontSize}em;
-	font-size: #{$baseFontSize}rem;
 }
 
 @mixin basefontlineheight {
@@ -74,8 +73,6 @@
 	border: 1px $borderGrey solid;
 	border-radius: 3px;
 
-	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
-
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	//-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	//-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -104,12 +101,10 @@
 
 	&:focus,
 	&:hover {
-		//box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	}
 
 	&:active {
-		//box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.5);
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25);
 	}
 
@@ -149,77 +144,6 @@
 	&.black {
 		@include button-grad($buttonBlack);
 	}
-
-	/*&.flat {
-		background: #E4E4E4;
-
-		border: none;
-
-		box-shadow: none;
-
-		&:hover {
-			background: #E8E8E8;
-		}
-
-		&:active {
-			box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
-		}
-
-		&.red {
-			@include button-flat($buttonRed);
-		}
-
-		&.green {
-			@include button-flat($buttonGreen);
-		}
-
-		&.blue {
-			@include button-flat($buttonBlue);
-		}
-
-		&.black {
-			@include button-flat($buttonBlack);
-		}
-	}*/
-
-	/*i.fa,
-	i[class^="fa-"],
-	i[class*=" fa-"] {
-		&::before {
-			width: 1em;
-			height: 1em;
-			padding-right: 0;
-			padding-left: 0.625em;
-
-			display: inline-block;
-
-			float: right;
-
-			text-align: center;
-			vertical-align: top;
-			line-height: 1em;
-		}
-
-		&.left-icon {
-			&::before {
-				padding-right: 0.625em;
-				padding-left: 0;
-
-				float: left;
-			}
-		}
-	}
-
-	&:empty {
-		i.fa,
-		i[class^="fa-"],
-		i[class*=" fa-"] {
-			&::before {
-				padding-right: 0;
-				padding-left: 0;
-			}
-		}
-	}*/
 }
 
 @mixin button-grad($base) {
@@ -244,9 +168,6 @@
 	}
 
 	&:active {
-		//@include grad(lighten($base, 5%), desaturate(lighten($base, 15%), 2%));
-
-		//box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.35);
 		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
 	}
 
@@ -263,33 +184,6 @@
 		}
 	}
 }
-
-/*@mixin button-flat($base) {
-	color: if(lightness($base) > 50, #111, #FFF);
-
-	background: desaturate(lighten($base, 10%), 5%);
-
-	&:focus,
-	&:hover,
-	&:active {
-		background: lighten($base, 15%);
-
-		border-color: lighten($base, 15%);
-	}
-
-	&.disabled,
-	&:disabled {
-		&:hover,
-		&:focus,
-		&:active {
-			background: lighten($base, 10%);
-
-			border-color: lighten($base, 10%);
-
-			box-shadow: none;
-		}
-	}
-}*/
 
 @mixin blockform {
 	text-align: left;
@@ -359,8 +253,6 @@
 
 	input[type="radio"] {
 		margin-top: 0.45em;
-
-		//clear: both;
 
 		+ label {
 			margin-top: 0.25em;

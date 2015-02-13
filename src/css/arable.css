@@ -4,39 +4,13 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.0
- * Date:        11/0/2015
+ * Version:     5.0.1
+ * Date:        13/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
  * ================================================================================
  */
-/*@mixin button-flat($base) {
-	color: if(lightness($base) > 50, #111, #FFF);
-
-	background: desaturate(lighten($base, 10%), 5%);
-
-	&:focus,
-	&:hover,
-	&:active {
-		background: lighten($base, 15%);
-
-		border-color: lighten($base, 15%);
-	}
-
-	&.disabled,
-	&:disabled {
-		&:hover,
-		&:focus,
-		&:active {
-			background: lighten($base, 10%);
-
-			border-color: lighten($base, 10%);
-
-			box-shadow: none;
-		}
-	}
-}*/
 @-ms-viewport {
   width: device-width; }
 @viewport {
@@ -214,25 +188,6 @@ textarea {
   border: 1px #CCC solid;
   border-radius: 3px; }
 
-/*::-webkit-input-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-::-moz-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-:-ms-input-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-::placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}*/
 optgroup,
 option {
   padding-right: 1em; }
@@ -383,7 +338,6 @@ form.linear .label {
     padding: 0.25em 0.5em;
     color: #212121;
     font-size: 1.33em;
-    font-size: 1.33rem;
     background-color: #F5F5F5;
     border: 1px #CCC solid; }
   form.inline .label .prefix,
@@ -462,7 +416,6 @@ form.linear .button {
   display: inline-block;
   color: #212121;
   font-size: 1.33em;
-  font-size: 1.33rem;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -482,76 +435,7 @@ form.linear .button {
   cursor: pointer;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  	/*&.flat {
-  		background: #E4E4E4;
-  
-  		border: none;
-  
-  		box-shadow: none;
-  
-  		&:hover {
-  			background: #E8E8E8;
-  		}
-  
-  		&:active {
-  			box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
-  		}
-  
-  		&.red {
-  			@include button-flat($buttonRed);
-  		}
-  
-  		&.green {
-  			@include button-flat($buttonGreen);
-  		}
-  
-  		&.blue {
-  			@include button-flat($buttonBlue);
-  		}
-  
-  		&.black {
-  			@include button-flat($buttonBlack);
-  		}
-  	}*/
-  	/*i.fa,
-  	i[class^="fa-"],
-  	i[class*=" fa-"] {
-  		&::before {
-  			width: 1em;
-  			height: 1em;
-  			padding-right: 0;
-  			padding-left: 0.625em;
-  
-  			display: inline-block;
-  
-  			float: right;
-  
-  			text-align: center;
-  			vertical-align: top;
-  			line-height: 1em;
-  		}
-  
-  		&.left-icon {
-  			&::before {
-  				padding-right: 0.625em;
-  				padding-left: 0;
-  
-  				float: left;
-  			}
-  		}
-  	}
-  
-  	&:empty {
-  		i.fa,
-  		i[class^="fa-"],
-  		i[class*=" fa-"] {
-  			&::before {
-  				padding-right: 0;
-  				padding-left: 0;
-  			}
-  		}
-  	}*/ }
+  box-sizing: content-box; }
   form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.inline [type="submit"]:active,
   form.inline [type="reset"]:focus,
   form.inline [type="reset"]:hover,
@@ -1649,22 +1533,7 @@ form.linear [type="submit"] {
   background-color: #539ce5;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  border-color: #267bcf;
-  		/*&.flat {
-  			@include button-flat($buttonBlue);
-  
-  			&.red {
-  				@include button-flat($buttonRed);
-  			}
-  
-  			&.green {
-  				@include button-flat($buttonGreen);
-  			}
-  
-  			&.black {
-  				@include button-flat($buttonBlack);
-  			}
-  		}*/ }
+  border-color: #267bcf; }
   form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.inline [type="submit"]:active,
   form.block [type="submit"]:focus,
   form.block [type="submit"]:hover,
@@ -1926,7 +1795,6 @@ form.block {
     float: left;
     clear: both;
     font-size: 1.33em;
-    font-size: 1.33rem;
     text-align: left;
     line-height: 1.33em; }
     form.inline label.button,
@@ -1943,7 +1811,6 @@ form.block {
     display: block;
     float: right;
     font-size: 1.33em;
-    font-size: 1.33rem;
     text-align: left; }
     form.inline input::-webkit-input-placeholder,
     form.inline select::-webkit-input-placeholder,
@@ -2336,8 +2203,7 @@ form.linear {
   form.linear select,
   form.linear button {
     float: left;
-    font-size: 1.33em;
-    font-size: 1.33rem; }
+    font-size: 1.33em; }
   form.linear label,
   form.linear input {
     line-height: 1.33em; }
@@ -2586,7 +2452,6 @@ label.button {
   display: inline-block;
   color: #212121;
   font-size: 1.33em;
-  font-size: 1.33rem;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -2606,76 +2471,7 @@ label.button {
   cursor: pointer;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  	/*&.flat {
-  		background: #E4E4E4;
-  
-  		border: none;
-  
-  		box-shadow: none;
-  
-  		&:hover {
-  			background: #E8E8E8;
-  		}
-  
-  		&:active {
-  			box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
-  		}
-  
-  		&.red {
-  			@include button-flat($buttonRed);
-  		}
-  
-  		&.green {
-  			@include button-flat($buttonGreen);
-  		}
-  
-  		&.blue {
-  			@include button-flat($buttonBlue);
-  		}
-  
-  		&.black {
-  			@include button-flat($buttonBlack);
-  		}
-  	}*/
-  	/*i.fa,
-  	i[class^="fa-"],
-  	i[class*=" fa-"] {
-  		&::before {
-  			width: 1em;
-  			height: 1em;
-  			padding-right: 0;
-  			padding-left: 0.625em;
-  
-  			display: inline-block;
-  
-  			float: right;
-  
-  			text-align: center;
-  			vertical-align: top;
-  			line-height: 1em;
-  		}
-  
-  		&.left-icon {
-  			&::before {
-  				padding-right: 0.625em;
-  				padding-left: 0;
-  
-  				float: left;
-  			}
-  		}
-  	}
-  
-  	&:empty {
-  		i.fa,
-  		i[class^="fa-"],
-  		i[class*=" fa-"] {
-  			&::before {
-  				padding-right: 0;
-  				padding-left: 0;
-  			}
-  		}
-  	}*/ }
+  box-sizing: content-box; }
   a.button:focus, a.button:hover, a.button:active,
   label.button:focus,
   label.button:hover,
@@ -2893,8 +2689,7 @@ label.button {
 
 label.button {
   width: auto !important;
-  padding: 0 0.75em !important;
-  font-size: 1.3em !important; }
+  padding: 0 0.75em !important; }
   label.button input[type="checkbox"] {
     margin: 0 0 0 0.5em !important;
     display: inline-block !important;
@@ -2909,8 +2704,7 @@ ul,
 ol,
 dl {
   margin-bottom: 1.5em;
-  font-size: 1.33em;
-  font-size: 1.33rem; }
+  font-size: 1.33em; }
 
 li > ul,
 li > ol,
@@ -3318,7 +3112,6 @@ thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 1.33em;
-  font-size: 1.33rem;
   background: -webkit-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
   background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
@@ -3492,7 +3285,6 @@ h6 {
 p {
   padding: 0 0 0.809em;
   font-size: 1.33em;
-  font-size: 1.33rem;
   line-height: 1.618em;
   word-break: normal;
   orphans: 3;
@@ -3518,8 +3310,7 @@ code {
   white-space: pre-wrap; }
 
 pre {
-  font-size: 1.33em;
-  font-size: 1.33rem; }
+  font-size: 1.33em; }
 
 code {
   font-size: 1em; }
