@@ -15,26 +15,6 @@ textarea {
 	border-radius: 3px;
 }
 
-/*::-webkit-input-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-::-moz-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-:-ms-input-placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}
-
-::placeholder {
-	color: $borderGrey;
-	text-overflow: ellipsis;
-}*/
-
 	optgroup,
 	option {
 		padding-right: 1em;
@@ -158,8 +138,6 @@ form.linear {
 		}
 
 		.prefix {
-			//padding-right: 3px !important;
-
 			float: left;
 
 			border-right-width: 0;
@@ -167,8 +145,6 @@ form.linear {
 
 			+ .input {
 				input {
-					//padding-left: 3px !important;
-
 					border-left-style: dotted;
 					border-radius: 0 3px 3px 0;
 				}
@@ -176,8 +152,6 @@ form.linear {
 		}
 
 		.suffix {
-			//padding-left: 3px !important;
-
 			float: right;
 
 			border-left-width: 0;
@@ -185,10 +159,6 @@ form.linear {
 
 			+ .input {
 				input {
-					//padding-right: 3px !important;
-
-					//text-align: right;
-
 					border-right-style: dotted;
 					border-radius: 3px 0 0 3px;
 				}
@@ -264,22 +234,6 @@ form.linear {
 		&.black {
 			@include button-grad($buttonBlack);
 		}
-
-		/*&.flat {
-			@include button-flat($buttonBlue);
-
-			&.red {
-				@include button-flat($buttonRed);
-			}
-
-			&.green {
-				@include button-flat($buttonGreen);
-			}
-
-			&.black {
-				@include button-flat($buttonBlack);
-			}
-		}*/
 	}
 
 	h1,
