@@ -157,7 +157,7 @@
 	&:focus,
 	&:hover,
 	&:active {
-		color: if(lightness($base) > 50, #111, #FFF);
+		color: if(lightness($base) > 50, $baseTextColour, #FFF);
 
 		border-color: darken($base, 5%);
 	}

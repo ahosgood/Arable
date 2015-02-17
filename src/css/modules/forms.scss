@@ -143,7 +143,7 @@ form.linear {
 			border-right-width: 0;
 			border-radius: 3px 0 0 3px;
 
-			+ .input {
+			~ .input {
 				input {
 					border-left-style: dotted;
 					border-radius: 0 3px 3px 0;
@@ -157,10 +157,19 @@ form.linear {
 			border-left-width: 0;
 			border-radius: 0 3px 3px 0;
 
-			+ .input {
+			~ .input {
 				input {
 					border-right-style: dotted;
 					border-radius: 3px 0 0 3px;
+				}
+			}
+		}
+
+		.prefix ~ .suffix,
+		.suffix ~ .prefix {
+			~ .input {
+				input {
+					border-radius: 0;
 				}
 			}
 		}
@@ -187,7 +196,7 @@ form.linear {
 			.prefix {
 				padding-right: 0 !important;
 
-				+ .input {
+				~ .input {
 					input {
 						padding-left: 0 !important;
 
@@ -199,7 +208,7 @@ form.linear {
 			.suffix {
 				padding-left: 0 !important;
 
-				+ .input {
+				~ .input {
 					input {
 						padding-right: 0 !important;
 

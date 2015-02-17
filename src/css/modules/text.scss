@@ -155,7 +155,7 @@ pre.code {
 			top: 0.25em;
 			right: 0.25em;
 
-			color: if(lightness($borderGrey) > 50, #111, #FFF);
+			color: if(lightness($borderGrey) > 50, $baseTextColour, #FFF);
 			@include basefontface;
 			line-height: 1.5em;
 			text-transform: uppercase;
@@ -179,10 +179,10 @@ pre.code {
 	&.dark {
 		color: #FFF;
 
-		background-color: #222;
+		background-color:$baseTextColour;
 
 		em {
-			color: #222;
+			color: $baseTextColour;
 		}
 	}
 }

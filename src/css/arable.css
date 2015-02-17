@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.1
- * Date:        13/02/2015
+ * Version:     5.0.2
+ * Date:        17/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -346,9 +346,9 @@ form.linear .label {
     float: left;
     border-right-width: 0;
     border-radius: 3px 0 0 3px; }
-    form.inline .label .prefix + .input input,
-    form.block .label .prefix + .input input,
-    form.linear .label .prefix + .input input {
+    form.inline .label .prefix ~ .input input,
+    form.block .label .prefix ~ .input input,
+    form.linear .label .prefix ~ .input input {
       border-left-style: dotted;
       border-radius: 0 3px 3px 0; }
   form.inline .label .suffix,
@@ -357,11 +357,18 @@ form.linear .label {
     float: right;
     border-left-width: 0;
     border-radius: 0 3px 3px 0; }
-    form.inline .label .suffix + .input input,
-    form.block .label .suffix + .input input,
-    form.linear .label .suffix + .input input {
+    form.inline .label .suffix ~ .input input,
+    form.block .label .suffix ~ .input input,
+    form.linear .label .suffix ~ .input input {
       border-right-style: dotted;
       border-radius: 3px 0 0 3px; }
+  form.inline .label .prefix ~ .suffix ~ .input input,
+  form.inline .label .suffix ~ .prefix ~ .input input,
+  form.block .label .prefix ~ .suffix ~ .input input,
+  form.block .label .suffix ~ .prefix ~ .input input,
+  form.linear .label .prefix ~ .suffix ~ .input input,
+  form.linear .label .suffix ~ .prefix ~ .input input {
+    border-radius: 0; }
   form.inline .label .input input,
   form.block .label .input input,
   form.linear .label .input input {
@@ -382,18 +389,18 @@ form.linear .label {
   form.block .label.no-space .prefix,
   form.linear .label.no-space .prefix {
     padding-right: 0 !important; }
-    form.inline .label.no-space .prefix + .input input,
-    form.block .label.no-space .prefix + .input input,
-    form.linear .label.no-space .prefix + .input input {
+    form.inline .label.no-space .prefix ~ .input input,
+    form.block .label.no-space .prefix ~ .input input,
+    form.linear .label.no-space .prefix ~ .input input {
       padding-left: 0 !important;
       border-left-width: 0 !important; }
   form.inline .label.no-space .suffix,
   form.block .label.no-space .suffix,
   form.linear .label.no-space .suffix {
     padding-left: 0 !important; }
-    form.inline .label.no-space .suffix + .input input,
-    form.block .label.no-space .suffix + .input input,
-    form.linear .label.no-space .suffix + .input input {
+    form.inline .label.no-space .suffix ~ .input input,
+    form.block .label.no-space .suffix ~ .input input,
+    form.linear .label.no-space .suffix ~ .input input {
       padding-right: 0 !important;
       border-right-width: 0 !important; }
 form.inline [type="submit"],
@@ -3353,7 +3360,7 @@ pre.code {
     position: absolute;
     top: 0.25em;
     right: 0.25em;
-    color: #111;
+    color: #212121;
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
     line-height: 1.5em;
     text-transform: uppercase;
@@ -3366,9 +3373,9 @@ pre.code {
     background-color: transparent; }
   pre.code.dark {
     color: #FFF;
-    background-color: #222; }
+    background-color: #212121; }
     pre.code.dark em {
-      color: #222; }
+      color: #212121; }
 
 p code,
 li code,
