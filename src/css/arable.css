@@ -4,7 +4,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.2
+ * Version:     5.0.3
  * Date:        17/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -274,43 +274,52 @@ form.linear textarea:invalid {
   form.linear select:invalid:focus,
   form.linear textarea:invalid:focus {
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
-form.inline input:disabled, form.inline input[readonly],
+form.inline input:disabled:focus, form.inline input[readonly]:focus,
+form.inline select:disabled:focus,
+form.inline select[readonly]:focus,
+form.inline textarea:disabled:focus,
+form.inline textarea[readonly]:focus,
+form.block input:disabled:focus,
+form.block input[readonly]:focus,
+form.block select:disabled:focus,
+form.block select[readonly]:focus,
+form.block textarea:disabled:focus,
+form.block textarea[readonly]:focus,
+form.linear input:disabled:focus,
+form.linear input[readonly]:focus,
+form.linear select:disabled:focus,
+form.linear select[readonly]:focus,
+form.linear textarea:disabled:focus,
+form.linear textarea[readonly]:focus {
+  box-shadow: none !important; }
+form.inline input:disabled, form.inline input[readonly]:focus,
 form.inline select:disabled,
-form.inline select[readonly],
+form.inline select[readonly]:focus,
 form.inline textarea:disabled,
-form.inline textarea[readonly],
+form.inline textarea[readonly]:focus,
 form.block input:disabled,
-form.block input[readonly],
+form.block input[readonly]:focus,
 form.block select:disabled,
-form.block select[readonly],
+form.block select[readonly]:focus,
 form.block textarea:disabled,
-form.block textarea[readonly],
+form.block textarea[readonly]:focus,
 form.linear input:disabled,
-form.linear input[readonly],
+form.linear input[readonly]:focus,
 form.linear select:disabled,
-form.linear select[readonly],
+form.linear select[readonly]:focus,
 form.linear textarea:disabled,
-form.linear textarea[readonly] {
-  color: #AAA;
+form.linear textarea[readonly]:focus {
+  color: #AAA; }
+form.inline input:disabled,
+form.inline select:disabled,
+form.inline textarea:disabled,
+form.block input:disabled,
+form.block select:disabled,
+form.block textarea:disabled,
+form.linear input:disabled,
+form.linear select:disabled,
+form.linear textarea:disabled {
   background-color: #EEE; }
-  form.inline input:disabled:focus, form.inline input[readonly]:focus,
-  form.inline select:disabled:focus,
-  form.inline select[readonly]:focus,
-  form.inline textarea:disabled:focus,
-  form.inline textarea[readonly]:focus,
-  form.block input:disabled:focus,
-  form.block input[readonly]:focus,
-  form.block select:disabled:focus,
-  form.block select[readonly]:focus,
-  form.block textarea:disabled:focus,
-  form.block textarea[readonly]:focus,
-  form.linear input:disabled:focus,
-  form.linear input[readonly]:focus,
-  form.linear select:disabled:focus,
-  form.linear select[readonly]:focus,
-  form.linear textarea:disabled:focus,
-  form.linear textarea[readonly]:focus {
-    box-shadow: none !important; }
 form.inline .label,
 form.block .label,
 form.linear .label {
@@ -3624,12 +3633,16 @@ p.error, p.warning, p.notice, p.success {
 
 /* ===================================================== TWISTPHP ===================================================== */
 form.inline .twistupload-wrapper, form.block .twistupload-wrapper {
-  width: 75%;
   display: block;
   float: right; }
   form.inline .twistupload-wrapper input, form.block .twistupload-wrapper input {
     width: 100%; }
+form.inline .twistupload-wrapper {
+  width: 75%; }
 
+@media (max-width: 658px) {
+  form.inline.foldable .twistupload-wrapper {
+    width: 100%; } }
 /* ===================================================== RUMMAGE ===================================================== */
 .rummage-searching tr {
   background-color: transparent; }

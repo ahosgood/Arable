@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.2
+ * Version:     5.0.3
  * Date:        17/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -26,7 +26,12 @@ $baseLinkColour: #0D47A1;
 $baseLinkHoverColour: #1976D2;
 $baseLinkActiveColour: #E64A19;
 
+$bgLightGrey: #F5F5F5;
+$borderGrey: #CCC;
 $activeHighlight: #FBC02D;
+$highlight: #FFF59D;
+$highlightTable: #FFF9C4;
+$hoverTable: #E3F2FD;
 
 $buttonRed: #D50000;
 $buttonGreen: #43A047;
@@ -59,13 +64,6 @@ $tagPink: #D81B60;
 $tagBrown: #6D4C41;
 $tagBlack: #212121;
 $tagGrey: #757575;
-
-$bgLightGrey: #F5F5F5;
-//$borderGrey: #BDBDBD;
-$borderGrey: #CCC;
-$highlight: #FFF59D;
-$highlightTable: #FFF9C4;
-$hoverTable: #E3F2FD;
 
 // ----------------------------------------------------- BREAKPOINTS -----------------------------------------------------
 $intMobileLarge: 481px;

@@ -98,13 +98,18 @@ form.linear {
 
 		&:disabled,
 		&[readonly] {
-			color: #AAA;
-
-			background-color: #EEE;
-
 			&:focus {
 				box-shadow: none !important;
 			}
+		}
+
+		&:disabled,
+		&[readonly]:focus {
+			color: #AAA;
+		}
+
+		&:disabled {
+			background-color: #EEE;
 		}
 	}
 

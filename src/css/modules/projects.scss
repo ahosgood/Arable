@@ -3,8 +3,6 @@ form {
 	&.inline,
 	&.block {
 		.twistupload-wrapper {
-			width: 75%;
-
 			display: block;
 
 			float: right;
@@ -13,6 +11,18 @@ form {
 				width: 100%;
 			}
 		}
+	}
+
+	&.inline {
+		.twistupload-wrapper {
+			width: 75%;
+		}
+	}
+}
+
+@media (max-width: $intTabletSmall - 1) {
+	form.inline.foldable .twistupload-wrapper {
+		width: 100%;
 	}
 }
 
@@ -68,7 +78,6 @@ form.inline label + .mce-tinymce {
 		clear: both;
 	}
 }
-
 
 /* ===================================================== MODERNIZR ===================================================== */
 .js .hide-on-js,
