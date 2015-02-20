@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.4
+ * Version:     5.0.5
  * Date:        20/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -2769,7 +2769,6 @@ ol {
     ol.plain ol,
     ol.lined ul,
     ol.lined ol {
-      margin-left: 0;
       list-style: none; }
     ul.plain ol, ul.lined ol,
     ol.plain ol,
@@ -2794,6 +2793,7 @@ ol {
     ol.lined ul,
     ol.lined ol {
       margin-top: 0.35em;
+      margin-left: 0;
       padding-left: 1em;
       border-top: 1px #BDBDBD solid; }
       ul.lined ul > :first-child,

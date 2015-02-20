@@ -44,7 +44,6 @@ ol {
 
 		ul,
 		ol {
-			margin-left: 0;
 
 			list-style: none;
 		}
@@ -75,6 +74,7 @@ ol {
 		ul,
 		ol {
 			margin-top: 0.35em;
+			margin-left: 0;
 			padding-left: 1em;
 
 			border-top: 1px $borderGrey solid;
