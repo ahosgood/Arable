@@ -138,6 +138,7 @@ form.linear {
 			@include basefontsize;
 
 			background-color: $bgLightGrey;
+			//background-color: $headerGrey;
 
 			border: 1px $borderGrey solid;
 		}

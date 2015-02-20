@@ -33,6 +33,14 @@ table {
 		}
 	}
 
+	&.no-horizontals {
+		th,
+		td {
+			border-top-width: 0;
+			border-bottom-width: 0;
+		}
+	}
+
 	&.highlight-on-hover {
 		tfoot,
 		tbody {
@@ -63,7 +71,8 @@ table {
 		font-weight: 700;
 		@include basefontsize;
 
-		@include grad(#EEE, #D8D8D8);
+		//@include grad(#EEE, #D8D8D8);
+		background-color: $headerGrey;
 
 		p,
 		ul,

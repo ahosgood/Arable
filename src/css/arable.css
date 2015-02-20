@@ -1,11 +1,12 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.3
- * Date:        17/02/2015
+ * Version:     5.0.4
+ * Date:        20/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -185,7 +186,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #FFF;
-  border: 1px #CCC solid;
+  border: 1px #BDBDBD solid;
   border-radius: 3px; }
 
 optgroup,
@@ -348,7 +349,7 @@ form.linear .label {
     color: #212121;
     font-size: 1.33em;
     background-color: #F5F5F5;
-    border: 1px #CCC solid; }
+    border: 1px #BDBDBD solid; }
   form.inline .label .prefix,
   form.block .label .prefix,
   form.linear .label .prefix {
@@ -392,7 +393,7 @@ form.linear .label {
   form.linear .label.no-space .suffix {
     padding-right: 0.35em;
     padding-left: 0.35em;
-    color: #CCC;
+    color: #BDBDBD;
     background-color: transparent; }
   form.inline .label.no-space .prefix,
   form.block .label.no-space .prefix,
@@ -444,7 +445,7 @@ form.linear .button {
   background-color: #F2F2F2;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  border: 1px #CCC solid;
+  border: 1px #BDBDBD solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -683,7 +684,7 @@ form.linear .button {
       background-color: #F2F2F2;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      border-color: #CCC;
+      border-color: #BDBDBD;
       box-shadow: none; }
   form.inline [type="submit"].red,
   form.inline [type="reset"].red,
@@ -2480,7 +2481,7 @@ label.button {
   background-color: #F2F2F2;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  border: 1px #CCC solid;
+  border: 1px #BDBDBD solid;
   border-radius: 3px;
   -webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
   transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -2524,7 +2525,7 @@ label.button {
       background-color: #F2F2F2;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      border-color: #CCC;
+      border-color: #BDBDBD;
       box-shadow: none; }
   a.button.red,
   label.button.red {
@@ -2781,20 +2782,20 @@ ol {
   ul.lined,
   ol.lined {
     margin-bottom: 1.5em;
-    border-bottom: 1px #CCC solid; }
+    border-bottom: 1px #BDBDBD solid; }
     ul.lined li,
     ol.lined li {
       margin-bottom: 0.35em;
       padding: 0.35em 0 0;
       text-indent: 0.5em;
-      border-top: 1px #CCC solid; }
+      border-top: 1px #BDBDBD solid; }
     ul.lined ul,
     ul.lined ol,
     ol.lined ul,
     ol.lined ol {
       margin-top: 0.35em;
       padding-left: 1em;
-      border-top: 1px #CCC solid; }
+      border-top: 1px #BDBDBD solid; }
       ul.lined ul > :first-child,
       ul.lined ol > :first-child,
       ol.lined ul > :first-child,
@@ -2809,7 +2810,7 @@ li {
 
 dl {
   padding-bottom: 0.5em;
-  border-bottom: 1px #CCC solid; }
+  border-bottom: 1px #BDBDBD solid; }
   dl dl {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -2829,7 +2830,7 @@ dl.inline > dt,
 dl.inline > dd {
   margin-top: 0.5em;
   padding-top: 0.5em;
-  border-top: 1px #CCC solid; }
+  border-top: 1px #BDBDBD solid; }
 
 dl dl dt:first-child,
 dl dl dt:first-child + dd {
@@ -2895,7 +2896,7 @@ ul.tabs {
   overflow-y: hidden;
   white-space: nowrap;
   background-color: #FFF;
-  border-color: #CCC; }
+  border-color: #BDBDBD; }
   ul.tabs li {
     margin: 0 0.25em;
     display: inline-block;
@@ -2958,7 +2959,7 @@ ul.tabs {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #CCC;
+    background-color: #BDBDBD;
     z-index: 2;
     content: ""; }
   ul.tabs::after {
@@ -3063,7 +3064,7 @@ ul.tree {
       top: 1.5em;
       bottom: 0.75em;
       left: 0.75em;
-      border-left: 1px #CCC solid;
+      border-left: 1px #BDBDBD solid;
       content: "";
       z-index: 1; }
   ul.tree li {
@@ -3079,7 +3080,7 @@ ul.tree {
       position: absolute;
       top: 0.75em;
       left: -1.25em;
-      border: #CCC solid;
+      border: #BDBDBD solid;
       border-width: 0 0 1px 1px;
       content: "";
       z-index: 1; }
@@ -3094,7 +3095,7 @@ table {
   margin-bottom: 1.618em;
   clear: both;
   background-color: rgba(255, 255, 255, 0.85);
-  border: 1px #CCC solid;
+  border: 1px #BDBDBD solid;
   border-radius: 3px;
   border-collapse: collapse; }
   table a {
@@ -3108,6 +3109,10 @@ table {
   table.verticals th,
   table.verticals td {
     border-width: 1px; }
+  table.no-horizontals th,
+  table.no-horizontals td {
+    border-top-width: 0;
+    border-bottom-width: 0; }
   table.highlight-on-hover tfoot tr,
   table.highlight-on-hover tbody tr {
     -webkit-transition: background ease 200ms;
@@ -3128,12 +3133,7 @@ thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 1.33em;
-  background: -webkit-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #EEE 0%, #D8D8D8 100%) no-repeat scroll;
-  background-color: #EEE;
-  background-repeat: no-repeat;
-  background-attachment: scroll; }
+  background-color: #E0E0E0; }
   thead p,
   thead ul,
   thead ol,
@@ -3176,7 +3176,7 @@ td {
   padding: 0.5em 0.75em;
   text-align: left;
   border-width: 1px 0;
-  border-color: #CCC;
+  border-color: #BDBDBD;
   border-style: solid; }
   th.no-padding,
   td.no-padding {
@@ -3338,7 +3338,7 @@ pre.code {
   color: #212121;
   white-space: pre;
   background-color: #F5F5F5;
-  border: 1px #CCC solid;
+  border: 1px #BDBDBD solid;
   border-radius: 3px; }
 
 pre.code {
@@ -3361,7 +3361,8 @@ pre.code {
       font-weight: 700;
       line-height: 1.5em;
       white-space: nowrap;
-      background-color: #CCC;
+      background-color: #E0E0E0;
+      border-bottom: 1px #BDBDBD solid;
       content: attr(title); }
   pre.code[lang]::after {
     height: 1.5em;
@@ -3373,7 +3374,7 @@ pre.code {
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
     line-height: 1.5em;
     text-transform: uppercase;
-    background-color: #CCC;
+    background-color: #E0E0E0;
     border-radius: 3px;
     content: attr(lang); }
   pre.code[lang][title]::after {
@@ -3397,7 +3398,7 @@ table code {
   white-space: nowrap;
   border: none;
   border-radius: 0;
-  outline: 1px #CCC solid; }
+  outline: 1px #BDBDBD solid; }
 
 blockquote {
   margin: 0.25em 0.5em 0.75em;
@@ -3408,7 +3409,7 @@ blockquote {
   line-height: 1.75em;
   white-space: pre-wrap;
   background-color: #F5F5F5;
-  border-left: 0.3em #CCC solid; }
+  border-left: 0.3em #BDBDBD solid; }
   blockquote p {
     margin-bottom: 0;
     font-size: 1em;
@@ -3459,10 +3460,10 @@ hr {
   clear: both;
   font-size: 1.3em;
   line-height: 1.25em;
-  background-image: -webkit-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-  background-image: -moz-linear-gradient(right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-  background-image: linear-gradient(to right, #FFF 0%, #CCC 25%, #CCC 75%, #FFF 100%);
-  background-color: #CCC;
+  background-image: -webkit-linear-gradient(right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
+  background-image: -moz-linear-gradient(right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
+  background-image: linear-gradient(to right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
+  background-color: #BDBDBD;
   border: none; }
 
 p + hr {

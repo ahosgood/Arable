@@ -140,7 +140,9 @@ pre.code {
 			line-height: 1.5em;
 			white-space: nowrap;
 
-			background-color: $borderGrey;
+			background-color: $headerGrey;
+
+			border-bottom: 1px $borderGrey solid;
 
 			content: attr(title);
 		}
@@ -160,7 +162,7 @@ pre.code {
 			line-height: 1.5em;
 			text-transform: uppercase;
 
-			background-color: $borderGrey;
+			background-color: $headerGrey;
 
 			border-radius: 3px;
 
