@@ -1,12 +1,11 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.5
- * Date:        20/02/2015
+ * Version:     5.0.6
+ * Date:        23/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3062,7 +3061,7 @@ ul.tree {
       display: block;
       position: absolute;
       top: 1.5em;
-      bottom: 0.75em;
+      bottom: 0.875em;
       left: 0.75em;
       border-left: 1px #BDBDBD solid;
       content: "";
