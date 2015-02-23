@@ -4,7 +4,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.6
+ * Version:     5.0.7
  * Date:        23/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -349,12 +349,22 @@ form.linear .label {
     font-size: 1.33em;
     background-color: #F5F5F5;
     border: 1px #BDBDBD solid; }
+  form.inline .label a.prefix:hover, form.inline .label a.suffix:hover,
+  form.block .label a.prefix:hover,
+  form.block .label a.suffix:hover,
+  form.linear .label a.prefix:hover,
+  form.linear .label a.suffix:hover {
+    background-color: #E3F2FD; }
   form.inline .label .prefix,
   form.block .label .prefix,
   form.linear .label .prefix {
     float: left;
     border-right-width: 0;
     border-radius: 3px 0 0 3px; }
+    form.inline .label .prefix ~ .prefix,
+    form.block .label .prefix ~ .prefix,
+    form.linear .label .prefix ~ .prefix {
+      border-radius: 0; }
     form.inline .label .prefix ~ .input input,
     form.block .label .prefix ~ .input input,
     form.linear .label .prefix ~ .input input {
@@ -366,6 +376,10 @@ form.linear .label {
     float: right;
     border-left-width: 0;
     border-radius: 0 3px 3px 0; }
+    form.inline .label .suffix ~ .suffix,
+    form.block .label .suffix ~ .suffix,
+    form.linear .label .suffix ~ .suffix {
+      border-radius: 0; }
     form.inline .label .suffix ~ .input input,
     form.block .label .suffix ~ .input input,
     form.linear .label .suffix ~ .input input {

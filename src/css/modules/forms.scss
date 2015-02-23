@@ -138,9 +138,17 @@ form.linear {
 			@include basefontsize;
 
 			background-color: $bgLightGrey;
-			//background-color: $headerGrey;
 
 			border: 1px $borderGrey solid;
+		}
+
+		a {
+			&.prefix,
+			&.suffix {
+				&:hover {
+					background-color: $hoverTable;
+				}
+			}
 		}
 
 		.prefix {
@@ -148,6 +156,10 @@ form.linear {
 
 			border-right-width: 0;
 			border-radius: 3px 0 0 3px;
+
+			~ .prefix {
+				border-radius: 0;
+			}
 
 			~ .input {
 				input {
@@ -162,6 +174,10 @@ form.linear {
 
 			border-left-width: 0;
 			border-radius: 0 3px 3px 0;
+
+			~ .suffix {
+				border-radius: 0;
+			}
 
 			~ .input {
 				input {
