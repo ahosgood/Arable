@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.7
- * Date:        23/02/2015
+ * Version:     5.0.8
+ * Date:        03/02/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3449,20 +3449,25 @@ a {
     color: #E64A19; }
 
 .superheavyweight {
-  font-weight: 900; }
+  font-weight: 900 !important; }
 
-strong,
-.heavyweight {
+strong {
   font-weight: 700; }
 
-.mediumweight {
-  font-weight: 400; }
+.heavyweight {
+  font-weight: 700 !important; }
 
-.lightweight {
-  font-weight: 300; }
+.mediumweight,
+.middleweight {
+  font-weight: 400 !important; }
 
-.superlightweight {
-  font-weight: 100; }
+.lightweight,
+.featherweight {
+  font-weight: 300 !important; }
+
+.superlightweight,
+.flyweight {
+  font-weight: 100 !important; }
 
 /* ===================================================== OTHER ===================================================== */
 hr {

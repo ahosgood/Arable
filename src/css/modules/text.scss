@@ -263,22 +263,28 @@ a {
 }
 
 .superheavyweight {
-	font-weight: 900;
+	font-weight: 900 !important;
 }
 
-strong,
-.heavyweight {
+strong {
 	font-weight: 700;
 }
 
-.mediumweight {
-	font-weight: 400;
+.heavyweight {
+	font-weight: 700 !important;
 }
 
-.lightweight {
-	font-weight: 300;
+.mediumweight,
+.middleweight {
+	font-weight: 400 !important;
 }
 
-.superlightweight {
-	font-weight: 100;
+.lightweight,
+.featherweight {
+	font-weight: 300 !important;
+}
+
+.superlightweight,
+.flyweight {
+	font-weight: 100 !important;
 }
