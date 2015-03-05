@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.8
- * Date:        03/02/2015
+ * Version:     5.0.9
+ * Date:        05/03/2015
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3269,6 +3269,7 @@ h6 {
   padding: 0.75em 0;
   line-height: 1em;
   font-weight: 700;
+  white-space: pre-wrap;
   page-break-after: avoid; }
   h1.no-top-padding,
   h2.no-top-padding,
