@@ -110,6 +110,61 @@ dl {
 
 	&.inline {
 		overflow: hidden;
+
+		&.bias-none {
+			> dt,
+			> dd + dd,
+			> dd {
+				width: 50%;
+			}
+		}
+
+		&.bias-left {
+			> dt {
+				width: 75%;
+			}
+
+			> dd {
+				width: 25%;
+			}
+
+			> dd + dd {
+				margin-left: 75%;
+			}
+		}
+
+		&.bias-right {
+			> dt {
+				width: 25%;
+			}
+
+			> dd {
+				width: 75%;
+			}
+
+			> dd + dd {
+				margin-left: 25%;
+			}
+		}
+	}
+
+	&.bold-right {
+		> dt {
+			font-weight: 400;
+		}
+
+		> dd {
+			font-weight: 700;
+		}
+	}
+
+	&.plain {
+		border: none;
+
+		dt,
+		dd {
+			border: none !important;
+		}
 	}
 }
 

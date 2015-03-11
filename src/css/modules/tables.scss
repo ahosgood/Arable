@@ -33,11 +33,21 @@ table {
 		}
 	}
 
+	&.plain,
 	&.no-horizontals {
 		th,
 		td {
 			border-top-width: 0;
 			border-bottom-width: 0;
+		}
+	}
+
+	&.plain,
+	&.no-zebra {
+		tbody {
+			tr {
+				background-color: transparent !important;
+			}
 		}
 	}
 
@@ -71,7 +81,6 @@ table {
 		font-weight: 700;
 		@include basefontsize;
 
-		//@include grad(#EEE, #D8D8D8);
 		background-color: $headerGrey;
 
 		p,

@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0.9
- * Date:        2015-03-06
+ * Version:     5.1.0
+ * Date:        2015-03-11
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -2830,6 +2830,31 @@ dl {
     border-bottom: none; }
   dl.inline {
     overflow: hidden; }
+    dl.inline.bias-none > dt,
+    dl.inline.bias-none > dd + dd,
+    dl.inline.bias-none > dd {
+      width: 50%; }
+    dl.inline.bias-left > dt {
+      width: 75%; }
+    dl.inline.bias-left > dd {
+      width: 25%; }
+    dl.inline.bias-left > dd + dd {
+      margin-left: 75%; }
+    dl.inline.bias-right > dt {
+      width: 25%; }
+    dl.inline.bias-right > dd {
+      width: 75%; }
+    dl.inline.bias-right > dd + dd {
+      margin-left: 25%; }
+  dl.bold-right > dt {
+    font-weight: 400; }
+  dl.bold-right > dd {
+    font-weight: 700; }
+  dl.plain {
+    border: none; }
+    dl.plain dt,
+    dl.plain dd {
+      border: none !important; }
 
 dt,
 dd {
@@ -3122,10 +3147,13 @@ table {
   table.verticals th,
   table.verticals td {
     border-width: 1px; }
-  table.no-horizontals th,
+  table.plain th,
+  table.plain td, table.no-horizontals th,
   table.no-horizontals td {
     border-top-width: 0;
     border-bottom-width: 0; }
+  table.plain tbody tr, table.no-zebra tbody tr {
+    background-color: transparent !important; }
   table.highlight-on-hover tfoot tr,
   table.highlight-on-hover tbody tr {
     -webkit-transition: background ease 200ms;
