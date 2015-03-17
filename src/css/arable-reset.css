@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.0
- * Date:        2015-03-06
+ * Version:     5.1
+ * Date:        2015-03-17
  * ================================================================================
  */
 @-ms-viewport {
@@ -59,6 +59,11 @@ ul {
 
 ol {
   list-style: decimal outside; }
+
+sub,
+sup,
+small {
+  font-size: smaller; }
 
 ul ul,
 ol ul,
