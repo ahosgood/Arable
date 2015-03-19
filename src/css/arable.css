@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.1.1
- * Date:        2015-03-17
+ * Version:     5.1.2
+ * Date:        2015-03-19
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3458,9 +3458,8 @@ blockquote {
   background-color: #F5F5F5;
   border-left: 0.3em #BDBDBD solid; }
   blockquote p {
-    margin-bottom: 0;
-    font-size: 1em;
-    line-height: 0.74em; }
+    padding-bottom: 0;
+    font-size: 1em; }
 
 sup,
 sub {
