@@ -1,11 +1,12 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.1.2
- * Date:        2015-03-19
+ * Version:     5.1.3
+ * Date:        2015-03-21
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -2460,20 +2461,28 @@ form.linear {
         margin-top: 0.25em;
         margin-bottom: 0.25em;
         display: inline-block; }
-  form.foldable.linear input.full,
-  form.foldable.linear select.full,
-  form.foldable.linear textarea.full {
+  form.foldable input.full,
+  form.foldable select.full,
+  form.foldable textarea.full, form.block input.full,
+  form.block select.full,
+  form.block textarea.full {
     width: 100%;
     clear: both; }
-  form.foldable.linear button,
-  form.foldable.linear [type="submit"],
-  form.foldable.linear [type="reset"],
-  form.foldable.linear [type="button"],
-  form.foldable.linear .button {
-    width: 100%;
+  form.foldable button,
+  form.foldable [type="submit"],
+  form.foldable [type="reset"],
+  form.foldable [type="button"],
+  form.foldable .button, form.block button,
+  form.block [type="submit"],
+  form.block [type="reset"],
+  form.block [type="button"],
+  form.block .button {
+    width: 100% !important;
     margin-top: 0.5em;
     margin-right: 0 !important;
     margin-left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     display: block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

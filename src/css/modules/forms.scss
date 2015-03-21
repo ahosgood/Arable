@@ -604,13 +604,16 @@ form.linear {
 }
 
 @media (max-width: $intTabletSmall - 1) {
-	form.foldable {
-		&.inline,
-		&.linear {
-			@include blockform();
+	form {
+		&.foldable {
+			&.inline,
+			&.linear {
+				@include blockform();
+			}
 		}
 
-		&.linear {
+		&.foldable,
+		&.block {
 			input,
 			select,
 			textarea {
@@ -626,10 +629,12 @@ form.linear {
 			[type="reset"],
 			[type="button"],
 			.button {
-				width: 100%;
+				width: 100% !important;
 				margin-top: 0.5em;
 				margin-right: 0 !important;
 				margin-left: 0 !important;
+				padding-right: 0 !important;
+				padding-left: 0 !important;
 
 				display: block;
 				-webkit-box-sizing: border-box;
