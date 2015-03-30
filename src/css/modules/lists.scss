@@ -7,7 +7,7 @@ dl {
 	@include basefontsize;
 
 	&.large {
-		font-size: #{$baseFontSize * 1.25}em;
+		font-size: #{$baseFontSize * 1.2}em;
 	}
 }
 
