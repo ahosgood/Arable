@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.1.5
- * Date:        2015-03-21
+ * Version:     5.1.6
+ * Date:        2015-03-30 
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -2752,7 +2752,7 @@ dl {
   ul.large,
   ol.large,
   dl.large {
-    font-size: 1.596em; }
+    font-size: 1.4497em; }
 
 li > ul,
 li > ol,
@@ -3188,7 +3188,7 @@ table {
       -o-transition: background ease 50ms;
       transition: background ease 50ms; }
   table.large {
-    font-size: 1.2em; }
+    font-size: 1.09em; }
 
 thead {
   font-family: Helvetica, Arial, Tahoma, sans-serif;
@@ -3196,7 +3196,7 @@ thead {
   font-size: 1.33em;
   background-color: #E0E0E0; }
   thead.large {
-    font-size: 1.596em; }
+    font-size: 1.4497em; }
   thead p,
   thead ul,
   thead ol,
@@ -3209,7 +3209,7 @@ tbody {
   font-size: 1.25em; }
   tfoot.large,
   tbody.large {
-    font-size: 1.5em; }
+    font-size: 1.3625em; }
   tfoot p,
   tfoot ul,
   tfoot ol,
