@@ -5,6 +5,10 @@ dl {
 	margin-bottom: 1.5em;
 
 	@include basefontsize;
+
+	&.large {
+		font-size: #{$baseFontSize * 1.25}em;
+	}
 }
 
 li,
