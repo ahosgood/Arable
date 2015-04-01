@@ -31,20 +31,22 @@ textarea {
 form.inline,
 form.block,
 form.linear {
-	label {
-		font-weight: 700;
-	}
+	&.confirm-valid {
+		input {
+			&:valid {
+				&:focus {
+					background-color: #E6FAE6;
 
-	input {
-		&:valid {
-			&:focus {
-				background-color: #E6FAE6;
+					border-color: #0C0;
 
-				border-color: #0C0;
-
-				box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5);
+					box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5);
+				}
 			}
 		}
+	}
+
+	label {
+		font-weight: 700;
 	}
 
 	textarea {
@@ -111,6 +113,8 @@ form.linear {
 		&:disabled {
 			background-color: #EEE;
 		}
+
+		&:required {}
 	}
 
 	.label {

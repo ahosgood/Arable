@@ -1,12 +1,11 @@
-@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.1.6
- * Date:        2015-03-30 
+ * Version:     5.2.0
+ * Date:        2015-04-01
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -204,16 +203,16 @@ optgroup option {
 option:disabled {
   color: #AAA; }
 
+form.inline.confirm-valid input:valid:focus,
+form.block.confirm-valid input:valid:focus,
+form.linear.confirm-valid input:valid:focus {
+  background-color: #E6FAE6;
+  border-color: #0C0;
+  box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5); }
 form.inline label,
 form.block label,
 form.linear label {
   font-weight: 700; }
-form.inline input:valid:focus,
-form.block input:valid:focus,
-form.linear input:valid:focus {
-  background-color: #E6FAE6;
-  border-color: #0C0;
-  box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5); }
 form.inline textarea,
 form.block textarea,
 form.linear textarea {
@@ -458,10 +457,10 @@ form.linear .button {
   line-height: 2.1em;
   vertical-align: middle;
   white-space: nowrap;
-  background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background-color: #F2F2F2;
+  background: -webkit-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background-color: #F5F5F5;
   background-repeat: no-repeat;
   background-attachment: scroll;
   border: 1px #BDBDBD solid;
@@ -2502,10 +2501,10 @@ label.button {
   line-height: 2.1em;
   vertical-align: middle;
   white-space: nowrap;
-  background: -webkit-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background: -moz-linear-gradient(top, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background: linear-gradient(to bottom, #F2F2F2 0%, #D8D8D8 100%) no-repeat scroll;
-  background-color: #F2F2F2;
+  background: -webkit-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background: -moz-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background: linear-gradient(to bottom, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
+  background-color: #F5F5F5;
   background-repeat: no-repeat;
   background-attachment: scroll;
   border: 1px #BDBDBD solid;
@@ -2812,13 +2811,13 @@ ol {
   ul.lined,
   ol.lined {
     margin-bottom: 1.5em;
-    border-bottom: 1px #BDBDBD solid; }
+    border-bottom: 1px #E0E0E0 solid; }
     ul.lined li,
     ol.lined li {
       margin-bottom: 0.35em;
       padding: 0.35em 0 0;
       text-indent: 0.5em;
-      border-top: 1px #BDBDBD solid; }
+      border-top: 1px #E0E0E0 solid; }
     ul.lined ul,
     ul.lined ol,
     ol.lined ul,
@@ -2826,7 +2825,7 @@ ol {
       margin-top: 0.35em;
       margin-left: 0;
       padding-left: 1em;
-      border-top: 1px #BDBDBD solid; }
+      border-top: 1px #E0E0E0 solid; }
       ul.lined ul > :first-child,
       ul.lined ol > :first-child,
       ol.lined ul > :first-child,
@@ -2841,7 +2840,7 @@ li {
 
 dl {
   padding-bottom: 0.5em;
-  border-bottom: 1px #BDBDBD solid; }
+  border-bottom: 1px #E0E0E0 solid; }
   dl dl {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -2886,7 +2885,7 @@ dl.inline > dt,
 dl.inline > dd {
   margin-top: 0.5em;
   padding-top: 0.5em;
-  border-top: 1px #BDBDBD solid; }
+  border-top: 1px #E0E0E0 solid; }
 
 dl dl dt:first-child,
 dl dl dt:first-child + dd {
@@ -2952,7 +2951,9 @@ ul.tabs {
   overflow-y: hidden;
   white-space: nowrap;
   background-color: #FFF;
-  border-color: #BDBDBD; }
+  border-color: #E0E0E0;
+  -webkit-transition: border ease 200ms;
+  transition: border ease 200ms; }
   ul.tabs li {
     margin: 0 0.25em;
     display: inline-block;
@@ -2965,19 +2966,22 @@ ul.tabs {
     border-style: solid;
     border-radius: 3px 3px 0 0;
     z-index: 1; }
-    ul.tabs li a {
+    ul.tabs li a,
+    ul.tabs li span {
       padding: 0.5em 1em 0.65em;
       display: block;
-      color: #212121;
       font-weight: 400;
       line-height: 1em;
-      white-space: nowrap;
+      white-space: nowrap; }
+    ul.tabs li a {
+      color: #212121;
       text-decoration: none; }
       ul.tabs li a:hover {
         color: #1976D2; }
       ul.tabs li a:active {
         color: #E64A19; }
-    ul.tabs li.primary a {
+    ul.tabs li.primary a,
+    ul.tabs li.primary span {
       font-weight: 700; }
     ul.tabs li.current {
       margin-top: 0;
@@ -2993,7 +2997,8 @@ ul.tabs {
         left: 0;
         background-color: inherit;
         content: ""; }
-    ul.tabs li.disabled a {
+    ul.tabs li.disabled a,
+    ul.tabs li.disabled span {
       color: #AAA;
       cursor: text; }
   ul.tabs.grad li {
@@ -3015,7 +3020,9 @@ ul.tabs {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #BDBDBD;
+    background-color: #E0E0E0;
+    -webkit-transition: background ease 200ms;
+    transition: background ease 200ms;
     z-index: 2;
     content: ""; }
   ul.tabs::after {
@@ -3026,6 +3033,14 @@ ul.tabs {
     overflow: hidden;
     clear: both;
     content: ""; }
+  ul.tabs.react:hover {
+    border-color: #BDBDBD;
+    -webkit-transition: border ease 50ms;
+    transition: border ease 50ms; }
+    ul.tabs.react:hover::before {
+      background-color: #BDBDBD;
+      -webkit-transition: background ease 50ms;
+      transition: background ease 50ms; }
 
 ul.tree {
   margin-left: 1em;
@@ -3043,7 +3058,7 @@ ul.tree {
   			bottom: 0.75em;
   			left: 0.5em;
   
-  			border-left: 1px $borderGrey solid;
+  			border-left: 1px $borderLightGrey solid;
   
   			content: "";
   
@@ -3078,7 +3093,7 @@ ul.tree {
   
   				background-color: #FFF;
   
-  				border: 1px $borderGrey solid;
+  				border: 1px $borderLightGrey solid;
   
   				content: "+";
   
@@ -3120,7 +3135,7 @@ ul.tree {
       top: 1.5em;
       bottom: 0.875em;
       left: 0.75em;
-      border-left: 1px #BDBDBD solid;
+      border-left: 1px #E0E0E0 solid;
       content: "";
       z-index: 1; }
   ul.tree li {
@@ -3136,7 +3151,7 @@ ul.tree {
       position: absolute;
       top: 0.75em;
       left: -1.25em;
-      border: #BDBDBD solid;
+      border: #E0E0E0 solid;
       border-width: 0 0 1px 1px;
       content: "";
       z-index: 1; }
@@ -3346,6 +3361,16 @@ h6 {
   h6.no-vertical-padding {
     padding-top: 0 !important;
     padding-bottom: 0 !important; }
+  h1.dark,
+  h2.dark,
+  h3.dark,
+  h4.dark,
+  h5.dark,
+  h6.dark {
+    margin: 0.25em 0;
+    padding: 0.5em;
+    color: #FFF;
+    background-color: #455A64; }
 
 h1 {
   font-size: 3.97136em; }
@@ -3450,7 +3475,8 @@ pre.code {
     background-color: transparent; }
   pre.code.dark {
     color: #FFF;
-    background-color: #212121; }
+    background-color: #212121;
+    border: none; }
     pre.code.dark em {
       color: #212121; }
 
@@ -3531,10 +3557,10 @@ hr {
   clear: both;
   font-size: 1.3em;
   line-height: 1.25em;
-  background-image: -webkit-linear-gradient(right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
-  background-image: -moz-linear-gradient(right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
-  background-image: linear-gradient(to right, #FFF 0%, #BDBDBD 25%, #BDBDBD 75%, #FFF 100%);
-  background-color: #BDBDBD;
+  background-image: -webkit-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
+  background-image: -moz-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
+  background-image: linear-gradient(to right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
+  background-color: #E0E0E0;
   border: none; }
 
 p + hr {

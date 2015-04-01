@@ -24,6 +24,15 @@ h6 {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
+
+	&.dark {
+		margin: 0.25em 0;
+		padding: 0.5em;
+
+		color: #FFF;
+
+		background-color: #455A64;
+	}
 }
 
 h1 {
@@ -183,6 +192,8 @@ pre.code {
 		color: #FFF;
 
 		background-color:$baseTextColour;
+
+		border: none;
 
 		em {
 			color: $baseTextColour;

@@ -64,7 +64,7 @@ ol {
 	&.lined {
 		margin-bottom: 1.5em;
 
-		border-bottom: 1px $borderGrey solid;
+		border-bottom: 1px $borderLightGrey solid;
 
 		li {
 			margin-bottom: 0.35em;
@@ -72,7 +72,7 @@ ol {
 
 			text-indent: 0.5em;
 
-			border-top: 1px $borderGrey solid;
+			border-top: 1px $borderLightGrey solid;
 		}
 
 		ul,
@@ -81,7 +81,7 @@ ol {
 			margin-left: 0;
 			padding-left: 1em;
 
-			border-top: 1px $borderGrey solid;
+			border-top: 1px $borderLightGrey solid;
 
 			> :first-child {
 				border-top: none;
@@ -103,7 +103,7 @@ ol {
 dl {
 	padding-bottom: 0.5em;
 
-	border-bottom: 1px $borderGrey solid;
+	border-bottom: 1px $borderLightGrey solid;
 
 	dl {
 		margin-bottom: 0;
@@ -187,7 +187,7 @@ dl {
 		margin-top: 0.5em;
 		padding-top: 0.5em;
 
-		border-top: 1px $borderGrey solid;
+		border-top: 1px $borderLightGrey solid;
 	}
 
 	dl dl dt,
@@ -298,7 +298,13 @@ ul.tabs {
 
 	background-color: #FFF;
 
-	border-color: $borderGrey;
+	border-color: $borderLightGrey;
+
+	-webkit-transition: border ease 200ms;
+	//-moz-transition: border ease 200ms;
+	//-ms-transition: border ease 200ms;
+	//-o-transition: border ease 200ms;
+	transition: border ease 200ms;
 
 	li {
 		margin: 0 0.25em;
@@ -319,15 +325,19 @@ ul.tabs {
 
 		z-index: 1;
 
-		a {
+		a,
+		span {
 			padding: 0.5em 1em 0.65em;
 
 			display: block;
 
-			color: $baseTextColour;
 			font-weight: 400;
 			line-height: 1em;
 			white-space: nowrap;
+		}
+
+		a {
+			color: $baseTextColour;
 			text-decoration: none;
 
 			&:hover {
@@ -340,7 +350,8 @@ ul.tabs {
 		}
 
 		&.primary {
-			a {
+			a,
+			span {
 				font-weight: 700;
 			}
 		}
@@ -371,7 +382,8 @@ ul.tabs {
 		}
 
 		&.disabled {
-			a {
+			a,
+			span {
 				color: #AAA;
 
 				cursor: text;
@@ -414,7 +426,13 @@ ul.tabs {
 		bottom: 0;
 		left: 0;
 
-		background-color: $borderGrey;
+		background-color: $borderLightGrey;
+
+		-webkit-transition: background ease 200ms;
+		//-moz-transition: background ease 200ms;
+		//-ms-transition: background ease 200ms;
+		//-o-transition: background ease 200ms;
+		transition: background ease 200ms;
 
 		z-index: 2;
 
@@ -433,6 +451,28 @@ ul.tabs {
 		clear: both;
 
 		content: "";
+	}
+
+	&.react {
+		&:hover {
+			border-color: $borderGrey;
+
+			-webkit-transition: border ease 50ms;
+			//-moz-transition: border ease 50ms;
+			//-ms-transition: border ease 50ms;
+			//-o-transition: border ease 50ms;
+			transition: border ease 50ms;
+
+			&::before {
+				background-color: $borderGrey;
+
+				-webkit-transition: background ease 50ms;
+				//-moz-transition: background ease 50ms;
+				//-ms-transition: background ease 50ms;
+				//-o-transition: background ease 50ms;
+				transition: background ease 50ms;
+			}
+		}
 	}
 }
 
@@ -455,7 +495,7 @@ ul.tree {
 			bottom: 0.875em;
 			left: 0.75em;
 
-			border-left: 1px $borderGrey solid;
+			border-left: 1px $borderLightGrey solid;
 
 			content: "";
 
@@ -482,7 +522,7 @@ ul.tree {
 			top: 0.75em;
 			left: -1.25em;
 
-			border: $borderGrey solid;
+			border: $borderLightGrey solid;
 			border-width: 0 0 1px 1px;
 
 			content: "";
@@ -512,7 +552,7 @@ ul.tree {
 			bottom: 0.75em;
 			left: 0.5em;
 
-			border-left: 1px $borderGrey solid;
+			border-left: 1px $borderLightGrey solid;
 
 			content: "";
 
@@ -547,7 +587,7 @@ ul.tree {
 
 				background-color: #FFF;
 
-				border: 1px $borderGrey solid;
+				border: 1px $borderLightGrey solid;
 
 				content: "+";
 
