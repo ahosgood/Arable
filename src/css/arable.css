@@ -4,7 +4,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.2.0
+ * Version:     5.2.1
  * Date:        2015-04-01
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -2951,7 +2951,7 @@ ul.tabs {
   overflow-y: hidden;
   white-space: nowrap;
   background-color: #FFF;
-  border-color: #E0E0E0;
+  border-color: #BDBDBD;
   -webkit-transition: border ease 200ms;
   transition: border ease 200ms; }
   ul.tabs li {
@@ -3020,7 +3020,7 @@ ul.tabs {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #E0E0E0;
+    background-color: #BDBDBD;
     -webkit-transition: background ease 200ms;
     transition: background ease 200ms;
     z-index: 2;
@@ -3033,14 +3033,18 @@ ul.tabs {
     overflow: hidden;
     clear: both;
     content: ""; }
-  ul.tabs.react:hover {
-    border-color: #BDBDBD;
-    -webkit-transition: border ease 50ms;
-    transition: border ease 50ms; }
-    ul.tabs.react:hover::before {
-      background-color: #BDBDBD;
-      -webkit-transition: background ease 50ms;
-      transition: background ease 50ms; }
+  ul.tabs.react {
+    border-color: #E0E0E0; }
+    ul.tabs.react::before {
+      background-color: #E0E0E0; }
+    ul.tabs.react:hover {
+      border-color: #BDBDBD;
+      -webkit-transition: border ease 50ms;
+      transition: border ease 50ms; }
+      ul.tabs.react:hover::before {
+        background-color: #BDBDBD;
+        -webkit-transition: background ease 50ms;
+        transition: background ease 50ms; }
 
 ul.tree {
   margin-left: 1em;

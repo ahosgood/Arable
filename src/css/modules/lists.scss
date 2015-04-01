@@ -298,7 +298,7 @@ ul.tabs {
 
 	background-color: #FFF;
 
-	border-color: $borderLightGrey;
+	border-color: $borderGrey;
 
 	-webkit-transition: border ease 200ms;
 	//-moz-transition: border ease 200ms;
@@ -426,7 +426,7 @@ ul.tabs {
 		bottom: 0;
 		left: 0;
 
-		background-color: $borderLightGrey;
+		background-color: $borderGrey;
 
 		-webkit-transition: background ease 200ms;
 		//-moz-transition: background ease 200ms;
@@ -454,6 +454,12 @@ ul.tabs {
 	}
 
 	&.react {
+		border-color: $borderLightGrey;
+
+		&::before {
+			background-color: $borderLightGrey;
+		}
+
 		&:hover {
 			border-color: $borderGrey;
 
