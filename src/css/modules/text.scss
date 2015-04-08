@@ -117,7 +117,7 @@ pre.code {
 	background-color: $bgLightGrey;
 
 	border: 1px $borderGrey solid;
-	border-radius: 3px;
+	border-radius: $borderRadius;
 }
 
 pre.code {
@@ -130,7 +130,7 @@ pre.code {
 
 		box-shadow: 0 0 0 1px $highlight;
 
-		border-radius: 3px;
+		border-radius: $borderRadius;
 	}
 
 	&[title] {
@@ -174,7 +174,7 @@ pre.code {
 
 			background-color: $headerGrey;
 
-			border-radius: 3px;
+			border-radius: $borderRadius;
 
 			content: attr(lang);
 		}

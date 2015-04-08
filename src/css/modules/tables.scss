@@ -8,7 +8,7 @@ table {
 	background-color: rgba(255, 255, 255, 0.85);
 
 	border: 1px $borderGrey solid;
-	border-radius: 3px;
+	border-radius: $borderRadius;
 	border-collapse: collapse;
 
 	a {

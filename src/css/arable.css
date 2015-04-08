@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.2.1
- * Date:        2015-04-01
+ * Version:     5.3.0
+ * Date:        2015-04-08
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -16,7 +16,7 @@
 @viewport {
   width: device-width; }
 /* ===================================================== RESET ===================================================== */
-a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
+* {
   margin: 0;
   padding: 0;
   color: inherit;
@@ -30,23 +30,23 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-rendering: optimizeLegibility;
+  border-color: inherit;
   z-index: inherit; }
 
+html,
+body {
+  min-height: 100%; }
+
 html {
-  min-height: 100%;
   overflow-y: auto;
   font-size: 10px; }
 
 body {
-  min-height: 100%;
   margin: 0 auto;
-  padding: 0;
   font-size: 1em;
   font-size: 1rem; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, span, em, strong, pre {
-  margin: 0;
-  padding: 0;
   color: inherit;
   line-height: inherit; }
 
@@ -175,9 +175,11 @@ body {
   font-weight: 400; }
 
 .clear {
-  display: block;
-  visibility: hidden;
-  clear: both;
+  width: 0;
+  height: 0;
+  display: block !important;
+  visibility: hidden !important;
+  clear: both !important;
   overflow: hidden; }
 
 /* ===================================================== FORMS AND INPUTS ===================================================== */
@@ -412,7 +414,7 @@ form.linear .label {
     padding-right: 0.35em;
     padding-left: 0.35em;
     color: #BDBDBD;
-    background-color: transparent; }
+    background-color: #FFF; }
   form.inline .label.no-space .prefix,
   form.block .label.no-space .prefix,
   form.linear .label.no-space .prefix {
@@ -2064,7 +2066,8 @@ form.block {
       padding: 0 0.5em;
       float: left;
       clear: none;
-      font-weight: inherit; }
+      font-weight: inherit;
+      background-color: transparent; }
     form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
     form.block input[type="radio"]:disabled + label,
     form.block input[type="radio"][readonly] + label {
@@ -2128,8 +2131,12 @@ form.inline textarea.full {
   clear: both; }
 form.inline .label {
   width: 75%; }
-form.inline.large input[type="radio"] + label {
-  margin-top: 1em; }
+form.inline.large input[type="radio"] {
+  margin-top: 1.65em; }
+  form.inline.large input[type="radio"] + label {
+    margin-top: 1.45em; }
+form.inline.large input[type="checkbox"] {
+  margin-top: 1.45em; }
 
 form.block {
   text-align: left; }
@@ -2207,6 +2214,7 @@ form.block {
   form.block .label.inline-8 {
     width: 11.625%; }
   form.block .label {
+    width: 100%;
     margin-bottom: 0.2em; }
   form.block input[type="checkbox"],
   form.block input[type="radio"] {
@@ -2224,10 +2232,8 @@ form.block {
       margin-top: 0.25em;
       margin-bottom: 0.25em;
       display: inline-block; }
-  form.block .label {
-    width: 100%; }
   form.block.large input[type="checkbox"] {
-    margin-top: 1.4em; }
+    margin-top: 1.65em; }
 
 form.linear {
   padding: 0.5em 0;
@@ -2442,6 +2448,7 @@ form.linear {
     form.foldable.linear .label.inline-8 {
       width: 11.625%; }
     form.foldable.inline .label, form.foldable.linear .label {
+      width: 100%;
       margin-bottom: 0.2em; }
     form.foldable.inline input[type="checkbox"],
     form.foldable.inline input[type="radio"], form.foldable.linear input[type="checkbox"],
@@ -2460,6 +2467,8 @@ form.linear {
         margin-top: 0.25em;
         margin-bottom: 0.25em;
         display: inline-block; }
+    form.foldable.inline.large input[type="checkbox"], form.foldable.linear.large input[type="checkbox"] {
+      margin-top: 1.65em; }
   form.foldable input.full,
   form.foldable select.full,
   form.foldable textarea.full, form.block input.full,
@@ -2972,7 +2981,8 @@ ul.tabs {
       display: block;
       font-weight: 400;
       line-height: 1em;
-      white-space: nowrap; }
+      white-space: nowrap;
+      border-radius: 2px 2px 0 0; }
     ul.tabs li a {
       color: #212121;
       text-decoration: none; }

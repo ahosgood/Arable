@@ -10,10 +10,13 @@ body {
 }
 
 .clear {
-	display: block;
-	visibility: hidden;
+	width: 0;
+	height: 0;
 
-	clear: both;
+	display: block !important;
+	visibility: hidden !important;
+
+	clear: both !important;
 
 	overflow: hidden;
 }

@@ -321,7 +321,7 @@ ul.tabs {
 		border-width: 1px 1px 0;
 		border-color: transparent;
 		border-style: solid;
-		border-radius: 3px 3px 0 0;
+		border-radius: $borderRadius $borderRadius 0 0;
 
 		z-index: 1;
 
@@ -334,6 +334,8 @@ ul.tabs {
 			font-weight: 400;
 			line-height: 1em;
 			white-space: nowrap;
+
+			border-radius: ($borderRadius - 1) ($borderRadius - 1) 0 0;
 		}
 
 		a {

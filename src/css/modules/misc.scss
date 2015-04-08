@@ -131,7 +131,7 @@ dl {
 	position: relative;
 
 	border: 1px #000 solid;
-	border-radius: 3px;
+	border-radius: $borderRadius;
 
 	> :first-child {
 		margin-top: 0;
@@ -192,7 +192,7 @@ p {
 
 	background-color: $tagStandard;
 
-	border-radius: 3px;
+	border-radius: $borderRadius;
 
 	&.caps {
 		text-transform: uppercase !important;

@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.2.1
- * Date:        2015-04-01
+ * Version:     5.3.0
+ * Date:        2015-04-08
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -35,6 +35,8 @@ $highlight: #FFF59D;
 $highlightTable: #FFF9C4;
 $hoverTable: #E3F2FD;
 
+$buttonTop: #F5F5F5;
+$buttonBottom: #E0E0E0;
 $buttonRed: #D50000;
 $buttonGreen: #43A047;
 $buttonBlue: #1976D2;
@@ -66,6 +68,9 @@ $tagPink: #D81B60;
 $tagBrown: #6D4C41;
 $tagBlack: #212121;
 $tagGrey: #757575;
+
+// ----------------------------------------------------- DIMENSIONS -----------------------------------------------------
+$borderRadius: 3px;
 
 // ----------------------------------------------------- BREAKPOINTS -----------------------------------------------------
 $intMobileLarge: 481px;

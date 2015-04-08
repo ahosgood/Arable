@@ -7,7 +7,7 @@
 }
 
 /* ===================================================== RESET ===================================================== */
-a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, datalist, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, link, main, map, mark, menu, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source, span, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
+* {
 	margin: 0;
 	padding: 0;
 
@@ -23,30 +23,30 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 	-ms-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
 
+	border-color: inherit;
+
 	z-index: inherit;
 }
 
-html {
+html,
+body {
 	min-height: 100%;
+}
 
+html {
 	overflow-y: auto;
 
 	font-size: 10px;
 }
 
 body {
-	min-height: 100%;
 	margin: 0 auto;
-	padding: 0;
 
 	font-size: 1em;
 	font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, span, em, strong, pre {
-	margin: 0;
-	padding: 0;
-
 	color: inherit;
 	line-height: inherit;
 }

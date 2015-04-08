@@ -68,10 +68,10 @@
 	vertical-align: middle;
 	white-space: nowrap;
 
-	@include grad(#F5F5F5, #E0E0E0);
+	@include grad($buttonTop, $buttonBottom);
 
 	border: 1px $borderGrey solid;
-	border-radius: 3px;
+	border-radius: $borderRadius;
 
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	//-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
@@ -231,6 +231,7 @@
 	}
 
 	.label {
+		width: 100%;
 		margin-bottom: 0.2em;
 	}
 
@@ -259,6 +260,14 @@
 			margin-bottom: 0.25em;
 
 			display: inline-block;
+		}
+	}
+
+	&.large {
+		input {
+			&[type="checkbox"] {
+				margin-top: 1.65em;
+			}
 		}
 	}
 }
