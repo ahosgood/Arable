@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.0
- * Date:        2015-04-08
+ * Version:     5.3.1
+ * Date:        2015-04-09
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3183,9 +3183,6 @@ table {
   border: 1px #BDBDBD solid;
   border-radius: 3px;
   border-collapse: collapse; }
-  table a {
-    color: #212121;
-    font-style: normal; }
   table p {
     margin: 0.25em 0;
     line-height: 1.618em; }
