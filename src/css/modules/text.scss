@@ -7,13 +7,13 @@ h5,
 h6 {
 	padding: 0.75em 0;
 
-	line-height: 1em;
+	line-height: 1;
 	font-weight: 700;
 	white-space: pre-wrap;
 	page-break-after: avoid;
 
 	&.no-top-padding {
-		line-height: 1em;
+		line-height: 1;
 	}
 
 	&.no-bottom-padding {
@@ -93,7 +93,7 @@ code {
 	display: block;
 
 	font-family: "Courier New", Courier, monospace, mono;
-	line-height: 1.25em;
+	line-height: 1.25;
 	white-space: pre-wrap;
 }
 
@@ -147,7 +147,7 @@ pre.code {
 			color: blackorwhite($borderGrey);
 			@include basefontface;
 			font-weight: 700;
-			line-height: 1.5em;
+			line-height: 1.5;
 			white-space: nowrap;
 
 			background-color: $headerGrey;
@@ -169,7 +169,7 @@ pre.code {
 
 			color: if(lightness($borderGrey) > 50, $baseTextColour, #FFF);
 			@include basefontface;
-			line-height: 1.5em;
+			line-height: 1.5;
 			text-transform: uppercase;
 
 			background-color: $headerGrey;
@@ -226,7 +226,7 @@ blockquote {
 	color: #555;
 	font-size: 1.55em;
 	font-weight: 300;
-	line-height: 1.75em;
+	line-height: 1.75;
 	white-space: pre-wrap;
 
 	background-color: $bgLightGrey;

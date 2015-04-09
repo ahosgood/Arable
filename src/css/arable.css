@@ -4,7 +4,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.1
+ * Version:     5.3.2
  * Date:        2015-04-09
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -203,7 +203,7 @@ optgroup option {
   padding-left: 1em; }
 
 option:disabled {
-  color: #AAA; }
+  color: #BDBDBD; }
 
 form.inline.confirm-valid input:valid:focus,
 form.block.confirm-valid input:valid:focus,
@@ -456,7 +456,7 @@ form.linear .button {
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  line-height: 2.1em;
+  line-height: 2.1;
   vertical-align: middle;
   white-space: nowrap;
   background: -webkit-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
@@ -582,7 +582,7 @@ form.linear .button {
   form.linear button.thin,
   form.linear .button.thin {
     height: 1.5em;
-    line-height: 1.5em; }
+    line-height: 1.5; }
   form.inline [type="submit"].disabled, form.inline [type="submit"]:disabled,
   form.inline [type="reset"].disabled,
   form.inline [type="reset"]:disabled,
@@ -1833,10 +1833,10 @@ form.block {
     clear: both;
     font-size: 1.33em;
     text-align: left;
-    line-height: 1.33em; }
+    line-height: 1.33; }
     form.inline label.button,
     form.block label.button {
-      line-height: 2.1em; }
+      line-height: 2.1; }
   form.inline input,
   form.inline select,
   form.inline textarea,
@@ -1855,28 +1855,56 @@ form.block {
     form.block input::-webkit-input-placeholder,
     form.block select::-webkit-input-placeholder,
     form.block textarea::-webkit-input-placeholder {
-      color: #999; }
+      color: #BDBDBD; }
     form.inline input:-moz-placeholder,
     form.inline select:-moz-placeholder,
     form.inline textarea:-moz-placeholder,
     form.block input:-moz-placeholder,
     form.block select:-moz-placeholder,
     form.block textarea:-moz-placeholder {
-      color: #999; }
+      color: #BDBDBD; }
     form.inline input::-moz-placeholder,
     form.inline select::-moz-placeholder,
     form.inline textarea::-moz-placeholder,
     form.block input::-moz-placeholder,
     form.block select::-moz-placeholder,
     form.block textarea::-moz-placeholder {
-      color: #999; }
+      color: #BDBDBD; }
     form.inline input:-ms-input-placeholder,
     form.inline select:-ms-input-placeholder,
     form.inline textarea:-ms-input-placeholder,
     form.block input:-ms-input-placeholder,
     form.block select:-ms-input-placeholder,
     form.block textarea:-ms-input-placeholder {
-      color: #999; }
+      color: #BDBDBD; }
+    form.inline input:focus::-webkit-input-placeholder,
+    form.inline select:focus::-webkit-input-placeholder,
+    form.inline textarea:focus::-webkit-input-placeholder,
+    form.block input:focus::-webkit-input-placeholder,
+    form.block select:focus::-webkit-input-placeholder,
+    form.block textarea:focus::-webkit-input-placeholder {
+      color: #9E9E9E; }
+    form.inline input:focus:-moz-placeholder,
+    form.inline select:focus:-moz-placeholder,
+    form.inline textarea:focus:-moz-placeholder,
+    form.block input:focus:-moz-placeholder,
+    form.block select:focus:-moz-placeholder,
+    form.block textarea:focus:-moz-placeholder {
+      color: #9E9E9E; }
+    form.inline input:focus::-moz-placeholder,
+    form.inline select:focus::-moz-placeholder,
+    form.inline textarea:focus::-moz-placeholder,
+    form.block input:focus::-moz-placeholder,
+    form.block select:focus::-moz-placeholder,
+    form.block textarea:focus::-moz-placeholder {
+      color: #9E9E9E; }
+    form.inline input:focus:-ms-input-placeholder,
+    form.inline select:focus:-ms-input-placeholder,
+    form.inline textarea:focus:-ms-input-placeholder,
+    form.block input:focus:-ms-input-placeholder,
+    form.block select:focus:-ms-input-placeholder,
+    form.block textarea:focus:-ms-input-placeholder {
+      color: #9E9E9E; }
     form.inline input.large,
     form.inline select.large,
     form.inline textarea.large,
@@ -2071,7 +2099,7 @@ form.block {
     form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
     form.block input[type="radio"]:disabled + label,
     form.block input[type="radio"][readonly] + label {
-      color: #AAA; }
+      color: #BDBDBD; }
   form.inline.large,
   form.block.large {
     padding-bottom: 1em; }
@@ -2247,7 +2275,7 @@ form.linear {
     font-size: 1.33em; }
   form.linear label,
   form.linear input {
-    line-height: 1.33em; }
+    line-height: 1.33; }
   form.linear label {
     margin: 1px 0.5em 1px 0;
     padding: 0.25em 0;
@@ -2267,7 +2295,7 @@ form.linear {
   form.linear .button {
     height: 1.7em;
     margin-left: 1.5em;
-    line-height: 1em; }
+    line-height: 1; }
     form.linear button + [type="submit"],
     form.linear button + [type="reset"],
     form.linear button + [type="button"],
@@ -2313,7 +2341,7 @@ form.linear {
   form.linear [type="reset"],
   form.linear [type="button"] {
     height: 2.1em;
-    line-height: 1em; }
+    line-height: 1; }
     form.inline button.thin,
     form.inline [type="submit"].thin,
     form.inline [type="reset"].thin,
@@ -2326,7 +2354,7 @@ form.linear {
     form.linear [type="submit"].thin,
     form.linear [type="reset"].thin,
     form.linear [type="button"].thin {
-      line-height: 1em; } }
+      line-height: 1; } }
 @media (max-width: 658px) {
   form.foldable.inline, form.foldable.linear {
     text-align: left; }
@@ -2507,7 +2535,7 @@ label.button {
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  line-height: 2.1em;
+  line-height: 2.1;
   vertical-align: middle;
   white-space: nowrap;
   background: -webkit-linear-gradient(top, #F5F5F5 0%, #E0E0E0 100%) no-repeat scroll;
@@ -2542,7 +2570,7 @@ label.button {
   a.button.thin,
   label.button.thin {
     height: 1.5em;
-    line-height: 1.5em; }
+    line-height: 1.5; }
   a.button.disabled, a.button:disabled,
   label.button.disabled,
   label.button:disabled {
@@ -2845,7 +2873,7 @@ ol.lined {
   list-style: decimal inside; }
 
 li {
-  line-height: 1.618em; }
+  line-height: 1.618; }
 
 dl {
   padding-bottom: 0.5em;
@@ -2884,7 +2912,7 @@ dl {
 
 dt,
 dd {
-  line-height: 1.35em; }
+  line-height: 1.35; }
 
 dt {
   font-weight: 700; }
@@ -2946,7 +2974,7 @@ ul.inline {
     color: #999;
     font-size: 150%;
     font-weight: 200;
-    line-height: 75%;
+    line-height: 0.75;
     vertical-align: text-top;
     content: "\203A"; }
 
@@ -2980,7 +3008,7 @@ ul.tabs {
       padding: 0.5em 1em 0.65em;
       display: block;
       font-weight: 400;
-      line-height: 1em;
+      line-height: 1;
       white-space: nowrap;
       border-radius: 2px 2px 0 0; }
     ul.tabs li a {
@@ -3103,7 +3131,7 @@ ul.tree {
   				color: #999;
   				font-weight: 400;
   				text-align: center;
-  				line-height: 0.8em;
+  				line-height: 0.8;
   
   				background-color: #FFF;
   
@@ -3154,7 +3182,7 @@ ul.tree {
       z-index: 1; }
   ul.tree li {
     position: relative;
-    line-height: 1.618em;
+    line-height: 1.618;
     white-space: nowrap;
     z-index: 3; }
     ul.tree li::after {
@@ -3185,7 +3213,7 @@ table {
   border-collapse: collapse; }
   table p {
     margin: 0.25em 0;
-    line-height: 1.618em; }
+    line-height: 1.618; }
   table ul {
     margin-left: 1.5em; }
   table.verticals th,
@@ -3346,7 +3374,7 @@ h4,
 h5,
 h6 {
   padding: 0.75em 0;
-  line-height: 1em;
+  line-height: 1;
   font-weight: 700;
   white-space: pre-wrap;
   page-break-after: avoid; }
@@ -3356,7 +3384,7 @@ h6 {
   h4.no-top-padding,
   h5.no-top-padding,
   h6.no-top-padding {
-    line-height: 1em; }
+    line-height: 1; }
   h1.no-bottom-padding,
   h2.no-bottom-padding,
   h3.no-bottom-padding,
@@ -3404,7 +3432,7 @@ h6 {
 p {
   padding: 0 0 0.809em;
   font-size: 1.33em;
-  line-height: 1.618em;
+  line-height: 1.618;
   word-break: normal;
   orphans: 3;
   widows: 3; }
@@ -3425,7 +3453,7 @@ code {
   margin-bottom: 1em;
   display: block;
   font-family: "Courier New", Courier, monospace, mono;
-  line-height: 1.25em;
+  line-height: 1.25;
   white-space: pre-wrap; }
 
 pre {
@@ -3462,7 +3490,7 @@ pre.code {
       color: #212121;
       font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
       font-weight: 700;
-      line-height: 1.5em;
+      line-height: 1.5;
       white-space: nowrap;
       background-color: #E0E0E0;
       border-bottom: 1px #BDBDBD solid;
@@ -3475,7 +3503,7 @@ pre.code {
     right: 0.25em;
     color: #212121;
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
-    line-height: 1.5em;
+    line-height: 1.5;
     text-transform: uppercase;
     background-color: #E0E0E0;
     border-radius: 3px;
@@ -3510,7 +3538,7 @@ blockquote {
   color: #555;
   font-size: 1.55em;
   font-weight: 300;
-  line-height: 1.75em;
+  line-height: 1.75;
   white-space: pre-wrap;
   background-color: #F5F5F5;
   border-left: 0.3em #BDBDBD solid; }
@@ -3567,7 +3595,7 @@ hr {
   display: inline-block;
   clear: both;
   font-size: 1.3em;
-  line-height: 1.25em;
+  line-height: 1.25;
   background-image: -webkit-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
   background-image: -moz-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
   background-image: linear-gradient(to right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
@@ -3697,7 +3725,7 @@ p.error, p.warning, p.notice, p.success {
   font-weight: 700;
   font-size: 11px;
   font-size: 1.1rem;
-  line-height: 1.5em;
+  line-height: 1.5;
   vertical-align: text-top;
   background-color: #B0BEC5;
   border-radius: 3px; }

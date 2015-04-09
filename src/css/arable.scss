@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.1
+ * Version:     5.3.2
  * Date:        2015-04-09
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -16,8 +16,8 @@
 // ===================================================== VARIABLES =====================================================
 // ----------------------------------------------------- FONTS -----------------------------------------------------
 $baseFontSize: 1.33;
-$baseLineHeight: 1.618;
-$basefontWeight: 400;
+$baseLineHeight: 1.618; //Phi
+$basefontWeight: 400;   //"Normal"
 
 // ----------------------------------------------------- COLOURS -----------------------------------------------------
 // ---------------------- http://zavoloklom.github.io/material-design-color-palette/colors.html ----------------------
@@ -34,6 +34,10 @@ $activeHighlight: #FBC02D;
 $highlight: #FFF59D;
 $highlightTable: #FFF9C4;
 $hoverTable: #E3F2FD;
+
+$inputPlaceholder: #BDBDBD;
+$inputPlaceholderActive: #9E9E9E;
+$disabledFormElement: #BDBDBD;
 
 $buttonTop: #F5F5F5;
 $buttonBottom: #E0E0E0;

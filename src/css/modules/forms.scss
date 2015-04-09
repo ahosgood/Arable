@@ -25,7 +25,7 @@ textarea {
 		}
 
 		option:disabled {
-			color: #AAA;
+			color: $disabledFormElement;
 		}
 
 form.inline,
@@ -303,10 +303,10 @@ form.block {
 
 		@include basefontsize;
 		text-align: left;
-		line-height: #{$baseFontSize}em;
+		line-height: #{$baseFontSize};
 
 		&.button {
-			line-height: 2.1em;
+			line-height: 2.1;
 		}
 	}
 
@@ -324,19 +324,37 @@ form.block {
 		text-align: left;
 
 		&::-webkit-input-placeholder {
-			color: #999;
+			color: $inputPlaceholder;
 		}
 
 		&:-moz-placeholder {
-			color: #999;
+			color: $inputPlaceholder;
 		}
 
 		&::-moz-placeholder {
-			color: #999;
+			color: $inputPlaceholder;
 		}
 
 		&:-ms-input-placeholder {
-			color: #999;
+			color: $inputPlaceholder;
+		}
+
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: $inputPlaceholderActive;
+			}
+
+			&:-moz-placeholder {
+				color: $inputPlaceholderActive;
+			}
+
+			&::-moz-placeholder {
+				color: $inputPlaceholderActive;
+			}
+
+			&:-ms-input-placeholder {
+				color: $inputPlaceholderActive;
+			}
 		}
 
 		&.large {
@@ -423,7 +441,7 @@ form.block {
 			&:disabled,
 			&[readonly] {
 				+ label {
-					color: #AAA;
+					color: $disabledFormElement;
 				}
 			}
 		}
@@ -530,7 +548,7 @@ form.linear {
 
 	label,
 	input {
-		line-height: #{$baseFontSize}em;
+		line-height: #{$baseFontSize};
 	}
 
 	label {
@@ -542,7 +560,6 @@ form.linear {
 
 	> input {
 		&[type="checkbox"] {
-			//margin-top: 0.25em;
 			margin-top: 0.35em;
 
 			position: relative;
@@ -564,7 +581,7 @@ form.linear {
 		height: 1.7em;
 		margin-left: 1.5em;
 
-		line-height: 1em;
+		line-height: 1;
 
 		+ [type="submit"],
 		+ [type="reset"],
@@ -594,10 +611,10 @@ form.linear {
 		[type="button"] {
 			height: 2.1em;
 
-			line-height: 1em;
+			line-height: 1;
 
 			&.thin {
-				line-height: 1em;
+				line-height: 1;
 			}
 		}
 	}

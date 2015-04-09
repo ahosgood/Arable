@@ -38,7 +38,7 @@
 }
 
 @mixin basefontlineheight {
-	line-height: #{$baseLineHeight}em;
+	line-height: #{$baseLineHeight};
 }
 
 @mixin basefontweight {
@@ -64,7 +64,7 @@
 	font-weight: 400;
 	text-align: center;
 	text-decoration: none;
-	line-height: 2.1em;
+	line-height: 2.1;
 	vertical-align: middle;
 	white-space: nowrap;
 
@@ -111,7 +111,7 @@
 	&.thin {
 		height: 1.5em;
 
-		line-height: 1.5em;
+		line-height: 1.5;
 	}
 
 	&.disabled,
