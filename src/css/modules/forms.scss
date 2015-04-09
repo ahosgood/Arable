@@ -45,6 +45,18 @@ form.linear {
 		}
 	}
 
+	&::after {
+		width: 100%;
+		height: 0;
+
+		display: block;
+
+		float: none;
+		clear: both;
+
+		content: "";
+	}
+
 	label {
 		font-weight: 700;
 	}
