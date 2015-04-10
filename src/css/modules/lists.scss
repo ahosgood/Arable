@@ -489,6 +489,8 @@ ul.tree {
 
 	list-style: none;
 
+	border: 0 $borderLightGrey solid;
+
 	ul {
 		margin-left: 0;
 		padding-left: 2em;
@@ -503,7 +505,9 @@ ul.tree {
 			bottom: 0.875em;
 			left: 0.75em;
 
-			border-left: 1px $borderLightGrey solid;
+			border-left-width: 1px;
+			border-left-color: inherit;
+			border-left-style: solid;
 
 			content: "";
 
@@ -530,8 +534,9 @@ ul.tree {
 			top: 0.75em;
 			left: -1.25em;
 
-			border: $borderLightGrey solid;
 			border-width: 0 0 1px 1px;
+			border-color: inherit;
+			border-style: solid;
 
 			content: "";
 

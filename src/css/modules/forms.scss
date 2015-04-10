@@ -28,587 +28,587 @@ textarea {
 			color: $disabledFormElement;
 		}
 
-form.inline,
-form.block,
-form.linear {
-	&.confirm-valid {
-		input {
-			&:valid {
-				&:focus {
-					background-color: #E6FAE6;
+form {
+	&.inline,
+	&.block,
+	&.linear {
+		&.confirm-valid {
+			input {
+				&:valid {
+					&:focus {
+						background-color: #E6FAE6;
 
-					border-color: #0C0;
+						border-color: #0C0;
 
-					box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5);
+						box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5);
+					}
 				}
 			}
 		}
-	}
 
-	&::after {
-		width: 100%;
-		height: 0;
+		&::after {
+			width: 100%;
+			height: 0;
 
-		display: block;
-
-		float: none;
-		clear: both;
-
-		content: "";
-	}
-
-	label {
-		font-weight: 700;
-	}
-
-	textarea {
-		min-height: 2em;
-
-		resize: vertical;
-	}
-
-	[type="text"],
-	[type="search"],
-	[type="checkbox"],
-	[type="radio"] {
-		&:valid {
-			&:focus {
-				background-color: #FFF;
-
-				border-color: $activeHighlight;
-
-				box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
-			}
-		}
-	}
-
-	input,
-	select,
-	textarea,
-	.label {
-		vertical-align: top;
-	}
-
-	input,
-	select,
-	textarea {
-		&:focus {
-			border-color: $activeHighlight;
-
-			box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
-		}
-
-		&:invalid {
-			background-color: #FAE6E6;
-
-			border-color: #C00;
-
-			box-shadow: none;
-
-			&:focus {
-				box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
-			}
-		}
-
-		&:disabled,
-		&[readonly] {
-			&:focus {
-				box-shadow: none !important;
-			}
-		}
-
-		&:disabled,
-		&[readonly]:focus {
-			color: #AAA;
-		}
-
-		&:disabled {
-			background-color: #EEE;
-		}
-
-		&:required {}
-	}
-
-	.label {
-		margin: 0.2em 0;
-
-		display: block;
-
-		float: right;
-
-		overflow: hidden;
-
-		.prefix,
-		.suffix,
-		.input {
 			display: block;
 
-			overflow: hidden;
+			float: none;
+			clear: both;
+
+			content: "";
 		}
 
-		.prefix,
-		.suffix {
-			padding: 0.25em 0.5em;
-
-			@include basefontcolour;
-			@include basefontsize;
-
-			background-color: $bgLightGrey;
-
-			border: 1px $borderGrey solid;
+		label {
+			font-weight: 700;
 		}
 
-		a {
-			&.prefix,
-			&.suffix {
-				&:hover {
-					background-color: $hoverTable;
-				}
-			}
-		}
-
-		.prefix {
-			float: left;
-
-			border-right-width: 0;
-			border-radius: $borderRadius 0 0 $borderRadius;
-
-			~ .prefix {
-				border-radius: 0;
-			}
-
-			~ .input {
-				input {
-					border-left-style: dotted;
-					border-radius: 0 $borderRadius $borderRadius 0;
-				}
-			}
-		}
-
-		.suffix {
-			float: right;
-
-			border-left-width: 0;
-			border-radius: 0 $borderRadius $borderRadius 0;
-
-			~ .suffix {
-				border-radius: 0;
-			}
-
-			~ .input {
-				input {
-					border-right-style: dotted;
-					border-radius: $borderRadius 0 0 $borderRadius;
-				}
-			}
-		}
-
-		.prefix ~ .suffix,
-		.suffix ~ .prefix {
-			~ .input {
-				input {
-					border-radius: 0;
-				}
-			}
-		}
-
-		.input {
-			input {
-				width: 100%;
-				margin: 0;
-
-				float: none;
-			}
-		}
-
-		&.no-space {
-			.prefix,
-			.suffix {
-				padding-right: 0.35em;
-				padding-left: 0.35em;
-				color: $borderGrey;
-
-				background-color: #FFF;
-			}
-
-			.prefix {
-				padding-right: 0 !important;
-
-				~ .input {
-					input {
-						padding-left: 0 !important;
-
-						border-left-width: 0 !important;
-					}
-				}
-			}
-
-			.suffix {
-				padding-left: 0 !important;
-
-				~ .input {
-					input {
-						padding-right: 0 !important;
-
-						border-right-width: 0 !important;
-					}
-				}
-			}
-		}
-	}
-
-	[type="submit"],
-	[type="reset"],
-	[type="button"],
-	button,
-	.button {
-		@include button;
-	}
-
-	[type="submit"] {
-		font-weight: 700;
-
-		@include button-grad($buttonSubmit);
-
-		&.red {
-			@include button-grad($buttonRed);
-		}
-
-		&.green {
-			@include button-grad($buttonGreen);
-		}
-
-		&.black {
-			@include button-grad($buttonBlack);
-		}
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ul,
-	ol,
-	dl {
-		clear: both;
-
-		text-align: left;
-	}
-}
-
-form.inline,
-form.block {
-	display: block;
-
-	text-align: right;
-
-	label {
-		width: 23%;
-		margin: 0.4em 2% 0.4em 0;
-		padding: 1px 0;
-
-		float: left;
-		clear: both;
-
-		@include basefontsize;
-		text-align: left;
-		line-height: #{$baseFontSize};
-
-		&.button {
-			line-height: 2.1;
-		}
-	}
-
-	input,
-	select,
-	textarea {
-		width: 75%;
-		margin: 0.2em 0;
-
-		display: block;
-
-		float: right;
-
-		@include basefontsize;
-		text-align: left;
-
-		&::-webkit-input-placeholder {
-			color: $inputPlaceholder;
-		}
-
-		&:-moz-placeholder {
-			color: $inputPlaceholder;
-		}
-
-		&::-moz-placeholder {
-			color: $inputPlaceholder;
-		}
-
-		&:-ms-input-placeholder {
-			color: $inputPlaceholder;
-		}
-
-		&:focus {
-			&::-webkit-input-placeholder {
-				color: $inputPlaceholderActive;
-			}
-
-			&:-moz-placeholder {
-				color: $inputPlaceholderActive;
-			}
-
-			&::-moz-placeholder {
-				color: $inputPlaceholderActive;
-			}
-
-			&:-ms-input-placeholder {
-				color: $inputPlaceholderActive;
-			}
-		}
-
-		&.large {
-			font-size: 2.1em;
-		}
-	}
-
-	input,
-	select,
-	textarea,
-	.label {
-		&[class^="inline-"],
-		&[class*=" inline-"] {
-			float: left;
-
-			+ [class^="inline-"],
-			+ [class*=" inline-"] {
-				margin-left: 1%;
-			}
-		}
-	}
-
-	input,
-	select,
-	.label {
-		@for $splitInput from 2 through 8 {
-			&.inline-#{$splitInput} {
-				width: ( 75% - ( $splitInput - 1 ) ) / $splitInput;
-			}
-		}
-	}
-
-	button,
-	[type="submit"],
-	[type="reset"],
-	[type="button"],
-	.button {
-		width: auto;
-		margin-top: 0.5em;
-
-		float: right;
-		clear: both;
-
-		+ button,
-		+ [type="submit"],
-		+ [type="reset"],
-		+ [type="button"],
-		+ .button {
-			margin-right: 0.5em;
-
-			clear: none;
-		}
-	}
-
-	input {
-		&[type="checkbox"],
-		&[type="radio"] {
-			width: auto;
-
-			float: left;
-		}
-
-		&[type="checkbox"] {
-			margin-top: 0.65em;
-		}
-
-		&[type="radio"] {
-			margin-top: 0.55em;
-
-			+ label {
-				width: auto;
-				margin-top: 0.4em;
-				margin-right: 1.5em;
-				padding: 0 0.5em;
-
-				float: left;
-				clear: none;
-
-				font-weight: inherit;
-
-				background-color: transparent;
-			}
-
-			&:disabled,
-			&[readonly] {
-				+ label {
-					color: $disabledFormElement;
-				}
-			}
-		}
-	}
-
-	&.large {
-		padding-bottom: 1em;
-
-		label,
-		input,
-		select,
 		textarea {
-			font-size: 1.45em;
+			min-height: 2em;
+
+			resize: vertical;
 		}
 
-		label,
-		button,
-		[type="submit"],
-		[type="reset"],
-		[type="button"],
-		.button {
-			margin-top: 1.4em;
+		[type="text"],
+		[type="search"],
+		[type="checkbox"],
+		[type="radio"] {
+			&:valid {
+				&:focus {
+					background-color: #FFF;
+
+					border-color: $activeHighlight;
+
+					box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
+				}
+			}
 		}
 
 		input,
 		select,
 		textarea,
 		.label {
-			margin-top: 1.2em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
+			vertical-align: top;
 		}
 
 		input,
 		select,
 		textarea {
-			padding-right: 0.5em;
-			padding-left: 0.5em;
-		}
+			&:focus {
+				border-color: $activeHighlight;
 
-		.label {
-			.prefix,
-			.suffix {
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
-
-				font-size: 1.45em;
+				box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
 			}
-		}
-	}
-}
 
-form.inline {
-	input,
-	select,
-	textarea {
-		&.full {
-			width: 100%;
+			&:invalid {
+				background-color: #FAE6E6;
 
-			clear: both;
-		}
-	}
+				border-color: #C00;
 
-	.label {
-		width: 75%;
-	}
+				box-shadow: none;
 
-	&.large {
-		input {
-			&[type="radio"] {
-				margin-top: 1.65em;
-
-				+ label {
-					margin-top: 1.45em;
+				&:focus {
+					box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5);
 				}
 			}
 
+			&:disabled,
+			&[readonly] {
+				&:focus {
+					box-shadow: none !important;
+				}
+			}
+
+			&:disabled,
+			&[readonly]:focus {
+				color: #AAA;
+			}
+
+			&:disabled {
+				background-color: #EEE;
+			}
+
+			&:required {}
+		}
+
+		.label {
+			margin: 0.2em 0;
+
+			display: block;
+
+			float: right;
+
+			overflow: hidden;
+
+			.prefix,
+			.suffix,
+			.input {
+				display: block;
+
+				overflow: hidden;
+			}
+
+			.prefix,
+			.suffix {
+				padding: 0.25em 0.5em;
+
+				@include basefontcolour;
+				@include basefontsize;
+
+				background-color: $bgLightGrey;
+
+				border: 1px $borderGrey solid;
+			}
+
+			a {
+				&.prefix,
+				&.suffix {
+					&:hover {
+						background-color: $hoverTable;
+					}
+				}
+			}
+
+			.prefix {
+				float: left;
+
+				border-right-width: 0;
+				border-radius: $borderRadius 0 0 $borderRadius;
+
+				~ .prefix {
+					border-radius: 0;
+				}
+
+				~ .input {
+					input {
+						border-left-style: dotted;
+						border-radius: 0 $borderRadius $borderRadius 0;
+					}
+				}
+			}
+
+			.suffix {
+				float: right;
+
+				border-left-width: 0;
+				border-radius: 0 $borderRadius $borderRadius 0;
+
+				~ .suffix {
+					border-radius: 0;
+				}
+
+				~ .input {
+					input {
+						border-right-style: dotted;
+						border-radius: $borderRadius 0 0 $borderRadius;
+					}
+				}
+			}
+
+			.prefix ~ .suffix,
+			.suffix ~ .prefix {
+				~ .input {
+					input {
+						border-radius: 0;
+					}
+				}
+			}
+
+			.input {
+				input {
+					width: 100%;
+					margin: 0;
+
+					float: none;
+				}
+			}
+
+			&.no-space {
+				.prefix,
+				.suffix {
+					padding-right: 0.35em;
+					padding-left: 0.35em;
+					color: $borderGrey;
+
+					background-color: #FFF;
+				}
+
+				.prefix {
+					padding-right: 0 !important;
+
+					~ .input {
+						input {
+							padding-left: 0 !important;
+
+							border-left-width: 0 !important;
+						}
+					}
+				}
+
+				.suffix {
+					padding-left: 0 !important;
+
+					~ .input {
+						input {
+							padding-right: 0 !important;
+
+							border-right-width: 0 !important;
+						}
+					}
+				}
+			}
+		}
+
+		[type="submit"],
+		[type="reset"],
+		[type="button"],
+		button,
+		.button {
+			@include button;
+		}
+
+		[type="submit"] {
+			font-weight: 700;
+
+			@include button-grad($buttonSubmit);
+
+			&.red {
+				@include button-grad($buttonRed);
+			}
+
+			&.green {
+				@include button-grad($buttonGreen);
+			}
+
+			&.black {
+				@include button-grad($buttonBlack);
+			}
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		ul,
+		ol,
+		dl {
+			clear: both;
+
+			text-align: left;
+		}
+	}
+
+	&.inline,
+	&.block {
+		display: block;
+
+		text-align: right;
+
+		label {
+			width: 23%;
+			margin: 0.4em 2% 0.4em 0;
+			padding: 1px 0;
+
+			float: left;
+			clear: both;
+
+			@include basefontsize;
+			text-align: left;
+			line-height: #{$baseFontSize};
+
+			&.button {
+				line-height: 2.1;
+			}
+		}
+
+		input,
+		select,
+		textarea {
+			width: 75%;
+			margin: 0.2em 0;
+
+			display: block;
+
+			float: right;
+
+			@include basefontsize;
+			text-align: left;
+
+			&::-webkit-input-placeholder {
+				color: $inputPlaceholder;
+			}
+
+			&:-moz-placeholder {
+				color: $inputPlaceholder;
+			}
+
+			&::-moz-placeholder {
+				color: $inputPlaceholder;
+			}
+
+			&:-ms-input-placeholder {
+				color: $inputPlaceholder;
+			}
+
+			&:focus {
+				&::-webkit-input-placeholder {
+					color: $inputPlaceholderActive;
+				}
+
+				&:-moz-placeholder {
+					color: $inputPlaceholderActive;
+				}
+
+				&::-moz-placeholder {
+					color: $inputPlaceholderActive;
+				}
+
+				&:-ms-input-placeholder {
+					color: $inputPlaceholderActive;
+				}
+			}
+
+			&.large {
+				font-size: 2.1em;
+			}
+		}
+
+		input,
+		select,
+		textarea,
+		.label {
+			&[class^="inline-"],
+			&[class*=" inline-"] {
+				float: left;
+
+				+ [class^="inline-"],
+				+ [class*=" inline-"] {
+					margin-left: 1%;
+				}
+			}
+		}
+
+		input,
+		select,
+		.label {
+			@for $splitInput from 2 through 8 {
+				&.inline-#{$splitInput} {
+					width: ( 75% - ( $splitInput - 1 ) ) / $splitInput;
+				}
+			}
+		}
+
+		button,
+		[type="submit"],
+		[type="reset"],
+		[type="button"],
+		.button {
+			width: auto;
+			margin-top: 0.5em;
+
+			float: right;
+			clear: both;
+
+			+ button,
+			+ [type="submit"],
+			+ [type="reset"],
+			+ [type="button"],
+			+ .button {
+				margin-right: 0.5em;
+
+				clear: none;
+			}
+		}
+
+		input {
+			&[type="checkbox"],
+			&[type="radio"] {
+				width: auto;
+
+				float: left;
+			}
+
 			&[type="checkbox"] {
-				margin-top: 1.45em;
+				margin-top: 0.65em;
+			}
+
+			&[type="radio"] {
+				margin-top: 0.55em;
+
+				+ label {
+					width: auto;
+					margin-top: 0.4em;
+					margin-right: 1.5em;
+					padding: 0 0.5em;
+
+					float: left;
+					clear: none;
+
+					font-weight: inherit;
+
+					background-color: transparent;
+				}
+
+				&:disabled,
+				&[readonly] {
+					+ label {
+						color: $disabledFormElement;
+					}
+				}
+			}
+		}
+
+		&.large {
+			label,
+			input,
+			select,
+			textarea {
+				font-size: 1.45em;
+			}
+
+			label,
+			button,
+			[type="submit"],
+			[type="reset"],
+			[type="button"],
+			.button {
+				margin-top: 1.4em;
+			}
+
+			input,
+			select,
+			textarea,
+			.label {
+				margin-top: 1.2em;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
+
+			input,
+			select,
+			textarea {
+				padding-right: 0.5em;
+				padding-left: 0.5em;
+			}
+
+			.label {
+				.prefix,
+				.suffix {
+					padding-top: 0.5em;
+					padding-bottom: 0.5em;
+
+					font-size: 1.45em;
+				}
 			}
 		}
 	}
-}
 
-form.block {
-	@include blockform;
-}
+	&.inline {
+		input,
+		select,
+		textarea {
+			&.full {
+				width: 100%;
 
-form.linear {
-	padding: 0.5em 0;
+				clear: both;
+			}
+		}
 
-	display: block;
+		.label {
+			width: 75%;
+		}
 
-	overflow: hidden;
+		&.large {
+			input {
+				&[type="radio"] {
+					margin-top: 1.65em;
 
-	label,
-	input,
-	select,
-	button {
-		float: left;
+					+ label {
+						margin-top: 1.45em;
+					}
+				}
 
-		@include basefontsize;
-	}
-
-	label,
-	input {
-		line-height: #{$baseFontSize};
-	}
-
-	label {
-		margin: 1px 0.5em 1px 0;
-		padding: 0.25em 0;
-
-		font-weight: 400;
-	}
-
-	> input {
-		&[type="checkbox"] {
-			margin-top: 0.35em;
-
-			position: relative;
-			top: 1px;
+				&[type="checkbox"] {
+					margin-top: 1.45em;
+				}
+			}
 		}
 	}
 
-	select {
-		height: 1.8em;
-		margin-top: 1px;
-		padding: 2px;
+	&.block {
+		@include blockform;
 	}
 
-	button,
-	[type="submit"],
-	[type="reset"],
-	[type="button"],
-	.button {
-		height: 1.7em;
-		margin-left: 1.5em;
+	&.linear {
+		padding: 0.5em 0;
 
-		line-height: 1;
+		display: block;
 
-		+ [type="submit"],
-		+ [type="reset"],
-		+ [type="button"],
-		+ button,
-		+ .button {
-			margin-left: 0.5em;
+		overflow: hidden;
+
+		label,
+		input,
+		select,
+		button {
+			float: left;
+
+			@include basefontsize;
 		}
-	}
 
-	input,
-	select,
-	button {
-		+ label {
+		label,
+		input {
+			line-height: #{$baseFontSize};
+		}
+
+		label {
+			margin: 1px 0.5em 1px 0;
+			padding: 0.25em 0;
+
+			font-weight: 400;
+		}
+
+		> input {
+			&[type="checkbox"] {
+				margin-top: 0.35em;
+
+				position: relative;
+				top: 1px;
+			}
+		}
+
+		select {
+			height: 1.8em;
+			margin-top: 1px;
+			padding: 2px;
+		}
+
+		button,
+		[type="submit"],
+		[type="reset"],
+		[type="button"],
+		.button {
+			height: 1.7em;
 			margin-left: 1.5em;
+
+			line-height: 1;
+
+			+ [type="submit"],
+			+ [type="reset"],
+			+ [type="button"],
+			+ button,
+			+ .button {
+				margin-left: 0.5em;
+			}
+		}
+
+		input,
+		select,
+		button {
+			+ label {
+				margin-left: 1.5em;
+			}
 		}
 	}
 }

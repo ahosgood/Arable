@@ -4,8 +4,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.3
- * Date:        2015-04-09
+ * Version:     5.3.4
+ * Date:        2015-04-10
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -205,39 +205,29 @@ optgroup option {
 option:disabled {
   color: #BDBDBD; }
 
-form.inline.confirm-valid input:valid:focus,
-form.block.confirm-valid input:valid:focus,
-form.linear.confirm-valid input:valid:focus {
+form.inline.confirm-valid input:valid:focus, form.block.confirm-valid input:valid:focus, form.linear.confirm-valid input:valid:focus {
   background-color: #E6FAE6;
   border-color: #0C0;
   box-shadow: 0 0 0.5em rgba(0, 212, 0, 0.5); }
-form.inline::after,
-form.block::after,
-form.linear::after {
+form.inline::after, form.block::after, form.linear::after {
   width: 100%;
   height: 0;
   display: block;
   float: none;
   clear: both;
   content: ""; }
-form.inline label,
-form.block label,
-form.linear label {
+form.inline label, form.block label, form.linear label {
   font-weight: 700; }
-form.inline textarea,
-form.block textarea,
-form.linear textarea {
+form.inline textarea, form.block textarea, form.linear textarea {
   min-height: 2em;
   resize: vertical; }
 form.inline [type="text"]:valid:focus,
 form.inline [type="search"]:valid:focus,
 form.inline [type="checkbox"]:valid:focus,
-form.inline [type="radio"]:valid:focus,
-form.block [type="text"]:valid:focus,
+form.inline [type="radio"]:valid:focus, form.block [type="text"]:valid:focus,
 form.block [type="search"]:valid:focus,
 form.block [type="checkbox"]:valid:focus,
-form.block [type="radio"]:valid:focus,
-form.linear [type="text"]:valid:focus,
+form.block [type="radio"]:valid:focus, form.linear [type="text"]:valid:focus,
 form.linear [type="search"]:valid:focus,
 form.linear [type="checkbox"]:valid:focus,
 form.linear [type="radio"]:valid:focus {
@@ -247,34 +237,28 @@ form.linear [type="radio"]:valid:focus {
 form.inline input,
 form.inline select,
 form.inline textarea,
-form.inline .label,
-form.block input,
+form.inline .label, form.block input,
 form.block select,
 form.block textarea,
-form.block .label,
-form.linear input,
+form.block .label, form.linear input,
 form.linear select,
 form.linear textarea,
 form.linear .label {
   vertical-align: top; }
 form.inline input:focus,
 form.inline select:focus,
-form.inline textarea:focus,
-form.block input:focus,
+form.inline textarea:focus, form.block input:focus,
 form.block select:focus,
-form.block textarea:focus,
-form.linear input:focus,
+form.block textarea:focus, form.linear input:focus,
 form.linear select:focus,
 form.linear textarea:focus {
   border-color: #FBC02D;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15); }
 form.inline input:invalid,
 form.inline select:invalid,
-form.inline textarea:invalid,
-form.block input:invalid,
+form.inline textarea:invalid, form.block input:invalid,
 form.block select:invalid,
-form.block textarea:invalid,
-form.linear input:invalid,
+form.block textarea:invalid, form.linear input:invalid,
 form.linear select:invalid,
 form.linear textarea:invalid {
   background-color: #FAE6E6;
@@ -282,11 +266,9 @@ form.linear textarea:invalid {
   box-shadow: none; }
   form.inline input:invalid:focus,
   form.inline select:invalid:focus,
-  form.inline textarea:invalid:focus,
-  form.block input:invalid:focus,
+  form.inline textarea:invalid:focus, form.block input:invalid:focus,
   form.block select:invalid:focus,
-  form.block textarea:invalid:focus,
-  form.linear input:invalid:focus,
+  form.block textarea:invalid:focus, form.linear input:invalid:focus,
   form.linear select:invalid:focus,
   form.linear textarea:invalid:focus {
     box-shadow: 0 0 0.5em rgba(212, 0, 0, 0.5); }
@@ -294,15 +276,11 @@ form.inline input:disabled:focus, form.inline input[readonly]:focus,
 form.inline select:disabled:focus,
 form.inline select[readonly]:focus,
 form.inline textarea:disabled:focus,
-form.inline textarea[readonly]:focus,
-form.block input:disabled:focus,
-form.block input[readonly]:focus,
+form.inline textarea[readonly]:focus, form.block input:disabled:focus, form.block input[readonly]:focus,
 form.block select:disabled:focus,
 form.block select[readonly]:focus,
 form.block textarea:disabled:focus,
-form.block textarea[readonly]:focus,
-form.linear input:disabled:focus,
-form.linear input[readonly]:focus,
+form.block textarea[readonly]:focus, form.linear input:disabled:focus, form.linear input[readonly]:focus,
 form.linear select:disabled:focus,
 form.linear select[readonly]:focus,
 form.linear textarea:disabled:focus,
@@ -312,15 +290,11 @@ form.inline input:disabled, form.inline input[readonly]:focus,
 form.inline select:disabled,
 form.inline select[readonly]:focus,
 form.inline textarea:disabled,
-form.inline textarea[readonly]:focus,
-form.block input:disabled,
-form.block input[readonly]:focus,
+form.inline textarea[readonly]:focus, form.block input:disabled, form.block input[readonly]:focus,
 form.block select:disabled,
 form.block select[readonly]:focus,
 form.block textarea:disabled,
-form.block textarea[readonly]:focus,
-form.linear input:disabled,
-form.linear input[readonly]:focus,
+form.block textarea[readonly]:focus, form.linear input:disabled, form.linear input[readonly]:focus,
 form.linear select:disabled,
 form.linear select[readonly]:focus,
 form.linear textarea:disabled,
@@ -328,131 +302,91 @@ form.linear textarea[readonly]:focus {
   color: #AAA; }
 form.inline input:disabled,
 form.inline select:disabled,
-form.inline textarea:disabled,
-form.block input:disabled,
+form.inline textarea:disabled, form.block input:disabled,
 form.block select:disabled,
-form.block textarea:disabled,
-form.linear input:disabled,
+form.block textarea:disabled, form.linear input:disabled,
 form.linear select:disabled,
 form.linear textarea:disabled {
   background-color: #EEE; }
-form.inline .label,
-form.block .label,
-form.linear .label {
+form.inline .label, form.block .label, form.linear .label {
   margin: 0.2em 0;
   display: block;
   float: right;
   overflow: hidden; }
   form.inline .label .prefix,
   form.inline .label .suffix,
-  form.inline .label .input,
-  form.block .label .prefix,
+  form.inline .label .input, form.block .label .prefix,
   form.block .label .suffix,
-  form.block .label .input,
-  form.linear .label .prefix,
+  form.block .label .input, form.linear .label .prefix,
   form.linear .label .suffix,
   form.linear .label .input {
     display: block;
     overflow: hidden; }
   form.inline .label .prefix,
-  form.inline .label .suffix,
-  form.block .label .prefix,
-  form.block .label .suffix,
-  form.linear .label .prefix,
+  form.inline .label .suffix, form.block .label .prefix,
+  form.block .label .suffix, form.linear .label .prefix,
   form.linear .label .suffix {
     padding: 0.25em 0.5em;
     color: #212121;
     font-size: 1.33em;
     background-color: #F5F5F5;
     border: 1px #BDBDBD solid; }
-  form.inline .label a.prefix:hover, form.inline .label a.suffix:hover,
-  form.block .label a.prefix:hover,
-  form.block .label a.suffix:hover,
-  form.linear .label a.prefix:hover,
-  form.linear .label a.suffix:hover {
+  form.inline .label a.prefix:hover, form.inline .label a.suffix:hover, form.block .label a.prefix:hover, form.block .label a.suffix:hover, form.linear .label a.prefix:hover, form.linear .label a.suffix:hover {
     background-color: #E3F2FD; }
-  form.inline .label .prefix,
-  form.block .label .prefix,
-  form.linear .label .prefix {
+  form.inline .label .prefix, form.block .label .prefix, form.linear .label .prefix {
     float: left;
     border-right-width: 0;
     border-radius: 3px 0 0 3px; }
-    form.inline .label .prefix ~ .prefix,
-    form.block .label .prefix ~ .prefix,
-    form.linear .label .prefix ~ .prefix {
+    form.inline .label .prefix ~ .prefix, form.block .label .prefix ~ .prefix, form.linear .label .prefix ~ .prefix {
       border-radius: 0; }
-    form.inline .label .prefix ~ .input input,
-    form.block .label .prefix ~ .input input,
-    form.linear .label .prefix ~ .input input {
+    form.inline .label .prefix ~ .input input, form.block .label .prefix ~ .input input, form.linear .label .prefix ~ .input input {
       border-left-style: dotted;
       border-radius: 0 3px 3px 0; }
-  form.inline .label .suffix,
-  form.block .label .suffix,
-  form.linear .label .suffix {
+  form.inline .label .suffix, form.block .label .suffix, form.linear .label .suffix {
     float: right;
     border-left-width: 0;
     border-radius: 0 3px 3px 0; }
-    form.inline .label .suffix ~ .suffix,
-    form.block .label .suffix ~ .suffix,
-    form.linear .label .suffix ~ .suffix {
+    form.inline .label .suffix ~ .suffix, form.block .label .suffix ~ .suffix, form.linear .label .suffix ~ .suffix {
       border-radius: 0; }
-    form.inline .label .suffix ~ .input input,
-    form.block .label .suffix ~ .input input,
-    form.linear .label .suffix ~ .input input {
+    form.inline .label .suffix ~ .input input, form.block .label .suffix ~ .input input, form.linear .label .suffix ~ .input input {
       border-right-style: dotted;
       border-radius: 3px 0 0 3px; }
   form.inline .label .prefix ~ .suffix ~ .input input,
-  form.inline .label .suffix ~ .prefix ~ .input input,
-  form.block .label .prefix ~ .suffix ~ .input input,
-  form.block .label .suffix ~ .prefix ~ .input input,
-  form.linear .label .prefix ~ .suffix ~ .input input,
+  form.inline .label .suffix ~ .prefix ~ .input input, form.block .label .prefix ~ .suffix ~ .input input,
+  form.block .label .suffix ~ .prefix ~ .input input, form.linear .label .prefix ~ .suffix ~ .input input,
   form.linear .label .suffix ~ .prefix ~ .input input {
     border-radius: 0; }
-  form.inline .label .input input,
-  form.block .label .input input,
-  form.linear .label .input input {
+  form.inline .label .input input, form.block .label .input input, form.linear .label .input input {
     width: 100%;
     margin: 0;
     float: none; }
   form.inline .label.no-space .prefix,
-  form.inline .label.no-space .suffix,
-  form.block .label.no-space .prefix,
-  form.block .label.no-space .suffix,
-  form.linear .label.no-space .prefix,
+  form.inline .label.no-space .suffix, form.block .label.no-space .prefix,
+  form.block .label.no-space .suffix, form.linear .label.no-space .prefix,
   form.linear .label.no-space .suffix {
     padding-right: 0.35em;
     padding-left: 0.35em;
     color: #BDBDBD;
     background-color: #FFF; }
-  form.inline .label.no-space .prefix,
-  form.block .label.no-space .prefix,
-  form.linear .label.no-space .prefix {
+  form.inline .label.no-space .prefix, form.block .label.no-space .prefix, form.linear .label.no-space .prefix {
     padding-right: 0 !important; }
-    form.inline .label.no-space .prefix ~ .input input,
-    form.block .label.no-space .prefix ~ .input input,
-    form.linear .label.no-space .prefix ~ .input input {
+    form.inline .label.no-space .prefix ~ .input input, form.block .label.no-space .prefix ~ .input input, form.linear .label.no-space .prefix ~ .input input {
       padding-left: 0 !important;
       border-left-width: 0 !important; }
-  form.inline .label.no-space .suffix,
-  form.block .label.no-space .suffix,
-  form.linear .label.no-space .suffix {
+  form.inline .label.no-space .suffix, form.block .label.no-space .suffix, form.linear .label.no-space .suffix {
     padding-left: 0 !important; }
-    form.inline .label.no-space .suffix ~ .input input,
-    form.block .label.no-space .suffix ~ .input input,
-    form.linear .label.no-space .suffix ~ .input input {
+    form.inline .label.no-space .suffix ~ .input input, form.block .label.no-space .suffix ~ .input input, form.linear .label.no-space .suffix ~ .input input {
       padding-right: 0 !important;
       border-right-width: 0 !important; }
 form.inline [type="submit"],
 form.inline [type="reset"],
 form.inline [type="button"],
 form.inline button,
-form.inline .button,
-form.block [type="submit"],
+form.inline .button, form.block [type="submit"],
 form.block [type="reset"],
 form.block [type="button"],
 form.block button,
-form.block .button,
-form.linear [type="submit"],
+form.block .button, form.linear [type="submit"],
 form.linear [type="reset"],
 form.linear [type="button"],
 form.linear button,
@@ -494,10 +428,7 @@ form.linear .button {
   form.inline button:active,
   form.inline .button:focus,
   form.inline .button:hover,
-  form.inline .button:active,
-  form.block [type="submit"]:focus,
-  form.block [type="submit"]:hover,
-  form.block [type="submit"]:active,
+  form.inline .button:active, form.block [type="submit"]:focus, form.block [type="submit"]:hover, form.block [type="submit"]:active,
   form.block [type="reset"]:focus,
   form.block [type="reset"]:hover,
   form.block [type="reset"]:active,
@@ -509,10 +440,7 @@ form.linear .button {
   form.block button:active,
   form.block .button:focus,
   form.block .button:hover,
-  form.block .button:active,
-  form.linear [type="submit"]:focus,
-  form.linear [type="submit"]:hover,
-  form.linear [type="submit"]:active,
+  form.block .button:active, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover, form.linear [type="submit"]:active,
   form.linear [type="reset"]:focus,
   form.linear [type="reset"]:hover,
   form.linear [type="reset"]:active,
@@ -537,9 +465,7 @@ form.linear .button {
   form.inline button:focus,
   form.inline button:hover,
   form.inline .button:focus,
-  form.inline .button:hover,
-  form.block [type="submit"]:focus,
-  form.block [type="submit"]:hover,
+  form.inline .button:hover, form.block [type="submit"]:focus, form.block [type="submit"]:hover,
   form.block [type="reset"]:focus,
   form.block [type="reset"]:hover,
   form.block [type="button"]:focus,
@@ -547,9 +473,7 @@ form.linear .button {
   form.block button:focus,
   form.block button:hover,
   form.block .button:focus,
-  form.block .button:hover,
-  form.linear [type="submit"]:focus,
-  form.linear [type="submit"]:hover,
+  form.block .button:hover, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover,
   form.linear [type="reset"]:focus,
   form.linear [type="reset"]:hover,
   form.linear [type="button"]:focus,
@@ -563,13 +487,11 @@ form.linear .button {
   form.inline [type="reset"]:active,
   form.inline [type="button"]:active,
   form.inline button:active,
-  form.inline .button:active,
-  form.block [type="submit"]:active,
+  form.inline .button:active, form.block [type="submit"]:active,
   form.block [type="reset"]:active,
   form.block [type="button"]:active,
   form.block button:active,
-  form.block .button:active,
-  form.linear [type="submit"]:active,
+  form.block .button:active, form.linear [type="submit"]:active,
   form.linear [type="reset"]:active,
   form.linear [type="button"]:active,
   form.linear button:active,
@@ -579,13 +501,11 @@ form.linear .button {
   form.inline [type="reset"].thin,
   form.inline [type="button"].thin,
   form.inline button.thin,
-  form.inline .button.thin,
-  form.block [type="submit"].thin,
+  form.inline .button.thin, form.block [type="submit"].thin,
   form.block [type="reset"].thin,
   form.block [type="button"].thin,
   form.block button.thin,
-  form.block .button.thin,
-  form.linear [type="submit"].thin,
+  form.block .button.thin, form.linear [type="submit"].thin,
   form.linear [type="reset"].thin,
   form.linear [type="button"].thin,
   form.linear button.thin,
@@ -600,9 +520,7 @@ form.linear .button {
   form.inline button.disabled,
   form.inline button:disabled,
   form.inline .button.disabled,
-  form.inline .button:disabled,
-  form.block [type="submit"].disabled,
-  form.block [type="submit"]:disabled,
+  form.inline .button:disabled, form.block [type="submit"].disabled, form.block [type="submit"]:disabled,
   form.block [type="reset"].disabled,
   form.block [type="reset"]:disabled,
   form.block [type="button"].disabled,
@@ -610,9 +528,7 @@ form.linear .button {
   form.block button.disabled,
   form.block button:disabled,
   form.block .button.disabled,
-  form.block .button:disabled,
-  form.linear [type="submit"].disabled,
-  form.linear [type="submit"]:disabled,
+  form.block .button:disabled, form.linear [type="submit"].disabled, form.linear [type="submit"]:disabled,
   form.linear [type="reset"].disabled,
   form.linear [type="reset"]:disabled,
   form.linear [type="button"].disabled,
@@ -646,13 +562,7 @@ form.linear .button {
     form.inline .button.disabled:active,
     form.inline .button:disabled:hover,
     form.inline .button:disabled:focus,
-    form.inline .button:disabled:active,
-    form.block [type="submit"].disabled:hover,
-    form.block [type="submit"].disabled:focus,
-    form.block [type="submit"].disabled:active,
-    form.block [type="submit"]:disabled:hover,
-    form.block [type="submit"]:disabled:focus,
-    form.block [type="submit"]:disabled:active,
+    form.inline .button:disabled:active, form.block [type="submit"].disabled:hover, form.block [type="submit"].disabled:focus, form.block [type="submit"].disabled:active, form.block [type="submit"]:disabled:hover, form.block [type="submit"]:disabled:focus, form.block [type="submit"]:disabled:active,
     form.block [type="reset"].disabled:hover,
     form.block [type="reset"].disabled:focus,
     form.block [type="reset"].disabled:active,
@@ -676,13 +586,7 @@ form.linear .button {
     form.block .button.disabled:active,
     form.block .button:disabled:hover,
     form.block .button:disabled:focus,
-    form.block .button:disabled:active,
-    form.linear [type="submit"].disabled:hover,
-    form.linear [type="submit"].disabled:focus,
-    form.linear [type="submit"].disabled:active,
-    form.linear [type="submit"]:disabled:hover,
-    form.linear [type="submit"]:disabled:focus,
-    form.linear [type="submit"]:disabled:active,
+    form.block .button:disabled:active, form.linear [type="submit"].disabled:hover, form.linear [type="submit"].disabled:focus, form.linear [type="submit"].disabled:active, form.linear [type="submit"]:disabled:hover, form.linear [type="submit"]:disabled:focus, form.linear [type="submit"]:disabled:active,
     form.linear [type="reset"].disabled:hover,
     form.linear [type="reset"].disabled:focus,
     form.linear [type="reset"].disabled:active,
@@ -719,13 +623,11 @@ form.linear .button {
   form.inline [type="reset"].red,
   form.inline [type="button"].red,
   form.inline button.red,
-  form.inline .button.red,
-  form.block [type="submit"].red,
+  form.inline .button.red, form.block [type="submit"].red,
   form.block [type="reset"].red,
   form.block [type="button"].red,
   form.block button.red,
-  form.block .button.red,
-  form.linear [type="submit"].red,
+  form.block .button.red, form.linear [type="submit"].red,
   form.linear [type="reset"].red,
   form.linear [type="button"].red,
   form.linear button.red,
@@ -751,10 +653,7 @@ form.linear .button {
     form.inline button.red:active,
     form.inline .button.red:focus,
     form.inline .button.red:hover,
-    form.inline .button.red:active,
-    form.block [type="submit"].red:focus,
-    form.block [type="submit"].red:hover,
-    form.block [type="submit"].red:active,
+    form.inline .button.red:active, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover, form.block [type="submit"].red:active,
     form.block [type="reset"].red:focus,
     form.block [type="reset"].red:hover,
     form.block [type="reset"].red:active,
@@ -766,10 +665,7 @@ form.linear .button {
     form.block button.red:active,
     form.block .button.red:focus,
     form.block .button.red:hover,
-    form.block .button.red:active,
-    form.linear [type="submit"].red:focus,
-    form.linear [type="submit"].red:hover,
-    form.linear [type="submit"].red:active,
+    form.block .button.red:active, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover, form.linear [type="submit"].red:active,
     form.linear [type="reset"].red:focus,
     form.linear [type="reset"].red:hover,
     form.linear [type="reset"].red:active,
@@ -792,9 +688,7 @@ form.linear .button {
     form.inline button.red:focus,
     form.inline button.red:hover,
     form.inline .button.red:focus,
-    form.inline .button.red:hover,
-    form.block [type="submit"].red:focus,
-    form.block [type="submit"].red:hover,
+    form.inline .button.red:hover, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover,
     form.block [type="reset"].red:focus,
     form.block [type="reset"].red:hover,
     form.block [type="button"].red:focus,
@@ -802,9 +696,7 @@ form.linear .button {
     form.block button.red:focus,
     form.block button.red:hover,
     form.block .button.red:focus,
-    form.block .button.red:hover,
-    form.linear [type="submit"].red:focus,
-    form.linear [type="submit"].red:hover,
+    form.block .button.red:hover, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover,
     form.linear [type="reset"].red:focus,
     form.linear [type="reset"].red:hover,
     form.linear [type="button"].red:focus,
@@ -823,13 +715,11 @@ form.linear .button {
     form.inline [type="reset"].red:active,
     form.inline [type="button"].red:active,
     form.inline button.red:active,
-    form.inline .button.red:active,
-    form.block [type="submit"].red:active,
+    form.inline .button.red:active, form.block [type="submit"].red:active,
     form.block [type="reset"].red:active,
     form.block [type="button"].red:active,
     form.block button.red:active,
-    form.block .button.red:active,
-    form.linear [type="submit"].red:active,
+    form.block .button.red:active, form.linear [type="submit"].red:active,
     form.linear [type="reset"].red:active,
     form.linear [type="button"].red:active,
     form.linear button.red:active,
@@ -859,13 +749,7 @@ form.linear .button {
     form.inline .button.red.disabled:active,
     form.inline .button.red:disabled:hover,
     form.inline .button.red:disabled:focus,
-    form.inline .button.red:disabled:active,
-    form.block [type="submit"].red.disabled:hover,
-    form.block [type="submit"].red.disabled:focus,
-    form.block [type="submit"].red.disabled:active,
-    form.block [type="submit"].red:disabled:hover,
-    form.block [type="submit"].red:disabled:focus,
-    form.block [type="submit"].red:disabled:active,
+    form.inline .button.red:disabled:active, form.block [type="submit"].red.disabled:hover, form.block [type="submit"].red.disabled:focus, form.block [type="submit"].red.disabled:active, form.block [type="submit"].red:disabled:hover, form.block [type="submit"].red:disabled:focus, form.block [type="submit"].red:disabled:active,
     form.block [type="reset"].red.disabled:hover,
     form.block [type="reset"].red.disabled:focus,
     form.block [type="reset"].red.disabled:active,
@@ -889,13 +773,7 @@ form.linear .button {
     form.block .button.red.disabled:active,
     form.block .button.red:disabled:hover,
     form.block .button.red:disabled:focus,
-    form.block .button.red:disabled:active,
-    form.linear [type="submit"].red.disabled:hover,
-    form.linear [type="submit"].red.disabled:focus,
-    form.linear [type="submit"].red.disabled:active,
-    form.linear [type="submit"].red:disabled:hover,
-    form.linear [type="submit"].red:disabled:focus,
-    form.linear [type="submit"].red:disabled:active,
+    form.block .button.red:disabled:active, form.linear [type="submit"].red.disabled:hover, form.linear [type="submit"].red.disabled:focus, form.linear [type="submit"].red.disabled:active, form.linear [type="submit"].red:disabled:hover, form.linear [type="submit"].red:disabled:focus, form.linear [type="submit"].red:disabled:active,
     form.linear [type="reset"].red.disabled:hover,
     form.linear [type="reset"].red.disabled:focus,
     form.linear [type="reset"].red.disabled:active,
@@ -932,13 +810,11 @@ form.linear .button {
   form.inline [type="reset"].green,
   form.inline [type="button"].green,
   form.inline button.green,
-  form.inline .button.green,
-  form.block [type="submit"].green,
+  form.inline .button.green, form.block [type="submit"].green,
   form.block [type="reset"].green,
   form.block [type="button"].green,
   form.block button.green,
-  form.block .button.green,
-  form.linear [type="submit"].green,
+  form.block .button.green, form.linear [type="submit"].green,
   form.linear [type="reset"].green,
   form.linear [type="button"].green,
   form.linear button.green,
@@ -964,10 +840,7 @@ form.linear .button {
     form.inline button.green:active,
     form.inline .button.green:focus,
     form.inline .button.green:hover,
-    form.inline .button.green:active,
-    form.block [type="submit"].green:focus,
-    form.block [type="submit"].green:hover,
-    form.block [type="submit"].green:active,
+    form.inline .button.green:active, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover, form.block [type="submit"].green:active,
     form.block [type="reset"].green:focus,
     form.block [type="reset"].green:hover,
     form.block [type="reset"].green:active,
@@ -979,10 +852,7 @@ form.linear .button {
     form.block button.green:active,
     form.block .button.green:focus,
     form.block .button.green:hover,
-    form.block .button.green:active,
-    form.linear [type="submit"].green:focus,
-    form.linear [type="submit"].green:hover,
-    form.linear [type="submit"].green:active,
+    form.block .button.green:active, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover, form.linear [type="submit"].green:active,
     form.linear [type="reset"].green:focus,
     form.linear [type="reset"].green:hover,
     form.linear [type="reset"].green:active,
@@ -1005,9 +875,7 @@ form.linear .button {
     form.inline button.green:focus,
     form.inline button.green:hover,
     form.inline .button.green:focus,
-    form.inline .button.green:hover,
-    form.block [type="submit"].green:focus,
-    form.block [type="submit"].green:hover,
+    form.inline .button.green:hover, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover,
     form.block [type="reset"].green:focus,
     form.block [type="reset"].green:hover,
     form.block [type="button"].green:focus,
@@ -1015,9 +883,7 @@ form.linear .button {
     form.block button.green:focus,
     form.block button.green:hover,
     form.block .button.green:focus,
-    form.block .button.green:hover,
-    form.linear [type="submit"].green:focus,
-    form.linear [type="submit"].green:hover,
+    form.block .button.green:hover, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover,
     form.linear [type="reset"].green:focus,
     form.linear [type="reset"].green:hover,
     form.linear [type="button"].green:focus,
@@ -1036,13 +902,11 @@ form.linear .button {
     form.inline [type="reset"].green:active,
     form.inline [type="button"].green:active,
     form.inline button.green:active,
-    form.inline .button.green:active,
-    form.block [type="submit"].green:active,
+    form.inline .button.green:active, form.block [type="submit"].green:active,
     form.block [type="reset"].green:active,
     form.block [type="button"].green:active,
     form.block button.green:active,
-    form.block .button.green:active,
-    form.linear [type="submit"].green:active,
+    form.block .button.green:active, form.linear [type="submit"].green:active,
     form.linear [type="reset"].green:active,
     form.linear [type="button"].green:active,
     form.linear button.green:active,
@@ -1072,13 +936,7 @@ form.linear .button {
     form.inline .button.green.disabled:active,
     form.inline .button.green:disabled:hover,
     form.inline .button.green:disabled:focus,
-    form.inline .button.green:disabled:active,
-    form.block [type="submit"].green.disabled:hover,
-    form.block [type="submit"].green.disabled:focus,
-    form.block [type="submit"].green.disabled:active,
-    form.block [type="submit"].green:disabled:hover,
-    form.block [type="submit"].green:disabled:focus,
-    form.block [type="submit"].green:disabled:active,
+    form.inline .button.green:disabled:active, form.block [type="submit"].green.disabled:hover, form.block [type="submit"].green.disabled:focus, form.block [type="submit"].green.disabled:active, form.block [type="submit"].green:disabled:hover, form.block [type="submit"].green:disabled:focus, form.block [type="submit"].green:disabled:active,
     form.block [type="reset"].green.disabled:hover,
     form.block [type="reset"].green.disabled:focus,
     form.block [type="reset"].green.disabled:active,
@@ -1102,13 +960,7 @@ form.linear .button {
     form.block .button.green.disabled:active,
     form.block .button.green:disabled:hover,
     form.block .button.green:disabled:focus,
-    form.block .button.green:disabled:active,
-    form.linear [type="submit"].green.disabled:hover,
-    form.linear [type="submit"].green.disabled:focus,
-    form.linear [type="submit"].green.disabled:active,
-    form.linear [type="submit"].green:disabled:hover,
-    form.linear [type="submit"].green:disabled:focus,
-    form.linear [type="submit"].green:disabled:active,
+    form.block .button.green:disabled:active, form.linear [type="submit"].green.disabled:hover, form.linear [type="submit"].green.disabled:focus, form.linear [type="submit"].green.disabled:active, form.linear [type="submit"].green:disabled:hover, form.linear [type="submit"].green:disabled:focus, form.linear [type="submit"].green:disabled:active,
     form.linear [type="reset"].green.disabled:hover,
     form.linear [type="reset"].green.disabled:focus,
     form.linear [type="reset"].green.disabled:active,
@@ -1145,13 +997,11 @@ form.linear .button {
   form.inline [type="reset"].blue,
   form.inline [type="button"].blue,
   form.inline button.blue,
-  form.inline .button.blue,
-  form.block [type="submit"].blue,
+  form.inline .button.blue, form.block [type="submit"].blue,
   form.block [type="reset"].blue,
   form.block [type="button"].blue,
   form.block button.blue,
-  form.block .button.blue,
-  form.linear [type="submit"].blue,
+  form.block .button.blue, form.linear [type="submit"].blue,
   form.linear [type="reset"].blue,
   form.linear [type="button"].blue,
   form.linear button.blue,
@@ -1177,10 +1027,7 @@ form.linear .button {
     form.inline button.blue:active,
     form.inline .button.blue:focus,
     form.inline .button.blue:hover,
-    form.inline .button.blue:active,
-    form.block [type="submit"].blue:focus,
-    form.block [type="submit"].blue:hover,
-    form.block [type="submit"].blue:active,
+    form.inline .button.blue:active, form.block [type="submit"].blue:focus, form.block [type="submit"].blue:hover, form.block [type="submit"].blue:active,
     form.block [type="reset"].blue:focus,
     form.block [type="reset"].blue:hover,
     form.block [type="reset"].blue:active,
@@ -1192,10 +1039,7 @@ form.linear .button {
     form.block button.blue:active,
     form.block .button.blue:focus,
     form.block .button.blue:hover,
-    form.block .button.blue:active,
-    form.linear [type="submit"].blue:focus,
-    form.linear [type="submit"].blue:hover,
-    form.linear [type="submit"].blue:active,
+    form.block .button.blue:active, form.linear [type="submit"].blue:focus, form.linear [type="submit"].blue:hover, form.linear [type="submit"].blue:active,
     form.linear [type="reset"].blue:focus,
     form.linear [type="reset"].blue:hover,
     form.linear [type="reset"].blue:active,
@@ -1218,9 +1062,7 @@ form.linear .button {
     form.inline button.blue:focus,
     form.inline button.blue:hover,
     form.inline .button.blue:focus,
-    form.inline .button.blue:hover,
-    form.block [type="submit"].blue:focus,
-    form.block [type="submit"].blue:hover,
+    form.inline .button.blue:hover, form.block [type="submit"].blue:focus, form.block [type="submit"].blue:hover,
     form.block [type="reset"].blue:focus,
     form.block [type="reset"].blue:hover,
     form.block [type="button"].blue:focus,
@@ -1228,9 +1070,7 @@ form.linear .button {
     form.block button.blue:focus,
     form.block button.blue:hover,
     form.block .button.blue:focus,
-    form.block .button.blue:hover,
-    form.linear [type="submit"].blue:focus,
-    form.linear [type="submit"].blue:hover,
+    form.block .button.blue:hover, form.linear [type="submit"].blue:focus, form.linear [type="submit"].blue:hover,
     form.linear [type="reset"].blue:focus,
     form.linear [type="reset"].blue:hover,
     form.linear [type="button"].blue:focus,
@@ -1249,13 +1089,11 @@ form.linear .button {
     form.inline [type="reset"].blue:active,
     form.inline [type="button"].blue:active,
     form.inline button.blue:active,
-    form.inline .button.blue:active,
-    form.block [type="submit"].blue:active,
+    form.inline .button.blue:active, form.block [type="submit"].blue:active,
     form.block [type="reset"].blue:active,
     form.block [type="button"].blue:active,
     form.block button.blue:active,
-    form.block .button.blue:active,
-    form.linear [type="submit"].blue:active,
+    form.block .button.blue:active, form.linear [type="submit"].blue:active,
     form.linear [type="reset"].blue:active,
     form.linear [type="button"].blue:active,
     form.linear button.blue:active,
@@ -1285,13 +1123,7 @@ form.linear .button {
     form.inline .button.blue.disabled:active,
     form.inline .button.blue:disabled:hover,
     form.inline .button.blue:disabled:focus,
-    form.inline .button.blue:disabled:active,
-    form.block [type="submit"].blue.disabled:hover,
-    form.block [type="submit"].blue.disabled:focus,
-    form.block [type="submit"].blue.disabled:active,
-    form.block [type="submit"].blue:disabled:hover,
-    form.block [type="submit"].blue:disabled:focus,
-    form.block [type="submit"].blue:disabled:active,
+    form.inline .button.blue:disabled:active, form.block [type="submit"].blue.disabled:hover, form.block [type="submit"].blue.disabled:focus, form.block [type="submit"].blue.disabled:active, form.block [type="submit"].blue:disabled:hover, form.block [type="submit"].blue:disabled:focus, form.block [type="submit"].blue:disabled:active,
     form.block [type="reset"].blue.disabled:hover,
     form.block [type="reset"].blue.disabled:focus,
     form.block [type="reset"].blue.disabled:active,
@@ -1315,13 +1147,7 @@ form.linear .button {
     form.block .button.blue.disabled:active,
     form.block .button.blue:disabled:hover,
     form.block .button.blue:disabled:focus,
-    form.block .button.blue:disabled:active,
-    form.linear [type="submit"].blue.disabled:hover,
-    form.linear [type="submit"].blue.disabled:focus,
-    form.linear [type="submit"].blue.disabled:active,
-    form.linear [type="submit"].blue:disabled:hover,
-    form.linear [type="submit"].blue:disabled:focus,
-    form.linear [type="submit"].blue:disabled:active,
+    form.block .button.blue:disabled:active, form.linear [type="submit"].blue.disabled:hover, form.linear [type="submit"].blue.disabled:focus, form.linear [type="submit"].blue.disabled:active, form.linear [type="submit"].blue:disabled:hover, form.linear [type="submit"].blue:disabled:focus, form.linear [type="submit"].blue:disabled:active,
     form.linear [type="reset"].blue.disabled:hover,
     form.linear [type="reset"].blue.disabled:focus,
     form.linear [type="reset"].blue.disabled:active,
@@ -1358,13 +1184,11 @@ form.linear .button {
   form.inline [type="reset"].black,
   form.inline [type="button"].black,
   form.inline button.black,
-  form.inline .button.black,
-  form.block [type="submit"].black,
+  form.inline .button.black, form.block [type="submit"].black,
   form.block [type="reset"].black,
   form.block [type="button"].black,
   form.block button.black,
-  form.block .button.black,
-  form.linear [type="submit"].black,
+  form.block .button.black, form.linear [type="submit"].black,
   form.linear [type="reset"].black,
   form.linear [type="button"].black,
   form.linear button.black,
@@ -1390,10 +1214,7 @@ form.linear .button {
     form.inline button.black:active,
     form.inline .button.black:focus,
     form.inline .button.black:hover,
-    form.inline .button.black:active,
-    form.block [type="submit"].black:focus,
-    form.block [type="submit"].black:hover,
-    form.block [type="submit"].black:active,
+    form.inline .button.black:active, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.block [type="submit"].black:active,
     form.block [type="reset"].black:focus,
     form.block [type="reset"].black:hover,
     form.block [type="reset"].black:active,
@@ -1405,10 +1226,7 @@ form.linear .button {
     form.block button.black:active,
     form.block .button.black:focus,
     form.block .button.black:hover,
-    form.block .button.black:active,
-    form.linear [type="submit"].black:focus,
-    form.linear [type="submit"].black:hover,
-    form.linear [type="submit"].black:active,
+    form.block .button.black:active, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover, form.linear [type="submit"].black:active,
     form.linear [type="reset"].black:focus,
     form.linear [type="reset"].black:hover,
     form.linear [type="reset"].black:active,
@@ -1431,9 +1249,7 @@ form.linear .button {
     form.inline button.black:focus,
     form.inline button.black:hover,
     form.inline .button.black:focus,
-    form.inline .button.black:hover,
-    form.block [type="submit"].black:focus,
-    form.block [type="submit"].black:hover,
+    form.inline .button.black:hover, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover,
     form.block [type="reset"].black:focus,
     form.block [type="reset"].black:hover,
     form.block [type="button"].black:focus,
@@ -1441,9 +1257,7 @@ form.linear .button {
     form.block button.black:focus,
     form.block button.black:hover,
     form.block .button.black:focus,
-    form.block .button.black:hover,
-    form.linear [type="submit"].black:focus,
-    form.linear [type="submit"].black:hover,
+    form.block .button.black:hover, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover,
     form.linear [type="reset"].black:focus,
     form.linear [type="reset"].black:hover,
     form.linear [type="button"].black:focus,
@@ -1462,13 +1276,11 @@ form.linear .button {
     form.inline [type="reset"].black:active,
     form.inline [type="button"].black:active,
     form.inline button.black:active,
-    form.inline .button.black:active,
-    form.block [type="submit"].black:active,
+    form.inline .button.black:active, form.block [type="submit"].black:active,
     form.block [type="reset"].black:active,
     form.block [type="button"].black:active,
     form.block button.black:active,
-    form.block .button.black:active,
-    form.linear [type="submit"].black:active,
+    form.block .button.black:active, form.linear [type="submit"].black:active,
     form.linear [type="reset"].black:active,
     form.linear [type="button"].black:active,
     form.linear button.black:active,
@@ -1498,13 +1310,7 @@ form.linear .button {
     form.inline .button.black.disabled:active,
     form.inline .button.black:disabled:hover,
     form.inline .button.black:disabled:focus,
-    form.inline .button.black:disabled:active,
-    form.block [type="submit"].black.disabled:hover,
-    form.block [type="submit"].black.disabled:focus,
-    form.block [type="submit"].black.disabled:active,
-    form.block [type="submit"].black:disabled:hover,
-    form.block [type="submit"].black:disabled:focus,
-    form.block [type="submit"].black:disabled:active,
+    form.inline .button.black:disabled:active, form.block [type="submit"].black.disabled:hover, form.block [type="submit"].black.disabled:focus, form.block [type="submit"].black.disabled:active, form.block [type="submit"].black:disabled:hover, form.block [type="submit"].black:disabled:focus, form.block [type="submit"].black:disabled:active,
     form.block [type="reset"].black.disabled:hover,
     form.block [type="reset"].black.disabled:focus,
     form.block [type="reset"].black.disabled:active,
@@ -1528,13 +1334,7 @@ form.linear .button {
     form.block .button.black.disabled:active,
     form.block .button.black:disabled:hover,
     form.block .button.black:disabled:focus,
-    form.block .button.black:disabled:active,
-    form.linear [type="submit"].black.disabled:hover,
-    form.linear [type="submit"].black.disabled:focus,
-    form.linear [type="submit"].black.disabled:active,
-    form.linear [type="submit"].black:disabled:hover,
-    form.linear [type="submit"].black:disabled:focus,
-    form.linear [type="submit"].black:disabled:active,
+    form.block .button.black:disabled:active, form.linear [type="submit"].black.disabled:hover, form.linear [type="submit"].black.disabled:focus, form.linear [type="submit"].black.disabled:active, form.linear [type="submit"].black:disabled:hover, form.linear [type="submit"].black:disabled:focus, form.linear [type="submit"].black:disabled:active,
     form.linear [type="reset"].black.disabled:hover,
     form.linear [type="reset"].black.disabled:focus,
     form.linear [type="reset"].black.disabled:active,
@@ -1567,9 +1367,7 @@ form.linear .button {
       background-attachment: scroll;
       border-color: #262626;
       box-shadow: none; }
-form.inline [type="submit"],
-form.block [type="submit"],
-form.linear [type="submit"] {
+form.inline [type="submit"], form.block [type="submit"], form.linear [type="submit"] {
   font-weight: 700;
   color: #FFF;
   text-shadow: 0 0 3px #398fe5;
@@ -1580,43 +1378,19 @@ form.linear [type="submit"] {
   background-repeat: no-repeat;
   background-attachment: scroll;
   border-color: #267bcf; }
-  form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.inline [type="submit"]:active,
-  form.block [type="submit"]:focus,
-  form.block [type="submit"]:hover,
-  form.block [type="submit"]:active,
-  form.linear [type="submit"]:focus,
-  form.linear [type="submit"]:hover,
-  form.linear [type="submit"]:active {
+  form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.inline [type="submit"]:active, form.block [type="submit"]:focus, form.block [type="submit"]:hover, form.block [type="submit"]:active, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover, form.linear [type="submit"]:active {
     color: #FFF;
     border-color: #1669bb; }
-  form.inline [type="submit"]:focus, form.inline [type="submit"]:hover,
-  form.block [type="submit"]:focus,
-  form.block [type="submit"]:hover,
-  form.linear [type="submit"]:focus,
-  form.linear [type="submit"]:hover {
+  form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.block [type="submit"]:focus, form.block [type="submit"]:hover, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover {
     background: -webkit-linear-gradient(top, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
     background-color: #69a9e8;
     background-repeat: no-repeat;
     background-attachment: scroll; }
-  form.inline [type="submit"]:active,
-  form.block [type="submit"]:active,
-  form.linear [type="submit"]:active {
+  form.inline [type="submit"]:active, form.block [type="submit"]:active, form.linear [type="submit"]:active {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-  form.inline [type="submit"].disabled:hover, form.inline [type="submit"].disabled:focus, form.inline [type="submit"].disabled:active, form.inline [type="submit"]:disabled:hover, form.inline [type="submit"]:disabled:focus, form.inline [type="submit"]:disabled:active,
-  form.block [type="submit"].disabled:hover,
-  form.block [type="submit"].disabled:focus,
-  form.block [type="submit"].disabled:active,
-  form.block [type="submit"]:disabled:hover,
-  form.block [type="submit"]:disabled:focus,
-  form.block [type="submit"]:disabled:active,
-  form.linear [type="submit"].disabled:hover,
-  form.linear [type="submit"].disabled:focus,
-  form.linear [type="submit"].disabled:active,
-  form.linear [type="submit"]:disabled:hover,
-  form.linear [type="submit"]:disabled:focus,
-  form.linear [type="submit"]:disabled:active {
+  form.inline [type="submit"].disabled:hover, form.inline [type="submit"].disabled:focus, form.inline [type="submit"].disabled:active, form.inline [type="submit"]:disabled:hover, form.inline [type="submit"]:disabled:focus, form.inline [type="submit"]:disabled:active, form.block [type="submit"].disabled:hover, form.block [type="submit"].disabled:focus, form.block [type="submit"].disabled:active, form.block [type="submit"]:disabled:hover, form.block [type="submit"]:disabled:focus, form.block [type="submit"]:disabled:active, form.linear [type="submit"].disabled:hover, form.linear [type="submit"].disabled:focus, form.linear [type="submit"].disabled:active, form.linear [type="submit"]:disabled:hover, form.linear [type="submit"]:disabled:focus, form.linear [type="submit"]:disabled:active {
     background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
@@ -1625,9 +1399,7 @@ form.linear [type="submit"] {
     background-attachment: scroll;
     border-color: #267bcf;
     box-shadow: none; }
-  form.inline [type="submit"].red,
-  form.block [type="submit"].red,
-  form.linear [type="submit"].red {
+  form.inline [type="submit"].red, form.block [type="submit"].red, form.linear [type="submit"].red {
     color: #FFF;
     text-shadow: 0 0 3px #fd0b0b;
     background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -1637,43 +1409,19 @@ form.linear [type="submit"] {
     background-repeat: no-repeat;
     background-attachment: scroll;
     border-color: #d40b0b; }
-    form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.inline [type="submit"].red:active,
-    form.block [type="submit"].red:focus,
-    form.block [type="submit"].red:hover,
-    form.block [type="submit"].red:active,
-    form.linear [type="submit"].red:focus,
-    form.linear [type="submit"].red:hover,
-    form.linear [type="submit"].red:active {
+    form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.inline [type="submit"].red:active, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover, form.block [type="submit"].red:active, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover, form.linear [type="submit"].red:active {
       color: #FFF;
       border-color: #bc0000; }
-    form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover,
-    form.block [type="submit"].red:focus,
-    form.block [type="submit"].red:hover,
-    form.linear [type="submit"].red:focus,
-    form.linear [type="submit"].red:hover {
+    form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover {
       background: -webkit-linear-gradient(top, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #fa4141 0%, #df0000 100%) no-repeat scroll;
       background-color: #fa4141;
       background-repeat: no-repeat;
       background-attachment: scroll; }
-    form.inline [type="submit"].red:active,
-    form.block [type="submit"].red:active,
-    form.linear [type="submit"].red:active {
+    form.inline [type="submit"].red:active, form.block [type="submit"].red:active, form.linear [type="submit"].red:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline [type="submit"].red.disabled:hover, form.inline [type="submit"].red.disabled:focus, form.inline [type="submit"].red.disabled:active, form.inline [type="submit"].red:disabled:hover, form.inline [type="submit"].red:disabled:focus, form.inline [type="submit"].red:disabled:active,
-    form.block [type="submit"].red.disabled:hover,
-    form.block [type="submit"].red.disabled:focus,
-    form.block [type="submit"].red.disabled:active,
-    form.block [type="submit"].red:disabled:hover,
-    form.block [type="submit"].red:disabled:focus,
-    form.block [type="submit"].red:disabled:active,
-    form.linear [type="submit"].red.disabled:hover,
-    form.linear [type="submit"].red.disabled:focus,
-    form.linear [type="submit"].red.disabled:active,
-    form.linear [type="submit"].red:disabled:hover,
-    form.linear [type="submit"].red:disabled:focus,
-    form.linear [type="submit"].red:disabled:active {
+    form.inline [type="submit"].red.disabled:hover, form.inline [type="submit"].red.disabled:focus, form.inline [type="submit"].red.disabled:active, form.inline [type="submit"].red:disabled:hover, form.inline [type="submit"].red:disabled:focus, form.inline [type="submit"].red:disabled:active, form.block [type="submit"].red.disabled:hover, form.block [type="submit"].red.disabled:focus, form.block [type="submit"].red.disabled:active, form.block [type="submit"].red:disabled:hover, form.block [type="submit"].red:disabled:focus, form.block [type="submit"].red:disabled:active, form.linear [type="submit"].red.disabled:hover, form.linear [type="submit"].red.disabled:focus, form.linear [type="submit"].red.disabled:active, form.linear [type="submit"].red:disabled:hover, form.linear [type="submit"].red:disabled:focus, form.linear [type="submit"].red:disabled:active {
       background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -1682,9 +1430,7 @@ form.linear [type="submit"] {
       background-attachment: scroll;
       border-color: #d40b0b;
       box-shadow: none; }
-  form.inline [type="submit"].green,
-  form.block [type="submit"].green,
-  form.linear [type="submit"].green {
+  form.inline [type="submit"].green, form.block [type="submit"].green, form.linear [type="submit"].green {
     color: #FFF;
     text-shadow: 0 0 3px #5eb862;
     background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -1694,43 +1440,19 @@ form.linear [type="submit"] {
     background-repeat: no-repeat;
     background-attachment: scroll;
     border-color: #529b55; }
-    form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.inline [type="submit"].green:active,
-    form.block [type="submit"].green:focus,
-    form.block [type="submit"].green:hover,
-    form.block [type="submit"].green:active,
-    form.linear [type="submit"].green:focus,
-    form.linear [type="submit"].green:hover,
-    form.linear [type="submit"].green:active {
+    form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.inline [type="submit"].green:active, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover, form.block [type="submit"].green:active, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover, form.linear [type="submit"].green:active {
       color: #FFF;
       border-color: #3b8e3f; }
-    form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover,
-    form.block [type="submit"].green:focus,
-    form.block [type="submit"].green:hover,
-    form.linear [type="submit"].green:focus,
-    form.linear [type="submit"].green:hover {
+    form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover {
       background: -webkit-linear-gradient(top, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #84c587 0%, #46a74a 100%) no-repeat scroll;
       background-color: #84c587;
       background-repeat: no-repeat;
       background-attachment: scroll; }
-    form.inline [type="submit"].green:active,
-    form.block [type="submit"].green:active,
-    form.linear [type="submit"].green:active {
+    form.inline [type="submit"].green:active, form.block [type="submit"].green:active, form.linear [type="submit"].green:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline [type="submit"].green.disabled:hover, form.inline [type="submit"].green.disabled:focus, form.inline [type="submit"].green.disabled:active, form.inline [type="submit"].green:disabled:hover, form.inline [type="submit"].green:disabled:focus, form.inline [type="submit"].green:disabled:active,
-    form.block [type="submit"].green.disabled:hover,
-    form.block [type="submit"].green.disabled:focus,
-    form.block [type="submit"].green.disabled:active,
-    form.block [type="submit"].green:disabled:hover,
-    form.block [type="submit"].green:disabled:focus,
-    form.block [type="submit"].green:disabled:active,
-    form.linear [type="submit"].green.disabled:hover,
-    form.linear [type="submit"].green.disabled:focus,
-    form.linear [type="submit"].green.disabled:active,
-    form.linear [type="submit"].green:disabled:hover,
-    form.linear [type="submit"].green:disabled:focus,
-    form.linear [type="submit"].green:disabled:active {
+    form.inline [type="submit"].green.disabled:hover, form.inline [type="submit"].green.disabled:focus, form.inline [type="submit"].green.disabled:active, form.inline [type="submit"].green:disabled:hover, form.inline [type="submit"].green:disabled:focus, form.inline [type="submit"].green:disabled:active, form.block [type="submit"].green.disabled:hover, form.block [type="submit"].green.disabled:focus, form.block [type="submit"].green.disabled:active, form.block [type="submit"].green:disabled:hover, form.block [type="submit"].green:disabled:focus, form.block [type="submit"].green:disabled:active, form.linear [type="submit"].green.disabled:hover, form.linear [type="submit"].green.disabled:focus, form.linear [type="submit"].green.disabled:active, form.linear [type="submit"].green:disabled:hover, form.linear [type="submit"].green:disabled:focus, form.linear [type="submit"].green:disabled:active {
       background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -1739,9 +1461,7 @@ form.linear [type="submit"] {
       background-attachment: scroll;
       border-color: #529b55;
       box-shadow: none; }
-  form.inline [type="submit"].black,
-  form.block [type="submit"].black,
-  form.linear [type="submit"].black {
+  form.inline [type="submit"].black, form.block [type="submit"].black, form.linear [type="submit"].black {
     color: #FFF;
     text-shadow: 0 0 3px #3b3b3b;
     background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
@@ -1751,43 +1471,19 @@ form.linear [type="submit"] {
     background-repeat: no-repeat;
     background-attachment: scroll;
     border-color: #262626; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
-    form.block [type="submit"].black:focus,
-    form.block [type="submit"].black:hover,
-    form.block [type="submit"].black:active,
-    form.linear [type="submit"].black:focus,
-    form.linear [type="submit"].black:hover,
-    form.linear [type="submit"].black:active {
+    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.block [type="submit"].black:active, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover, form.linear [type="submit"].black:active {
       color: #FFF;
       border-color: #141414; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover,
-    form.block [type="submit"].black:focus,
-    form.block [type="submit"].black:hover,
-    form.linear [type="submit"].black:focus,
-    form.linear [type="submit"].black:hover {
+    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover {
       background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
       background-color: #545454;
       background-repeat: no-repeat;
       background-attachment: scroll; }
-    form.inline [type="submit"].black:active,
-    form.block [type="submit"].black:active,
-    form.linear [type="submit"].black:active {
+    form.inline [type="submit"].black:active, form.block [type="submit"].black:active, form.linear [type="submit"].black:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline [type="submit"].black.disabled:hover, form.inline [type="submit"].black.disabled:focus, form.inline [type="submit"].black.disabled:active, form.inline [type="submit"].black:disabled:hover, form.inline [type="submit"].black:disabled:focus, form.inline [type="submit"].black:disabled:active,
-    form.block [type="submit"].black.disabled:hover,
-    form.block [type="submit"].black.disabled:focus,
-    form.block [type="submit"].black.disabled:active,
-    form.block [type="submit"].black:disabled:hover,
-    form.block [type="submit"].black:disabled:focus,
-    form.block [type="submit"].black:disabled:active,
-    form.linear [type="submit"].black.disabled:hover,
-    form.linear [type="submit"].black.disabled:focus,
-    form.linear [type="submit"].black.disabled:active,
-    form.linear [type="submit"].black:disabled:hover,
-    form.linear [type="submit"].black:disabled:focus,
-    form.linear [type="submit"].black:disabled:active {
+    form.inline [type="submit"].black.disabled:hover, form.inline [type="submit"].black.disabled:focus, form.inline [type="submit"].black.disabled:active, form.inline [type="submit"].black:disabled:hover, form.inline [type="submit"].black:disabled:focus, form.inline [type="submit"].black:disabled:active, form.block [type="submit"].black.disabled:hover, form.block [type="submit"].black.disabled:focus, form.block [type="submit"].black.disabled:active, form.block [type="submit"].black:disabled:hover, form.block [type="submit"].black:disabled:focus, form.block [type="submit"].black:disabled:active, form.linear [type="submit"].black.disabled:hover, form.linear [type="submit"].black.disabled:focus, form.linear [type="submit"].black.disabled:active, form.linear [type="submit"].black:disabled:hover, form.linear [type="submit"].black:disabled:focus, form.linear [type="submit"].black:disabled:active {
       background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
       background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
@@ -1805,8 +1501,7 @@ form.inline h6,
 form.inline p,
 form.inline ul,
 form.inline ol,
-form.inline dl,
-form.block h1,
+form.inline dl, form.block h1,
 form.block h2,
 form.block h3,
 form.block h4,
@@ -1815,8 +1510,7 @@ form.block h6,
 form.block p,
 form.block ul,
 form.block ol,
-form.block dl,
-form.linear h1,
+form.block dl, form.linear h1,
 form.linear h2,
 form.linear h3,
 form.linear h4,
@@ -1828,13 +1522,10 @@ form.linear ol,
 form.linear dl {
   clear: both;
   text-align: left; }
-
-form.inline,
-form.block {
+form.inline, form.block {
   display: block;
   text-align: right; }
-  form.inline label,
-  form.block label {
+  form.inline label, form.block label {
     width: 23%;
     margin: 0.4em 2% 0.4em 0;
     padding: 1px 0;
@@ -1843,13 +1534,11 @@ form.block {
     font-size: 1.33em;
     text-align: left;
     line-height: 1.33; }
-    form.inline label.button,
-    form.block label.button {
+    form.inline label.button, form.block label.button {
       line-height: 2.1; }
   form.inline input,
   form.inline select,
-  form.inline textarea,
-  form.block input,
+  form.inline textarea, form.block input,
   form.block select,
   form.block textarea {
     width: 75%;
@@ -1860,64 +1549,55 @@ form.block {
     text-align: left; }
     form.inline input::-webkit-input-placeholder,
     form.inline select::-webkit-input-placeholder,
-    form.inline textarea::-webkit-input-placeholder,
-    form.block input::-webkit-input-placeholder,
+    form.inline textarea::-webkit-input-placeholder, form.block input::-webkit-input-placeholder,
     form.block select::-webkit-input-placeholder,
     form.block textarea::-webkit-input-placeholder {
       color: #BDBDBD; }
     form.inline input:-moz-placeholder,
     form.inline select:-moz-placeholder,
-    form.inline textarea:-moz-placeholder,
-    form.block input:-moz-placeholder,
+    form.inline textarea:-moz-placeholder, form.block input:-moz-placeholder,
     form.block select:-moz-placeholder,
     form.block textarea:-moz-placeholder {
       color: #BDBDBD; }
     form.inline input::-moz-placeholder,
     form.inline select::-moz-placeholder,
-    form.inline textarea::-moz-placeholder,
-    form.block input::-moz-placeholder,
+    form.inline textarea::-moz-placeholder, form.block input::-moz-placeholder,
     form.block select::-moz-placeholder,
     form.block textarea::-moz-placeholder {
       color: #BDBDBD; }
     form.inline input:-ms-input-placeholder,
     form.inline select:-ms-input-placeholder,
-    form.inline textarea:-ms-input-placeholder,
-    form.block input:-ms-input-placeholder,
+    form.inline textarea:-ms-input-placeholder, form.block input:-ms-input-placeholder,
     form.block select:-ms-input-placeholder,
     form.block textarea:-ms-input-placeholder {
       color: #BDBDBD; }
     form.inline input:focus::-webkit-input-placeholder,
     form.inline select:focus::-webkit-input-placeholder,
-    form.inline textarea:focus::-webkit-input-placeholder,
-    form.block input:focus::-webkit-input-placeholder,
+    form.inline textarea:focus::-webkit-input-placeholder, form.block input:focus::-webkit-input-placeholder,
     form.block select:focus::-webkit-input-placeholder,
     form.block textarea:focus::-webkit-input-placeholder {
       color: #9E9E9E; }
     form.inline input:focus:-moz-placeholder,
     form.inline select:focus:-moz-placeholder,
-    form.inline textarea:focus:-moz-placeholder,
-    form.block input:focus:-moz-placeholder,
+    form.inline textarea:focus:-moz-placeholder, form.block input:focus:-moz-placeholder,
     form.block select:focus:-moz-placeholder,
     form.block textarea:focus:-moz-placeholder {
       color: #9E9E9E; }
     form.inline input:focus::-moz-placeholder,
     form.inline select:focus::-moz-placeholder,
-    form.inline textarea:focus::-moz-placeholder,
-    form.block input:focus::-moz-placeholder,
+    form.inline textarea:focus::-moz-placeholder, form.block input:focus::-moz-placeholder,
     form.block select:focus::-moz-placeholder,
     form.block textarea:focus::-moz-placeholder {
       color: #9E9E9E; }
     form.inline input:focus:-ms-input-placeholder,
     form.inline select:focus:-ms-input-placeholder,
-    form.inline textarea:focus:-ms-input-placeholder,
-    form.block input:focus:-ms-input-placeholder,
+    form.inline textarea:focus:-ms-input-placeholder, form.block input:focus:-ms-input-placeholder,
     form.block select:focus:-ms-input-placeholder,
     form.block textarea:focus:-ms-input-placeholder {
       color: #9E9E9E; }
     form.inline input.large,
     form.inline select.large,
-    form.inline textarea.large,
-    form.block input.large,
+    form.inline textarea.large, form.block input.large,
     form.block select.large,
     form.block textarea.large {
       font-size: 2.1em; }
@@ -1927,9 +1607,7 @@ form.block {
   form.inline textarea[class^="inline-"],
   form.inline textarea[class*=" inline-"],
   form.inline .label[class^="inline-"],
-  form.inline .label[class*=" inline-"],
-  form.block input[class^="inline-"],
-  form.block input[class*=" inline-"],
+  form.inline .label[class*=" inline-"], form.block input[class^="inline-"], form.block input[class*=" inline-"],
   form.block select[class^="inline-"],
   form.block select[class*=" inline-"],
   form.block textarea[class^="inline-"],
@@ -1951,10 +1629,8 @@ form.block {
     form.inline .label[class^="inline-"] + [class^="inline-"],
     form.inline .label[class^="inline-"] + [class*=" inline-"],
     form.inline .label[class*=" inline-"] + [class^="inline-"],
-    form.inline .label[class*=" inline-"] + [class*=" inline-"],
-    form.block input[class^="inline-"] + [class^="inline-"],
-    form.block input[class^="inline-"] + [class*=" inline-"],
-    form.block input[class*=" inline-"] + [class^="inline-"],
+    form.inline .label[class*=" inline-"] + [class*=" inline-"], form.block input[class^="inline-"] + [class^="inline-"],
+    form.block input[class^="inline-"] + [class*=" inline-"], form.block input[class*=" inline-"] + [class^="inline-"],
     form.block input[class*=" inline-"] + [class*=" inline-"],
     form.block select[class^="inline-"] + [class^="inline-"],
     form.block select[class^="inline-"] + [class*=" inline-"],
@@ -1971,50 +1647,43 @@ form.block {
       margin-left: 1%; }
   form.inline input.inline-2,
   form.inline select.inline-2,
-  form.inline .label.inline-2,
-  form.block input.inline-2,
+  form.inline .label.inline-2, form.block input.inline-2,
   form.block select.inline-2,
   form.block .label.inline-2 {
     width: 37%; }
   form.inline input.inline-3,
   form.inline select.inline-3,
-  form.inline .label.inline-3,
-  form.block input.inline-3,
+  form.inline .label.inline-3, form.block input.inline-3,
   form.block select.inline-3,
   form.block .label.inline-3 {
     width: 24.33333%; }
   form.inline input.inline-4,
   form.inline select.inline-4,
-  form.inline .label.inline-4,
-  form.block input.inline-4,
+  form.inline .label.inline-4, form.block input.inline-4,
   form.block select.inline-4,
   form.block .label.inline-4 {
     width: 18%; }
   form.inline input.inline-5,
   form.inline select.inline-5,
-  form.inline .label.inline-5,
-  form.block input.inline-5,
+  form.inline .label.inline-5, form.block input.inline-5,
   form.block select.inline-5,
   form.block .label.inline-5 {
     width: 14.2%; }
   form.inline input.inline-6,
   form.inline select.inline-6,
-  form.inline .label.inline-6,
-  form.block input.inline-6,
+  form.inline .label.inline-6, form.block input.inline-6,
   form.block select.inline-6,
   form.block .label.inline-6 {
     width: 11.66667%; }
   form.inline input.inline-7,
   form.inline select.inline-7,
-  form.inline .label.inline-7,
-  form.block input.inline-7,
+  form.inline .label.inline-7, form.block input.inline-7,
   form.block select.inline-7,
   form.block .label.inline-7 {
     width: 9.85714%; }
   form.inline input.inline-8,
   form.inline select.inline-8,
-  form.inline .label.inline-8,
-  form.block input.inline-8,
+  form.inline .label.inline-8, form.block input.inline-8,
   form.block select.inline-8,
   form.block .label.inline-8 {
     width: 8.5%; }
@@ -2022,8 +1691,7 @@ form.block {
   form.inline [type="submit"],
   form.inline [type="reset"],
   form.inline [type="button"],
-  form.inline .button,
-  form.block button,
+  form.inline .button, form.block button,
   form.block [type="submit"],
   form.block [type="reset"],
   form.block [type="button"],
@@ -2056,8 +1724,7 @@ form.block {
     form.inline .button + [type="submit"],
     form.inline .button + [type="reset"],
     form.inline .button + [type="button"],
-    form.inline .button + .button,
-    form.block button + button,
+    form.inline .button + .button, form.block button + button,
     form.block button + [type="submit"],
     form.block button + [type="reset"],
     form.block button + [type="button"],
@@ -2084,19 +1751,14 @@ form.block {
     form.block .button + .button {
       margin-right: 0.5em;
       clear: none; }
-  form.inline input[type="checkbox"], form.inline input[type="radio"],
-  form.block input[type="checkbox"],
-  form.block input[type="radio"] {
+  form.inline input[type="checkbox"], form.inline input[type="radio"], form.block input[type="checkbox"], form.block input[type="radio"] {
     width: auto;
     float: left; }
-  form.inline input[type="checkbox"],
-  form.block input[type="checkbox"] {
+  form.inline input[type="checkbox"], form.block input[type="checkbox"] {
     margin-top: 0.65em; }
-  form.inline input[type="radio"],
-  form.block input[type="radio"] {
+  form.inline input[type="radio"], form.block input[type="radio"] {
     margin-top: 0.55em; }
-    form.inline input[type="radio"] + label,
-    form.block input[type="radio"] + label {
+    form.inline input[type="radio"] + label, form.block input[type="radio"] + label {
       width: auto;
       margin-top: 0.4em;
       margin-right: 1.5em;
@@ -2105,62 +1767,51 @@ form.block {
       clear: none;
       font-weight: inherit;
       background-color: transparent; }
-    form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label,
-    form.block input[type="radio"]:disabled + label,
-    form.block input[type="radio"][readonly] + label {
+    form.inline input[type="radio"]:disabled + label, form.inline input[type="radio"][readonly] + label, form.block input[type="radio"]:disabled + label, form.block input[type="radio"][readonly] + label {
       color: #BDBDBD; }
-  form.inline.large,
-  form.block.large {
-    padding-bottom: 1em; }
-    form.inline.large label,
-    form.inline.large input,
-    form.inline.large select,
-    form.inline.large textarea,
-    form.block.large label,
-    form.block.large input,
-    form.block.large select,
-    form.block.large textarea {
-      font-size: 1.45em; }
-    form.inline.large label,
-    form.inline.large button,
-    form.inline.large [type="submit"],
-    form.inline.large [type="reset"],
-    form.inline.large [type="button"],
-    form.inline.large .button,
-    form.block.large label,
-    form.block.large button,
-    form.block.large [type="submit"],
-    form.block.large [type="reset"],
-    form.block.large [type="button"],
-    form.block.large .button {
-      margin-top: 1.4em; }
-    form.inline.large input,
-    form.inline.large select,
-    form.inline.large textarea,
-    form.inline.large .label,
-    form.block.large input,
-    form.block.large select,
-    form.block.large textarea,
-    form.block.large .label {
-      margin-top: 1.2em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em; }
-    form.inline.large input,
-    form.inline.large select,
-    form.inline.large textarea,
-    form.block.large input,
-    form.block.large select,
-    form.block.large textarea {
-      padding-right: 0.5em;
-      padding-left: 0.5em; }
-    form.inline.large .label .prefix,
-    form.inline.large .label .suffix,
-    form.block.large .label .prefix,
-    form.block.large .label .suffix {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      font-size: 1.45em; }
-
+  form.inline.large label,
+  form.inline.large input,
+  form.inline.large select,
+  form.inline.large textarea, form.block.large label,
+  form.block.large input,
+  form.block.large select,
+  form.block.large textarea {
+    font-size: 1.45em; }
+  form.inline.large label,
+  form.inline.large button,
+  form.inline.large [type="submit"],
+  form.inline.large [type="reset"],
+  form.inline.large [type="button"],
+  form.inline.large .button, form.block.large label,
+  form.block.large button,
+  form.block.large [type="submit"],
+  form.block.large [type="reset"],
+  form.block.large [type="button"],
+  form.block.large .button {
+    margin-top: 1.4em; }
+  form.inline.large input,
+  form.inline.large select,
+  form.inline.large textarea,
+  form.inline.large .label, form.block.large input,
+  form.block.large select,
+  form.block.large textarea,
+  form.block.large .label {
+    margin-top: 1.2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em; }
+  form.inline.large input,
+  form.inline.large select,
+  form.inline.large textarea, form.block.large input,
+  form.block.large select,
+  form.block.large textarea {
+    padding-right: 0.5em;
+    padding-left: 0.5em; }
+  form.inline.large .label .prefix,
+  form.inline.large .label .suffix, form.block.large .label .prefix,
+  form.block.large .label .suffix {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.45em; }
 form.inline input.full,
 form.inline select.full,
 form.inline textarea.full {
@@ -2174,7 +1825,6 @@ form.inline.large input[type="radio"] {
     margin-top: 1.45em; }
 form.inline.large input[type="checkbox"] {
   margin-top: 1.45em; }
-
 form.block {
   text-align: left; }
   form.block label {
@@ -2271,7 +1921,6 @@ form.block {
       display: inline-block; }
   form.block.large input[type="checkbox"] {
     margin-top: 1.65em; }
-
 form.linear {
   padding: 0.5em 0;
   display: block;
@@ -3096,6 +2745,7 @@ ul.tabs {
 ul.tree {
   margin-left: 1em;
   list-style: none;
+  border: 0 #E0E0E0 solid;
   	/*&.interactive {
   		padding-left: 1.75em;
   
@@ -3186,7 +2836,9 @@ ul.tree {
       top: 1.5em;
       bottom: 0.875em;
       left: 0.75em;
-      border-left: 1px #E0E0E0 solid;
+      border-left-width: 1px;
+      border-left-color: inherit;
+      border-left-style: solid;
       content: "";
       z-index: 1; }
   ul.tree li {
@@ -3202,8 +2854,9 @@ ul.tree {
       position: absolute;
       top: 0.75em;
       left: -1.25em;
-      border: #E0E0E0 solid;
       border-width: 0 0 1px 1px;
+      border-color: inherit;
+      border-style: solid;
       content: "";
       z-index: 1; }
     ul.tree li:last-child::before {
