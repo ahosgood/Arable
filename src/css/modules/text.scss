@@ -220,18 +220,53 @@ table {
 }
 
 blockquote {
-	margin: 0.25em 0.5em 0.75em;
-	padding: 0.5em 0.75em 0.5em 1.25em;
+	margin: 0.5em 1em 1em;
+	padding: 3em 1.25em 0.5em;
 
-	color: #555;
-	font-size: 1.55em;
-	font-weight: 300;
+	position: relative;
+
+	color: $baseTextColour;
+	font-size: 1.5em;
+	font-weight: 400;
 	line-height: 1.75;
-	white-space: pre-wrap;
+	//white-space: pre-wrap;
 
-	background-color: $bgLightGrey;
+	border-left: 0.3em $baseTextColour solid;
 
-	border-left: 0.3em $borderGrey solid;
+	quotes: "“" "”" "‘" "’";
+
+	&::before {
+		position: absolute;
+		top: 0.05em;
+		left: 0.27777em;
+
+		font-size: 4.5em;
+		font-weight: 700;
+		line-height: 1;
+
+		content: open-quote;
+	}
+
+	&::after {
+		color: transparent;
+		font-size: 0;
+		line-height: 0;
+
+		content: close-quote;
+	}
+
+	&.subtle {
+		padding-top: 0.5em;
+
+		background-color: $bgLightGrey;
+
+		border-left-color: $borderGrey;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
 
 	p {
 		padding-bottom: 0;
@@ -261,7 +296,7 @@ a {
 	color: $baseLinkColour;
 
 	&:visited {
-		//color: $baseLinkVisitedColour;
+		color: $baseLinkVisitedColour;
 	}
 
 	&:hover {
@@ -281,6 +316,7 @@ strong {
 	font-weight: 700;
 }
 
+.bold,
 .heavyweight {
 	font-weight: 700 !important;
 }

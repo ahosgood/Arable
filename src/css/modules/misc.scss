@@ -198,6 +198,11 @@ p {
 		text-transform: uppercase !important;
 	}
 
+	&.small {
+		font-size: 10px;
+		font-size: 1rem;
+	}
+
 	&.large {
 		font-size: 13px;
 		font-size: 1.3rem;
@@ -206,6 +211,10 @@ p {
 	&.huge {
 		font-size: 16px;
 		font-size: 1.6rem;
+	}
+
+	&.inherit {
+		font-size: 1em;
 	}
 
 	&.red {

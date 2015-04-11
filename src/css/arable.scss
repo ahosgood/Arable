@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.4
- * Date:        2015-04-10
+ * Version:     5.3.5
+ * Date:        2015-04-11
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -25,6 +25,7 @@ $baseTextColour: #212121;
 $baseLinkColour: #0D47A1;
 $baseLinkHoverColour: #1976D2;
 $baseLinkActiveColour: #E64A19;
+$baseLinkVisitedColour: $baseLinkHoverColour;
 
 $bgLightGrey: #F5F5F5;
 $headerGrey: #E0E0E0;

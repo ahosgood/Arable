@@ -1,11 +1,12 @@
+@charset "UTF-8";
 /*!
  * ================================================================================
  * Arable
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.4
- * Date:        2015-04-10
+ * Version:     5.3.5
+ * Date:        2015-04-11
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -3195,15 +3196,34 @@ table code {
   outline: 1px #BDBDBD solid; }
 
 blockquote {
-  margin: 0.25em 0.5em 0.75em;
-  padding: 0.5em 0.75em 0.5em 1.25em;
-  color: #555;
-  font-size: 1.55em;
-  font-weight: 300;
+  margin: 0.5em 1em 1em;
+  padding: 3em 1.25em 0.5em;
+  position: relative;
+  color: #212121;
+  font-size: 1.5em;
+  font-weight: 400;
   line-height: 1.75;
-  white-space: pre-wrap;
-  background-color: #F5F5F5;
-  border-left: 0.3em #BDBDBD solid; }
+  border-left: 0.3em #212121 solid;
+  quotes: "“" "”" "‘" "’"; }
+  blockquote::before {
+    position: absolute;
+    top: 0.05em;
+    left: 0.27777em;
+    font-size: 4.5em;
+    font-weight: 700;
+    line-height: 1;
+    content: open-quote; }
+  blockquote::after {
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    content: close-quote; }
+  blockquote.subtle {
+    padding-top: 0.5em;
+    background-color: #F5F5F5;
+    border-left-color: #BDBDBD; }
+    blockquote.subtle::before, blockquote.subtle::after {
+      display: none; }
   blockquote p {
     padding-bottom: 0;
     font-size: 1em; }
@@ -3223,6 +3243,8 @@ em {
 
 a {
   color: #0D47A1; }
+  a:visited {
+    color: #1976D2; }
   a:hover {
     color: #1976D2; }
   a:active {
@@ -3234,6 +3256,7 @@ a {
 strong {
   font-weight: 700; }
 
+.bold,
 .heavyweight {
   font-weight: 700 !important; }
 
@@ -3393,12 +3416,17 @@ p.error, p.warning, p.notice, p.success {
   border-radius: 3px; }
   .tag.caps {
     text-transform: uppercase !important; }
+  .tag.small {
+    font-size: 10px;
+    font-size: 1rem; }
   .tag.large {
     font-size: 13px;
     font-size: 1.3rem; }
   .tag.huge {
     font-size: 16px;
     font-size: 1.6rem; }
+  .tag.inherit {
+    font-size: 1em; }
   .tag.red {
     background-color: #E53935; }
   .tag.orange {
