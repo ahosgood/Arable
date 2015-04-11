@@ -280,6 +280,18 @@ ul.inline {
 				content: "\203A";
 			}
 		}
+
+		&.slashes {
+			li {
+				+ li::before {
+					font-size: 1em;
+					line-height: 1;
+					vertical-align: text-bottom;
+
+					content: "//";
+				}
+			}
+		}
 	}
 }
 

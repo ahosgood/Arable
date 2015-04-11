@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.5
+ * Version:     5.3.6
  * Date:        2015-04-11
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -2636,6 +2636,11 @@ ul.inline {
     line-height: 0.75;
     vertical-align: text-top;
     content: "\203A"; }
+  ul.inline.breadcrumbs.slashes li + li::before {
+    font-size: 1em;
+    line-height: 1;
+    vertical-align: text-bottom;
+    content: "//"; }
 
 ul.tabs {
   margin-top: 0.5em;
@@ -3410,21 +3415,22 @@ p.error, p.warning, p.notice, p.success {
   font-weight: 700;
   font-size: 11px;
   font-size: 1.1rem;
-  line-height: 1.5;
+  line-height: 1.618;
   vertical-align: text-top;
   background-color: #B0BEC5;
   border-radius: 3px; }
   .tag.caps {
     text-transform: uppercase !important; }
-  .tag.small {
-    font-size: 10px;
-    font-size: 1rem; }
   .tag.large {
     font-size: 13px;
     font-size: 1.3rem; }
+    .tag.large a.cross {
+      margin-top: 5px; }
   .tag.huge {
     font-size: 16px;
     font-size: 1.6rem; }
+    .tag.huge a.cross {
+      margin-top: 7px; }
   .tag.inherit {
     font-size: 1em; }
   .tag.red {
@@ -3457,6 +3463,39 @@ p.error, p.warning, p.notice, p.success {
     background-color: #212121; }
   .tag.grey {
     background-color: #757575; }
+  .tag a.cross {
+    width: 11px;
+    height: 11px;
+    margin: 3px 0 0 0.35em;
+    display: block;
+    position: relative;
+    float: right;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background-color: #FFF;
+    border-radius: 100%; }
+    .tag a.cross::before, .tag a.cross::after {
+      display: block;
+      position: absolute;
+      background-color: #616161;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: ""; }
+    .tag a.cross::before {
+      width: 1px;
+      height: 7px;
+      top: 2px;
+      left: 5px; }
+    .tag a.cross::after {
+      width: 7px;
+      height: 1px;
+      top: 5px;
+      left: 2px; }
 
 /* ===================================================== TWISTPHP ===================================================== */
 form.inline .twistupload-wrapper, form.block .twistupload-wrapper {

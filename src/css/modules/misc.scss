@@ -187,7 +187,8 @@ p {
 	font-weight: 700;
 	font-size: 11px;
 	font-size: 1.1rem;
-	line-height: 1.5;
+	//line-height: 1.5;
+	@include basefontlineheight;
 	vertical-align: text-top;
 
 	background-color: $tagStandard;
@@ -198,19 +199,26 @@ p {
 		text-transform: uppercase !important;
 	}
 
-	&.small {
-		font-size: 10px;
-		font-size: 1rem;
-	}
-
 	&.large {
 		font-size: 13px;
 		font-size: 1.3rem;
+
+		a {
+			&.cross {
+				margin-top: 5px;
+			}
+		}
 	}
 
 	&.huge {
 		font-size: 16px;
 		font-size: 1.6rem;
+
+		a {
+			&.cross {
+				margin-top: 7px;
+			}
+		}
 	}
 
 	&.inherit {
@@ -275,5 +283,59 @@ p {
 
 	&.grey {
 		background-color: $tagGrey;
+	}
+
+	a {
+		&.cross {
+			width: 11px;
+			height: 11px;
+			margin: 3px 0 0 0.35em;
+
+			display: block;
+
+			position: relative;
+
+			float: right;
+
+			font-size: 1em;
+			text-align: center;
+			font-weight: 700;
+			line-height: 1;
+			text-decoration: none;
+
+			background-color: #FFF;
+
+			border-radius: 100%;
+
+			&::before,
+			&::after {
+				display: block;
+
+				position: absolute;
+
+				background-color: $tagCross;
+
+				-webkit-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+
+				content: "";
+			}
+
+			&::before {
+				width: 1px;
+				height: 7px;
+				top: 2px;
+				left: 5px;
+			}
+
+			&::after {
+				width: 7px;
+				height: 1px;
+				top: 5px;
+				left: 2px;
+			}
+		}
 	}
 }
