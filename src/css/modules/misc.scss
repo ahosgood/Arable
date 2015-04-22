@@ -179,51 +179,19 @@ p {
 
 /* ===================================================== TAGS ===================================================== */
 .tag {
-	padding: 0 0.35em;
+	padding: #{((base-font(line-height) - 1) / 2)}em 0.35em;
 
 	display: inline-block;
 
 	color: #FFF;
 	font-weight: 700;
-	font-size: 11px;
-	font-size: 1.1rem;
-	//line-height: 1.5;
-	@include base-font-line-height;
-	vertical-align: text-top;
+	font-size: 0.875em;
+	line-height: 1;
+	vertical-align: baseline;
 
 	background-color: $tagBase;
 
 	border-radius: $border-radius;
-
-	&.caps {
-		text-transform: uppercase !important;
-	}
-
-	&.large {
-		font-size: 13px;
-		font-size: 1.3rem;
-
-		a {
-			&.cross {
-				margin-top: 5px;
-			}
-		}
-	}
-
-	&.huge {
-		font-size: 16px;
-		font-size: 1.6rem;
-
-		a {
-			&.cross {
-				margin-top: 7px;
-			}
-		}
-	}
-
-	&.inherit {
-		font-size: 1em;
-	}
 
 	@each $tag-colour-name, $tag-hex in $tag-colours {
 		&.#{$tag-colour-name} {
@@ -231,23 +199,39 @@ p {
 		}
 	}
 
+	&.caps {
+		text-transform: uppercase !important;
+	}
+
+	&.large {
+		font-size: 1.1em;
+	}
+
+	&.huge {
+		font-size: 1.325em;
+	}
+
+	&.inherit {
+		font-size: 1em;
+	}
+
 	a {
 		&.cross {
 			width: 11px;
 			height: 11px;
-			margin: 3px 0 0 0.35em;
+			margin: 0 0 0 0.35em;
 
-			display: block;
+			display: inline-block;
 
 			position: relative;
-
-			float: right;
+			//top: 3.5px;
 
 			font-size: 1em;
 			text-align: center;
 			font-weight: 700;
 			line-height: 1;
 			text-decoration: none;
+			//vertical-align: top;
 
 			background-color: #FFF;
 

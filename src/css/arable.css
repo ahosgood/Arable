@@ -3256,30 +3256,15 @@ p.error, p.warning, p.notice, p.success {
 
 /* ===================================================== TAGS ===================================================== */
 .tag {
-  padding: 0 0.35em;
+  padding: 0.309em 0.35em;
   display: inline-block;
   color: #FFF;
   font-weight: 700;
-  font-size: 11px;
-  font-size: 1.1rem;
-  line-height: 1.618;
-  vertical-align: text-top;
+  font-size: 0.875em;
+  line-height: 1;
+  vertical-align: baseline;
   background-color: #B0BEC5;
   border-radius: 3px; }
-  .tag.caps {
-    text-transform: uppercase !important; }
-  .tag.large {
-    font-size: 13px;
-    font-size: 1.3rem; }
-    .tag.large a.cross {
-      margin-top: 5px; }
-  .tag.huge {
-    font-size: 16px;
-    font-size: 1.6rem; }
-    .tag.huge a.cross {
-      margin-top: 7px; }
-  .tag.inherit {
-    font-size: 1em; }
   .tag.red {
     background-color: #E53935; }
   .tag.orange {
@@ -3310,13 +3295,20 @@ p.error, p.warning, p.notice, p.success {
     background-color: #212121; }
   .tag.grey {
     background-color: #757575; }
+  .tag.caps {
+    text-transform: uppercase !important; }
+  .tag.large {
+    font-size: 1.1em; }
+  .tag.huge {
+    font-size: 1.325em; }
+  .tag.inherit {
+    font-size: 1em; }
   .tag a.cross {
     width: 11px;
     height: 11px;
-    margin: 3px 0 0 0.35em;
-    display: block;
+    margin: 0 0 0 0.35em;
+    display: inline-block;
     position: relative;
-    float: right;
     font-size: 1em;
     text-align: center;
     font-weight: 700;
@@ -3327,7 +3319,7 @@ p.error, p.warning, p.notice, p.success {
     .tag a.cross::before, .tag a.cross::after {
       display: block;
       position: absolute;
-      background-color: #616161;
+      background-color: #212121;
       -webkit-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
       -webkit-transform: rotate(45deg);
