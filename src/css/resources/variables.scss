@@ -1,0 +1,107 @@
+// ===================================================== VARIABLES =====================================================
+// ----------------------------------------------------- BASE FONTS -----------------------------------------------------
+$base-font-face: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
+$base-font: (
+	"size": 1.33,
+	"line-height": 1.618, //Phi
+	"colour": #212121,
+	"weight": 400,        //"Normal"
+	"bold-weight": 700     //"Bold"
+);
+
+$base-mono-font-face: "Courier New", Courier, monospace, mono;
+$base-mono-font: (
+	"line-height": 1.25,
+	"weight": 400
+);
+
+// ----------------------------------------------------- COLOURS -----------------------------------------------------
+// ---------------------- http://zavoloklom.github.io/material-design-color-palette/colors.html ----------------------
+$anchor-colour: (
+	"base": #0D47A1,
+	"hover": #1976D2,
+	"active": #E64A19,
+	"visited": #0D47A1
+);
+
+$border-colour: #BDBDBD;
+$border-light-colour: #E0E0E0;
+
+$form-colour: (
+	"border": $border-colour,
+	"active-border": #FBC02D,
+	"placeholder": #BDBDBD,
+	"placeholder-active": #9E9E9E,
+	"label-hover": #E3F2FD
+);
+
+$table-colour: (
+	"border": $border-colour,
+	//"header": #E0E0E0,
+	"header": #455A64,
+	"header-border": #455A64,
+	"highlight": #FFF9C4,
+	"hover": #E3F2FD
+);
+
+$bgLightGrey: #F5F5F5;
+$highlight: #FFF59D;
+
+$disabledFormElement: #BDBDBD;
+
+$button-base: (
+	"top": #F5F5F5,
+	"bottom": #E0E0E0,
+	"border": $border-colour
+);
+$button-base-hover: (
+	"top": #F2F2F2,
+	"bottom": #D8D8D8,
+	"border": $border-colour
+);
+$button-submit: #1976D2;
+$button-colours: (
+	"red": #D50000,
+	"green": #43A047,
+	"blue": $button-submit
+);
+
+$errorBorder: #D32F2F;
+$errorBackground: #FFCDD2;
+$warningBorder: #FBC02D;
+$warningBackground: #FFF9C4;
+$successBorder: #689F38;
+$successBackground: #DCEDC8;
+$noticeBorder: #1976D2;
+$noticeBackground: #BBDEFB;
+
+$tagBase: #B0BEC5;
+$tagCross: #616161;
+$tag-colours: (
+	"red": #E53935,
+	"orange": #FB8C00,
+	"amber": #FFB300,
+	"yellow": #FDD835,
+	"lime": #C0CA33,
+	"green": #7CB342,
+	"teal": #00897B,
+	"cyan": #00ACC1,
+	"blue": #1E88E5,
+	"indigo": #3949AB,
+	"purple": #5E35B1,
+	"pink": #D81B60,
+	"brown": #6D4C41,
+	"black": #212121,
+	"grey": #757575,
+);
+
+// ----------------------------------------------------- DIMENSIONS -----------------------------------------------------
+$border-radius: 3px;
+
+// ----------------------------------------------------- BREAKPOINTS (MIN PIXEL VALUES FOR EACH DEVICE) -----------------------------------------------------
+$breakpoints: (
+	"mobile-large": 481px,
+	"tablet-small": 659px,
+	"tablet-large": 769px,
+	"desktop": 1025px
+);

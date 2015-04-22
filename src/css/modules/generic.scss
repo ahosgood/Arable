@@ -4,9 +4,9 @@ html {
 }
 
 body {
-	@include basefontcolour;
-	@include basefontface;
-	@include basefontweight;
+	@include base-font-colour;
+	@include base-font-face;
+	@include base-font-weight;
 }
 
 .clear {

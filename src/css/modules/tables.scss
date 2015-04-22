@@ -1,25 +1,19 @@
 /* ===================================================== TABLES ===================================================== */
 table {
 	width: 100%;
-	margin-bottom: #{$baseLineHeight}em;
+	margin-bottom: #{base-font(line-height)}em;
 
 	clear: both;
 
 	background-color: rgba(255, 255, 255, 0.85);
 
-	border: 1px $borderGrey solid;
-	border-radius: $borderRadius;
+	border: 0 $border-colour solid;
 	border-collapse: collapse;
-
-	a {
-		//@include basefontcolour;
-		//font-style: normal;
-	}
 
 	p {
 		margin: 0.25em 0;
 
-		@include basefontlineheight;
+		@include base-font-line-height;
 	}
 
 	ul {
@@ -63,7 +57,7 @@ table {
 				transition: background ease 200ms;
 
 				&:hover {
-					background-color: $hoverTable;
+					background-color: table-colour(hover);
 
 					-webkit-transition: background ease 50ms;
 					-moz-transition: background ease 50ms;
@@ -81,14 +75,19 @@ table {
 }
 
 	thead {
+		color: blackorwhite(table-colour(header));
 		font-family: Helvetica, Arial, Tahoma, sans-serif;
 		font-weight: 700;
-		@include basefontsize;
+		@include base-font-size;
 
-		background-color: $headerGrey;
+		background-color: table-colour(header);
+
+		border-width: 1px;
+		border-color: table-colour(header-border) table-colour(header-border) table-colour(border);
+		border-style: solid;
 
 		&.large {
-			font-size: #{$baseFontSize * 1.09}em;
+			font-size: #{base-font(size) * 1.09}em;
 		}
 
 		p,
@@ -104,6 +103,10 @@ table {
 	tbody {
 		font-size: 1.25em;
 
+		border-width: 1px;
+		border-color: inherit;
+		border-style: solid;
+
 		&.large {
 			font-size: 1.3625em;
 		}
@@ -113,7 +116,7 @@ table {
 		ol,
 		button,
 		.button {
-			font-size: #{$baseFontSize / 1.25}em;
+			font-size: #{base-font(size) / 1.25}em;
 		}
 	}
 
@@ -143,7 +146,7 @@ table {
 		}
 
 			tr.highlight {
-				background-color: $highlightTable;
+				background-color: table-colour(highlight);
 			}
 
 				th,
@@ -153,7 +156,7 @@ table {
 					text-align: left;
 
 					border-width: 1px 0;
-					border-color: $borderGrey;
+					border-color: inherit;
 					border-style: solid;
 
 					&.no-padding {
@@ -212,11 +215,11 @@ form {
 	}
 
 	10% {
-		background-color: $highlightTable;
+		background-color: table-colour(highlight);
 	}
 
 	75% {
-		background-color: $highlightTable;
+		background-color: table-colour(highlight);
 	}
 
 	100% {

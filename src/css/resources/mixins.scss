@@ -1,14 +1,38 @@
 // ===================================================== MIXINS =====================================================
-@mixin grad($top, $bottom) {
-	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)) no-repeat scroll;
-	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: -moz-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	//background: -ms-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	//background: -o-linear-gradient(top, $top 0%, $bottom 100%) no-repeat scroll;
-	background: linear-gradient(to bottom, $top 0%, $bottom 100%) no-repeat scroll;
-	background-color: $top;
+@mixin background-opacity($color, $opacity: 0.85) {
+	background: $color;
+	background: rgba($color, $opacity);
+}
+
+@mixin grad($topColour, $bottomColour) {
+	background: -webkit-linear-gradient(top, $topColour 0%, $bottomColour 100%) no-repeat scroll;
+	background: -moz-linear-gradient(top, $topColour 0%, $bottomColour 100%) no-repeat scroll;
+	background: linear-gradient(to bottom, $topColour 0%, $bottomColour 100%) no-repeat scroll;
+	background-color: $topColour;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
+}
+
+@mixin slim-underline {
+	text-decoration: none;
+	background-image: linear-gradient( to bottom, rgba( 0, 0, 0, 0 ) 75%, #000 50% );
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 1em;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-size: 2px 6px;
+		background-position: 0 0.8em;
+	}
+
+	@media not all,
+	only screen and ( min-resolution: 2dppx ),
+	only screen and ( -webkit-min-device-pixel-ratio: 2 ) {
+		background-image: linear-gradient( to bottom, rgba( 0, 0, 0, 0 ) 75%, #000 75% );
+		background-repeat: repeat-x;
+	}
 }
 
 @mixin keyframes($name) {
@@ -20,37 +44,82 @@
 		@content;
 	}
 
-	/*@-ms-keyframes #{$name} {
-		@content;
-	}
-
-	@-o-keyframes #{$name} {
-		@content;
-	}*/
-
 	@keyframes #{$name} {
 		@content;
 	}
 }
 
-@mixin basefontsize {
-	font-size: #{$baseFontSize}em;
+@mixin base-font-size {
+	font-size: #{base-font(size)}em;
 }
 
-@mixin basefontlineheight {
-	line-height: #{$baseLineHeight};
+@mixin base-font-line-height {
+	line-height: base-font(line-height);
 }
 
-@mixin basefontweight {
-	font-weight: $basefontWeight;
+@mixin base-font-weight {
+	font-weight: base-font(weight);
 }
 
-@mixin basefontcolour {
-	color: $baseTextColour;
+@mixin base-font-colour {
+	color: base-font(colour);
 }
 
-@mixin basefontface {
-	font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
+@mixin base-font-face {
+	font-family: $base-font-face;
+}
+
+@mixin base-mono-font-line-height {
+	line-height: base-mono-font(line-height);
+}
+
+@mixin base-mono-font-weight {
+	font-weight: base-mono-font(weight);
+}
+
+@mixin base-mono-font-face {
+	font-family: $base-mono-font-face;
+}
+
+@mixin button-grad($base) {
+	color: blackorwhite($base) !important;
+	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
+
+	@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+	border-color: desaturate(lighten($base, 2%), 10%);
+
+	&:focus,
+	&:hover,
+	&:active {
+		border-color: darken($base, 5%);
+	}
+
+	&:focus,
+	&:hover {
+		@include grad(desaturate(lighten($base, 20%), 5%), lighten($base, 2%));
+	}
+
+	&:active {
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	&:visited {
+		color: blackorwhite($base) !important;
+	}
+
+	&.disabled,
+	&:disabled {
+		&:hover,
+		&:focus,
+		&:active {
+			@include grad(desaturate(lighten($base, 15%), 5%), $base);
+
+			border-color: desaturate(lighten($base, 2%), 10%);
+
+			box-shadow: none;
+		}
+	}
 }
 
 @mixin button {
@@ -59,24 +128,21 @@
 
 	display: inline-block;
 
-	@include basefontcolour;
-	@include basefontsize;
-	font-weight: 400;
+	@include base-font-colour;
+	@include base-font-size;
+	font-weight: base-font(weight);
 	text-align: center;
 	text-decoration: none;
 	line-height: 2.1;
 	vertical-align: middle;
 	white-space: nowrap;
 
-	@include grad($buttonTop, $buttonBottom);
+	@include grad(map-get($button-base, top), map-get($button-base, bottom));
 
-	border: 1px $borderGrey solid;
-	border-radius: $borderRadius;
+	border: 1px map-get($button-base, border) solid;
+	border-radius: $border-radius;
 
 	-webkit-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	//-moz-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	//-ms-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
-	//-o-transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 	transition: background ease 200ms, border ease 200ms, box-shadow ease 200ms, opacity ease 400ms;
 
 	cursor: pointer;
@@ -88,14 +154,11 @@
 	&:focus,
 	&:hover,
 	&:active {
-		@include basefontcolour;
+		@include base-font-colour;
 
 		border-color: #AAA;
 
 		-webkit-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		//-moz-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		//-ms-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
-		//-o-transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
 		transition: background ease 50ms, border ease 50ms, box-shadow ease 50ms, opacity ease 100ms;
 	}
 
@@ -106,6 +169,10 @@
 
 	&:active {
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25);
+	}
+
+	&:visited {
+		@include base-font-colour;
 	}
 
 	&.thin {
@@ -121,66 +188,17 @@
 		&:hover,
 		&:focus,
 		&:active {
-			@include grad(#F2F2F2, #D8D8D8);
+			@include grad(map-get($button-base-hover, top), map-get($button-base-hover, bottom));
 
-			border-color: $borderGrey;
+			border-color: map-get($button-base-hover, border);
 
 			box-shadow: none;
 		}
 	}
 
-	&.red {
-		@include button-grad($buttonRed);
-	}
-
-	&.green {
-		@include button-grad($buttonGreen);
-	}
-
-	&.blue {
-		@include button-grad($buttonBlue);
-	}
-
-	&.black {
-		@include button-grad($buttonBlack);
-	}
-}
-
-@mixin button-grad($base) {
-	color: blackorwhite($base);
-	text-shadow: 0 0 3px desaturate(lighten($base, 10%), 2%);
-
-	@include grad(desaturate(lighten($base, 15%), 5%), $base);
-
-	border-color: desaturate(lighten($base, 2%), 10%);
-
-	&:focus,
-	&:hover,
-	&:active {
-		color: if(lightness($base) > 50, $baseTextColour, #FFF);
-
-		border-color: darken($base, 5%);
-	}
-
-	&:focus,
-	&:hover {
-		@include grad(desaturate(lighten($base, 20%), 5%), lighten($base, 2%));
-	}
-
-	&:active {
-		box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15);
-	}
-
-	&.disabled,
-	&:disabled {
-		&:hover,
-		&:focus,
-		&:active {
-			@include grad(desaturate(lighten($base, 15%), 5%), $base);
-
-			border-color: desaturate(lighten($base, 2%), 10%);
-
-			box-shadow: none;
+	@each $button-colour-name, $button-hex in $button-colours {
+		&.#{$button-colour-name} {
+			@include button-grad($button-hex);
 		}
 	}
 }

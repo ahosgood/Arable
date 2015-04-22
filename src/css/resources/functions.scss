@@ -1,16 +1,4 @@
 // ===================================================== FUNCTIONS =====================================================
-@function black($opacity) {
-	@return rgba(0, 0, 0, $opacity);
-}
-
-@function white($opacity) {
-	@return rgba(255, 255, 255, $opacity);
-}
-
-@function blackorwhite($colour) {
-	@return if(lightness($colour) > 50, $baseTextColour, #FFF);
-}
-
 @function exponent($base, $exponent) {
 	$value: $base;
 
@@ -27,4 +15,80 @@
 	}
 
 	@return $value;
+}
+
+@function base-font($key) {
+	@if map-has-key($base-font, $key) {
+		@return map-get($base-font, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $base-font.";
+
+	@return null;
+}
+
+@function base-mono-font($key) {
+	@if map-has-key($base-mono-font, $key) {
+		@return map-get($base-mono-font, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $base-mono-font.";
+
+	@return null;
+}
+
+@function anchor-colour($key) {
+	@if map-has-key($anchor-colour, $key) {
+		@return map-get($anchor-colour, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $anchor-colour.";
+
+	@return null;
+}
+
+@function form-colour($key) {
+	@if map-has-key($form-colour, $key) {
+		@return map-get($form-colour, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $anchor-colour.";
+
+	@return null;
+}
+
+@function table-colour($key) {
+	@if map-has-key($table-colour, $key) {
+		@return map-get($table-colour, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $anchor-colour.";
+
+	@return null;
+}
+
+@function breakpoint($key) {
+	@if map-has-key($breakpoints, $key) {
+		@return map-get($breakpoints, $key);
+	}
+
+	@warn "Unknown '#{$key}' in $breakpoints.";
+
+	@return null;
+}
+
+@function black($alpha) {
+	@return rgba(0, 0, 0, $alpha);
+}
+
+@function white($alpha) {
+	@return rgba(255, 255, 255, $alpha);
+}
+
+@function colour-opacity($colour, $alpha) {
+	@return rgba($colour, $alpha);
+}
+
+@function blackorwhite($colour) {
+	@return if(lightness($colour) > 50, base-font(colour), #FFF);
 }

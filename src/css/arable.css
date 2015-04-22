@@ -99,10 +99,10 @@ button {
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
 @media (max-width: 480px) {
-  .noshow-on-mobile-p {
+  .noshow-on-mobile-s {
     display: none; }
 
-  .show-on-mobile-p {
+  .show-on-mobile-s {
     display: block; } }
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
 @media (min-width: 481px) and (max-width: 658px) {
@@ -120,10 +120,10 @@ button {
     display: block; } }
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
 @media (min-width: 659px) and (max-width: 768px) {
-  .noshow-on-tablet-p {
+  .noshow-on-tablet-s {
     display: none; }
 
-  .show-on-tablet-p {
+  .show-on-tablet-s {
     display: block; } }
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -219,6 +219,13 @@ form.inline::after, form.block::after, form.linear::after {
   content: ""; }
 form.inline label, form.block label, form.linear label {
   font-weight: 700; }
+  form.inline label[title], form.block label[title], form.linear label[title] {
+    text-decoration: underline;
+    text-decoration-color: rgba(33, 33, 33, 0.35);
+    text-decoration-style: dotted;
+    text-decoration-skip: ink; }
+    form.inline label[title]:hover, form.block label[title]:hover, form.linear label[title]:hover {
+      text-decoration-color: rgba(33, 33, 33, 0.75); }
 form.inline textarea, form.block textarea, form.linear textarea {
   min-height: 2em;
   resize: vertical; }
@@ -498,6 +505,20 @@ form.linear .button {
   form.linear button:active,
   form.linear .button:active {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25); }
+  form.inline [type="submit"]:visited,
+  form.inline [type="reset"]:visited,
+  form.inline [type="button"]:visited,
+  form.inline button:visited,
+  form.inline .button:visited, form.block [type="submit"]:visited,
+  form.block [type="reset"]:visited,
+  form.block [type="button"]:visited,
+  form.block button:visited,
+  form.block .button:visited, form.linear [type="submit"]:visited,
+  form.linear [type="reset"]:visited,
+  form.linear [type="button"]:visited,
+  form.linear button:visited,
+  form.linear .button:visited {
+    color: #212121; }
   form.inline [type="submit"].thin,
   form.inline [type="reset"].thin,
   form.inline [type="button"].thin,
@@ -633,7 +654,7 @@ form.linear .button {
   form.linear [type="button"].red,
   form.linear button.red,
   form.linear .button.red {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #fd0b0b;
     background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -679,7 +700,6 @@ form.linear .button {
     form.linear .button.red:focus,
     form.linear .button.red:hover,
     form.linear .button.red:active {
-      color: #FFF;
       border-color: #bc0000; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover,
     form.inline [type="reset"].red:focus,
@@ -726,6 +746,20 @@ form.linear .button {
     form.linear button.red:active,
     form.linear .button.red:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline [type="submit"].red:visited,
+    form.inline [type="reset"].red:visited,
+    form.inline [type="button"].red:visited,
+    form.inline button.red:visited,
+    form.inline .button.red:visited, form.block [type="submit"].red:visited,
+    form.block [type="reset"].red:visited,
+    form.block [type="button"].red:visited,
+    form.block button.red:visited,
+    form.block .button.red:visited, form.linear [type="submit"].red:visited,
+    form.linear [type="reset"].red:visited,
+    form.linear [type="button"].red:visited,
+    form.linear button.red:visited,
+    form.linear .button.red:visited {
+      color: #FFF !important; }
     form.inline [type="submit"].red.disabled:hover, form.inline [type="submit"].red.disabled:focus, form.inline [type="submit"].red.disabled:active, form.inline [type="submit"].red:disabled:hover, form.inline [type="submit"].red:disabled:focus, form.inline [type="submit"].red:disabled:active,
     form.inline [type="reset"].red.disabled:hover,
     form.inline [type="reset"].red.disabled:focus,
@@ -820,7 +854,7 @@ form.linear .button {
   form.linear [type="button"].green,
   form.linear button.green,
   form.linear .button.green {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #5eb862;
     background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -866,7 +900,6 @@ form.linear .button {
     form.linear .button.green:focus,
     form.linear .button.green:hover,
     form.linear .button.green:active {
-      color: #FFF;
       border-color: #3b8e3f; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover,
     form.inline [type="reset"].green:focus,
@@ -913,6 +946,20 @@ form.linear .button {
     form.linear button.green:active,
     form.linear .button.green:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline [type="submit"].green:visited,
+    form.inline [type="reset"].green:visited,
+    form.inline [type="button"].green:visited,
+    form.inline button.green:visited,
+    form.inline .button.green:visited, form.block [type="submit"].green:visited,
+    form.block [type="reset"].green:visited,
+    form.block [type="button"].green:visited,
+    form.block button.green:visited,
+    form.block .button.green:visited, form.linear [type="submit"].green:visited,
+    form.linear [type="reset"].green:visited,
+    form.linear [type="button"].green:visited,
+    form.linear button.green:visited,
+    form.linear .button.green:visited {
+      color: #FFF !important; }
     form.inline [type="submit"].green.disabled:hover, form.inline [type="submit"].green.disabled:focus, form.inline [type="submit"].green.disabled:active, form.inline [type="submit"].green:disabled:hover, form.inline [type="submit"].green:disabled:focus, form.inline [type="submit"].green:disabled:active,
     form.inline [type="reset"].green.disabled:hover,
     form.inline [type="reset"].green.disabled:focus,
@@ -1007,7 +1054,7 @@ form.linear .button {
   form.linear [type="button"].blue,
   form.linear button.blue,
   form.linear .button.blue {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #398fe5;
     background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
@@ -1053,7 +1100,6 @@ form.linear .button {
     form.linear .button.blue:focus,
     form.linear .button.blue:hover,
     form.linear .button.blue:active {
-      color: #FFF;
       border-color: #1669bb; }
     form.inline [type="submit"].blue:focus, form.inline [type="submit"].blue:hover,
     form.inline [type="reset"].blue:focus,
@@ -1100,6 +1146,20 @@ form.linear .button {
     form.linear button.blue:active,
     form.linear .button.blue:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline [type="submit"].blue:visited,
+    form.inline [type="reset"].blue:visited,
+    form.inline [type="button"].blue:visited,
+    form.inline button.blue:visited,
+    form.inline .button.blue:visited, form.block [type="submit"].blue:visited,
+    form.block [type="reset"].blue:visited,
+    form.block [type="button"].blue:visited,
+    form.block button.blue:visited,
+    form.block .button.blue:visited, form.linear [type="submit"].blue:visited,
+    form.linear [type="reset"].blue:visited,
+    form.linear [type="button"].blue:visited,
+    form.linear button.blue:visited,
+    form.linear .button.blue:visited {
+      color: #FFF !important; }
     form.inline [type="submit"].blue.disabled:hover, form.inline [type="submit"].blue.disabled:focus, form.inline [type="submit"].blue.disabled:active, form.inline [type="submit"].blue:disabled:hover, form.inline [type="submit"].blue:disabled:focus, form.inline [type="submit"].blue:disabled:active,
     form.inline [type="reset"].blue.disabled:hover,
     form.inline [type="reset"].blue.disabled:focus,
@@ -1181,196 +1241,9 @@ form.linear .button {
       background-attachment: scroll;
       border-color: #267bcf;
       box-shadow: none; }
-  form.inline [type="submit"].black,
-  form.inline [type="reset"].black,
-  form.inline [type="button"].black,
-  form.inline button.black,
-  form.inline .button.black, form.block [type="submit"].black,
-  form.block [type="reset"].black,
-  form.block [type="button"].black,
-  form.block button.black,
-  form.block .button.black, form.linear [type="submit"].black,
-  form.linear [type="reset"].black,
-  form.linear [type="button"].black,
-  form.linear button.black,
-  form.linear .button.black {
-    color: #FFF;
-    text-shadow: 0 0 3px #3b3b3b;
-    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-    background-color: #474747;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    border-color: #262626; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active,
-    form.inline [type="reset"].black:focus,
-    form.inline [type="reset"].black:hover,
-    form.inline [type="reset"].black:active,
-    form.inline [type="button"].black:focus,
-    form.inline [type="button"].black:hover,
-    form.inline [type="button"].black:active,
-    form.inline button.black:focus,
-    form.inline button.black:hover,
-    form.inline button.black:active,
-    form.inline .button.black:focus,
-    form.inline .button.black:hover,
-    form.inline .button.black:active, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.block [type="submit"].black:active,
-    form.block [type="reset"].black:focus,
-    form.block [type="reset"].black:hover,
-    form.block [type="reset"].black:active,
-    form.block [type="button"].black:focus,
-    form.block [type="button"].black:hover,
-    form.block [type="button"].black:active,
-    form.block button.black:focus,
-    form.block button.black:hover,
-    form.block button.black:active,
-    form.block .button.black:focus,
-    form.block .button.black:hover,
-    form.block .button.black:active, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover, form.linear [type="submit"].black:active,
-    form.linear [type="reset"].black:focus,
-    form.linear [type="reset"].black:hover,
-    form.linear [type="reset"].black:active,
-    form.linear [type="button"].black:focus,
-    form.linear [type="button"].black:hover,
-    form.linear [type="button"].black:active,
-    form.linear button.black:focus,
-    form.linear button.black:hover,
-    form.linear button.black:active,
-    form.linear .button.black:focus,
-    form.linear .button.black:hover,
-    form.linear .button.black:active {
-      color: #FFF;
-      border-color: #141414; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover,
-    form.inline [type="reset"].black:focus,
-    form.inline [type="reset"].black:hover,
-    form.inline [type="button"].black:focus,
-    form.inline [type="button"].black:hover,
-    form.inline button.black:focus,
-    form.inline button.black:hover,
-    form.inline .button.black:focus,
-    form.inline .button.black:hover, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover,
-    form.block [type="reset"].black:focus,
-    form.block [type="reset"].black:hover,
-    form.block [type="button"].black:focus,
-    form.block [type="button"].black:hover,
-    form.block button.black:focus,
-    form.block button.black:hover,
-    form.block .button.black:focus,
-    form.block .button.black:hover, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover,
-    form.linear [type="reset"].black:focus,
-    form.linear [type="reset"].black:hover,
-    form.linear [type="button"].black:focus,
-    form.linear [type="button"].black:hover,
-    form.linear button.black:focus,
-    form.linear button.black:hover,
-    form.linear .button.black:focus,
-    form.linear .button.black:hover {
-      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
-      background-color: #545454;
-      background-repeat: no-repeat;
-      background-attachment: scroll; }
-    form.inline [type="submit"].black:active,
-    form.inline [type="reset"].black:active,
-    form.inline [type="button"].black:active,
-    form.inline button.black:active,
-    form.inline .button.black:active, form.block [type="submit"].black:active,
-    form.block [type="reset"].black:active,
-    form.block [type="button"].black:active,
-    form.block button.black:active,
-    form.block .button.black:active, form.linear [type="submit"].black:active,
-    form.linear [type="reset"].black:active,
-    form.linear [type="button"].black:active,
-    form.linear button.black:active,
-    form.linear .button.black:active {
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline [type="submit"].black.disabled:hover, form.inline [type="submit"].black.disabled:focus, form.inline [type="submit"].black.disabled:active, form.inline [type="submit"].black:disabled:hover, form.inline [type="submit"].black:disabled:focus, form.inline [type="submit"].black:disabled:active,
-    form.inline [type="reset"].black.disabled:hover,
-    form.inline [type="reset"].black.disabled:focus,
-    form.inline [type="reset"].black.disabled:active,
-    form.inline [type="reset"].black:disabled:hover,
-    form.inline [type="reset"].black:disabled:focus,
-    form.inline [type="reset"].black:disabled:active,
-    form.inline [type="button"].black.disabled:hover,
-    form.inline [type="button"].black.disabled:focus,
-    form.inline [type="button"].black.disabled:active,
-    form.inline [type="button"].black:disabled:hover,
-    form.inline [type="button"].black:disabled:focus,
-    form.inline [type="button"].black:disabled:active,
-    form.inline button.black.disabled:hover,
-    form.inline button.black.disabled:focus,
-    form.inline button.black.disabled:active,
-    form.inline button.black:disabled:hover,
-    form.inline button.black:disabled:focus,
-    form.inline button.black:disabled:active,
-    form.inline .button.black.disabled:hover,
-    form.inline .button.black.disabled:focus,
-    form.inline .button.black.disabled:active,
-    form.inline .button.black:disabled:hover,
-    form.inline .button.black:disabled:focus,
-    form.inline .button.black:disabled:active, form.block [type="submit"].black.disabled:hover, form.block [type="submit"].black.disabled:focus, form.block [type="submit"].black.disabled:active, form.block [type="submit"].black:disabled:hover, form.block [type="submit"].black:disabled:focus, form.block [type="submit"].black:disabled:active,
-    form.block [type="reset"].black.disabled:hover,
-    form.block [type="reset"].black.disabled:focus,
-    form.block [type="reset"].black.disabled:active,
-    form.block [type="reset"].black:disabled:hover,
-    form.block [type="reset"].black:disabled:focus,
-    form.block [type="reset"].black:disabled:active,
-    form.block [type="button"].black.disabled:hover,
-    form.block [type="button"].black.disabled:focus,
-    form.block [type="button"].black.disabled:active,
-    form.block [type="button"].black:disabled:hover,
-    form.block [type="button"].black:disabled:focus,
-    form.block [type="button"].black:disabled:active,
-    form.block button.black.disabled:hover,
-    form.block button.black.disabled:focus,
-    form.block button.black.disabled:active,
-    form.block button.black:disabled:hover,
-    form.block button.black:disabled:focus,
-    form.block button.black:disabled:active,
-    form.block .button.black.disabled:hover,
-    form.block .button.black.disabled:focus,
-    form.block .button.black.disabled:active,
-    form.block .button.black:disabled:hover,
-    form.block .button.black:disabled:focus,
-    form.block .button.black:disabled:active, form.linear [type="submit"].black.disabled:hover, form.linear [type="submit"].black.disabled:focus, form.linear [type="submit"].black.disabled:active, form.linear [type="submit"].black:disabled:hover, form.linear [type="submit"].black:disabled:focus, form.linear [type="submit"].black:disabled:active,
-    form.linear [type="reset"].black.disabled:hover,
-    form.linear [type="reset"].black.disabled:focus,
-    form.linear [type="reset"].black.disabled:active,
-    form.linear [type="reset"].black:disabled:hover,
-    form.linear [type="reset"].black:disabled:focus,
-    form.linear [type="reset"].black:disabled:active,
-    form.linear [type="button"].black.disabled:hover,
-    form.linear [type="button"].black.disabled:focus,
-    form.linear [type="button"].black.disabled:active,
-    form.linear [type="button"].black:disabled:hover,
-    form.linear [type="button"].black:disabled:focus,
-    form.linear [type="button"].black:disabled:active,
-    form.linear button.black.disabled:hover,
-    form.linear button.black.disabled:focus,
-    form.linear button.black.disabled:active,
-    form.linear button.black:disabled:hover,
-    form.linear button.black:disabled:focus,
-    form.linear button.black:disabled:active,
-    form.linear .button.black.disabled:hover,
-    form.linear .button.black.disabled:focus,
-    form.linear .button.black.disabled:active,
-    form.linear .button.black:disabled:hover,
-    form.linear .button.black:disabled:focus,
-    form.linear .button.black:disabled:active {
-      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-      background-color: #474747;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      border-color: #262626;
-      box-shadow: none; }
 form.inline [type="submit"], form.block [type="submit"], form.linear [type="submit"] {
   font-weight: 700;
-  color: #FFF;
+  color: #FFF !important;
   text-shadow: 0 0 3px #398fe5;
   background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
   background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
@@ -1380,7 +1253,6 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
   background-attachment: scroll;
   border-color: #267bcf; }
   form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.inline [type="submit"]:active, form.block [type="submit"]:focus, form.block [type="submit"]:hover, form.block [type="submit"]:active, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover, form.linear [type="submit"]:active {
-    color: #FFF;
     border-color: #1669bb; }
   form.inline [type="submit"]:focus, form.inline [type="submit"]:hover, form.block [type="submit"]:focus, form.block [type="submit"]:hover, form.linear [type="submit"]:focus, form.linear [type="submit"]:hover {
     background: -webkit-linear-gradient(top, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
@@ -1391,6 +1263,8 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
     background-attachment: scroll; }
   form.inline [type="submit"]:active, form.block [type="submit"]:active, form.linear [type="submit"]:active {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+  form.inline [type="submit"]:visited, form.block [type="submit"]:visited, form.linear [type="submit"]:visited {
+    color: #FFF !important; }
   form.inline [type="submit"].disabled:hover, form.inline [type="submit"].disabled:focus, form.inline [type="submit"].disabled:active, form.inline [type="submit"]:disabled:hover, form.inline [type="submit"]:disabled:focus, form.inline [type="submit"]:disabled:active, form.block [type="submit"].disabled:hover, form.block [type="submit"].disabled:focus, form.block [type="submit"].disabled:active, form.block [type="submit"]:disabled:hover, form.block [type="submit"]:disabled:focus, form.block [type="submit"]:disabled:active, form.linear [type="submit"].disabled:hover, form.linear [type="submit"].disabled:focus, form.linear [type="submit"].disabled:active, form.linear [type="submit"]:disabled:hover, form.linear [type="submit"]:disabled:focus, form.linear [type="submit"]:disabled:active {
     background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
@@ -1401,7 +1275,7 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
     border-color: #267bcf;
     box-shadow: none; }
   form.inline [type="submit"].red, form.block [type="submit"].red, form.linear [type="submit"].red {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #fd0b0b;
     background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -1411,7 +1285,6 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
     background-attachment: scroll;
     border-color: #d40b0b; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.inline [type="submit"].red:active, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover, form.block [type="submit"].red:active, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover, form.linear [type="submit"].red:active {
-      color: #FFF;
       border-color: #bc0000; }
     form.inline [type="submit"].red:focus, form.inline [type="submit"].red:hover, form.block [type="submit"].red:focus, form.block [type="submit"].red:hover, form.linear [type="submit"].red:focus, form.linear [type="submit"].red:hover {
       background: -webkit-linear-gradient(top, #fa4141 0%, #df0000 100%) no-repeat scroll;
@@ -1422,6 +1295,8 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
       background-attachment: scroll; }
     form.inline [type="submit"].red:active, form.block [type="submit"].red:active, form.linear [type="submit"].red:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline [type="submit"].red:visited, form.block [type="submit"].red:visited, form.linear [type="submit"].red:visited {
+      color: #FFF !important; }
     form.inline [type="submit"].red.disabled:hover, form.inline [type="submit"].red.disabled:focus, form.inline [type="submit"].red.disabled:active, form.inline [type="submit"].red:disabled:hover, form.inline [type="submit"].red:disabled:focus, form.inline [type="submit"].red:disabled:active, form.block [type="submit"].red.disabled:hover, form.block [type="submit"].red.disabled:focus, form.block [type="submit"].red.disabled:active, form.block [type="submit"].red:disabled:hover, form.block [type="submit"].red:disabled:focus, form.block [type="submit"].red:disabled:active, form.linear [type="submit"].red.disabled:hover, form.linear [type="submit"].red.disabled:focus, form.linear [type="submit"].red.disabled:active, form.linear [type="submit"].red:disabled:hover, form.linear [type="submit"].red:disabled:focus, form.linear [type="submit"].red:disabled:active {
       background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -1432,7 +1307,7 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
       border-color: #d40b0b;
       box-shadow: none; }
   form.inline [type="submit"].green, form.block [type="submit"].green, form.linear [type="submit"].green {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #5eb862;
     background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -1442,7 +1317,6 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
     background-attachment: scroll;
     border-color: #529b55; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.inline [type="submit"].green:active, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover, form.block [type="submit"].green:active, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover, form.linear [type="submit"].green:active {
-      color: #FFF;
       border-color: #3b8e3f; }
     form.inline [type="submit"].green:focus, form.inline [type="submit"].green:hover, form.block [type="submit"].green:focus, form.block [type="submit"].green:hover, form.linear [type="submit"].green:focus, form.linear [type="submit"].green:hover {
       background: -webkit-linear-gradient(top, #84c587 0%, #46a74a 100%) no-repeat scroll;
@@ -1453,6 +1327,8 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
       background-attachment: scroll; }
     form.inline [type="submit"].green:active, form.block [type="submit"].green:active, form.linear [type="submit"].green:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    form.inline [type="submit"].green:visited, form.block [type="submit"].green:visited, form.linear [type="submit"].green:visited {
+      color: #FFF !important; }
     form.inline [type="submit"].green.disabled:hover, form.inline [type="submit"].green.disabled:focus, form.inline [type="submit"].green.disabled:active, form.inline [type="submit"].green:disabled:hover, form.inline [type="submit"].green:disabled:focus, form.inline [type="submit"].green:disabled:active, form.block [type="submit"].green.disabled:hover, form.block [type="submit"].green.disabled:focus, form.block [type="submit"].green.disabled:active, form.block [type="submit"].green:disabled:hover, form.block [type="submit"].green:disabled:focus, form.block [type="submit"].green:disabled:active, form.linear [type="submit"].green.disabled:hover, form.linear [type="submit"].green.disabled:focus, form.linear [type="submit"].green.disabled:active, form.linear [type="submit"].green:disabled:hover, form.linear [type="submit"].green:disabled:focus, form.linear [type="submit"].green:disabled:active {
       background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
       background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -1462,36 +1338,37 @@ form.inline [type="submit"], form.block [type="submit"], form.linear [type="subm
       background-attachment: scroll;
       border-color: #529b55;
       box-shadow: none; }
-  form.inline [type="submit"].black, form.block [type="submit"].black, form.linear [type="submit"].black {
-    color: #FFF;
-    text-shadow: 0 0 3px #3b3b3b;
-    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-    background-color: #474747;
+  form.inline [type="submit"].blue, form.block [type="submit"].blue, form.linear [type="submit"].blue {
+    color: #FFF !important;
+    text-shadow: 0 0 3px #398fe5;
+    background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+    background-color: #539ce5;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    border-color: #262626; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.inline [type="submit"].black:active, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.block [type="submit"].black:active, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover, form.linear [type="submit"].black:active {
-      color: #FFF;
-      border-color: #141414; }
-    form.inline [type="submit"].black:focus, form.inline [type="submit"].black:hover, form.block [type="submit"].black:focus, form.block [type="submit"].black:hover, form.linear [type="submit"].black:focus, form.linear [type="submit"].black:hover {
-      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
-      background-color: #545454;
+    border-color: #267bcf; }
+    form.inline [type="submit"].blue:focus, form.inline [type="submit"].blue:hover, form.inline [type="submit"].blue:active, form.block [type="submit"].blue:focus, form.block [type="submit"].blue:hover, form.block [type="submit"].blue:active, form.linear [type="submit"].blue:focus, form.linear [type="submit"].blue:hover, form.linear [type="submit"].blue:active {
+      border-color: #1669bb; }
+    form.inline [type="submit"].blue:focus, form.inline [type="submit"].blue:hover, form.block [type="submit"].blue:focus, form.block [type="submit"].blue:hover, form.linear [type="submit"].blue:focus, form.linear [type="submit"].blue:hover {
+      background: -webkit-linear-gradient(top, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #69a9e8 0%, #1a7bdb 100%) no-repeat scroll;
+      background-color: #69a9e8;
       background-repeat: no-repeat;
       background-attachment: scroll; }
-    form.inline [type="submit"].black:active, form.block [type="submit"].black:active, form.linear [type="submit"].black:active {
+    form.inline [type="submit"].blue:active, form.block [type="submit"].blue:active, form.linear [type="submit"].blue:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    form.inline [type="submit"].black.disabled:hover, form.inline [type="submit"].black.disabled:focus, form.inline [type="submit"].black.disabled:active, form.inline [type="submit"].black:disabled:hover, form.inline [type="submit"].black:disabled:focus, form.inline [type="submit"].black:disabled:active, form.block [type="submit"].black.disabled:hover, form.block [type="submit"].black.disabled:focus, form.block [type="submit"].black.disabled:active, form.block [type="submit"].black:disabled:hover, form.block [type="submit"].black:disabled:focus, form.block [type="submit"].black:disabled:active, form.linear [type="submit"].black.disabled:hover, form.linear [type="submit"].black.disabled:focus, form.linear [type="submit"].black.disabled:active, form.linear [type="submit"].black:disabled:hover, form.linear [type="submit"].black:disabled:focus, form.linear [type="submit"].black:disabled:active {
-      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-      background-color: #474747;
+    form.inline [type="submit"].blue:visited, form.block [type="submit"].blue:visited, form.linear [type="submit"].blue:visited {
+      color: #FFF !important; }
+    form.inline [type="submit"].blue.disabled:hover, form.inline [type="submit"].blue.disabled:focus, form.inline [type="submit"].blue.disabled:active, form.inline [type="submit"].blue:disabled:hover, form.inline [type="submit"].blue:disabled:focus, form.inline [type="submit"].blue:disabled:active, form.block [type="submit"].blue.disabled:hover, form.block [type="submit"].blue.disabled:focus, form.block [type="submit"].blue.disabled:active, form.block [type="submit"].blue:disabled:hover, form.block [type="submit"].blue:disabled:focus, form.block [type="submit"].blue:disabled:active, form.linear [type="submit"].blue.disabled:hover, form.linear [type="submit"].blue.disabled:focus, form.linear [type="submit"].blue.disabled:active, form.linear [type="submit"].blue:disabled:hover, form.linear [type="submit"].blue:disabled:focus, form.linear [type="submit"].blue:disabled:active {
+      background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background: linear-gradient(to bottom, #539ce5 0%, #1976D2 100%) no-repeat scroll;
+      background-color: #539ce5;
       background-repeat: no-repeat;
       background-attachment: scroll;
-      border-color: #262626;
+      border-color: #267bcf;
       box-shadow: none; }
 form.inline h1,
 form.inline h2,
@@ -2226,6 +2103,9 @@ label.button {
   a.button:active,
   label.button:active {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.25); }
+  a.button:visited,
+  label.button:visited {
+    color: #212121; }
   a.button.thin,
   label.button.thin {
     height: 1.5em;
@@ -2251,7 +2131,7 @@ label.button {
       box-shadow: none; }
   a.button.red,
   label.button.red {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #fd0b0b;
     background: -webkit-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #f92828 0%, #D50000 100%) no-repeat scroll;
@@ -2264,7 +2144,6 @@ label.button {
     label.button.red:focus,
     label.button.red:hover,
     label.button.red:active {
-      color: #FFF;
       border-color: #bc0000; }
     a.button.red:focus, a.button.red:hover,
     label.button.red:focus,
@@ -2278,6 +2157,9 @@ label.button {
     a.button.red:active,
     label.button.red:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    a.button.red:visited,
+    label.button.red:visited {
+      color: #FFF !important; }
     a.button.red.disabled:hover, a.button.red.disabled:focus, a.button.red.disabled:active, a.button.red:disabled:hover, a.button.red:disabled:focus, a.button.red:disabled:active,
     label.button.red.disabled:hover,
     label.button.red.disabled:focus,
@@ -2295,7 +2177,7 @@ label.button {
       box-shadow: none; }
   a.button.green,
   label.button.green {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #5eb862;
     background: -webkit-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #73bd76 0%, #43A047 100%) no-repeat scroll;
@@ -2308,7 +2190,6 @@ label.button {
     label.button.green:focus,
     label.button.green:hover,
     label.button.green:active {
-      color: #FFF;
       border-color: #3b8e3f; }
     a.button.green:focus, a.button.green:hover,
     label.button.green:focus,
@@ -2322,6 +2203,9 @@ label.button {
     a.button.green:active,
     label.button.green:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    a.button.green:visited,
+    label.button.green:visited {
+      color: #FFF !important; }
     a.button.green.disabled:hover, a.button.green.disabled:focus, a.button.green.disabled:active, a.button.green:disabled:hover, a.button.green:disabled:focus, a.button.green:disabled:active,
     label.button.green.disabled:hover,
     label.button.green.disabled:focus,
@@ -2339,7 +2223,7 @@ label.button {
       box-shadow: none; }
   a.button.blue,
   label.button.blue {
-    color: #FFF;
+    color: #FFF !important;
     text-shadow: 0 0 3px #398fe5;
     background: -webkit-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
     background: -moz-linear-gradient(top, #539ce5 0%, #1976D2 100%) no-repeat scroll;
@@ -2352,7 +2236,6 @@ label.button {
     label.button.blue:focus,
     label.button.blue:hover,
     label.button.blue:active {
-      color: #FFF;
       border-color: #1669bb; }
     a.button.blue:focus, a.button.blue:hover,
     label.button.blue:focus,
@@ -2366,6 +2249,9 @@ label.button {
     a.button.blue:active,
     label.button.blue:active {
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
+    a.button.blue:visited,
+    label.button.blue:visited {
+      color: #FFF !important; }
     a.button.blue.disabled:hover, a.button.blue.disabled:focus, a.button.blue.disabled:active, a.button.blue:disabled:hover, a.button.blue:disabled:focus, a.button.blue:disabled:active,
     label.button.blue.disabled:hover,
     label.button.blue.disabled:focus,
@@ -2380,50 +2266,6 @@ label.button {
       background-repeat: no-repeat;
       background-attachment: scroll;
       border-color: #267bcf;
-      box-shadow: none; }
-  a.button.black,
-  label.button.black {
-    color: #FFF;
-    text-shadow: 0 0 3px #3b3b3b;
-    background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-    background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-    background-color: #474747;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    border-color: #262626; }
-    a.button.black:focus, a.button.black:hover, a.button.black:active,
-    label.button.black:focus,
-    label.button.black:hover,
-    label.button.black:active {
-      color: #FFF;
-      border-color: #141414; }
-    a.button.black:focus, a.button.black:hover,
-    label.button.black:focus,
-    label.button.black:hover {
-      background: -webkit-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #545454 0%, #262626 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #545454 0%, #262626 100%) no-repeat scroll;
-      background-color: #545454;
-      background-repeat: no-repeat;
-      background-attachment: scroll; }
-    a.button.black:active,
-    label.button.black:active {
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.15); }
-    a.button.black.disabled:hover, a.button.black.disabled:focus, a.button.black.disabled:active, a.button.black:disabled:hover, a.button.black:disabled:focus, a.button.black:disabled:active,
-    label.button.black.disabled:hover,
-    label.button.black.disabled:focus,
-    label.button.black.disabled:active,
-    label.button.black:disabled:hover,
-    label.button.black:disabled:focus,
-    label.button.black:disabled:active {
-      background: -webkit-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: -moz-linear-gradient(top, #474747 0%, #212121 100%) no-repeat scroll;
-      background: linear-gradient(to bottom, #474747 0%, #212121 100%) no-repeat scroll;
-      background-color: #474747;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      border-color: #262626;
       box-shadow: none; }
 
 label.button {
@@ -2682,6 +2524,8 @@ ul.tabs {
         color: #1976D2; }
       ul.tabs li a:active {
         color: #E64A19; }
+      ul.tabs li a:focus {
+        outline: none; }
     ul.tabs li.primary a,
     ul.tabs li.primary span {
       font-weight: 700; }
@@ -2765,7 +2609,7 @@ ul.tree {
   			bottom: 0.75em;
   			left: 0.5em;
   
-  			border-left: 1px $borderLightGrey solid;
+  			border-left: 1px $border-light-colour solid;
   
   			content: "";
   
@@ -2800,7 +2644,7 @@ ul.tree {
   
   				background-color: #FFF;
   
-  				border: 1px $borderLightGrey solid;
+  				border: 1px $border-light-colour solid;
   
   				content: "+";
   
@@ -2876,8 +2720,7 @@ table {
   margin-bottom: 1.618em;
   clear: both;
   background-color: rgba(255, 255, 255, 0.85);
-  border: 1px #BDBDBD solid;
-  border-radius: 3px;
+  border: 0 #BDBDBD solid;
   border-collapse: collapse; }
   table p {
     margin: 0.25em 0;
@@ -2913,10 +2756,14 @@ table {
     font-size: 1.09em; }
 
 thead {
+  color: #FFF;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 700;
   font-size: 1.33em;
-  background-color: #E0E0E0; }
+  background-color: #455A64;
+  border-width: 1px;
+  border-color: #455A64 #455A64 #BDBDBD;
+  border-style: solid; }
   thead.large {
     font-size: 1.4497em; }
   thead p,
@@ -2928,7 +2775,10 @@ thead {
 
 tfoot,
 tbody {
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  border-width: 1px;
+  border-color: inherit;
+  border-style: solid; }
   tfoot.large,
   tbody.large {
     font-size: 1.3625em; }
@@ -2964,7 +2814,7 @@ td {
   padding: 0.5em 0.75em;
   text-align: left;
   border-width: 1px 0;
-  border-color: #BDBDBD;
+  border-color: inherit;
   border-style: solid; }
   th.no-padding,
   td.no-padding {
@@ -3018,13 +2868,6 @@ form table input {
     background-color: #FFF9C4; }
   100% {
     background-color: transparent; } }
-	/*@-ms-keyframes highlight-fade {
-		@content;
-	}
-
-	@-o-keyframes highlight-fade {
-		@content;
-	}*/
 @keyframes highlight-fade {
   0% {
     background-color: transparent; }
@@ -3155,12 +2998,12 @@ pre.code {
       top: 0;
       right: 0;
       left: 0;
-      color: #212121;
+      color: #FFF;
       font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
       font-weight: 700;
       line-height: 1.5;
       white-space: nowrap;
-      background-color: #E0E0E0;
+      background-color: #455A64;
       border-bottom: 1px #BDBDBD solid;
       content: attr(title); }
   pre.code[lang]::after {
@@ -3173,7 +3016,7 @@ pre.code {
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
     line-height: 1.5;
     text-transform: uppercase;
-    background-color: #E0E0E0;
+    background-color: #455A64;
     border-radius: 3px;
     content: attr(lang); }
   pre.code[lang][title]::after {
@@ -3199,6 +3042,10 @@ table code {
   border: none;
   border-radius: 0;
   outline: 1px #BDBDBD solid; }
+
+.underline {
+  text-decoration: underline;
+  text-decoration-skip: ink; }
 
 blockquote {
   margin: 0.5em 1em 1em;
@@ -3249,7 +3096,7 @@ em {
 a {
   color: #0D47A1; }
   a:visited {
-    color: #1976D2; }
+    color: #0D47A1; }
   a:hover {
     color: #1976D2; }
   a:active {
@@ -3286,9 +3133,9 @@ hr {
   clear: both;
   font-size: 1.3em;
   line-height: 1.25;
-  background-image: -webkit-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
-  background-image: -moz-linear-gradient(right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
-  background-image: linear-gradient(to right, #FFF 0%, #E0E0E0 25%, #E0E0E0 75%, #FFF 100%);
+  background-image: -webkit-linear-gradient(right, rgba(224, 224, 224, 0) 0%, #E0E0E0 25%, #E0E0E0 75%, rgba(224, 224, 224, 0) 100%);
+  background-image: -moz-linear-gradient(right, rgba(224, 224, 224, 0) 0%, #E0E0E0 25%, #E0E0E0 75%, rgba(224, 224, 224, 0) 100%);
+  background-image: linear-gradient(to right, rgba(224, 224, 224, 0) 0%, #E0E0E0 25%, #E0E0E0 75%, rgba(224, 224, 224, 0) 100%);
   background-color: #E0E0E0;
   border: none; }
 

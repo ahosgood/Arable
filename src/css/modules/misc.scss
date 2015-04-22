@@ -11,13 +11,13 @@ hr {
 	font-size: 1.3em;
 	line-height: 1.25;
 
-	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFF), color-stop(0.25, $borderLightGrey),  color-stop(0.75, $borderLightGrey), color-stop(1, #FFF));
-	background-image: -webkit-linear-gradient(right, #FFF 0%, $borderLightGrey 25%, $borderLightGrey 75%, #FFF 100%);
-	background-image: -moz-linear-gradient(right, #FFF 0%, $borderLightGrey 25%, $borderLightGrey 75%, #FFF 100%);
-	//background-image: -ms-linear-gradient(right, #FFF 0%, $borderLightGrey 25%, $borderLightGrey 75%, #FFF 100%);
-	//background-image: -o-linear-gradient(right, #FFF 0%, $borderLightGrey 25%, $borderLightGrey 75%, #FFF 100%);
-	background-image: linear-gradient(to right, #FFF 0%, $borderLightGrey 25%, $borderLightGrey 75%, #FFF 100%);
-	background-color: $borderLightGrey;
+	//background-image: -webkit-gradient(linear, left top, right top, color-stop(0, colour-opacity($border-light-colour, 0)), color-stop(0.25, $border-light-colour),  color-stop(0.75, $border-light-colour), color-stop(1, colour-opacity($border-light-colour, 0)));
+	background-image: -webkit-linear-gradient(right, colour-opacity($border-light-colour, 0) 0%, $border-light-colour 25%, $border-light-colour 75%, colour-opacity($border-light-colour, 0) 100%);
+	background-image: -moz-linear-gradient(right, colour-opacity($border-light-colour, 0) 0%, $border-light-colour 25%, $border-light-colour 75%, colour-opacity($border-light-colour, 0) 100%);
+	//background-image: -ms-linear-gradient(right, colour-opacity($border-light-colour, 0) 0%, $border-light-colour 25%, $border-light-colour 75%, colour-opacity($border-light-colour, 0) 100%);
+	//background-image: -o-linear-gradient(right, colour-opacity($border-light-colour, 0) 0%, $border-light-colour 25%, $border-light-colour 75%, colour-opacity($border-light-colour, 0) 100%);
+	background-image: linear-gradient(to right, colour-opacity($border-light-colour, 0) 0%, $border-light-colour 25%, $border-light-colour 75%, colour-opacity($border-light-colour, 0) 100%);
+	background-color: $border-light-colour;
 
 	border: none;
 }
@@ -131,7 +131,7 @@ dl {
 	position: relative;
 
 	border: 1px #000 solid;
-	border-radius: $borderRadius;
+	border-radius: $border-radius;
 
 	> :first-child {
 		margin-top: 0;
@@ -188,12 +188,12 @@ p {
 	font-size: 11px;
 	font-size: 1.1rem;
 	//line-height: 1.5;
-	@include basefontlineheight;
+	@include base-font-line-height;
 	vertical-align: text-top;
 
-	background-color: $tagStandard;
+	background-color: $tagBase;
 
-	border-radius: $borderRadius;
+	border-radius: $border-radius;
 
 	&.caps {
 		text-transform: uppercase !important;
@@ -225,64 +225,10 @@ p {
 		font-size: 1em;
 	}
 
-	&.red {
-		background-color: $tagRed;
-	}
-
-	&.orange {
-		background-color: $tagOrange;
-	}
-
-	&.amber {
-		background-color: $tagAmber;
-	}
-
-	&.yellow {
-		background-color: $tagYellow;
-	}
-
-	&.lime {
-		background-color: $tagLime;
-	}
-
-	&.green {
-		background-color: $tagGreen;
-	}
-
-	&.teal {
-		background-color: $tagTeal;
-	}
-
-	&.cyan {
-		background-color: $tagCyan;
-	}
-
-	&.blue {
-		background-color: $tagBlue;
-	}
-
-	&.indigo {
-		background-color: $tagIndigo;
-	}
-
-	&.purple {
-		background-color: $tagPurple;
-	}
-
-	&.pink {
-		background-color: $tagPink;
-	}
-
-	&.brown {
-		background-color: $tagBrown;
-	}
-
-	&.black {
-		background-color: $tagBlack;
-	}
-
-	&.grey {
-		background-color: $tagGrey;
+	@each $tag-colour-name, $tag-hex in $tag-colours {
+		&.#{$tag-colour-name} {
+			background-color: $tag-hex;
+		}
 	}
 
 	a {

@@ -20,7 +20,7 @@ form {
 	}
 }
 
-@media (max-width: $intTabletSmall - 1) {
+@media (max-width: breakpoint(tablet-small) - 1) {
 	form.inline.foldable .twistupload-wrapper {
 		width: 100%;
 	}
@@ -69,7 +69,7 @@ form.inline label + .mce-tinymce {
 	float: right;
 }
 
-@media (max-width: $intTabletSmall - 1) {
+@media (max-width: breakpoint(tablet-small) - 1) {
 	form.inline.foldable label + .mce-tinymce {
 		width: auto;
 
