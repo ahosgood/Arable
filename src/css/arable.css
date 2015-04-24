@@ -2458,6 +2458,7 @@ dd ul {
 
 ul.inline {
   margin-left: 0;
+  display: inline-block;
   overflow: hidden; }
   ul.inline li {
     padding: 0 1px;
