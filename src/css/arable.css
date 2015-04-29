@@ -519,6 +519,62 @@ form.linear .button {
   form.linear button:visited,
   form.linear .button:visited {
     color: #212121; }
+  form.inline [type="submit"].tiny,
+  form.inline [type="reset"].tiny,
+  form.inline [type="button"].tiny,
+  form.inline button.tiny,
+  form.inline .button.tiny, form.block [type="submit"].tiny,
+  form.block [type="reset"].tiny,
+  form.block [type="button"].tiny,
+  form.block button.tiny,
+  form.block .button.tiny, form.linear [type="submit"].tiny,
+  form.linear [type="reset"].tiny,
+  form.linear [type="button"].tiny,
+  form.linear button.tiny,
+  form.linear .button.tiny {
+    font-size: 0.92361em; }
+  form.inline [type="submit"].small,
+  form.inline [type="reset"].small,
+  form.inline [type="button"].small,
+  form.inline button.small,
+  form.inline .button.small, form.block [type="submit"].small,
+  form.block [type="reset"].small,
+  form.block [type="button"].small,
+  form.block button.small,
+  form.block .button.small, form.linear [type="submit"].small,
+  form.linear [type="reset"].small,
+  form.linear [type="button"].small,
+  form.linear button.small,
+  form.linear .button.small {
+    font-size: 1.10833em; }
+  form.inline [type="submit"].large,
+  form.inline [type="reset"].large,
+  form.inline [type="button"].large,
+  form.inline button.large,
+  form.inline .button.large, form.block [type="submit"].large,
+  form.block [type="reset"].large,
+  form.block [type="button"].large,
+  form.block button.large,
+  form.block .button.large, form.linear [type="submit"].large,
+  form.linear [type="reset"].large,
+  form.linear [type="button"].large,
+  form.linear button.large,
+  form.linear .button.large {
+    font-size: 1.596em; }
+  form.inline [type="submit"].huge,
+  form.inline [type="reset"].huge,
+  form.inline [type="button"].huge,
+  form.inline button.huge,
+  form.inline .button.huge, form.block [type="submit"].huge,
+  form.block [type="reset"].huge,
+  form.block [type="button"].huge,
+  form.block button.huge,
+  form.block .button.huge, form.linear [type="submit"].huge,
+  form.linear [type="reset"].huge,
+  form.linear [type="button"].huge,
+  form.linear button.huge,
+  form.linear .button.huge {
+    font-size: 1.9152em; }
   form.inline [type="submit"].thin,
   form.inline [type="reset"].thin,
   form.inline [type="button"].thin,
@@ -532,8 +588,27 @@ form.linear .button {
   form.linear [type="button"].thin,
   form.linear button.thin,
   form.linear .button.thin {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     height: 1.5em;
     line-height: 1.5; }
+  form.inline [type="submit"].fat,
+  form.inline [type="reset"].fat,
+  form.inline [type="button"].fat,
+  form.inline button.fat,
+  form.inline .button.fat, form.block [type="submit"].fat,
+  form.block [type="reset"].fat,
+  form.block [type="button"].fat,
+  form.block button.fat,
+  form.block .button.fat, form.linear [type="submit"].fat,
+  form.linear [type="reset"].fat,
+  form.linear [type="button"].fat,
+  form.linear button.fat,
+  form.linear .button.fat {
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 2.7em;
+    line-height: 2.7; }
   form.inline [type="submit"].disabled, form.inline [type="submit"]:disabled,
   form.inline [type="reset"].disabled,
   form.inline [type="reset"]:disabled,
@@ -2106,10 +2181,30 @@ label.button {
   a.button:visited,
   label.button:visited {
     color: #212121; }
+  a.button.tiny,
+  label.button.tiny {
+    font-size: 0.92361em; }
+  a.button.small,
+  label.button.small {
+    font-size: 1.10833em; }
+  a.button.large,
+  label.button.large {
+    font-size: 1.596em; }
+  a.button.huge,
+  label.button.huge {
+    font-size: 1.9152em; }
   a.button.thin,
   label.button.thin {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     height: 1.5em;
     line-height: 1.5; }
+  a.button.fat,
+  label.button.fat {
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 2.7em;
+    line-height: 2.7; }
   a.button.disabled, a.button:disabled,
   label.button.disabled,
   label.button:disabled {
@@ -2267,6 +2362,11 @@ label.button {
       background-attachment: scroll;
       border-color: #267bcf;
       box-shadow: none; }
+  a.button.center,
+  label.button.center {
+    margin-right: auto;
+    margin-left: auto;
+    display: block; }
 
 label.button {
   width: auto !important;

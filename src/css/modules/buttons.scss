@@ -2,6 +2,13 @@
 a.button,
 label.button {
 	@include button;
+
+	&.center {
+		margin-right: auto;
+		margin-left: auto;
+
+		display: block;
+	}
 }
 
 label.button {

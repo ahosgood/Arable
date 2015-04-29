@@ -175,10 +175,38 @@
 		@include base-font-colour;
 	}
 
+	&.tiny {
+		font-size: #{base-font(size) * exponent(1.2, -2)}em;
+	}
+
+	&.small {
+		font-size: #{base-font(size) * exponent(1.2, -1)}em;
+	}
+
+	&.large {
+		font-size: #{base-font(size) * exponent(1.2, 1)}em;
+	}
+
+	&.huge {
+		font-size: #{base-font(size) * exponent(1.2, 2)}em;
+	}
+
 	&.thin {
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+
 		height: 1.5em;
 
 		line-height: 1.5;
+	}
+
+	&.fat {
+		padding-right: 1em;
+		padding-left: 1em;
+
+		height: 2.7em;
+
+		line-height: 2.7;
 	}
 
 	&.disabled,
