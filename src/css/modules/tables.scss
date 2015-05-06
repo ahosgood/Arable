@@ -5,25 +5,18 @@ table {
 
 	clear: both;
 
+	@include base-font-size;
+
 	background-color: rgba(255, 255, 255, 0.85);
 
-	border: 0 $border-colour solid;
+	border: 0 table-colour("border") solid;
 	border-collapse: collapse;
-
-	p {
-		margin: 0.25em 0;
-
-		@include base-font-line-height;
-	}
-
-	ul {
-		margin-left: 1.5em;
-	}
 
 	&.verticals {
 		th,
 		td {
-			border-width: 1px;
+			border-right-width: 1px;
+			border-left-width: 1px;
 		}
 	}
 
@@ -70,109 +63,107 @@ table {
 	}
 
 	&.large {
-		font-size: 1.09em;
+		font-size: #{base-font(size) * exponent(1.2, 1)}em;
+	}
+
+	p,
+	ul,
+	ol,
+	button,
+	.button {
+		font-size: 1em;
+	}
+
+	p {
+		margin: 0.25em 0;
+
+		@include base-font-line-height;
+	}
+
+	ul {
+		margin-left: 1.5em;
 	}
 }
 
+	thead,
+	tfoot,
+	tbody {
+		&.large {
+			font-size: #{base-font(size) * exponent(1.2, 1)}em;
+		}
+	}
+
 	thead {
 		color: blackorwhite(table-colour(header));
-		font-family: Helvetica, Arial, Tahoma, sans-serif;
 		font-weight: 700;
-		@include base-font-size;
 
 		background-color: table-colour(header);
 
-		border-width: 1px;
-		border-color: table-colour(header-border) table-colour(header-border) table-colour(border);
+		border-width: 1px 1px 0;
+		border-color: table-colour(header-border);
 		border-style: solid;
-
-		&.large {
-			font-size: #{base-font(size) * 1.09}em;
-		}
-
-		p,
-		ul,
-		ol,
-		button,
-		.button {
-			font-size: 1em;
-		}
 	}
 
 	tfoot,
 	tbody {
-		font-size: 1.25em;
-
-		border-width: 1px;
+		border-width: 0 1px 1px;
 		border-color: inherit;
 		border-style: solid;
+	}
 
-		&.large {
-			font-size: 1.3625em;
-		}
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: $bgLightGrey;
+			}
 
-		p,
-		ul,
-		ol,
-		button,
-		.button {
-			font-size: #{base-font(size) / 1.25}em;
+			&.disabled {
+				> * {
+					opacity: 0.2;
+				}
+			}
+
+			&.highlight-fade {
+				th,
+				td {
+					-webkit-animation: highlight-fade 6s;
+					-moz-animation: highlight-fade 6s;
+					-ms-animation: highlight-fade 6s;
+					-o-animation: highlight-fade 6s;
+					animation: highlight-fade 6s;
+				}
+			}
 		}
 	}
 
-		tbody {
-			tr {
-				&:nth-child(even) {
-					background-color: $bgLightGrey;
-				}
-
-				&.disabled {
-					> * {
-						opacity: 0.2;
-					}
-				}
-
-				&.highlight-fade {
-					th,
-					td {
-						-webkit-animation: highlight-fade 6s;
-						-moz-animation: highlight-fade 6s;
-						-ms-animation: highlight-fade 6s;
-						-o-animation: highlight-fade 6s;
-						animation: highlight-fade 6s;
-					}
-				}
-			}
+		tr.highlight {
+			background-color: table-colour(highlight);
 		}
 
-			tr.highlight {
-				background-color: table-colour(highlight);
-			}
+			th,
+			td {
+				padding: 0.5em 0.75em;
 
-				th,
-				td {
-					padding: 0.5em 0.75em;
+				text-align: left;
 
-					text-align: left;
+				border-width: 0 0 1px;
+				border-color: inherit;
+				border-style: solid;
 
-					border-width: 1px 0;
-					border-color: inherit;
-					border-style: solid;
-
-					&.no-padding {
-						padding: 0;
-					}
-
-					&.no-padding-x {
-						padding-right: 0;
-						padding-left: 0;
-					}
-
-					&.no-padding-y {
-						padding-top: 0;
-						padding-bottom: 0;
-					}
+				&.no-padding {
+					padding: 0;
 				}
+
+				&.no-padding-x {
+					padding-right: 0;
+					padding-left: 0;
+				}
+
+				&.no-padding-y {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
 
 table,
 tr {

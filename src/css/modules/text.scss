@@ -7,12 +7,13 @@ h5,
 h6 {
 	padding: 0.75em 0;
 
-	line-height: 1;
-	font-weight: 700;
+	line-height: 1 + ((base-font("line-height") - 1) / 2);
+	font-weight: base-font("bold-weight");
 	white-space: pre-wrap;
 	page-break-after: avoid;
 
-	&.no-top-padding {
+	&.no-top-padding,
+	&.no-vertical-padding {
 		line-height: 1;
 	}
 
@@ -31,7 +32,7 @@ h6 {
 
 		color: #FFF;
 
-		background-color: #455A64;
+		background-color: base-font("dark-headers");
 	}
 }
 
@@ -153,8 +154,6 @@ pre.code {
 
 			background-color: table-colour(header);
 
-			border-bottom: 1px $border-colour solid;
-
 			content: attr(title);
 		}
 	}
@@ -168,7 +167,7 @@ pre.code {
 			top: 0.25em;
 			right: 0.25em;
 
-			color: if(lightness($border-colour) > 50, base-font(colour), #FFF);
+			color: if(lightness(table-colour(header)) > 50, base-font(colour), #FFF);
 			@include base-font-face;
 			line-height: 1.5;
 			text-transform: uppercase;
@@ -192,9 +191,14 @@ pre.code {
 	&.dark {
 		color: #FFF;
 
-		background-color:base-font(colour);
+		background-color: base-font(colour);
 
 		border: none;
+
+		&::before,
+		&::after {
+			background-color: base-font(colour) !important;
+		}
 
 		em {
 			color: base-font(colour);

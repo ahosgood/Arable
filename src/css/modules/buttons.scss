@@ -24,6 +24,13 @@ label.button {
 
 		vertical-align: baseline;
 	}
+
+	&.left {
+		input[type="checkbox"] {
+			margin-right: 0.5em !important;
+			margin-left: 0 !important;
+		}
+	}
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) {

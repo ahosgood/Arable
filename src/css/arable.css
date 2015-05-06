@@ -1651,6 +1651,7 @@ form.inline, form.block {
   form.block .button {
     width: auto;
     margin-top: 0.5em;
+    margin-right: 0;
     float: right;
     clear: both; }
     form.inline button + button,
@@ -2376,6 +2377,9 @@ label.button {
     display: inline-block !important;
     float: none !important;
     vertical-align: baseline; }
+  label.button.left input[type="checkbox"] {
+    margin-right: 0.5em !important;
+    margin-left: 0 !important; }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) {
   label.button input[type="checkbox"] {
@@ -2820,17 +2824,14 @@ table {
   width: 100%;
   margin-bottom: 1.618em;
   clear: both;
+  font-size: 1.33em;
   background-color: rgba(255, 255, 255, 0.85);
   border: 0 #BDBDBD solid;
   border-collapse: collapse; }
-  table p {
-    margin: 0.25em 0;
-    line-height: 1.618; }
-  table ul {
-    margin-left: 1.5em; }
   table.verticals th,
   table.verticals td {
-    border-width: 1px; }
+    border-right-width: 1px;
+    border-left-width: 1px; }
   table.plain th,
   table.plain td, table.no-horizontals th,
   table.no-horizontals td {
@@ -2854,46 +2855,37 @@ table {
       -o-transition: background ease 50ms;
       transition: background ease 50ms; }
   table.large {
-    font-size: 1.09em; }
+    font-size: 1.596em; }
+  table p,
+  table ul,
+  table ol,
+  table button,
+  table .button {
+    font-size: 1em; }
+  table p {
+    margin: 0.25em 0;
+    line-height: 1.618; }
+  table ul {
+    margin-left: 1.5em; }
+
+thead.large,
+tfoot.large,
+tbody.large {
+  font-size: 1.596em; }
 
 thead {
   color: #FFF;
-  font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-weight: 700;
-  font-size: 1.33em;
   background-color: #455A64;
-  border-width: 1px;
-  border-color: #455A64 #455A64 #BDBDBD;
+  border-width: 1px 1px 0;
+  border-color: #455A64;
   border-style: solid; }
-  thead.large {
-    font-size: 1.4497em; }
-  thead p,
-  thead ul,
-  thead ol,
-  thead button,
-  thead .button {
-    font-size: 1em; }
 
 tfoot,
 tbody {
-  font-size: 1.25em;
-  border-width: 1px;
+  border-width: 0 1px 1px;
   border-color: inherit;
   border-style: solid; }
-  tfoot.large,
-  tbody.large {
-    font-size: 1.3625em; }
-  tfoot p,
-  tfoot ul,
-  tfoot ol,
-  tfoot button,
-  tfoot .button,
-  tbody p,
-  tbody ul,
-  tbody ol,
-  tbody button,
-  tbody .button {
-    font-size: 1.064em; }
 
 tbody tr:nth-child(even) {
   background-color: #F5F5F5; }
@@ -2914,7 +2906,7 @@ th,
 td {
   padding: 0.5em 0.75em;
   text-align: left;
-  border-width: 1px 0;
+  border-width: 0 0 1px;
   border-color: inherit;
   border-style: solid; }
   th.no-padding,
@@ -2986,16 +2978,21 @@ h4,
 h5,
 h6 {
   padding: 0.75em 0;
-  line-height: 1;
+  line-height: 1.309;
   font-weight: 700;
   white-space: pre-wrap;
   page-break-after: avoid; }
-  h1.no-top-padding,
+  h1.no-top-padding, h1.no-vertical-padding,
   h2.no-top-padding,
+  h2.no-vertical-padding,
   h3.no-top-padding,
+  h3.no-vertical-padding,
   h4.no-top-padding,
+  h4.no-vertical-padding,
   h5.no-top-padding,
-  h6.no-top-padding {
+  h5.no-vertical-padding,
+  h6.no-top-padding,
+  h6.no-vertical-padding {
     line-height: 1; }
   h1.no-bottom-padding,
   h2.no-bottom-padding,
@@ -3105,7 +3102,6 @@ pre.code {
       line-height: 1.5;
       white-space: nowrap;
       background-color: #455A64;
-      border-bottom: 1px #BDBDBD solid;
       content: attr(title); }
   pre.code[lang]::after {
     height: 1.5em;
@@ -3113,7 +3109,7 @@ pre.code {
     position: absolute;
     top: 0.25em;
     right: 0.25em;
-    color: #212121;
+    color: #FFF;
     font-family: "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, "Open Sans", Arial, sans-serif;
     line-height: 1.5;
     text-transform: uppercase;
@@ -3128,6 +3124,8 @@ pre.code {
     color: #FFF;
     background-color: #212121;
     border: none; }
+    pre.code.dark::before, pre.code.dark::after {
+      background-color: #212121 !important; }
     pre.code.dark em {
       color: #212121; }
 
@@ -3437,7 +3435,7 @@ p.error, p.warning, p.notice, p.success {
       top: 5px;
       left: 2px; }
 
-/* ===================================================== TWISTPHP ===================================================== */
+/* ===================================================== TWISTPHP, TINYMCE ===================================================== */
 form.inline .twistupload-wrapper, form.block .twistupload-wrapper {
   display: block;
   float: right; }
@@ -3445,17 +3443,13 @@ form.inline .twistupload-wrapper, form.block .twistupload-wrapper {
     width: 100%; }
 form.inline .twistupload-wrapper {
   width: 75%; }
+form.inline label + .mce-tinymce {
+  width: 75%;
+  margin: 0.2em 0;
+  float: right; }
+form.block label + .mce-tinymce {
+  clear: both; }
 
-@media (max-width: 658px) {
-  form.inline.foldable .twistupload-wrapper {
-    width: 100%; } }
-/* ===================================================== RUMMAGE ===================================================== */
-.rummage-searching tr {
-  background-color: transparent; }
-  .rummage-searching tr.disabled {
-    background-color: #F5F5F5; }
-
-/* ===================================================== TINYMCE ===================================================== */
 .mce-container.mce-tinymce {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3467,15 +3461,9 @@ form.inline .twistupload-wrapper {
   .mce-container button:hover {
     box-shadow: none; }
 
-form.block label + .mce-tinymce {
-  clear: both; }
-
-form.inline label + .mce-tinymce {
-  width: 75%;
-  margin: 0.2em 0;
-  float: right; }
-
 @media (max-width: 658px) {
+  form.inline.foldable .twistupload-wrapper {
+    width: 100%; }
   form.inline.foldable label + .mce-tinymce {
     width: auto;
     float: none;
