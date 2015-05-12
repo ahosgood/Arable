@@ -27,28 +27,25 @@ $anchor-colour: (
 
 $border-colour: #BDBDBD;
 $border-light-colour: #E0E0E0;
+$background-light: #F5F5F5;
+$highlight: #FFF59D;
 
 $form-colour: (
 	"border": $border-colour,
 	"active-border": #FBC02D,
 	"placeholder": #BDBDBD,
 	"placeholder-active": #9E9E9E,
-	"label-hover": #E3F2FD
+	"label-hover": #E3F2FD,
+	"disabled": #BDBDBD
 );
 
 $table-colour: (
 	"border": $border-colour,
-	//"header": #E0E0E0,
 	"header": #455A64,
 	"header-border": #455A64,
 	"highlight": #FFF9C4,
 	"hover": #E3F2FD
 );
-
-$bgLightGrey: #F5F5F5;
-$highlight: #FFF59D;
-
-$disabledFormElement: #BDBDBD;
 
 $button-base: (
 	"top": #F5F5F5,
@@ -67,17 +64,25 @@ $button-colours: (
 	"blue": $button-submit
 );
 
-$errorBorder: #D32F2F;
-$errorBackground: #FFCDD2;
-$warningBorder: #FBC02D;
-$warningBackground: #FFF9C4;
-$successBorder: #689F38;
-$successBackground: #DCEDC8;
-$noticeBorder: #1976D2;
-$noticeBackground: #BBDEFB;
+$error: (
+	"background": #FFCDD2,
+	"border": #D32F2F
+);
+$warning: (
+	"background": #FFF9C4,
+	"border": #FBC02D
+);
+$success: (
+	"background": #DCEDC8,
+	"border": #689F38
+);
+$notice: (
+	"background": #BBDEFB,
+	"border": #1976D2
+);
 
-$tagBase: #B0BEC5;
-$tagCross: #212121;
+$tag-base: #B0BEC5;
+$tag-cross: #212121;
 $tag-colours: (
 	"red": #E53935,
 	"orange": #FB8C00,

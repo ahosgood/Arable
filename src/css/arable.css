@@ -2381,9 +2381,6 @@ label.button {
     margin-right: 0.5em !important;
     margin-left: 0 !important; }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) {
-  label.button input[type="checkbox"] {
-    vertical-align: baseline; } }
 /* ===================================================== LISTS ===================================================== */
 ul,
 ol,

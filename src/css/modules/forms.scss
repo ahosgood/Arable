@@ -25,7 +25,7 @@ textarea {
 		}
 
 		option:disabled {
-			color: $disabledFormElement;
+			color: form-colour("disabled");
 		}
 
 form {
@@ -165,7 +165,7 @@ form {
 				@include base-font-colour;
 				@include base-font-size;
 
-				background-color: $bgLightGrey;
+				background-color: $background-light;
 
 				border: 1px $border-colour solid;
 			}
@@ -460,7 +460,7 @@ form {
 				&:disabled,
 				&[readonly] {
 					+ label {
-						color: $disabledFormElement;
+						color: form-colour("disabled");
 					}
 				}
 			}

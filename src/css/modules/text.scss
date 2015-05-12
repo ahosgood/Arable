@@ -116,7 +116,7 @@ pre.code {
 	color: base-font(colour);
 	white-space: pre;
 
-	background-color: $bgLightGrey;
+	background-color: $background-light;
 
 	border: 1px $border-colour solid;
 	border-radius: $border-radius;
@@ -269,7 +269,7 @@ blockquote {
 	&.subtle {
 		padding-top: 0.5em;
 
-		background-color: $bgLightGrey;
+		background-color: $background-light;
 
 		border-left-color: $border-colour;
 

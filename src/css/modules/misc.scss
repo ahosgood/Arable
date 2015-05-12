@@ -154,27 +154,27 @@ p {
 }
 
 .error {
-	background-color: $errorBackground;
+	background-color: map-get($error, "background");
 
-	border-color: $errorBorder;
+	border-color: map-get($error, "border");
 }
 
 .warning {
-	background-color: $warningBackground;
+	background-color: map-get($warning, "background");
 
-	border-color: $warningBorder;
+	border-color: map-get($warning, "border");
 }
 
 .success {
-	background-color: $successBackground;
+	background-color: map-get($success, "background");
 
-	border-color: $successBorder;
+	border-color: map-get($success, "border");
 }
 
 .notice {
-	background-color: $noticeBackground;
+	background-color: map-get($notice, "background");
 
-	border-color: $noticeBorder;
+	border-color: map-get($notice, "border");
 }
 
 /* ===================================================== TAGS ===================================================== */
@@ -189,7 +189,7 @@ p {
 	line-height: 1;
 	vertical-align: baseline;
 
-	background-color: $tagBase;
+	background-color: $tag-base;
 
 	border-radius: $border-radius;
 
@@ -243,7 +243,7 @@ p {
 
 				position: absolute;
 
-				background-color: $tagCross;
+				background-color: $tag-cross;
 
 				-webkit-transform-origin: 50% 50%;
 				transform-origin: 50% 50%;

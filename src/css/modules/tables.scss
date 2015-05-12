@@ -114,7 +114,7 @@ table {
 	tbody {
 		tr {
 			&:nth-child(even) {
-				background-color: $bgLightGrey;
+				background-color: $background-light;
 			}
 
 			&.disabled {
