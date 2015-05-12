@@ -59,6 +59,7 @@
 			<li>Delta</li>
 			<li><a href="#">Epsilon</a></li>
 		</ul>
+        <br>
 		<ul class="inline breadcrumbs">
 			<li><a href="#">Alpha</a></li>
 			<li><a href="#">Beta</a></li>
@@ -66,6 +67,7 @@
 			<li><a href="#">Delta</a></li>
 			<li>Epsilon</li>
 		</ul>
+        <br>
 		<ul class="inline breadcrumbs slashes">
 			<li><a href="#">Alpha</a></li>
 			<li><a href="#">Beta</a></li>
@@ -188,6 +190,144 @@
 				</tr>
 			</tbody>
 		</table>
+		<table class="highlight-on-hover verticals">
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Type</th>
+					<th>Name Length</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="highlight-fade">
+					<th>Monday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td>Weekday</td>
+					<td>7</td>
+				</tr>
+				<tr class="highlight">
+					<th>Wednesday</th>
+					<td>Weekday</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td>Weekday</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr class="disabled">
+					<th>Saturday</th>
+					<td>Weekend</td>
+					<td>8</td>
+				</tr>
+				<tr class="disabled">
+					<th>Sunday</th>
+					<td>Weekend</td>
+					<td>6</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="highlight-on-hover no-horizontals">
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Type</th>
+					<th>Name Length</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="highlight-fade">
+					<th>Monday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td>Weekday</td>
+					<td>7</td>
+				</tr>
+				<tr class="highlight">
+					<th>Wednesday</th>
+					<td>Weekday</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td>Weekday</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr class="disabled">
+					<th>Saturday</th>
+					<td>Weekend</td>
+					<td>8</td>
+				</tr>
+				<tr class="disabled">
+					<th>Sunday</th>
+					<td>Weekend</td>
+					<td>6</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="highlight-on-hover verticals no-horizontals">
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Type</th>
+					<th>Name Length</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="highlight-fade">
+					<th>Monday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td>Weekday</td>
+					<td>7</td>
+				</tr>
+				<tr class="highlight">
+					<th>Wednesday</th>
+					<td>Weekday</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td>Weekday</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr class="disabled">
+					<th>Saturday</th>
+					<td>Weekend</td>
+					<td>8</td>
+				</tr>
+				<tr class="disabled">
+					<th>Sunday</th>
+					<td>Weekend</td>
+					<td>6</td>
+				</tr>
+			</tbody>
+		</table>
 		<hr>
 		<pre>SELECT `training`.`id`,
 	`training`.`site_id`,
@@ -246,14 +386,16 @@ KiB Swap:  8388540 total,        0 used,  8388540 free.  1524728 cached Mem
 			<span class="tag caps">Caps</span>
 			<span class="tag large">Large</span>
 			<span class="tag huge">Huge</span></p>
-		<p>Properties: <span class="tag">Houses<a href="#" class="cross"></a></span> <span class="tag">Plymouth<a href="#" class="cross"></a></span> <span class="tag">Within 5 miles<a href="#" class="cross"></a></span></p>
+		<p>Properties: <span class="tag grey">Houses<a href="#" class="cross"></a></span> <span class="tag grey">Plymouth<a href="#" class="cross"></a></span> <span class="tag grey">Within 5 miles<a href="#" class="cross"></a></span></p>
+		<p>Properties: <span class="tag grey large">Houses<a href="#" class="cross"></a></span> <span class="tag grey large">Plymouth<a href="#" class="cross"></a></span> <span class="tag grey large">Within 5 miles<a href="#" class="cross"></a></span></p>
+		<p>Properties: <span class="tag grey huge">Houses<a href="#" class="cross"></a></span> <span class="tag grey huge">Plymouth<a href="#" class="cross"></a></span> <span class="tag grey huge">Within 5 miles<a href="#" class="cross"></a></span></p>
 		<hr>
 		<form class="inline foldable">
 			<input type="text" id="input-name" class="full large" placeholder="Name">
 
 			<input type="text" id="input-middlename" class="full" placeholder="Middle Name">
 
-			<label for="input-email">Email</label>
+			<label for="input-email" title="Please use a valid email address">Email</label>
 			<input type="email" id="input-email" placeholder="Email">
 
 			<label for="input-twitter">Twitter</label>
@@ -425,8 +567,7 @@ KiB Swap:  8388540 total,        0 used,  8388540 free.  1524728 cached Mem
 			<button type="submit">Save</button>
 			<button type="reset">Reset</button>
 			<label class="button">Remember<input type="checkbox"></label>
-            <button class="red">Delete</button>
-            <button class="green">Add</button>
+			<label class="button left"><input type="checkbox">Remember</label>
 		</form>
 		<hr>
 		<form class="block large">
@@ -502,44 +643,59 @@ KiB Swap:  8388540 total,        0 used,  8388540 free.  1524728 cached Mem
 		<p class="notice"><strong>Notice:</strong> This site will be closing down in 7 days</p>
 		<p class="success"><strong>Success:</strong> The user &quot;Andrew Hosgood&quot; was added</p>
 		<hr>
-		<a href="#" class="button">Anchor</a>
-		<a href="#" class="button red">Anchor</a>
-		<a href="#" class="button green">Anchor</a>
-		<a href="#" class="button blue">Anchor</a>
-		<a href="#" class="button black">Anchor</a>
-		<a href="#" class="button disabled">Anchor</a>
-		<a href="#" class="button thin">Anchor</a>
+		<a href="#" class="button">Button</a>
+		<a href="#" class="button red">Red Button</a>
+		<a href="#" class="button green">Green Button</a>
+		<a href="#" class="button blue">Blue Button</a>
+		<a href="#" class="button disabled">Disabled Button</a>
+        <hr>
+        <a href="#" class="button thin">Thin Button</a>
+        <a href="#" class="button">Regular Button</a>
+        <a href="#" class="button fat">Fat Button</a>
+        <hr>
+        <a href="#" class="button tiny">Tiny Button</a>
+        <a href="#" class="button small">Small Button</a>
+        <a href="#" class="button">Regular Button</a>
+        <a href="#" class="button large">Large Button</a>
+        <a href="#" class="button huge">Huge Button</a>
         <!--<hr>
-        <a href="#" class="button flat">Flat</a>
-        <a href="#" class="button flat red">Flat</a>
-        <a href="#" class="button flat green">Flat</a>
-        <a href="#" class="button flat blue">Flat</a>
-        <a href="#" class="button flat black">Flat</a>
-        <a href="#" class="button flat disabled">Flat</a>
-        <a href="#" class="button flat thin">Flat</a>
-        <hr>
-        <button>Button</button>
-        <button class="red">Button</button>
-        <button class="green">Button</button>
-        <button class="blue">Button</button>
-        <button class="black">Button</button>
-        <button disabled>Button</button>
-        <button class="thin">Button</button>
-        <hr>
-        <input type="button" value="Input">
-        <input type="button" class="red" value="Input">
-        <input type="button" class="green" value="Input">
-        <input type="button" class="blue" value="Input">
-        <input type="button" class="black" value="Input">
-        <input type="button" value="Input" disabled>
-        <input type="button" class="thin" value="Input">-->
-		<hr>
-		<label class="button">Label<input type="checkbox"></label>
-		<label class="button red">Label<input type="checkbox"></label>
-		<label class="button green">Label<input type="checkbox"></label>
-		<label class="button blue">Label<input type="checkbox"></label>
-		<label class="button black">Label<input type="checkbox"></label>
-		<label class="button disabled">Label<input type="checkbox" disabled></label>
-		<label class="button thin">Label<input type="checkbox"></label>
+        <table class="no-zebra align-center">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Tiny</th>
+                    <th>Small</th>
+                    <th>Regular</th>
+                    <th>Large</th>
+                    <th>Huge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Thin</th>
+                    <td><a href="#" class="button thin tiny">Button</a></td>
+                    <td><a href="#" class="button thin small">Button</a></td>
+                    <td><a href="#" class="button thin">Button</a></td>
+                    <td><a href="#" class="button thin large">Button</a></td>
+                    <td><a href="#" class="button thin huge">Button</a></td>
+                </tr>
+                <tr>
+                    <th>Regular</th>
+                    <td><a href="#" class="button tiny">Button</a></td>
+                    <td><a href="#" class="button small">Button</a></td>
+                    <td><a href="#" class="button">Button</a></td>
+                    <td><a href="#" class="button large">Button</a></td>
+                    <td><a href="#" class="button huge">Button</a></td>
+                </tr>
+                <tr>
+                    <th>Fat</th>
+                    <td><a href="#" class="button fat tiny">Button</a></td>
+                    <td><a href="#" class="button fat small">Button</a></td>
+                    <td><a href="#" class="button fat">Button</a></td>
+                    <td><a href="#" class="button fat large">Button</a></td>
+                    <td><a href="#" class="button fat huge">Button</a></td>
+                </tr>
+            </tbody>
+        </table>-->
 	</body>
 </html>

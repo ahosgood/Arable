@@ -2,6 +2,13 @@
 a.button,
 label.button {
 	@include button;
+
+	&.center {
+		margin-right: auto;
+		margin-left: auto;
+
+		display: block;
+	}
 }
 
 label.button {
@@ -17,12 +24,19 @@ label.button {
 
 		vertical-align: baseline;
 	}
+
+	&.left {
+		input[type="checkbox"] {
+			margin-right: 0.5em !important;
+			margin-left: 0 !important;
+		}
+	}
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) {
 	label.button {
 		input[type="checkbox"] {
-			vertical-align: baseline;
+			//vertical-align: baseline;
 		}
 	}
 }

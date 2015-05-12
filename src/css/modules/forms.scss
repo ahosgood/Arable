@@ -11,8 +11,8 @@ textarea {
 
 	background-color: #FFF;
 
-	border: 1px $borderGrey solid;
-	border-radius: $borderRadius;
+	border: 1px $border-colour solid;
+	border-radius: $border-radius;
 }
 
 	optgroup,
@@ -25,7 +25,7 @@ textarea {
 		}
 
 		option:disabled {
-			color: $disabledFormElement;
+			color: form-colour("disabled");
 		}
 
 form {
@@ -60,6 +60,17 @@ form {
 
 		label {
 			font-weight: 700;
+
+			&[title] {
+				text-decoration: underline;
+				text-decoration-color: rgba(base-font(colour), 0.35);
+				text-decoration-style: dotted;
+				text-decoration-skip: ink;
+
+				&:hover {
+					text-decoration-color: rgba(base-font(colour), 0.75);
+				}
+			}
 		}
 
 		textarea {
@@ -76,7 +87,7 @@ form {
 				&:focus {
 					background-color: #FFF;
 
-					border-color: $activeHighlight;
+					border-color: form-colour(active-border);
 
 					box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
 				}
@@ -94,7 +105,7 @@ form {
 		select,
 		textarea {
 			&:focus {
-				border-color: $activeHighlight;
+				border-color: form-colour(active-border);
 
 				box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.15);
 			}
@@ -151,19 +162,19 @@ form {
 			.suffix {
 				padding: 0.25em 0.5em;
 
-				@include basefontcolour;
-				@include basefontsize;
+				@include base-font-colour;
+				@include base-font-size;
 
-				background-color: $bgLightGrey;
+				background-color: $background-light;
 
-				border: 1px $borderGrey solid;
+				border: 1px $border-colour solid;
 			}
 
 			a {
 				&.prefix,
 				&.suffix {
 					&:hover {
-						background-color: $hoverTable;
+						background-color: form-colour(label-hover);
 					}
 				}
 			}
@@ -172,7 +183,7 @@ form {
 				float: left;
 
 				border-right-width: 0;
-				border-radius: $borderRadius 0 0 $borderRadius;
+				border-radius: $border-radius 0 0 $border-radius;
 
 				~ .prefix {
 					border-radius: 0;
@@ -181,7 +192,7 @@ form {
 				~ .input {
 					input {
 						border-left-style: dotted;
-						border-radius: 0 $borderRadius $borderRadius 0;
+						border-radius: 0 $border-radius $border-radius 0;
 					}
 				}
 			}
@@ -190,7 +201,7 @@ form {
 				float: right;
 
 				border-left-width: 0;
-				border-radius: 0 $borderRadius $borderRadius 0;
+				border-radius: 0 $border-radius $border-radius 0;
 
 				~ .suffix {
 					border-radius: 0;
@@ -199,7 +210,7 @@ form {
 				~ .input {
 					input {
 						border-right-style: dotted;
-						border-radius: $borderRadius 0 0 $borderRadius;
+						border-radius: $border-radius 0 0 $border-radius;
 					}
 				}
 			}
@@ -227,7 +238,7 @@ form {
 				.suffix {
 					padding-right: 0.35em;
 					padding-left: 0.35em;
-					color: $borderGrey;
+					color: $border-colour;
 
 					background-color: #FFF;
 				}
@@ -269,18 +280,12 @@ form {
 		[type="submit"] {
 			font-weight: 700;
 
-			@include button-grad($buttonSubmit);
+			@include button-grad($button-submit);
 
-			&.red {
-				@include button-grad($buttonRed);
-			}
-
-			&.green {
-				@include button-grad($buttonGreen);
-			}
-
-			&.black {
-				@include button-grad($buttonBlack);
+			@each $button-colour-name, $button-hex in $button-colours {
+				&.#{$button-colour-name} {
+					@include button-grad($button-hex);
+				}
 			}
 		}
 
@@ -314,9 +319,9 @@ form {
 			float: left;
 			clear: both;
 
-			@include basefontsize;
+			@include base-font-size;
 			text-align: left;
-			line-height: #{$baseFontSize};
+			line-height: base-font(size);
 
 			&.button {
 				line-height: 2.1;
@@ -333,40 +338,40 @@ form {
 
 			float: right;
 
-			@include basefontsize;
+			@include base-font-size;
 			text-align: left;
 
 			&::-webkit-input-placeholder {
-				color: $inputPlaceholder;
+				color: form-colour(placeholder);
 			}
 
 			&:-moz-placeholder {
-				color: $inputPlaceholder;
+				color: form-colour(placeholder);
 			}
 
 			&::-moz-placeholder {
-				color: $inputPlaceholder;
+				color: form-colour(placeholder);
 			}
 
 			&:-ms-input-placeholder {
-				color: $inputPlaceholder;
+				color: form-colour(placeholder);
 			}
 
 			&:focus {
 				&::-webkit-input-placeholder {
-					color: $inputPlaceholderActive;
+					color: form-colour(placeholder-active);
 				}
 
 				&:-moz-placeholder {
-					color: $inputPlaceholderActive;
+					color: form-colour(placeholder-active);
 				}
 
 				&::-moz-placeholder {
-					color: $inputPlaceholderActive;
+					color: form-colour(placeholder-active);
 				}
 
 				&:-ms-input-placeholder {
-					color: $inputPlaceholderActive;
+					color: form-colour(placeholder-active);
 				}
 			}
 
@@ -407,6 +412,7 @@ form {
 		.button {
 			width: auto;
 			margin-top: 0.5em;
+			margin-right: 0;
 
 			float: right;
 			clear: both;
@@ -454,7 +460,7 @@ form {
 				&:disabled,
 				&[readonly] {
 					+ label {
-						color: $disabledFormElement;
+						color: form-colour("disabled");
 					}
 				}
 			}
@@ -554,12 +560,12 @@ form {
 		button {
 			float: left;
 
-			@include basefontsize;
+			@include base-font-size;
 		}
 
 		label,
 		input {
-			line-height: #{$baseFontSize};
+			line-height: base-font(size);
 		}
 
 		label {
@@ -632,7 +638,7 @@ form {
 	}
 }
 
-@media (max-width: $intTabletSmall - 1) {
+@media (max-width: breakpoint(tablet-small) - 1) {
 	form {
 		&.foldable {
 			&.inline,

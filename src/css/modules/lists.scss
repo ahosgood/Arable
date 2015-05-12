@@ -4,10 +4,10 @@ ol,
 dl {
 	margin-bottom: 1.5em;
 
-	@include basefontsize;
+	@include base-font-size;
 
 	&.large {
-		font-size: #{$baseFontSize * 1.09}em;
+		font-size: #{base-font(size) * 1.09}em;
 	}
 }
 
@@ -64,7 +64,7 @@ ol {
 	&.lined {
 		margin-bottom: 1.5em;
 
-		border-bottom: 1px $borderLightGrey solid;
+		border-bottom: 1px $border-light-colour solid;
 
 		li {
 			margin-bottom: 0.35em;
@@ -72,7 +72,7 @@ ol {
 
 			text-indent: 0.5em;
 
-			border-top: 1px $borderLightGrey solid;
+			border-top: 1px $border-light-colour solid;
 		}
 
 		ul,
@@ -81,7 +81,7 @@ ol {
 			margin-left: 0;
 			padding-left: 1em;
 
-			border-top: 1px $borderLightGrey solid;
+			border-top: 1px $border-light-colour solid;
 
 			> :first-child {
 				border-top: none;
@@ -97,13 +97,13 @@ ol {
 }
 
 	li {
-		@include basefontlineheight;
+		@include base-font-line-height;
 	}
 
 dl {
 	padding-bottom: 0.5em;
 
-	border-bottom: 1px $borderLightGrey solid;
+	border-bottom: 1px $border-light-colour solid;
 
 	dl {
 		margin-bottom: 0;
@@ -187,7 +187,7 @@ dl {
 		margin-top: 0.5em;
 		padding-top: 0.5em;
 
-		border-top: 1px $borderLightGrey solid;
+		border-top: 1px $border-light-colour solid;
 	}
 
 	dl dl dt,
@@ -241,6 +241,8 @@ dl {
 
 ul.inline {
 	margin-left: 0;
+
+	display: inline-block;
 
 	overflow: hidden;
 
@@ -310,7 +312,7 @@ ul.tabs {
 
 	background-color: #FFF;
 
-	border-color: $borderGrey;
+	border-color: $border-colour;
 
 	-webkit-transition: border ease 200ms;
 	//-moz-transition: border ease 200ms;
@@ -333,7 +335,7 @@ ul.tabs {
 		border-width: 1px 1px 0;
 		border-color: transparent;
 		border-style: solid;
-		border-radius: $borderRadius $borderRadius 0 0;
+		border-radius: $border-radius $border-radius 0 0;
 
 		z-index: 1;
 
@@ -347,19 +349,23 @@ ul.tabs {
 			line-height: 1;
 			white-space: nowrap;
 
-			border-radius: ($borderRadius - 1) ($borderRadius - 1) 0 0;
+			border-radius: ($border-radius - 1) ($border-radius - 1) 0 0;
 		}
 
 		a {
-			color: $baseTextColour;
+			color: base-font(colour);
 			text-decoration: none;
 
 			&:hover {
-				color: $baseLinkHoverColour;
+				color: anchor-colour(hover);
 			}
 
 			&:active {
-				color: $baseLinkActiveColour;
+				color: anchor-colour(active);
+			}
+
+			&:focus {
+				outline: none;
 			}
 		}
 
@@ -378,7 +384,7 @@ ul.tabs {
 			z-index: 3;
 
 			a {
-				color: $baseTextColour;
+				color: base-font(colour);
 			}
 
 			&::after {
@@ -440,7 +446,7 @@ ul.tabs {
 		bottom: 0;
 		left: 0;
 
-		background-color: $borderGrey;
+		background-color: $border-colour;
 
 		-webkit-transition: background ease 200ms;
 		//-moz-transition: background ease 200ms;
@@ -468,14 +474,14 @@ ul.tabs {
 	}
 
 	&.react {
-		border-color: $borderLightGrey;
+		border-color: $border-light-colour;
 
 		&::before {
-			background-color: $borderLightGrey;
+			background-color: $border-light-colour;
 		}
 
 		&:hover {
-			border-color: $borderGrey;
+			border-color: $border-colour;
 
 			-webkit-transition: border ease 50ms;
 			//-moz-transition: border ease 50ms;
@@ -484,7 +490,7 @@ ul.tabs {
 			transition: border ease 50ms;
 
 			&::before {
-				background-color: $borderGrey;
+				background-color: $border-colour;
 
 				-webkit-transition: background ease 50ms;
 				//-moz-transition: background ease 50ms;
@@ -501,7 +507,7 @@ ul.tree {
 
 	list-style: none;
 
-	border: 0 $borderLightGrey solid;
+	border: 0 $border-light-colour solid;
 
 	ul {
 		margin-left: 0;
@@ -530,7 +536,7 @@ ul.tree {
 	li {
 		position: relative;
 
-		@include basefontlineheight;
+		@include base-font-line-height;
 		white-space: nowrap;
 
 		z-index: 3;
@@ -577,7 +583,7 @@ ul.tree {
 			bottom: 0.75em;
 			left: 0.5em;
 
-			border-left: 1px $borderLightGrey solid;
+			border-left: 1px $border-light-colour solid;
 
 			content: "";
 
@@ -612,7 +618,7 @@ ul.tree {
 
 				background-color: #FFF;
 
-				border: 1px $borderLightGrey solid;
+				border: 1px $border-light-colour solid;
 
 				content: "+";
 

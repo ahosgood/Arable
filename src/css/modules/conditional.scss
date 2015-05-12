@@ -13,18 +13,18 @@
 }
 
 /* ----------------------------------------------------- SMALL MOBILE (iPhone Portrait) ----------------------------------------------------- */
-@media (max-width: $intMobileLarge - 1) {
-	.noshow-on-mobile-p {
+@media (max-width: breakpoint(mobile-large) - 1) {
+	.noshow-on-mobile-s {
 		display: none;
 	}
 
-	.show-on-mobile-p {
+	.show-on-mobile-s {
 		display: block;
 	}
 }
 
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media (min-width: $intMobileLarge) and (max-width: $intTabletSmall - 1) {
+@media (min-width: breakpoint(mobile-large)) and (max-width: breakpoint(tablet-small) - 1) {
 	.noshow-on-mobile-l {
 		display: none;
 	}
@@ -35,7 +35,7 @@
 }
 
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media (max-width: $intTabletSmall - 1) {
+@media (max-width: breakpoint(tablet-small) - 1) {
 	.noshow-on-mobile {
 		display: none;
 	}
@@ -46,18 +46,18 @@
 }
 
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
-@media (min-width: $intTabletSmall) and (max-width: $intTabletLarge - 1) {
-	.noshow-on-tablet-p {
+@media (min-width: breakpoint(tablet-small)) and (max-width: breakpoint(tablet-large) - 1) {
+	.noshow-on-tablet-s {
 		display: none;
 	}
 
-	.show-on-tablet-p {
+	.show-on-tablet-s {
 		display: block;
 	}
 }
 
 /* ----------------------------------------------------- LARGE TABLET (iPad) ----------------------------------------------------- */
-@media (min-width: $intTabletLarge) and (max-width: $intDesktop - 1) {
+@media (min-width: breakpoint(tablet-large)) and (max-width: breakpoint(desktop) - 1) {
 	.noshow-on-tablet-l {
 		display: none;
 	}
@@ -68,7 +68,7 @@
 }
 
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media (min-width: $intTabletSmall) and (max-width: $intDesktop - 1) {
+@media (min-width: breakpoint(tablet-small)) and (max-width: breakpoint(desktop) - 1) {
 	.noshow-on-tablet {
 		display: none;
 	}
@@ -79,7 +79,7 @@
 }
 
 /* ----------------------------------------------------- DESKTOP ----------------------------------------------------- */
-@media (min-width: $intDesktop) {
+@media (min-width: breakpoint(desktop)) {
 	.noshow-on-desktop {
 		display: none;
 	}
@@ -91,7 +91,7 @@
 
 /* ===================================================== GROWING TEXT ===================================================== */
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media (max-device-width: $intTabletSmall - 1) {
+@media (max-device-width: breakpoint(tablet-small) - 1) {
 	html {
 		&.grow-font {
 			font-size: 12px;
@@ -100,7 +100,7 @@
 }
 
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media (min-device-width: $intTabletSmall) and (max-device-width: $intDesktop - 1) {
+@media (min-device-width: breakpoint(tablet-small)) and (max-device-width: breakpoint(desktop) - 1) {
 	html {
 		&.grow-font {
 			font-size: 11px;

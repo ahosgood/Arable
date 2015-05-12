@@ -5,86 +5,16 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.3.6
- * Date:        2015-04-11
+ * Version:     5.4.0
+ * Date:        2015-05-12
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
  * ================================================================================
  */
 
-// ===================================================== VARIABLES =====================================================
-// ----------------------------------------------------- FONTS -----------------------------------------------------
-$baseFontSize: 1.33;
-$baseLineHeight: 1.618; //Phi
-$basefontWeight: 400;   //"Normal"
-
-// ----------------------------------------------------- COLOURS -----------------------------------------------------
-// ---------------------- http://zavoloklom.github.io/material-design-color-palette/colors.html ----------------------
-$baseTextColour: #212121;
-$baseLinkColour: #0D47A1;
-$baseLinkHoverColour: #1976D2;
-$baseLinkActiveColour: #E64A19;
-$baseLinkVisitedColour: $baseLinkHoverColour;
-
-$bgLightGrey: #F5F5F5;
-$headerGrey: #E0E0E0;
-$borderGrey: #BDBDBD;
-$borderLightGrey: #E0E0E0;
-$activeHighlight: #FBC02D;
-$highlight: #FFF59D;
-$highlightTable: #FFF9C4;
-$hoverTable: #E3F2FD;
-
-$inputPlaceholder: #BDBDBD;
-$inputPlaceholderActive: #9E9E9E;
-$disabledFormElement: #BDBDBD;
-
-$buttonTop: #F5F5F5;
-$buttonBottom: #E0E0E0;
-$buttonRed: #D50000;
-$buttonGreen: #43A047;
-$buttonBlue: #1976D2;
-$buttonBlack: #212121;
-$buttonSubmit: $buttonBlue;
-
-$errorBorder: #D32F2F;
-$errorBackground: #FFCDD2;
-$warningBorder: #FBC02D;
-$warningBackground: #FFF9C4;
-$successBorder: #689F38;
-$successBackground: #DCEDC8;
-$noticeBorder: #1976D2;
-$noticeBackground: #BBDEFB;
-
-$tagStandard: #B0BEC5;
-$tagRed: #E53935;
-$tagOrange: #FB8C00;
-$tagAmber: #FFB300;
-$tagYellow: #FDD835;
-$tagLime: #C0CA33;
-$tagGreen: #7CB342;
-$tagTeal: #00897B;
-$tagCyan: #00ACC1;
-$tagBlue: #1E88E5;
-$tagIndigo: #3949AB;
-$tagPurple: #5E35B1;
-$tagPink: #D81B60;
-$tagBrown: #6D4C41;
-$tagBlack: #212121;
-$tagGrey: #757575;
-$tagCross: #616161;
-
-// ----------------------------------------------------- DIMENSIONS -----------------------------------------------------
-$borderRadius: 3px;
-
-// ----------------------------------------------------- BREAKPOINTS -----------------------------------------------------
-$intMobileLarge: 481px;
-$intTabletSmall: 659px;
-$intTabletLarge: 769px;
-$intDesktop: 1025px;
-
 // ===================================================== RESOURCES =====================================================
+@import "resources/variables";
 @import "resources/functions";
 @import "resources/mixins";
 
@@ -99,3 +29,4 @@ $intDesktop: 1025px;
 @import "modules/text";
 @import "modules/misc";
 @import "modules/projects";
+@import "modules/modernizr";
