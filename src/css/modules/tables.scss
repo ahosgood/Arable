@@ -91,6 +91,12 @@ table {
 		&.large {
 			font-size: #{base-font(size) * exponent(1.2, 1)}em;
 		}
+
+		tr {
+			&.highlight {
+				background-color: table-colour(highlight);
+			}
+		}
 	}
 
 	thead {
@@ -135,10 +141,6 @@ table {
 			}
 		}
 	}
-
-		tr.highlight {
-			background-color: table-colour(highlight);
-		}
 
 			th,
 			td {
