@@ -66,19 +66,23 @@ $button-colours: (
 
 $error: (
 	"background": #FFCDD2,
-	"border": #D32F2F
+	//"border": #D32F2F
+	"border": #EF5350
 );
 $warning: (
 	"background": #FFF9C4,
-	"border": #FBC02D
+	//"border": #FBC02D
+	"border": #FFEE58
 );
 $success: (
 	"background": #DCEDC8,
-	"border": #689F38
+	//"border": #689F38
+	"border": #9CCC65
 );
 $notice: (
 	"background": #BBDEFB,
-	"border": #1976D2
+	//"border": #1976D2
+	"border": #42A5F5
 );
 
 $tag-base: #B0BEC5;

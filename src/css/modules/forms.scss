@@ -15,18 +15,13 @@ textarea {
 	border-radius: $border-radius;
 }
 
-	optgroup,
-	option {
-		padding-right: 1em;
+	optgroup option {
+		padding-left: 1em;
 	}
 
-		optgroup option {
-			padding-left: 1em;
-		}
-
-		option:disabled {
-			color: form-colour("disabled");
-		}
+	option:disabled {
+		color: form-colour("disabled");
+	}
 
 form {
 	&.inline,

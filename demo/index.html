@@ -89,14 +89,14 @@
                     <li>Six</li>
                 </ol></li>
 		</ul>
-		<ul class="tabs react">
+		<ul class="tabs">
 			<li class="primary"><a href="#">Alpha</a></li><!--
 			--><li class="current"><a href="#">Beta</a></li><!--
 			--><li><a href="#">Gamma</a></li><!--
 			--><li class="disabled"><a href="#">Delta</a></li><!--
 			--><li><a href="#">Epsilon</a></li>
 		</ul>
-		<ul class="tabs grad">
+		<ul class="tabs react">
 			<li class="primary"><a href="#">Alpha</a></li><!--
 			--><li class="current"><a href="#">Beta</a></li><!--
 			--><li><a href="#">Gamma</a></li><!--
@@ -145,6 +145,98 @@
 			<dd>JavaScript</dd>
 		</dl>
 		<table class="highlight-on-hover">
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Type</th>
+					<th>Name Length</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="highlight-fade">
+					<th>Monday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td>Weekday</td>
+					<td>7</td>
+				</tr>
+				<tr class="highlight">
+					<th>Wednesday</th>
+					<td>Weekday</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td>Weekday</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr class="disabled">
+					<th>Saturday</th>
+					<td>Weekend</td>
+					<td>8</td>
+				</tr>
+				<tr class="disabled">
+					<th>Sunday</th>
+					<td>Weekend</td>
+					<td>6</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="highlight-on-hover zebra">
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Type</th>
+					<th>Name Length</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="highlight-fade">
+					<th>Monday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td>Weekday</td>
+					<td>7</td>
+				</tr>
+				<tr class="highlight">
+					<th>Wednesday</th>
+					<td>Weekday</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td>Weekday</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td>Weekday</td>
+					<td>6</td>
+				</tr>
+				<tr class="disabled">
+					<th>Saturday</th>
+					<td>Weekend</td>
+					<td>8</td>
+				</tr>
+				<tr class="disabled">
+					<th>Sunday</th>
+					<td>Weekend</td>
+					<td>6</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="highlight-on-hover striped">
 			<thead>
 				<tr>
 					<th>Day</th>
@@ -638,10 +730,26 @@ KiB Swap:  8388540 total,        0 used,  8388540 free.  1524728 cached Mem
 			<button type="reset">Reset</button>
 		</form>
 		<hr>
+		<!--<div class="error">
+			<p><strong>Error:</strong> An error occurred on line 29 - invalid property <em>length</em></p>
+		</div>
+		<div class="warning">
+			<p><strong>Warning:</strong> The function <em>url_encode()</em> is deprecated</p>
+		</div>
+		<div class="notice">
+			<p><strong>Notice:</strong> This site will be closing down in 7 days</p>
+		</div>
+		<div class="success">
+			<p><strong>Success:</strong> The user &quot;Andrew Hosgood&quot; was added</p>
+		</div>-->
 		<p class="error"><strong>Error:</strong> An error occurred on line 29 - invalid property <em>length</em></p>
 		<p class="warning"><strong>Warning:</strong> The function <em>url_encode()</em> is deprecated</p>
 		<p class="notice"><strong>Notice:</strong> This site will be closing down in 7 days</p>
 		<p class="success"><strong>Success:</strong> The user &quot;Andrew Hosgood&quot; was added</p>
+		<p class="callout error"><strong>Error:</strong> An error occurred on line 29 - invalid property <em>length</em></p>
+		<p class="callout warning"><strong>Warning:</strong> The function <em>url_encode()</em> is deprecated</p>
+		<p class="callout notice"><strong>Notice:</strong> This site will be closing down in 7 days</p>
+		<p class="callout success"><strong>Success:</strong> The user &quot;Andrew Hosgood&quot; was added</p>
 		<hr>
 		<a href="#" class="button">Button</a>
 		<a href="#" class="button red">Red Button</a>

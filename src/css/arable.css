@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.1
- * Date:        2015-05-12
+ * Version:     5.4.2
+ * Date:        2015-05-20
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -195,10 +195,6 @@ textarea {
   background-color: #FFF;
   border: 1px #BDBDBD solid;
   border-radius: 3px; }
-
-optgroup,
-option {
-  padding-right: 1em; }
 
 optgroup option {
   padding-left: 1em; }
@@ -2598,7 +2594,32 @@ ul.tabs {
   background-color: #FFF;
   border-color: #BDBDBD;
   -webkit-transition: border ease 200ms;
-  transition: border ease 200ms; }
+  transition: border ease 200ms;
+  	/*&.grad {
+  		li {
+  			border-color: inherit;
+  
+  			a {
+  				box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15);
+  			}
+  
+  			&.current {
+  				background-color: inherit;
+  
+  				a {
+  					box-shadow: none;
+  				}
+  			}
+  
+  			&.disabled {
+  				border-color: #DDD;
+  
+  				a {
+  					border-top-color: #EEE;
+  				}
+  			}
+  		}
+  	}*/ }
   ul.tabs li {
     margin: 0 0.25em;
     display: inline-block;
@@ -2649,18 +2670,6 @@ ul.tabs {
     ul.tabs li.disabled span {
       color: #AAA;
       cursor: text; }
-  ul.tabs.grad li {
-    border-color: inherit; }
-    ul.tabs.grad li a {
-      box-shadow: inset 0 -0.75em 1.5em -0.75em rgba(0, 0, 0, 0.15); }
-    ul.tabs.grad li.current {
-      background-color: inherit; }
-      ul.tabs.grad li.current a {
-        box-shadow: none; }
-    ul.tabs.grad li.disabled {
-      border-color: #DDD; }
-      ul.tabs.grad li.disabled a {
-        border-top-color: #EEE; }
   ul.tabs::before {
     width: 100%;
     height: 1px;
@@ -2834,7 +2843,7 @@ table {
   table.no-horizontals td {
     border-top-width: 0;
     border-bottom-width: 0; }
-  table.plain tbody tr, table.no-zebra tbody tr {
+  table.plain tbody tr {
     background-color: transparent !important; }
   table.highlight-on-hover tfoot tr,
   table.highlight-on-hover tbody tr {
@@ -2853,6 +2862,13 @@ table {
       transition: background ease 50ms; }
   table.large {
     font-size: 1.596em; }
+  table.zebra tbody tr:nth-child(even) {
+    background-color: #F5F5F5; }
+  table.striped tfoot th:nth-child(even),
+  table.striped tfoot td:nth-child(even),
+  table.striped tbody th:nth-child(even),
+  table.striped tbody td:nth-child(even) {
+    background-color: #F5F5F5; }
   table p,
   table ul,
   table ol,
@@ -2869,10 +2885,13 @@ thead.large,
 tfoot.large,
 tbody.large {
   font-size: 1.596em; }
-thead tr.highlight,
-tfoot tr.highlight,
-tbody tr.highlight {
-  background-color: #FFF9C4; }
+thead tr.highlight th,
+thead tr.highlight td,
+tfoot tr.highlight th,
+tfoot tr.highlight td,
+tbody tr.highlight th,
+tbody tr.highlight td {
+  background-color: #FFF9C4 !important; }
 
 thead {
   color: #FFF;
@@ -2888,10 +2907,8 @@ tbody {
   border-color: inherit;
   border-style: solid; }
 
-tbody tr:nth-child(even) {
-  background-color: #F5F5F5; }
 tbody tr.disabled > * {
-  opacity: 0.2; }
+  color: #BDBDBD; }
 tbody tr.highlight-fade th,
 tbody tr.highlight-fade td {
   -webkit-animation: highlight-fade 6s;
@@ -3315,7 +3332,7 @@ dl + hr {
 .success {
   min-height: 16px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 6px 9px;
   position: relative;
   border: 1px #000 solid;
   border-radius: 3px; }
@@ -3333,23 +3350,36 @@ dl + hr {
     padding-bottom: 0; }
 
 p.error, p.warning, p.notice, p.success {
-  padding: 0.25em 0.5em; }
+  padding: 0.5em 0.75em; }
 
 .error {
   background-color: #FFCDD2;
-  border-color: #D32F2F; }
+  border-color: #EF5350; }
 
 .warning {
   background-color: #FFF9C4;
-  border-color: #FBC02D; }
+  border-color: #FFEE58; }
 
 .success {
   background-color: #DCEDC8;
-  border-color: #689F38; }
+  border-color: #9CCC65; }
 
 .notice {
   background-color: #BBDEFB;
-  border-color: #1976D2; }
+  border-color: #42A5F5; }
+
+.callout {
+  background-color: #F5F5F5;
+  border-width: 0 0 0 4px;
+  border-radius: 0 3px 3px 0; }
+  .callout.error {
+    border-color: #EF5350; }
+  .callout.warning {
+    border-color: #FFEE58; }
+  .callout.success {
+    border-color: #9CCC65; }
+  .callout.notice {
+    border-color: #42A5F5; }
 
 /* ===================================================== TAGS ===================================================== */
 .tag {
