@@ -15,6 +15,17 @@ textarea {
 	border-radius: $border-radius;
 }
 
+input,
+select,
+textarea,
+button,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none !important;
+}
+
 	optgroup option {
 		padding-left: 1em;
 	}

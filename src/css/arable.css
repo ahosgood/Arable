@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.3
+ * Version:     5.4.4
  * Date:        2015-05-20
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -195,6 +195,16 @@ textarea {
   background-color: #FFF;
   border: 1px #BDBDBD solid;
   border-radius: 3px; }
+
+input,
+select,
+textarea,
+button,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none !important; }
 
 optgroup option {
   padding-left: 1em; }
