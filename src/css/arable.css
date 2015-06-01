@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.4
- * Date:        2015-05-20
+ * Version:     5.4.5
+ * Date:        2015-06-01
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -56,24 +56,24 @@ h1, h2, h3, h4, h5, h6, strong {
 
 ul,
 ol {
-  margin-left: 20px; }
+  margin-left: 20px;
+  list-style-position: outside; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    font-size: 1em; }
 
 ul {
-  list-style: disc outside; }
+  list-style-type: disc; }
 
 ol {
-  list-style: decimal outside; }
+  list-style: decimal; }
 
 sub,
 sup,
 small {
   font-size: smaller; }
-
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  font-size: 1em; }
 
 img {
   display: inline-block; }

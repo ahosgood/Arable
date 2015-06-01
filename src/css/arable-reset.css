@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.2
- * Date:        2015-04-08
+ * Version:     5.3
+ * Date:        2015-06-01
  * ================================================================================
  */
 @-ms-viewport {
@@ -53,24 +53,24 @@ h1, h2, h3, h4, h5, h6, strong {
 
 ul,
 ol {
-  margin-left: 20px; }
+  margin-left: 20px;
+  list-style-position: outside; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    font-size: 1em; }
 
 ul {
-  list-style: disc outside; }
+  list-style-type: disc; }
 
 ol {
-  list-style: decimal outside; }
+  list-style-type: decimal; }
 
 sub,
 sup,
 small {
   font-size: smaller; }
-
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  font-size: 1em; }
 
 img {
   display: inline-block; }
