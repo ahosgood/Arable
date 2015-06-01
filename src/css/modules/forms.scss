@@ -390,12 +390,10 @@ form {
 		select,
 		textarea,
 		.label {
-			&[class^="inline-"],
-			&[class*=" inline-"] {
+			&[class|="inline"] {
 				float: left;
 
-				+ [class^="inline-"],
-				+ [class*=" inline-"] {
+				+ [class|="inline"] {
 					margin-left: 1%;
 				}
 			}

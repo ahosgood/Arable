@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.5
+ * Version:     5.4.6
  * Date:        2015-06-01
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -68,7 +68,7 @@ ul {
   list-style-type: disc; }
 
 ol {
-  list-style: decimal; }
+  list-style-type: decimal; }
 
 sub,
 sup,
@@ -87,8 +87,7 @@ button {
   -webkit-font-smoothing: antialiased; }
 
 /* ===================================================== RESPONSIVE ELEMENTS ===================================================== */
-[class^="show-on-"],
-[class*=" show-on-"] {
+[class|="show-on"] {
   display: none; }
 
 .oldie .show-on-desktop {
@@ -1560,49 +1559,21 @@ form.inline, form.block {
     form.block select.large,
     form.block textarea.large {
       font-size: 2.1em; }
-  form.inline input[class^="inline-"], form.inline input[class*=" inline-"],
-  form.inline select[class^="inline-"],
-  form.inline select[class*=" inline-"],
-  form.inline textarea[class^="inline-"],
-  form.inline textarea[class*=" inline-"],
-  form.inline .label[class^="inline-"],
-  form.inline .label[class*=" inline-"], form.block input[class^="inline-"], form.block input[class*=" inline-"],
-  form.block select[class^="inline-"],
-  form.block select[class*=" inline-"],
-  form.block textarea[class^="inline-"],
-  form.block textarea[class*=" inline-"],
-  form.block .label[class^="inline-"],
-  form.block .label[class*=" inline-"] {
+  form.inline input[class|="inline"],
+  form.inline select[class|="inline"],
+  form.inline textarea[class|="inline"],
+  form.inline .label[class|="inline"], form.block input[class|="inline"],
+  form.block select[class|="inline"],
+  form.block textarea[class|="inline"],
+  form.block .label[class|="inline"] {
     float: left; }
-    form.inline input[class^="inline-"] + [class^="inline-"],
-    form.inline input[class^="inline-"] + [class*=" inline-"], form.inline input[class*=" inline-"] + [class^="inline-"],
-    form.inline input[class*=" inline-"] + [class*=" inline-"],
-    form.inline select[class^="inline-"] + [class^="inline-"],
-    form.inline select[class^="inline-"] + [class*=" inline-"],
-    form.inline select[class*=" inline-"] + [class^="inline-"],
-    form.inline select[class*=" inline-"] + [class*=" inline-"],
-    form.inline textarea[class^="inline-"] + [class^="inline-"],
-    form.inline textarea[class^="inline-"] + [class*=" inline-"],
-    form.inline textarea[class*=" inline-"] + [class^="inline-"],
-    form.inline textarea[class*=" inline-"] + [class*=" inline-"],
-    form.inline .label[class^="inline-"] + [class^="inline-"],
-    form.inline .label[class^="inline-"] + [class*=" inline-"],
-    form.inline .label[class*=" inline-"] + [class^="inline-"],
-    form.inline .label[class*=" inline-"] + [class*=" inline-"], form.block input[class^="inline-"] + [class^="inline-"],
-    form.block input[class^="inline-"] + [class*=" inline-"], form.block input[class*=" inline-"] + [class^="inline-"],
-    form.block input[class*=" inline-"] + [class*=" inline-"],
-    form.block select[class^="inline-"] + [class^="inline-"],
-    form.block select[class^="inline-"] + [class*=" inline-"],
-    form.block select[class*=" inline-"] + [class^="inline-"],
-    form.block select[class*=" inline-"] + [class*=" inline-"],
-    form.block textarea[class^="inline-"] + [class^="inline-"],
-    form.block textarea[class^="inline-"] + [class*=" inline-"],
-    form.block textarea[class*=" inline-"] + [class^="inline-"],
-    form.block textarea[class*=" inline-"] + [class*=" inline-"],
-    form.block .label[class^="inline-"] + [class^="inline-"],
-    form.block .label[class^="inline-"] + [class*=" inline-"],
-    form.block .label[class*=" inline-"] + [class^="inline-"],
-    form.block .label[class*=" inline-"] + [class*=" inline-"] {
+    form.inline input[class|="inline"] + [class|="inline"],
+    form.inline select[class|="inline"] + [class|="inline"],
+    form.inline textarea[class|="inline"] + [class|="inline"],
+    form.inline .label[class|="inline"] + [class|="inline"], form.block input[class|="inline"] + [class|="inline"],
+    form.block select[class|="inline"] + [class|="inline"],
+    form.block textarea[class|="inline"] + [class|="inline"],
+    form.block .label[class|="inline"] + [class|="inline"] {
       margin-left: 1%; }
   form.inline input.inline-2,
   form.inline select.inline-2,
