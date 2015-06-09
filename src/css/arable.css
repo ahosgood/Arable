@@ -5,7 +5,7 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.6
+ * Version:     5.4.7
  * Date:        2015-06-01
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
@@ -104,21 +104,21 @@ button {
   .show-on-mobile-s {
     display: block; } }
 /* ----------------------------------------------------- LARGE MOBILE (iPhone Landscape) ----------------------------------------------------- */
-@media (min-width: 481px) and (max-width: 658px) {
+@media (min-width: 481px) and (max-width: 667px) {
   .noshow-on-mobile-l {
     display: none; }
 
   .show-on-mobile-l {
     display: block; } }
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media (max-width: 658px) {
+@media (max-width: 667px) {
   .noshow-on-mobile {
     display: none; }
 
   .show-on-mobile {
     display: block; } }
 /* ----------------------------------------------------- SMALL TABLET ----------------------------------------------------- */
-@media (min-width: 659px) and (max-width: 768px) {
+@media (min-width: 668px) and (max-width: 768px) {
   .noshow-on-tablet-s {
     display: none; }
 
@@ -132,7 +132,7 @@ button {
   .show-on-tablet-l {
     display: block; } }
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media (min-width: 659px) and (max-width: 1024px) {
+@media (min-width: 668px) and (max-width: 1024px) {
   .noshow-on-tablet {
     display: none; }
 
@@ -147,11 +147,11 @@ button {
     display: block; } }
 /* ===================================================== GROWING TEXT ===================================================== */
 /* ----------------------------------------------------- MOBILE (iPhone) ----------------------------------------------------- */
-@media (max-device-width: 658px) {
+@media (max-device-width: 667px) {
   html.grow-font {
     font-size: 12px; } }
 /* ----------------------------------------------------- TABLET (iPad) ----------------------------------------------------- */
-@media (min-device-width: 659px) and (max-device-width: 1024px) {
+@media (min-device-width: 668px) and (max-device-width: 1024px) {
   html.grow-font {
     font-size: 11px; } }
 /* ===================================================== CONDITIONAL VISIBILITY ===================================================== */
@@ -1944,7 +1944,7 @@ form.linear {
     form.linear [type="reset"].thin,
     form.linear [type="button"].thin {
       line-height: 1; } }
-@media (max-width: 658px) {
+@media (max-width: 667px) {
   form.foldable.inline, form.foldable.linear {
     text-align: left; }
     form.foldable.inline label, form.foldable.linear label {
@@ -3443,39 +3443,6 @@ p.error, p.warning, p.notice, p.success {
       top: 5px;
       left: 2px; }
 
-/* ===================================================== TWISTPHP, TINYMCE ===================================================== */
-form.inline .twistupload-wrapper, form.block .twistupload-wrapper {
-  display: block;
-  float: right; }
-  form.inline .twistupload-wrapper input, form.block .twistupload-wrapper input {
-    width: 100%; }
-form.inline .twistupload-wrapper {
-  width: 75%; }
-form.inline label + .mce-tinymce {
-  width: 75%;
-  margin: 0.2em 0;
-  float: right; }
-form.block label + .mce-tinymce {
-  clear: both; }
-
-.mce-container.mce-tinymce {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-.mce-container button {
-  margin-top: 0 !important;
-  font-size: 10px;
-  border-radius: 0; }
-  .mce-container button:hover {
-    box-shadow: none; }
-
-@media (max-width: 658px) {
-  form.inline.foldable .twistupload-wrapper {
-    width: 100%; }
-  form.inline.foldable label + .mce-tinymce {
-    width: auto;
-    float: none;
-    clear: both; } }
 /* ===================================================== MODERNIZR ===================================================== */
 .js .hide-on-js,
 .flexbox .hide-on-flexbox,

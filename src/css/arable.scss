@@ -5,8 +5,8 @@
  * Useful and stylish CSS
  * --------------------------------------------------------------------------------
  * Author:      Andrew Hosgood
- * Version:     5.4.6
- * Date:        2015-06-01
+ * Version:     5.4.7
+ * Date:        2015-06-09
  * ================================================================================
  * Please include Open Sans if supporting systems without Helvetica
  * http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800
@@ -28,5 +28,5 @@
 @import "modules/tables";
 @import "modules/text";
 @import "modules/misc";
-@import "modules/projects";
+//@import "modules/projects";
 @import "modules/modernizr";

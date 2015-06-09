@@ -66,22 +66,18 @@ $button-colours: (
 
 $error: (
 	"background": #FFCDD2,
-	//"border": #D32F2F
 	"border": #EF5350
 );
 $warning: (
 	"background": #FFF9C4,
-	//"border": #FBC02D
 	"border": #FFEE58
 );
 $success: (
 	"background": #DCEDC8,
-	//"border": #689F38
 	"border": #9CCC65
 );
 $notice: (
 	"background": #BBDEFB,
-	//"border": #1976D2
 	"border": #42A5F5
 );
 
@@ -108,10 +104,11 @@ $tag-colours: (
 // ----------------------------------------------------- DIMENSIONS -----------------------------------------------------
 $border-radius: 3px;
 
-// ----------------------------------------------------- BREAKPOINTS (MIN PIXEL VALUES FOR EACH DEVICE) -----------------------------------------------------
+// ----------------------------------------------------- BREAKPOINTS (MIN WIDTHS FOR EACH DEVICE) -----------------------------------------------------
 $breakpoints: (
-	"mobile-large": 481px,
-	"tablet-small": 659px,
-	"tablet-large": 769px,
-	"desktop": 1025px
+	                       // <= 480px is small mobile
+	"mobile-large": 481px, // 481-667px
+	"tablet-small": 668px, // 668-768px
+	"tablet-large": 769px, // 769-1024px
+	"desktop": 1025px      // 1025px+
 );
