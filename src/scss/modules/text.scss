@@ -117,7 +117,7 @@ pre {
 		border: 1px $border-colour solid;
 		border-radius: $border-radius;
 
-		em {
+		span.highlight {
 			font-style: normal;
 
 			background-color: $highlight;
