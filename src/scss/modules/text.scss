@@ -93,58 +93,46 @@ code {
 
 	display: block;
 
+	position: relative;
+
 	@include base-mono-font-face;
 	line-height: base-mono-font(line-height);
-	font-weight: base-mono-font(font-weight);
+	font-weight: base-mono-font(weight);
 	white-space: pre-wrap;
 }
 
 pre {
 	@include base-font-size;
-}
 
-code {
-	font-size: 1em;
-}
+	code {
+		padding: 1em;
 
-code,
-pre.code {
-	position: relative;
+		overflow: auto;
 
-	overflow: auto;
+		color: base-font(colour);
+		white-space: pre;
 
-	color: base-font(colour);
-	white-space: pre;
+		background-color: $background-light;
 
-	background-color: $background-light;
-
-	border: 1px $border-colour solid;
-	border-radius: $border-radius;
-}
-
-pre.code {
-	padding: 1em;
-
-	em {
-		font-style: normal;
-
-		background-color: $highlight;
-
-		box-shadow: 0 0 0 1px $highlight;
-
+		border: 1px $border-colour solid;
 		border-radius: $border-radius;
+
+		em {
+			font-style: normal;
+
+			background-color: $highlight;
+
+			box-shadow: 0 0 0 1px $highlight;
+
+			border-radius: $border-radius;
+		}
 	}
 
 	&[title] {
-		padding-top: 3em;
-
 		&::before {
 			padding: 0.25em 0.75em;
 
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
+			display: block;
 
 			color: blackorwhite(table-colour(header));
 			@include base-font-face;
@@ -154,7 +142,15 @@ pre.code {
 
 			background-color: table-colour(header);
 
+			border-radius: $border-radius $border-radius 0 0;
+
 			content: attr(title);
+		}
+
+		code {
+			border-top-width: 0;
+
+			border-radius: 0 0 $border-radius $border-radius;
 		}
 	}
 
@@ -189,21 +185,27 @@ pre.code {
 	}
 
 	&.dark {
-		color: #FFF;
+		code {
+			color: #FFF;
 
-		background-color: base-font(colour);
+			background-color: base-font(colour);
 
-		border: none;
+			border: none;
 
-		&::before,
-		&::after {
-			background-color: base-font(colour) !important;
-		}
+			&::before,
+			&::after {
+				background-color: base-font(colour) !important;
+			}
 
-		em {
-			color: base-font(colour);
+			em {
+				color: base-font(colour);
+			}
 		}
 	}
+}
+
+code {
+	font-size: 1em;
 }
 
 p,

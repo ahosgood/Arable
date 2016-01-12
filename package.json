@@ -1,0 +1,26 @@
+{
+  "name": "arable",
+  "version": "0.1.0",
+  "description": "##Useful and stylish CSS",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahosgood/Arable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahosgood/Arable/issues"
+  },
+  "homepage": "https://github.com/ahosgood/Arable",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-sass": "*",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-using": "*"
+  }
+}
